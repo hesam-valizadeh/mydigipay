@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/variables";
+@import "styles/utility";
+@import "styles/fonts";
+@import "styles/icons";
+@import "styles/fonts/YekanBakh";
+@import "styles/app/app";
+@import "styles/responsive";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+  font-family: YekanBakh;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f3f6;
+}
+a{
+  color: #45474A;
+  text-decoration: none;
+  font-size: 14px;
+}

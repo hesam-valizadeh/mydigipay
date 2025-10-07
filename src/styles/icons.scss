@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'icomoon';
+  src:
+  loadStaticFont('/icomoon/icomoon.woff?vnhxk9') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.icon,
+[class^="icon-"], [class*="icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e90e";
+}
+.icon-danger:before {
+  content: "\e900";
+}
+.icon-tick-circle:before {
+  content: "\e901";
+}
+.icon-add:before {
+  content: "\e902";
+}
+.icon-arrow-left:before {
+  content: "\e903";
+}
+.icon-arrow-right:before {
+  content: "\e904";
+}
+.icon-call:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-call-calling:before {
+  content: "\e906";
+}
+.icon-edit-2:before {
+  content: "\e907";
+}
+.icon-export:before {
+  content: "\e908";
+}
+.icon-flag:before {
+  content: "\e909";
+}
+.icon-mobile:before {
+  content: "\e90a";
+}
+.icon-send-2:before {
+  content: "\e90b";
+}
+.icon-star:before {
+  content: "\e90c";
+}
+.icon-user:before {
+  content: "\e90d";
+}
+
