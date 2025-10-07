@@ -10,16 +10,41 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-body{
-  font-family: YekanBakh;
-  direction: rtl;
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  direction: rtl;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Yekan-Bakh";
+  direction: rtl;
   background-color: #f2f3f6;
 }
-a{
+
+a {
   color: #45474A;
   text-decoration: none;
   font-size: 14px;
+
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  line-height: 1 !important;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+@include media-breakpoint-up(xl) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

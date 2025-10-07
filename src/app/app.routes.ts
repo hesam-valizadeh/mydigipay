@@ -6,18 +6,18 @@ export const routes: Routes = [
   {
     path: "",
     data: {
-      title: 'گیمی‌فای اولین پلتفرم تخصصی طراحی و مدیریت کمپین در ایران',
-      description: "گیمی‌فای اولین پلتفرم تخصصی طراحی و مدیریت کمپین در ایران است. با ابزارهای این پلتفرم با اطمینان بالا تعامل با کاربران خود را افزایش دهید.",
+      title: 'صفحه اصلی | دیجی‌پی',
+      description: "",
       canonical: environment.baseURL
     },
     loadComponent: () => import('./pages/home/home.component').then(c => c.HomeComponent)
   },
   {
-    path: routeWithoutSlash(RouterLinksPath.gamesPage.singleRoulette),
+    path: routeWithoutSlash(RouterLinksPath.wealthPage.wealth),
     data: {
-      title: 'معرفی گیمیفیکیشن حرفه ای گردونه شانس تک لایه',
-      description: "گردونه شانس تک لایه گیمی‌فای ابزاری حرفه ای و جذاب برای افزایش تعامل مخاطب، جمع آوری سرنخ (لید) و ترغیب کاربران به مشارکت در کمپین‌های شما است.",
+      title: 'سرمایه‌گذاری دیجی‌پی',
+      description: "",
     },
-    loadComponent: () => import('./pages/single-roulette/single-roulette.component').then(c => c.SingleRouletteComponent)
+    loadComponent: () => import('./pages/wealth/wealth.component').then(c => c.WealthComponent)
   },
 ];
