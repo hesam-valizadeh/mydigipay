@@ -1,0 +1,120 @@
+import { Component, Input } from '@angular/core';
+import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
+import { SwiperOptions } from 'swiper/types';
+import { ListModel } from '../../@core/models/list-model';
+import { HomeCarouselWrapperDesktop } from '../model/carousel-inerface';
+import { HomeCarouselItemComponent } from './home-carousel-item/home-carousel-item.component';
+
+@Component({
+  selector: 'app-home-carousel-wrapper-desktop',
+  imports: [CustomSwiperComponent, HomeCarouselItemComponent],
+  templateUrl: './home-carousel-wrapper-desktop.component.html',
+  styleUrl: './home-carousel-wrapper-desktop.component.scss'
+})
+export class HomeCarouselWrapperDesktopComponent {
+
+  slider?: ListModel<HomeCarouselWrapperDesktop> | any = new ListModel([
+    {
+      id: 1,
+      image: "assets/images/01.webp",
+      width:"748"
+    },
+     {
+      id: 2,
+      image: "assets/images/02.webp",
+      width:"748"
+      
+    },
+     {
+      id: 3,
+      image: "assets/images/03.webp",
+      width:"748"
+      
+    }, 
+    {
+      
+      id: 4,
+      image: "assets/images/04.webp",
+      width:"748"
+      
+    },
+    {
+      id: 5,
+      image: "assets/images/05.webp",
+      width:"748"
+      
+    },
+    {
+      id: 6,
+      image: "assets/images/06.webp",
+      width:"748"
+      
+    },
+    {
+      id: 7,
+      image: "assets/images/07.webp",
+      width:"748"
+      
+    },
+    {
+      id: 8,
+      image: "assets/images/08.webp",
+      width:"748"
+      
+    },
+    {
+      id: 9,
+      image: "assets/images/09.webp",
+      width:"748"
+      
+    }
+  ])
+
+  SwiperConfig: SwiperOptions = {
+    slidesPerView: 'auto',
+    spaceBetween: 15,
+    centeredSlides: false,
+    grabCursor: true,
+    loopPreventsSliding: false,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },    
+    pagination: {
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    injectStyles: [
+      `
+        :host ::ng-deep .swiper-slide {
+        width: 748px !important;
+         }
+
+      @media (max-width: 768px) {
+        .swiper-slide {
+          width: 100% !important;
+        }
+      }
+  
+      .swiper-pagination-bullet {
+    background-color: #C9CBCF !important;
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    border-radius: 30px;
+    margin: 0 4px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 14px !important;
+    background-color: #fff !important;
+
+}`
+    ],
+    breakpoints: {}
+  };
+}
