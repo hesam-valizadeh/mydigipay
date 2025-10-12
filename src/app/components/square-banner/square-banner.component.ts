@@ -3,15 +3,16 @@ import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/cu
 import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
 import { HomeCarouselWrapperDesktop } from '../model/carousel-inerface';
-import { DesktopSquareBannersItem } from './desktop-square-banners-item/desktop-square-banners-item.component';
+import { SquareBannerItem } from './square-banner-item/square-banner-item.component';
 
 @Component({
-  selector: 'app-desktop-square-banner',
-  imports: [CustomSwiperComponent, DesktopSquareBannersItem],
-  templateUrl: './desktop-square-banner.component.html',
-  styleUrl: './desktop-square-banner.component.scss'
+  selector: 'app-square-banner',
+  imports: [CustomSwiperComponent, SquareBannerItem],
+  standalone:true,
+  templateUrl: './square-banner.component.html',
+  styleUrl: './square-banner.component.scss'
 })
-export class DesktopSquareBanner {
+export class SquareBanner {
 
   slider?: ListModel<HomeCarouselWrapperDesktop> | any = new ListModel([
     {

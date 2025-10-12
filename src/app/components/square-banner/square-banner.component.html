@@ -5,14 +5,14 @@
 [slides]="slider.data"
 #swiperRef>
 <ng-template #swiperSlideTemplate let-index="index" >
-  <app-desktop-square-banners-item
+  <app-square-banner-item
     [src]="slider.item(index)?.image"
     [alt]="slider.item(index)?.imageAlt"
     [title]="slider.item(index)?.title"
     [description]="slider.item(index)?.description"
     [brand]="slider.item(index)?.brand"
     [link]="slider.item(index)?.link"
-  ></app-desktop-square-banners-item>
+  ></app-square-banner-item>
 </ng-template>
 </app-custom-swiper>
   

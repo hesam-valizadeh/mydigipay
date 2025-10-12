@@ -1,12 +1,13 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-desktop-square-banners-item',
+  selector: 'app-square-banner-item',
   imports: [],
-  templateUrl: './desktop-square-banners-item.component.html',
-  styleUrl: './desktop-square-banners-item.component.scss'
+  standalone:true,
+  templateUrl: './square-banner-item.component.html',
+  styleUrl: './square-banner-item.component.scss'
 })
-export class DesktopSquareBannersItem  {
+export class SquareBannerItem  {
   @Input() src?: string | undefined | null = '';
   @Input() alt?: string | undefined = '';
   @Input() title?: string | undefined = '';

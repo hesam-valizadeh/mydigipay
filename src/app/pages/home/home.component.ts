@@ -1,11 +1,12 @@
-import { Component,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component } from '@angular/core';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
-import { HomeCarouselWrapperDesktopComponent } from '../../component/home-carousel-wrapper-desktop/home-carousel-wrapper-desktop.component';
-import { DesktopSquareBanner } from '../../component/desktop-square-banners/desktop-square-banner.component';
+import { HomeCarouselWrapperDesktopComponent } from '../../components/home-carousel-wrapper-desktop/home-carousel-wrapper-desktop.component';
+import { SquareBanner } from '../../components/square-banner/square-banner.component';
+import { ServiceCardComponent } from '../../components/service-card/service-card.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CustomSwiperComponent,HomeCarouselWrapperDesktopComponent,DesktopSquareBanner],
+  imports: [CustomSwiperComponent, HomeCarouselWrapperDesktopComponent, SquareBanner, ServiceCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 

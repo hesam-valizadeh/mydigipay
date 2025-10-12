@@ -1,0 +1,20 @@
+.services-section{
+    div{
+        .services-section-title{
+            font-weight: 600;
+            font-size: 14px;
+        }
+        a.services-section-link{
+            display: flex;
+            align-items: center;
+            i.icon{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                font-size: 20px;
+                margin-right: 4px;
+            }
+        }
+     
+    }
+}

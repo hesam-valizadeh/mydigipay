@@ -1,0 +1,8 @@
+<div class="service-card-section d-flex aling-items-center justify-content-between">
+    @for (card of cards; track card; let i = $index) {
+    <div class="card">
+        <img [src]="card.src" [alt]="card.alt" [title]="card.title" [width]="card.width" [height]="card.height">
+    </div>
+    }
+
+</div>
