@@ -1,0 +1,18 @@
+
+<app-custom-swiper
+[config]="SwiperConfig"
+[startIndex]="1"
+[slides]="slider.data"
+#swiperRef>
+<ng-template #swiperSlideTemplate let-index="index" >
+  <app-product-item
+    [src]="slider.item(index)?.image"
+    [alt]="slider.item(index)?.imageAlt"
+    [title]="slider.item(index)?.title"
+    [description]="slider.item(index)?.description"
+    [brand]="slider.item(index)?.brand"
+    [link]="slider.item(index)?.link"
+  ></app-product-item>
+</ng-template>
+</app-custom-swiper>
+  

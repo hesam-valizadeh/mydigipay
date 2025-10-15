@@ -15,35 +15,35 @@ export class ServiceCardComponent {
       title: "خدمات وام و اعتبار",
       width: "256",
       height: "270",
-      description: "",
-      link: ""
+      description: "خرید قسطی، بدون ضامن و سپرده‌گذاری",
+      link: "دریافت اعتبار"
     },
     {
       src: "assets/images/fintech.webp",
-      alt: "خدمات وام و اعتبار",
-      title: "خدمات وام و اعتبار",
+      alt: "خدمات پرداخت",
+      title: "خدمات پرداخت",
       width: "256",
       height: "270",
-      description: "",
-      link: ""
+      description: "پرداخت و انتقال وجه، از هرجا به هرجا",
+      link: "خدمات پرداخت"
     },
     {
       src: "assets/images/wealth.webp",
-      alt: "خدمات وام و اعتبار",
-      title: "خدمات وام و اعتبار",
+      alt: "خدمات مدیریت ثروت",
+      title: "خدمات مدیریت ثروت",
       width: "256",
       height: "270",
-      description: "",
-      link: ""
+      description: "حفظ ارزش سرمایه، کم ریسک و بی‌دغدغه",
+      link: "سرمایه گذاری"
     },
     {
       src: "assets/images/insurance.webp",
-      alt: "خدمات وام و اعتبار",
-      title: "خدمات وام و اعتبار",
+      alt: "خدمات بیمه",
+      title: "خدمات بیمه",
       width: "256",
       height: "270",
-      description: "",
-      link: ""
+      description: "زندگی بدون نگرانی، با جبران هر خسارتی",
+      link: "خدمات بیمه"
     }
   ]
 }
