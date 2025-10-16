@@ -9,6 +9,7 @@ import { HeroCarouselItemComponent } from './hero-carousel-item/hero-carousel-it
   selector: 'app-hero-carousel',
   imports: [CustomSwiperComponent, HeroCarouselItemComponent],
   templateUrl: './hero-carousel.component.html',
+  styleUrl:'./hero-carousel.component.scss'
 })
 export class HeroCarouselComponent {
 

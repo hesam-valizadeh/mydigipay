@@ -4,6 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-product-item',
   imports: [],
   templateUrl: './product-item.component.html',
+  styleUrl:'./product-item.component.scss'
 })
 export class ProductItemComponent {
   @Input() src: string | undefined | null = '';

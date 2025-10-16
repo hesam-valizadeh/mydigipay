@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
   imports: [],
   standalone:true,
   templateUrl: './square-banner-item.component.html',
+  styleUrl:'./square-banner-item.component.scss'
 })
 export class SquareBannerItem  {
   @Input() src?: string | undefined | null = '';

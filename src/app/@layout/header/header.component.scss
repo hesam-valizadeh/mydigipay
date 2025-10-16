@@ -1,4 +1,3 @@
-@use "./../variables.scss" as *;
 header {
   height: 90px;
   padding-left: 0 !important;
@@ -73,11 +72,10 @@ header {
     }
 
     a.menu_link {
-
       position: relative;
 
       &:hover {
-        color: $brand;
+        color: #1159FC;
 
         &::after {
           content: "";

@@ -10,6 +10,7 @@ import { HeaderViewDataInterface } from '../../view-models/header-view-data.inte
     SearchBoxComponent
   ],
   templateUrl: './header.component.html',
+  styleUrl:'./header.component.scss'
 })
 export class HeaderComponent {
 

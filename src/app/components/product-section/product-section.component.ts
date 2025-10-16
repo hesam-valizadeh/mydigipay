@@ -9,6 +9,7 @@ import { ProductCarousel } from './model/carousel-inerface';
   selector: 'app-product-section',
   imports: [CustomSwiperComponent, ProductItemComponent],
   templateUrl: './product-section.component.html',
+  styleUrl:'./product-section.component.scss'
 })
 export class ProductSectionComponent {
 

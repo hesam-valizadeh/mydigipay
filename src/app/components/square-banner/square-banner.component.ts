@@ -9,7 +9,8 @@ import { SquareBannerCarousel } from './model/carousel-inerface';
   selector: 'app-square-banner',
   imports: [CustomSwiperComponent, SquareBannerItem],
   standalone:true,
-  templateUrl: './square-banner.component.html'
+  templateUrl: './square-banner.component.html',
+  styleUrl:'./square-banner.component.scss'
 })
 export class SquareBanner {
 
