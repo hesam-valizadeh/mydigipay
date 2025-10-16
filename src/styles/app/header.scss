@@ -1,19 +1,24 @@
+@use "./../variables.scss" as *;
 header {
   height: 90px;
   padding-left: 0 !important;
 
   a.menu_link {
-    font-size: 12px;
-    font-weight: 450;
-    margin: 0 16px;
+    margin: 0 -2.5px;
+    span{
+      font-size: 12px;
+      font-weight: 450;
+      margin: 0 16px;
+    }
   }
 
   .login {
-    word-spacing: -2.79px;
-    margin-right: 20px;
+    margin-right: 29px;
 
     span {
       font-size: 12px;
+      word-spacing: -2.79px;
+      font-weight: 450;
     }
   }
 
@@ -44,6 +49,7 @@ header {
         padding: 10px;
         margin: 0;
         font-size: 12px;
+
         span {
           color: #45474A;
         }
@@ -133,9 +139,11 @@ nav.navbar {
 
 .icon-discount-bold {
   color: #F9441F;
-  top: -5px;
-  right: -7px;
+  top: -6px;
+  right: -11px;
   font-size: 16px;
   width: 16px;
   height: 16px;
+  border: 1px solid #fff;
+  border-radius: 50em;
 }

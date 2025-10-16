@@ -11,7 +11,6 @@ import { SwiperElementDirective } from '../../directives/swiper-element.directiv
     SwiperElementDirective
   ],
   templateUrl: './custom-swiper.component.html',
-  styleUrl: './custom-swiper.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CustomSwiperComponent<ItemsType> implements AfterViewInit{

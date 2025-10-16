@@ -1,18 +1,16 @@
-
-<app-custom-swiper
-[config]="SwiperConfig"
-[startIndex]="1"
-[slides]="slider.data"
-#swiperRef>
-<ng-template #swiperSlideTemplate let-index="index" >
-  <app-product-item
-    [src]="slider.item(index)?.image"
-    [alt]="slider.item(index)?.imageAlt"
-    [title]="slider.item(index)?.title"
-    [description]="slider.item(index)?.description"
-    [brand]="slider.item(index)?.brand"
-    [link]="slider.item(index)?.link"
-  ></app-product-item>
-</ng-template>
-</app-custom-swiper>
-  
+<section class="product-section gap-20px my-40px p-0 d-flex flex-column">
+  <div class="d-flex justify-content-between aling-items-center p-0">
+    <h3 class="text-dark fs-14px fw-600 product-section-title">کلید و پریز هوشمند</h3>
+    <a href="" class="text-primary product-section-link">
+      <span class="text-primary">همه</span>
+      <i class="icon icon-arrow-2-left-linear text-primary"></i>
+    </a>
+  </div>
+  <app-custom-swiper [config]="SwiperConfig" [startIndex]="1" [slides]="slider.data" #swiperRef>
+    <ng-template #swiperSlideTemplate let-index="index">
+      <app-product-item [src]="slider.item(index)?.imageSrc" [alt]="slider.item(index)?.alt"
+        [width]="slider.item(index)?.width" [height]="slider.item(index)?.height" [title]="slider.item(index)?.title"
+        [loading]="slider.item(index)?.loading" [storeLogoSrc]="slider.item(index)?.storeLogoSrc"></app-product-item>
+    </ng-template>
+  </app-custom-swiper>
+</section>

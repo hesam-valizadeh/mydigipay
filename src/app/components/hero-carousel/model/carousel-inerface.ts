@@ -1,4 +1,4 @@
-export interface HomeCarouselWrapperDesktop {
+export interface HeroCarousel{
   id: number,
   title: string,
   image: string,

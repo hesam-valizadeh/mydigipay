@@ -2,18 +2,17 @@ import { Component, Input } from '@angular/core';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
 import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
-import { HomeCarouselWrapperDesktop } from '../model/carousel-inerface';
-import { HomeCarouselItemComponent } from './home-carousel-item/home-carousel-item.component';
+import { HeroCarousel } from './model/carousel-inerface';
+import { HeroCarouselItemComponent } from './hero-carousel-item/hero-carousel-item.component';
 
 @Component({
-  selector: 'app-home-carousel-wrapper-desktop',
-  imports: [CustomSwiperComponent, HomeCarouselItemComponent],
-  templateUrl: './home-carousel-wrapper-desktop.component.html',
-  styleUrl: './home-carousel-wrapper-desktop.component.scss'
+  selector: 'app-hero-carousel',
+  imports: [CustomSwiperComponent, HeroCarouselItemComponent],
+  templateUrl: './hero-carousel.component.html',
 })
-export class HomeCarouselWrapperDesktopComponent {
+export class HeroCarouselComponent {
 
-  slider?: ListModel<HomeCarouselWrapperDesktop> | any = new ListModel([
+  slider?: ListModel<HeroCarousel> | any = new ListModel([
     {
       id: 1,
       image: "assets/images/01.webp",
@@ -90,30 +89,22 @@ export class HomeCarouselWrapperDesktopComponent {
     },
     injectStyles: [
       `
-        :host ::ng-deep .swiper-slide {
-        width: 748px !important;
-         }
-
-      @media (max-width: 768px) {
-        .swiper-slide {
-          width: 100% !important;
-        }
-      }
-  
-      .swiper-pagination-bullet {
-    background-color: #C9CBCF !important;
-    opacity: 1;
-    width: 6px;
-    height: 6px;
-    border-radius: 30px;
-    margin: 0 4px;
-}
-
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    width: 14px !important;
-    background-color: #fff !important;
-
-}`
+         .swiper-pagination-bullet {
+        background-color: #C9CBCF !important;
+        opacity: 1;
+        width: 6px;
+        height: 6px;
+        border-radius: 30px;
+        margin: 0 4px;
+    }
+    
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        width: 14px !important;
+        background-color: #fff !important;
+    
+    }
+     
+`
     ],
     breakpoints: {}
   };

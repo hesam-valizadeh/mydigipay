@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-home-carousel-item',
+  selector: 'app-hero-carousel-item',
   imports: [],
-  templateUrl: './home-carousel-item.component.html',
-  styleUrl: './home-carousel-item.component.scss'
+  templateUrl: './hero-carousel-item.component.html',
 })
-export class HomeCarouselItemComponent {
+export class HeroCarouselItemComponent {
   @Input() src?: string | undefined | null = '';
   @Input() alt?: string | undefined = '';
   @Input() title?: string | undefined = '';

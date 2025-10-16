@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   imports: [],
   standalone: true,
   templateUrl: './service-card.component.html',
-  styleUrl: './service-card.component.scss'
 })
 export class ServiceCardComponent {
   cards = [

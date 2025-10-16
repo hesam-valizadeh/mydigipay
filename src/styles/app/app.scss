@@ -1,3 +1,7 @@
-@import "./header";
-@import "./home";
-@import "./service-card.scss";
+@use "./header";
+@use "./home";
+@use "./service-card.scss";
+@use "./search-box.scss";
+@use "./hero-carousel.scss";
+@use "./products.scss";
+@use "./square-banner.scss";

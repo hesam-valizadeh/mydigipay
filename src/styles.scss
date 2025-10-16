@@ -1,9 +1,8 @@
 @import "styles/variables";
 @import "styles/utility";
-@import "styles/fonts";
 @import "styles/icons";
-@import "styles/fonts/YekanBakh";
 @import "styles/app/app";
+@import "styles/fonts/YekanBakh";
 @import "styles/responsive";
 
 @import "../node_modules/bootstrap/scss/functions";
@@ -50,3 +49,11 @@ a {
 }
 
 
+figure{
+  margin: unset;
+}
+a:focus-visible{
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+}
