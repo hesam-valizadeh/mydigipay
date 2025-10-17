@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
@@ -9,103 +9,25 @@ import { ProductCarousel } from './model/carousel-inerface';
   selector: 'app-product-section',
   imports: [CustomSwiperComponent, ProductItemComponent],
   templateUrl: './product-section.component.html',
-  styleUrl:'./product-section.component.scss'
+  styleUrl: './product-section.component.scss'
 })
 export class ProductSectionComponent {
-
-  slider: ListModel<ProductCarousel> | any = new ListModel([
-    {
-      id: 1,
-      imageSrc: "assets/images/product/arta/01.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    },
-    {
-      id: 2,
-      imageSrc: "assets/images/product/arta/02.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    },
-    {
-      id: 3,
-      imageSrc: "assets/images/product/arta/03.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    },
-    {
-      id: 4,
-      imageSrc: "assets/images/product/arta/04.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    },
-    {
-      id: 5,
-      imageSrc: "assets/images/product/arta/05.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    },
-    {
-      id: 6,
-      imageSrc: "assets/images/product/arta/06.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    },
-    {
-      id: 7,
-      imageSrc: "assets/images/product/arta/07.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    },
-    {
-      id: 8,
-      imageSrc: "assets/images/product/arta/08.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    }
-    ,
-    {
-      id: 9,
-      imageSrc: "assets/images/product/arta/09.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    }, {
-      id: 10,
-      imageSrc: "assets/images/product/arta/10.webp",
-      alt: "کلید لمسی هوشمند چهار پل Zigbee نستک سری INNOVA کد NE5LS01XG4",
-      width: "147",
-      height: "147",
-      loading: "lazy",
-      storeLogoSrc: "assets/images/product/arta/arta.svg"
-    }
-
-  ])
+  @Input() category!: string;
+  @Input() storeName!: string | undefined;
+  @Input() products!: ListModel<ProductCarousel>; // 👈 استفاده از Input
+  @Input() imageSrc!:string | undefined;
+  @Input() alt!:string | undefined;
+  @Input() width!:string | undefined;
+  @Input() height!:string | undefined;
+  @Input() title!:string | undefined;
+  @Input() loading!:string | undefined;
+  @Input() storeLogoSrc!:string | undefined;
+  @Input() priceNoDiscount!:string | undefined;
+  @Input() priceFinal!:string | undefined;
+  @Input() discountPercentage!:string | undefined;
+  get slider() {
+    return this.products || new ListModel([]); // 👈 استفاده از Input data
+  }
 
   SwiperConfig: SwiperOptions = {
     slidesPerView: 6.8,
@@ -117,7 +39,6 @@ export class ProductSectionComponent {
       type: 'bullets',
       el: ""
     },
-  
     breakpoints: {}
   };
 }
