@@ -28,7 +28,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              {"glob": "**/*", "input": "assets"}
+              {"glob": "**/*", "input": "assets"} 
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",

@@ -4,10 +4,11 @@ import {HeaderComponent} from './@layout/header/header.component';
 import {Meta, Title} from '@angular/platform-browser';
 import {filter, map, mergeMap} from 'rxjs';
 import {environment} from '../enviroment/environment';
+import { FooterComponent } from './@layout/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent],
+  imports: [RouterOutlet, HeaderComponent,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
