@@ -4,7 +4,8 @@ header {
 
   a.menu_link {
     margin: 0 -2.5px;
-    span{
+
+    >span {
       font-size: 12px;
       font-weight: 450;
       margin: 0 16px;
@@ -54,7 +55,7 @@ header {
         }
 
         i {
-          color: #45474A;
+          color: #1159FC;
           font-size: 24px;
           width: 24px;
           height: 24px;
@@ -94,18 +95,29 @@ header {
 
         }
       }
-    }
 
-    .submenu_link:hover {
-      background-color: #deedff;
-      border-radius: 8px;
+      .submenu_link:hover {
+        background-color: #deedff;
+        border-radius: 8px;
 
-      i,
-      span {
-        color: #1159FC;
+        i {
+          background: #1159FC;
+        }
+
+        svg {
+          fill: #1159FC
+        }
+
+        
+        span {
+          color: #1159FC;
+        }
       }
     }
+
+
   }
+
 }
 
 nav {
