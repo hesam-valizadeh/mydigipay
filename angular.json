@@ -20,6 +20,7 @@
             "outputPath": "dist/angular-v19",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/mydigipay/",
             "polyfills": [
               "zone.js"
             ],
@@ -106,6 +107,9 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
