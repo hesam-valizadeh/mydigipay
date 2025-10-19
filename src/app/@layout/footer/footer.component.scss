@@ -3,7 +3,7 @@ footer {
         height: 30px;
         margin-bottom: 16px;
     }
-
+  
     .address {
         display: flex;
         align-items: start;
@@ -11,22 +11,27 @@ footer {
         flex-direction: row;
         font-size: 12px;
         color: #101113;
-        margin-bottom: 16px;
+        margin-bottom: 0;
+        font-weight: 300;
 
     }
 
     .tell {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         font-size: 12px;
+        font-weight: 300;
         color: #101113;
+        a{
+            font-weight: 400;
+        }
     }
 
     .footer-links {
-        padding-top: 40px;
+        padding-top: 48px;
         display: flex;
         justify-content: space-between;
         align-items: start;
-
+        padding-right: 40px;
         >div,
         ul {
             display: flex;
