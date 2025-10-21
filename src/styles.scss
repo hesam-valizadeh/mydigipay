@@ -2,11 +2,11 @@
 @import "styles/utility";
 @import "styles/icons";
 @import "styles/fonts/YekanBakh";
-@import "styles/responsive";
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "styles/responsive";
 
 *,
 *::after,
@@ -57,3 +57,4 @@ a:focus-visible{
   border: transparent;
   outline: transparent;
 }
+

@@ -17,55 +17,46 @@ export class HeroCarouselComponent {
     {
       id: 1,
       image: "assets/images/01.webp",
-      width:"748"
     },
      {
       id: 2,
       image: "assets/images/02.webp",
-      width:"748"
       
     },
      {
       id: 3,
       image: "assets/images/03.webp",
-      width:"748"
       
     }, 
     {
       
       id: 4,
       image: "assets/images/04.webp",
-      width:"748"
       
     },
     {
       id: 5,
       image: "assets/images/05.webp",
-      width:"748"
       
     },
     {
       id: 6,
       image: "assets/images/06.webp",
-      width:"748"
       
     },
     {
       id: 7,
       image: "assets/images/07.webp",
-      width:"748"
       
     },
     {
       id: 8,
       image: "assets/images/08.webp",
-      width:"748"
       
     },
     {
       id: 9,
       image: "assets/images/09.webp",
-      width:"748"
       
     }
   ])
@@ -104,9 +95,12 @@ export class HeroCarouselComponent {
         background-color: #fff !important;
     
     }
+        
      
 `
     ],
-    breakpoints: {}
+    breakpoints: {
+
+    }
   };
 }

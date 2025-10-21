@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeroCarouselComponent } from '../../components/hero-carousel/hero-carousel.component';
 import { SquareBanner } from '../../components/square-banner/square-banner.component';
 import { ServiceCardComponent } from '../../components/service-card/service-card.component';
@@ -6,6 +6,7 @@ import { ProductSectionComponent } from '../../components/product-section/produc
 import { HomePageViewDataInterface } from '../../view-models/home-page-view-data.interface';
 import { ListModel } from '../../@core/models/list-model';
 import { ProductCarousel } from '../../components/product-section/model/carousel-inerface';
+import { ResponsiveService } from '../../@core/services/responsive.service';
 
 @Component({
   selector: 'app-home',
@@ -597,6 +598,7 @@ export class HomeComponent {
       ]
     }
   }
+  responsive = inject(ResponsiveService);
 
 
   get sections() {

@@ -1,8 +1,41 @@
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
+    .container {
+        width: calc(100% - 40px);
+    }
 
+    .side-banner {
+        display: none !important;
+    }
+
+    .hero-carousel {
+        .swiper-slide {
+            width: 100% !important;
+            max-width: 100% !important;
+
+            img {
+                max-width: 100% !important;
+                width: 100% !important;
+                border: radius 50px, i !important;
+            }
+        }
+
+        swiper-container {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
+        app-custom-swiper {
+            display: block;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+
+        .swiper-initialized {
+            width: 100% !important;
+        }
+    }
 }
 
-@include media-breakpoint-up(lg) {
-  
-}
+// @include media-breakpoint-up(lg) {
 
+// }
