@@ -7,14 +7,16 @@ import { HomePageViewDataInterface } from '../../view-models/home-page-view-data
 import { ListModel } from '../../@core/models/list-model';
 import { ProductCarousel } from '../../components/product-section/model/carousel-inerface';
 import { ResponsiveService } from '../../@core/services/responsive.service';
+import { BottomNavigationComponent } from '../../@layout/bottom-navigation/bottom-navigation.component';
 
 @Component({
   selector: 'app-home',
-  imports: [HeroCarouselComponent, SquareBanner, ServiceCardComponent, ProductSectionComponent],
+  imports: [HeroCarouselComponent, SquareBanner, ServiceCardComponent, ProductSectionComponent,BottomNavigationComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
   data: HomePageViewDataInterface = {
     smartSwitches: {
       category: "کلید و پریز هوشمند",
@@ -598,9 +600,9 @@ export class HomeComponent {
       ]
     }
   }
+
   responsive = inject(ResponsiveService);
-
-
+  
   get sections() {
     return Object.values(this.data).map((section, index) => ({
       id: index + 1,
@@ -608,4 +610,5 @@ export class HomeComponent {
       products: new ListModel(section.sliderProducts || [])
     }));
   }
+
 }

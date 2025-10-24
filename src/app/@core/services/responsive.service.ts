@@ -1,11 +1,12 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal, WritableSignal } from '@angular/core';
+import { BreakpointKey } from '../models/types/responsive.types';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResponsiveService {
   /** Breakpoints definition (you can adjust as needed) */
-  private readonly breakpoints = {
+  private readonly breakpoints: Record<BreakpointKey, string> = {
     xs: '(max-width: 1199px)',
     sm: '(min-width: 600px) and (max-width: 959px)',
     md: '(min-width: 960px) and (max-width: 1279px)',
@@ -14,11 +15,12 @@ export class ResponsiveService {
   };
 
   /** Signals for each breakpoint */
-  readonly isXs = signal(false);
-  readonly isSm = signal(false);
-  readonly isMd = signal(false);
-  readonly isLg = signal(false);
-  readonly isXl = signal(false);
+  readonly isXs: WritableSignal<boolean> = signal(false);
+  readonly isSm: WritableSignal<boolean> = signal(false);
+  readonly isMd: WritableSignal<boolean> = signal(false);
+  readonly isLg: WritableSignal<boolean> = signal(false);
+  readonly isXl: WritableSignal<boolean> = signal(false);
+
   /** Combined signals */
   readonly isMobile = computed(() => this.isXs());
   readonly isTablet = computed(() => this.isMd());
@@ -27,7 +29,6 @@ export class ResponsiveService {
   constructor() {
     // Only run in browser (avoid SSR issues)
     if (typeof window === 'undefined') return;
-
     this.initListeners();
   }
 
