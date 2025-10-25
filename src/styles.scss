@@ -1,4 +1,5 @@
-@import "styles/variables";
+// @import "styles/variables";
+@use "styles/variables" as *;
 @import "styles/utility";
 @import "styles/icons";
 @import "styles/fonts/YekanBakh";
