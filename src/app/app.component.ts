@@ -5,6 +5,7 @@ import {Meta, Title} from '@angular/platform-browser';
 import {filter, map, mergeMap} from 'rxjs';
 import {environment} from '../enviroment/environment';
 import { FooterComponent } from './@layout/footer/footer.component';
+import { SwUpdateService } from './@core/services/sw-custom.service';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +18,10 @@ export class AppComponent implements OnInit {
     private titleService: Title,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private metaService: Meta
-  ) {}
+    private metaService: Meta,
+    private sw: SwUpdateService
+  ) {
+  }
 
 
   ngOnInit(): void {

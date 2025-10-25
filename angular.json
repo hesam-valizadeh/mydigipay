@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-      "digipay": {
+      "mydigipay": {
         "projectType": "application",
         "schematics": {
           "@schematics/angular:component": {
@@ -17,7 +17,7 @@
           "build": {
             "builder": "@angular/build:application",
             "options": {
-              "outputPath": "dist/digipay",
+              "outputPath": "dist/mydigipay",
               "index": "src/index.html",
               "browser": "src/main.ts",
               "baseHref": "/mydigipay/",
@@ -29,6 +29,7 @@
               "assets": [
                 "src/favicon.ico",
                 "src/assets",
+                 "src/manifest.webmanifest",
                 {
                   "glob": "**/*",
                   "input": "assets"
@@ -71,10 +72,10 @@
             "builder": "@angular/build:dev-server",
             "configurations": {
               "production": {
-                "buildTarget": "digipay:build:production"
+                "buildTarget": "mydigipay:build:production"
               },
               "development": {
-                "buildTarget": "digipay:build:development"
+                "buildTarget": "mydigipay:build:development"
               }
             },
             "defaultConfiguration": "development"
