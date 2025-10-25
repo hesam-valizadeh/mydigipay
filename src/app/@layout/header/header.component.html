@@ -1,11 +1,18 @@
 <header class="pb-lg-16px pt-lg-42px container">
   <div class="row align-items-center">
-    <div class="col-lg-5 ">
-      <a href="">
-        <img src="assets/images/logo.svg" alt="logo" width="78" height="19"  class="me-8px">
+    <div class="col-lg-5 d-flex align-items-center justify-content-between">
+      <a href="" class="">
+        <img src="assets/images/logo.svg" alt="logo" width="78" height="19" class="me-lg-8px me-0">
       </a>
+      <div class=" d-lg-none d-inline-block">
+
+        <button class="hamburger-btn">
+          <i class="icon icon-hamburger-menu-linear text-dark"> </i>
+        </button>
+      </div>
+
     </div>
-    <div class="col-lg-auto p-0">
+    <div class="col-lg-auto d-lg-block d-none p-0">
       <menu class="p-0 ">
         <a href="" class="menu_link">
           <span>
@@ -88,8 +95,8 @@
             خدمات سازمانی
           </span>
           <div class="submenu">
-          
-          
+
+
             <a href="" class="submenu_link">
               <i>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +121,7 @@
         </a>
       </menu>
     </div>
-    <div class="col-lg-auto p-0">
+    <div class="col-lg-auto d-lg-block d-none p-0">
       <a href="" class="login">
         <img src="assets/icons/person.svg" alt="logo" width="20" height="20">
         <span>
@@ -122,9 +129,15 @@
         </span>
       </a>
     </div>
+
   </div>
+  @if(responsive.isMobile()){
+  <div class="search-bar">
+    <app-search-box></app-search-box>
+  </div>
+  }
 </header>
-<nav class="navbar justify-content-start container ">
+<nav class="navbar justify-content-start container d-lg-flex d-none">
   <a href="" class="nav-item mx-24px d-flex gap-5px active">
     <span class="icon-container">
       <i class="icon icon-home-bold"></i>
@@ -135,7 +148,7 @@
     <span class="icon-container">
       <i class="icon icon-more-bold"></i>
     </span>
-    <span >خدمات</span>
+    <span>خدمات</span>
   </a>
   <a href="" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container position-relative">
@@ -152,4 +165,3 @@
   </a>
   <app-search-box class="me-auto"></app-search-box>
 </nav>
-
