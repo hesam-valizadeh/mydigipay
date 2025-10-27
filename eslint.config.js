@@ -2,7 +2,10 @@
 const eslint = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angular = require("angular-eslint");
-
+const tsEslint = require("@typescript-eslint/eslint-plugin");
+const tsParser = require("@typescript-eslint/parser");
+const angularEslint = require("@angular-eslint/eslint-plugin");
+const angularTemplate = require("@angular-eslint/template-parser");
 module.exports = tseslint.config(
   {
     files: ["**/*.ts"],

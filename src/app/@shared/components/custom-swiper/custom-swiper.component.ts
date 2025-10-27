@@ -14,21 +14,21 @@ import { SwiperElementDirective } from '../../directives/swiper-element.directiv
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CustomSwiperComponent<ItemsType> implements AfterViewInit{
-  @Input() swiperClass: string = '';
-  @Input() customPagination: boolean = false;
-  @Input() startIndex: number = 0;
+  @Input() swiperClass = '';
+  @Input() customPagination = false;
+  @Input() startIndex = 0;
   @Input() swiperDir: 'ltr' | 'rtl' = 'rtl';
-  @Input() slides: Array<ItemsType> = [];
+  @Input() slides: ItemsType[] = [];
   @Input({required: true}) config: SwiperOptions = {};
 
   @ViewChild('swiperRef', {static: false}) swiperRef!: ElementRef<SwiperContainer>;
 
-  @ContentChild('swiperSlideTemplate') swiperSlideTemplate: TemplateRef<{ item: any, index: number }> | null = null;
+  @ContentChild('swiperSlideTemplate') swiperSlideTemplate: TemplateRef<{ item: ItemsType, index: number }> | null = null;
 
   @Output() slideChange = new EventEmitter<number>();
   
-  disabledPrevButton: boolean = true;
-  disabledNextButton: boolean = true;
+  disabledPrevButton = true;
+  disabledNextButton = true;
 
   
   ngAfterViewInit(): void {

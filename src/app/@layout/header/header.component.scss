@@ -158,3 +158,29 @@ nav.navbar {
   border-radius: 50em;
 }
 
+
+.mobile-submenu {
+  z-index: 1111;
+  background-color: #f2f3f6;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  border-radius: 0;
+  position: absolute;
+  top: 46px;
+  left: 0;
+  right: 0;
+
+  .mobile-menu-item {
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    text-align: right;
+
+    &:hover {
+      color: #6c00cb;
+    }
+  }
+}

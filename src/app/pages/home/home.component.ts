@@ -5,7 +5,6 @@ import { ServiceCardComponent } from '../../components/service-card/service-card
 import { ProductSectionComponent } from '../../components/product-section/product-section.component';
 import { HomePageViewDataInterface } from '../../view-models/home-page-view-data.interface';
 import { ListModel } from '../../@core/models/list-model';
-import { ProductCarousel } from '../../components/product-section/model/carousel-inerface';
 import { ResponsiveService } from '../../@core/services/responsive.service';
 import { BottomNavigationComponent } from '../../@layout/bottom-navigation/bottom-navigation.component';
 
@@ -18,6 +17,7 @@ import { BottomNavigationComponent } from '../../@layout/bottom-navigation/botto
 export class HomeComponent {
 
   data: HomePageViewDataInterface = {
+    downloadApp:"دانلود اپلیکیشن",
     smartSwitches: {
       category: "کلید و پریز هوشمند",
       sliderProducts: [

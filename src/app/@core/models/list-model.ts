@@ -1,8 +1,8 @@
 export class ListModel<DataModel> {
-  data: Array<DataModel>;
+  data: DataModel[];
   item = (index: number): DataModel | null => this.data && this.data.length && this.data[index] ? this.data[index] : null;
 
-  constructor(data?: Array<DataModel>) {
+  constructor(data?: DataModel[]) {
     this.data = data ?? [];
   }
 }

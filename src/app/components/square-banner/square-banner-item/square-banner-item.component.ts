@@ -18,6 +18,6 @@ export class SquareBannerItem  {
   @Input() textBrand?: string = '';
   @Input() viewBtnText?: string = '';
   @Input() icon?: string = '';
-  @Input() width: string = '320';
+  @Input() width = '320';
   @Input() btn?: boolean = false;
 }

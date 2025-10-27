@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 
 @Injectable({ providedIn: 'root' })
 export class SwUpdateService {
-  constructor(private updates: SwUpdate) {
-    if (updates.isEnabled) {
-      updates.versionUpdates.subscribe(evt => {
+  private updates = inject(SwUpdate);
+
+  constructor() {
+    if (this.updates.isEnabled) {
+      this.updates.versionUpdates.subscribe(evt => {
         if (evt.type === 'VERSION_READY') {
           const update = confirm('نسخه جدید در دسترس است. بارگذاری شود؟');
           if (update) location.reload();

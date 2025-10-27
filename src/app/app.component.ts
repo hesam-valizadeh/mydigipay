@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {ActivatedRoute, NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {HeaderComponent} from './@layout/header/header.component';
 import {Meta, Title} from '@angular/platform-browser';
@@ -14,16 +14,11 @@ import { SwUpdateService } from './@core/services/sw-custom.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private metaService: Meta,
-    private sw: SwUpdateService
-  ) {
-  }
-
-
+  private router = inject(Router);
+  private titleService = inject(Title);
+  private activatedRoute = inject(ActivatedRoute);
+  private metaService = inject(Meta);
+  private sw = inject(SwUpdateService);
   ngOnInit(): void {
     this.router.events
       .pipe(

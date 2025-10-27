@@ -16,6 +16,6 @@ export class HeroCarouselItemComponent {
   @Input() textBrand?: string = '';
   @Input() viewBtnText?: string = '';
   @Input() icon?: string = '';
-  @Input() width: string = '748';
+  @Input() width = '748';
   @Input() btn?: boolean = false;
 }

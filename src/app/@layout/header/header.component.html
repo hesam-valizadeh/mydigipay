@@ -6,7 +6,9 @@
       </a>
       <div class=" d-lg-none d-inline-block">
 
-        <button class="hamburger-btn">
+        <button class="hamburger-btn" (click)="toggleSubmenu()" (keydown.enter)="toggleSubmenu()"
+          (keydown.space)="toggleSubmenu(); $event.preventDefault()" aria-label="منو اصلی"
+          aria-expanded="{{isSubmenuOpen()}}" tabindex="0">
           <i class="icon icon-hamburger-menu-linear text-dark"> </i>
         </button>
       </div>
@@ -62,7 +64,7 @@
             </a>
           </div>
         </a>
-        <a href="" class="menu_link">
+        <a [routerLink]="RouterLinksPath.wealthPage.wealth" class="menu_link">
           <span>
             مدیریت سرمایه
           </span>
@@ -165,3 +167,142 @@
   </a>
   <app-search-box class="me-auto"></app-search-box>
 </nav>
+
+
+
+
+@if (isSubmenuOpen()) {
+<div class="mobile-submenu">
+  <div class="d-flex flex-column align-items-start">
+    <a routerLink="/" class="mobile-menu-item fw-light fs-16px text-800 home-link-first-child">{{ data.loansAndCredits
+      }}</a>
+    <button
+      class="mobile-menu-item d-flex flex-column justify-content-start align-items-start fw-light fs-16px text-800 my-15px"
+      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
+      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
+      aria-controls="submenu-games-1">
+      <div class="d-flex justify-content-between w-100">
+        <span>
+          {{ data.loansAndCredits }}
+        </span>
+        <i class="icon icon-arrow-2-down-linear"></i>
+      </div>
+
+      @if (isSubmenuGamesOpen()) {
+      <div class="w-100 mb-10px submenu-games">
+        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.tripleRoulette"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.jackpot"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.quiz"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.paperScissorsRock"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800"> {{ data.credit }}</span>
+        </a>
+      </div>
+      }
+    </button>
+    <button
+      class="mobile-menu-item d-flex flex-column justify-content-start align-items-start fw-light fs-16px text-800 my-15px"
+      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
+      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
+      aria-controls="submenu-games-2">
+      <div class="d-flex justify-content-between w-100">
+        <span>
+          {{ data.loansAndCredits }}
+        </span>
+        <i class="icon icon-arrow-2-down-linear"></i>
+      </div>
+
+      @if (isSubmenuGamesOpen()) {
+      <div class="w-100 mb-10px submenu-games">
+        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.tripleRoulette"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.jackpot"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.quiz"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.paperScissorsRock"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800"> {{ data.credit }}</span>
+        </a>
+      </div>
+      }
+    </button>
+    <button
+      class="mobile-menu-item d-flex flex-column justify-content-start align-items-start fw-light fs-16px text-800 my-15px"
+      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
+      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
+      aria-controls="submenu-games-2">
+      <div class="d-flex justify-content-between w-100">
+        <span>
+          {{ data.loansAndCredits }}
+        </span>
+        <i class="icon icon-arrow-2-down-linear"></i>
+      </div>
+
+      @if (isSubmenuGamesOpen()) {
+      <div class="w-100 mb-10px submenu-games">
+        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.tripleRoulette"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.jackpot"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.quiz"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800">{{ data.credit }}</span>
+        </a>
+        <a [routerLink]="RouterLinksPath.gamesPage.paperScissorsRock"
+          class="mobile-menu-item d-flex align-items-center gap-10px mb-10px">
+          <i class="icon icon-credit-linear"></i>
+          <span class="fw-light fs-sm text-800"> {{ data.credit }}</span>
+        </a>
+      </div>
+      }
+    </button>
+    <a href="#about" class="mobile-menu-item fw-light fs-16px text-800 border-top-link">{{ data.credit }}</a>
+  </div>
+</div>
+}
