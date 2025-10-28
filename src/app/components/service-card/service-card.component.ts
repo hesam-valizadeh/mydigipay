@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ResponsiveService } from '../../@core/services/responsive.service';
 
 @Component({
   selector: 'app-service-card',
@@ -46,4 +47,5 @@ export class ServiceCardComponent {
       link: 'خدمات بیمه',
     },
   ];
+  responsive = inject(ResponsiveService);
 }

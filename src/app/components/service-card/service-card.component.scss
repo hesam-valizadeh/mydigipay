@@ -118,3 +118,34 @@
     }
     
 }
+
+
+ .icon-container {
+    width: 56px;
+        height: 56px;
+        padding: 12px !important;
+            justify-content: space-around !important; 
+               align-items: center !important;
+    display: flex !important;   
+     border-radius: 16px !important;
+     &.bnpl{
+        background: var(--Purple-Gradient, linear-gradient(221deg, #8643F3 4.59%, #C7AAF7 92.92%));
+
+     }
+     &.card-to-card{
+        background: var(--Blue-Gradient, linear-gradient(220deg, #1159FC 3.65%, #8EB1FE 95.95%));
+     }
+     &.bar-chart-upward{
+        background: var(--Green-Gradient, linear-gradient(224deg, #14A654 11.43%, #79FAB2 92.87%));
+     }
+     &.insurance{
+        background: var(--Dark-Blue-Gradient, linear-gradient(220deg, #0E0C7C 3.65%, #89A7EC 95.95%));
+     }
+    
+
+     i{
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+     }
+}   

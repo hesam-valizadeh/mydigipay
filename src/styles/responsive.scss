@@ -1,5 +1,7 @@
 @include media-breakpoint-down(lg) {
     header.container {
+    background-color: #f4f4f4 !important;
+    height: auto !important;
         div.row-lg {
             padding-top: 10px !important;
             max-width: 1091px;
@@ -19,18 +21,32 @@
            
             >div {
                 padding: 0 0 0 34px !important;
-        z-index: 1111;
+            background-color: #f4f4f4 !important;
+            z-index: 1111;
                 position: relative;
             }
+        }
+    
+    }
+ .search-bar{
+    position: sticky;
+    top: 0; 
+    z-index: 111;
+    background-color: #f4f4f4 !important;
+    padding: 10px 15px;
+    .search-box-container{
+        i{
+            top: 21px !important;
         }
         .search-box{
             background-color: #fff !important;
             width: 98% !important;
             margin-block: 10px;
-                
+          
         }
     }
-
+ }
+    
     .container {
         width: calc(100% - 40px);
     }

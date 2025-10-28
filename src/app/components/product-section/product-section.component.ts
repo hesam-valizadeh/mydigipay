@@ -30,8 +30,6 @@ export class ProductSectionComponent {
   }
 
   SwiperConfig: SwiperOptions = {
-    slidesPerView: 6.8,
-    spaceBetween: 8,
     centeredSlides: false,
     grabCursor: true,
     loopPreventsSliding: false,
@@ -39,6 +37,35 @@ export class ProductSectionComponent {
       type: 'bullets',
       el: '',
     },
-    breakpoints: {},
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 12,
+      },
+      360: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+      },
+      500: {
+        slidesPerView: 3,
+        spaceBetween: 12,
+      },
+      677: {
+        slidesPerView: 4,
+        spaceBetween: 2,
+      },
+      780: {
+        slidesPerView: 4.5,
+        spaceBetween: 12,
+      },
+      992: {
+        slidesPerView: 6,
+        spaceBetween: 12,
+      },
+      1200: {
+        slidesPerView: 6.8,
+        spaceBetween: 8,
+      },
+    },
   };
 }
