@@ -4,7 +4,7 @@ import { SwiperContainer } from 'swiper/element';
 import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
-  selector: '[appSwiperElement]'
+  selector: '[appSwiperElement]',
 })
 export class SwiperElementDirective implements AfterViewInit {
   private readonly _swiperElement: SwiperContainer;
@@ -13,13 +13,11 @@ export class SwiperElementDirective implements AfterViewInit {
   private element = inject(ElementRef<SwiperContainer>);
   private ngZone = inject(NgZone);
   private platformId = inject(PLATFORM_ID);
-  constructor(
-  ) {
+  constructor() {
     this._swiperElement = this.element.nativeElement;
   }
 
   ngAfterViewInit(): void {
-
     let autoplay: AutoplayOptions | boolean = false;
 
     if (this.config?.autoplay) {
@@ -35,9 +33,8 @@ export class SwiperElementDirective implements AfterViewInit {
         this.ngZone.runOutsideAngular(() => {
           this._swiperElement.swiper.params.autoplay = autoplay;
           this._swiperElement.swiper.autoplay.start();
-        })
+        });
       }
     }
   }
 }
-

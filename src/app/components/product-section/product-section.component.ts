@@ -9,22 +9,22 @@ import { ProductCarousel } from './model/carousel-inerface';
   selector: 'app-product-section',
   imports: [CustomSwiperComponent, ProductItemComponent],
   templateUrl: './product-section.component.html',
-  styleUrl: './product-section.component.scss'
+  styleUrl: './product-section.component.scss',
 })
 export class ProductSectionComponent {
   @Input() category!: string;
   @Input() storeName!: string | undefined;
   @Input() products!: ListModel<ProductCarousel>; // 👈 استفاده از Input
-  @Input() imageSrc!:string | undefined;
-  @Input() alt!:string | undefined;
-  @Input() width!:string | undefined;
-  @Input() height!:string | undefined;
-  @Input() title!:string | undefined;
-  @Input() loading!:string | undefined;
-  @Input() storeLogoSrc!:string | undefined;
-  @Input() priceNoDiscount!:string | undefined;
-  @Input() priceFinal!:string | undefined;
-  @Input() discountPercentage!:string | undefined;
+  @Input() imageSrc!: string | undefined;
+  @Input() alt!: string | undefined;
+  @Input() width!: string | undefined;
+  @Input() height!: string | undefined;
+  @Input() title!: string | undefined;
+  @Input() loading!: string | undefined;
+  @Input() storeLogoSrc!: string | undefined;
+  @Input() priceNoDiscount!: string | undefined;
+  @Input() priceFinal!: string | undefined;
+  @Input() discountPercentage!: string | undefined;
   get slider() {
     return this.products || new ListModel([]); // 👈 استفاده از Input data
   }
@@ -37,8 +37,8 @@ export class ProductSectionComponent {
     loopPreventsSliding: false,
     pagination: {
       type: 'bullets',
-      el: ""
+      el: '',
     },
-    breakpoints: {}
+    breakpoints: {},
   };
 }

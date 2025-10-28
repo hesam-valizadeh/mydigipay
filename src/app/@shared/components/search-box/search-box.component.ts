@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-search-box',
   imports: [],
   templateUrl: './search-box.component.html',
-  styleUrl:'./search-box.component.scss'
+  styleUrl: './search-box.component.scss',
 })
-export class SearchBoxComponent {
-
-}
+export class SearchBoxComponent {}

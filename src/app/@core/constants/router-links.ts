@@ -12,7 +12,7 @@ export class RouterLinksPath {
     khanomi: '/khanomi-campaign',
     nostrajamos: '/nostrajamos-campaign',
     divar: '/divar-campaign',
-  }
+  };
 
   static wealthPage = {
     wealth: '/wealth',
@@ -20,7 +20,7 @@ export class RouterLinksPath {
 }
 export function routeWithoutSlash(path: string): string {
   if (path.startsWith('/')) {
-    return path.replace('/', '')
+    return path.replace('/', '');
   } else {
     return path;
   }

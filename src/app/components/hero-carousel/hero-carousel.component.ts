@@ -9,56 +9,47 @@ import { HeroCarouselItemComponent } from './hero-carousel-item/hero-carousel-it
   selector: 'app-hero-carousel',
   imports: [CustomSwiperComponent, HeroCarouselItemComponent],
   templateUrl: './hero-carousel.component.html',
-  styleUrl: './hero-carousel.component.scss'
+  styleUrl: './hero-carousel.component.scss',
 })
 export class HeroCarouselComponent {
-  slider?:ListModel<HeroCarousel>  = new ListModel<HeroCarousel>([
+  slider?: ListModel<HeroCarousel> = new ListModel<HeroCarousel>([
     {
       id: 1,
-      image: "assets/images/01.webp",
+      image: 'assets/images/01.webp',
     },
     {
       id: 2,
-      image: "assets/images/02.webp",
-
+      image: 'assets/images/02.webp',
     },
     {
       id: 3,
-      image: "assets/images/03.webp",
-
+      image: 'assets/images/03.webp',
     },
     {
-
       id: 4,
-      image: "assets/images/04.webp",
-
+      image: 'assets/images/04.webp',
     },
     {
       id: 5,
-      image: "assets/images/05.webp",
-
+      image: 'assets/images/05.webp',
     },
     {
       id: 6,
-      image: "assets/images/06.webp",
-
+      image: 'assets/images/06.webp',
     },
     {
       id: 7,
-      image: "assets/images/07.webp",
-
+      image: 'assets/images/07.webp',
     },
     {
       id: 8,
-      image: "assets/images/08.webp",
-
+      image: 'assets/images/08.webp',
     },
     {
       id: 9,
-      image: "assets/images/09.webp",
-
-    }
-  ])
+      image: 'assets/images/09.webp',
+    },
+  ]);
 
   SwiperConfig: SwiperOptions = {
     slidesPerView: 'auto',
@@ -96,10 +87,8 @@ export class HeroCarouselComponent {
     }
         
      
-`
+`,
     ],
-    breakpoints: {
-
-    }
+    breakpoints: {},
   };
 }

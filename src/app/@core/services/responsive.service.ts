@@ -2,7 +2,7 @@ import { computed, Injectable, signal, WritableSignal } from '@angular/core';
 import { BreakpointKey } from '../models/types/responsive.types';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ResponsiveService {
   /** Breakpoints definition (you can adjust as needed) */
@@ -39,18 +39,28 @@ export class ResponsiveService {
       this.updateSignal(key, media.matches);
 
       // Listen for changes
-      media.addEventListener('change', e => this.updateSignal(key, e.matches));
+      media.addEventListener('change', (e) => this.updateSignal(key, e.matches));
     });
   }
 
   /** Map breakpoint name to signal */
   private updateSignal(breakpoint: string, value: boolean) {
     switch (breakpoint) {
-      case 'xs': this.isXs.set(value); break;
-      case 'sm': this.isSm.set(value); break;
-      case 'md': this.isMd.set(value); break;
-      case 'lg': this.isLg.set(value); break;
-      case 'xl': this.isXl.set(value); break;
+      case 'xs':
+        this.isXs.set(value);
+        break;
+      case 'sm':
+        this.isSm.set(value);
+        break;
+      case 'md':
+        this.isMd.set(value);
+        break;
+      case 'lg':
+        this.isLg.set(value);
+        break;
+      case 'xl':
+        this.isXl.set(value);
+        break;
     }
   }
 

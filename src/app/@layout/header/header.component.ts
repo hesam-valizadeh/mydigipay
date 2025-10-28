@@ -9,14 +9,11 @@ import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
-  imports: [
-    SearchBoxComponent,
-    RouterLink
-  ],
+  imports: [SearchBoxComponent, RouterLink],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
   isSubmenuOpen = signal(false);
   isSubmenuGamesOpen = signal(true);
 
@@ -26,31 +23,29 @@ export class HeaderComponent implements OnInit{
   protected readonly RouterLinksPath = RouterLinksPath;
   responsive = inject(ResponsiveService);
   data: HeaderViewDataInterface = {
-    loansAndCredits: "وام و اعتبار",
-    credit: "وام خرید کالا",
-    bnpl: "الان بخر بعدا پرداخت کن",
-    merchants: "خرید اقساطی از دیجی‌کالا",
-    insurance: "بیمه",
-    thirdPartyInsurance: "بیمه شخص ثالث",
-    equipment: "بیمه تجهیزات الکترونیک",
-    wealth: "مدیریت سرمایه",
-    serviceOrganization: "خدمات کسب و کارها",
-    bpg: "درگاه پرداخت اعتباری"
-  }
+    loansAndCredits: 'وام و اعتبار',
+    credit: 'وام خرید کالا',
+    bnpl: 'الان بخر بعدا پرداخت کن',
+    merchants: 'خرید اقساطی از دیجی‌کالا',
+    insurance: 'بیمه',
+    thirdPartyInsurance: 'بیمه شخص ثالث',
+    equipment: 'بیمه تجهیزات الکترونیک',
+    wealth: 'مدیریت سرمایه',
+    serviceOrganization: 'خدمات کسب و کارها',
+    bpg: 'درگاه پرداخت اعتباری',
+  };
   ngOnInit() {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
       this.isSubmenuOpen.set(false);
       this.isSubmenuGamesOpen.set(true);
-    })
+    });
   }
   toggleSubmenu() {
-    this.isSubmenuOpen.update(prev => !prev);
+    this.isSubmenuOpen.update((prev) => !prev);
   }
 
   toggleSubmenuGames() {
-    this.isSubmenuGamesOpen.update(prev => !prev);
+    this.isSubmenuGamesOpen.update((prev) => !prev);
   }
 
   @HostListener('document:click', ['$event'])

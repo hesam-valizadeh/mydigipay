@@ -1,13 +1,11 @@
-import {EnvironmentInterface} from '../app/@core/models/interfaces/environment.interface';
-import {DeployTargetEnum} from '../app/@core/models/enums';
-
+import { EnvironmentInterface } from '../app/@core/models/interfaces/environment.interface';
+import { DeployTargetEnum } from '../app/@core/models/enums';
 const baseURL = 'http://mydigipay.website';
-
 export const environment: EnvironmentInterface = {
   production: false,
   deployTarget: DeployTargetEnum.LOCAL,
   baseURL,
-  apiUrl: baseURL + '/api'
+  apiUrl: baseURL + '/api',
 };
 
 /*

@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-wealth',
   imports: [],
   templateUrl: './wealth.component.html',
-  styleUrl: './wealth.component.scss'
+  styleUrl: './wealth.component.scss',
 })
-export class WealthComponent {
-
-}
+export class WealthComponent {}

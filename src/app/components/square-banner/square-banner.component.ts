@@ -10,30 +10,26 @@ import { SquareBannerCarousel } from './model/carousel-inerface';
   imports: [CustomSwiperComponent, SquareBannerItem],
   standalone: true,
   templateUrl: './square-banner.component.html',
-  styleUrl: './square-banner.component.scss'
+  styleUrl: './square-banner.component.scss',
 })
 export class SquareBanner {
-
   slider?: ListModel<SquareBannerCarousel> = new ListModel<SquareBannerCarousel>([
     {
       id: 1,
-      image: "assets/images/banner/01.webp",
-      width: "748"
+      image: 'assets/images/banner/01.webp',
+      width: '748',
     },
     {
       id: 2,
-      image: "assets/images/banner/02.webp",
-      width: "748"
-
+      image: 'assets/images/banner/02.webp',
+      width: '748',
     },
     {
       id: 3,
-      image: "assets/images/banner/03.webp",
-      width: "748"
-
-    }
-
-  ])
+      image: 'assets/images/banner/03.webp',
+      width: '748',
+    },
+  ]);
 
   SwiperConfig: SwiperOptions = {
     slidesPerView: 'auto',
@@ -48,12 +44,12 @@ export class SquareBanner {
     },
     pagination: {
       type: 'bullets',
-      el: ""
+      el: '',
     },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    breakpoints: {}
+    breakpoints: {},
   };
 }

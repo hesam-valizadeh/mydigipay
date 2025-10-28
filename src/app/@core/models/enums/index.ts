@@ -1,1 +1,1 @@
-export {DeployTargetEnum} from './deploy-target-enum';
+export { DeployTargetEnum } from './deploy-target-enum';

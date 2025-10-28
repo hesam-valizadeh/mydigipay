@@ -9,5 +9,4 @@ export interface HeaderViewDataInterface {
   wealth: string;
   serviceOrganization: string;
   bpg: string;
-
 }

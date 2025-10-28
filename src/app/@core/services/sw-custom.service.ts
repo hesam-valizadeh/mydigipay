@@ -7,7 +7,7 @@ export class SwUpdateService {
 
   constructor() {
     if (this.updates.isEnabled) {
-      this.updates.versionUpdates.subscribe(evt => {
+      this.updates.versionUpdates.subscribe((evt) => {
         if (evt.type === 'VERSION_READY') {
           const update = confirm('نسخه جدید در دسترس است. بارگذاری شود؟');
           if (update) location.reload();

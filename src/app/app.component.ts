@@ -1,17 +1,17 @@
-import {Component, inject, OnInit} from '@angular/core';
-import {ActivatedRoute, NavigationEnd, Router, RouterOutlet} from '@angular/router';
-import {HeaderComponent} from './@layout/header/header.component';
-import {Meta, Title} from '@angular/platform-browser';
-import {filter, map, mergeMap} from 'rxjs';
-import {environment} from '../enviroment/environment';
+import { Component, inject, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './@layout/header/header.component';
+import { Meta, Title } from '@angular/platform-browser';
+import { filter, map, mergeMap } from 'rxjs';
+import { environment } from '../enviroment/environment';
 import { FooterComponent } from './@layout/footer/footer.component';
 import { SwUpdateService } from './@core/services/sw-custom.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent,FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
   private router = inject(Router);
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events
       .pipe(
-        filter(event => event instanceof NavigationEnd),
+        filter((event) => event instanceof NavigationEnd),
         map(() => {
           let route = this.activatedRoute;
           while (route.firstChild) {
@@ -30,16 +30,16 @@ export class AppComponent implements OnInit {
           }
           return route;
         }),
-        mergeMap(route => route.data)
+        mergeMap((route) => route.data),
       )
-      .subscribe(data => {
+      .subscribe((data) => {
         if (data['title']) {
           this.titleService.setTitle(data['title']);
         }
         if (data['description']) {
           this.metaService.updateTag({
             name: 'description',
-            content: data['description']
+            content: data['description'],
           });
         }
 
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
         this.metaService.removeTag("rel='canonical'");
         this.metaService.addTag({
           rel: 'canonical',
-          href: canonicalUrl
+          href: canonicalUrl,
         });
       });
   }
