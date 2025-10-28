@@ -14,7 +14,7 @@ import { ProductCarousel } from './model/carousel-inerface';
 export class ProductSectionComponent {
   @Input() category!: string;
   @Input() storeName!: string | undefined;
-  @Input() products!: ListModel<ProductCarousel>; // 👈 استفاده از Input
+  @Input() products!: ListModel<ProductCarousel>;
   @Input() imageSrc!: string | undefined;
   @Input() alt!: string | undefined;
   @Input() width!: string | undefined;
@@ -26,7 +26,7 @@ export class ProductSectionComponent {
   @Input() priceFinal!: string | undefined;
   @Input() discountPercentage!: string | undefined;
   get slider() {
-    return this.products || new ListModel([]); // 👈 استفاده از Input data
+    return this.products || new ListModel([]);
   }
 
   SwiperConfig: SwiperOptions = {

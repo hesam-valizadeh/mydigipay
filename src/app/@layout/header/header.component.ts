@@ -31,8 +31,14 @@ export class HeaderComponent implements OnInit {
     thirdPartyInsurance: 'بیمه شخص ثالث',
     equipment: 'بیمه تجهیزات الکترونیک',
     wealth: 'مدیریت سرمایه',
-    serviceOrganization: 'خدمات کسب و کارها',
+    serviceBusiness: 'خدمات کسب و کارها',
     bpg: 'درگاه پرداخت اعتباری',
+    merchantsSeller: 'وام فروشمدگان',
+    ipg: 'درگاه پرداخت جامع',
+    merchantCredit: 'تسویه زودهنگام',
+    serviceOrganization: 'خدمات سازمانی',
+    Ocredit: 'خرید اقساطی از دیجی‌کالا',
+    orgbnpl: 'الان بخر بعدا پرداخت کن',
   };
   ngOnInit() {
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {

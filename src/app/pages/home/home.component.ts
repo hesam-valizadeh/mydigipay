@@ -16,7 +16,6 @@ import { BottomNavigationComponent } from '../../@layout/bottom-navigation/botto
 })
 export class HomeComponent {
   data: HomePageViewDataInterface = {
-    downloadApp: 'دانلود اپلیکیشن',
     smartSwitches: {
       category: 'کلید و پریز هوشمند',
       sliderProducts: [

@@ -160,17 +160,18 @@ nav.navbar {
 
 
 .mobile-submenu {
-  z-index: 1111;
+  z-index: 111;
   background-color: #f2f3f6;
   width: 100%;
   height: auto;
-  padding: 30px;
+  padding: 60px 30px;
   border-radius: 0;
-  position: absolute;
-  top: 46px;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-
+  bottom: 0;
+  overflow-y: scroll;
   .mobile-menu-item {
     font-size: 12px;
     font-weight: 300;
@@ -181,6 +182,14 @@ nav.navbar {
 
     &:hover {
       color: #6c00cb;
+    }
+  }
+}
+button{
+  background-color: transparent;
+  div{
+    span{
+      color:#45474A
     }
   }
 }

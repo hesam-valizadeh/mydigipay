@@ -7,6 +7,12 @@ export interface HeaderViewDataInterface {
   thirdPartyInsurance: string;
   equipment: string;
   wealth: string;
-  serviceOrganization: string;
+  serviceBusiness: string;
   bpg: string;
+  merchantsSeller: string;
+  ipg: string;
+  merchantCredit: string;
+  serviceOrganization: string;
+  Ocredit: string;
+  orgbnpl: string;
 }

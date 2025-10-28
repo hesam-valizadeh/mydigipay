@@ -1,7 +1,6 @@
 @include media-breakpoint-down(lg) {
     header.container {
-
-        div.row {
+        div.row-lg {
             padding-top: 10px !important;
             max-width: 1091px;
 
@@ -19,7 +18,9 @@
             }
            
             >div {
-                padding: 0 !important;
+                padding: 0 0 0 34px !important;
+        z-index: 1111;
+                position: relative;
             }
         }
         .search-box{
