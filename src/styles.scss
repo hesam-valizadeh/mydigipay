@@ -1,12 +1,12 @@
-@use "styles/variables" as *;
-@import "styles/utility";
-@import "styles/icons";
-@import "styles/fonts/YekanBakh";
+@use 'styles/variables' as *;
+@import 'styles/utility';
+@import 'styles/icons';
+@import 'styles/fonts/YekanBakh';
 
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/bootstrap";
-@import "styles/responsive";
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'styles/responsive';
 
 *,
 *::after,
@@ -15,24 +15,25 @@
   padding: 0;
   direction: rtl;
   box-sizing: border-box;
-  
 }
 
 body {
-  font-family: "Yekan-Bakh";
+  font-family: Yekan-Bakh;
   direction: rtl;
   background-color: #f2f3f6;
 }
 
 a {
-  color: #45474A;
+  color: #45474a;
   text-decoration: none;
   font-size: 14px;
 }
-button{
-  border:none;
+
+button {
+  border: none;
   outline: none;
 }
+
 .icon-container {
   display: flex;
   justify-content: flex-start;
@@ -50,13 +51,12 @@ button{
   }
 }
 
-
-figure{
+figure {
   margin: unset;
 }
-a:focus-visible{
+
+a:focus-visible {
   background-color: transparent;
   border: transparent;
   outline: transparent;
 }
-

@@ -5,7 +5,7 @@ header {
   a.menu_link {
     margin: 0 -2.5px;
 
-    >span {
+    > span {
       font-size: 12px;
       font-weight: 450;
       margin: 0 16px;
@@ -35,8 +35,9 @@ header {
       width: 245px;
       text-align: center;
       border-radius: 24px;
-      box-shadow: 0px 2px 12px 0px rgba(69, 71, 74, 0.07), -4px 0px 12px 0px rgba(69, 71, 74, 0.07);
-      -webkit-backdrop-filter: blur(25px);
+      box-shadow:
+        0 2px 12px 0 rgb(69 71 74 / 7%),
+        -4px 0 12px 0 rgb(69 71 74 / 7%);
       backdrop-filter: blur(25px);
       padding: 20px;
       z-index: 11;
@@ -51,39 +52,38 @@ header {
         font-size: 12px;
 
         span {
-          color: #45474A;
+          color: #45474a;
         }
 
         i {
-          color: #1159FC;
+          color: #1159fc;
           font-size: 24px;
           width: 24px;
           height: 24px;
           display: flex;
-          -webkit-background-clip: text !important;
+          background-clip: text !important;
           -webkit-text-fill-color: transparent;
-          background: #74777C;
+          background: #74777c;
 
-          >svg {
-            fill: #74777C
+          > svg {
+            fill: #74777c;
           }
         }
       }
-
     }
 
     a.menu_link {
       position: relative;
 
       &:hover {
-        color: #1159FC;
+        color: #1159fc;
 
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           width: 20px;
           height: 2px;
-          background: #1159FC;
+          background: #1159fc;
           bottom: 0;
           left: 38%;
         }
@@ -92,7 +92,6 @@ header {
           opacity: 1;
           visibility: visible;
           transition: all 0.2s linear;
-
         }
       }
 
@@ -101,23 +100,19 @@ header {
         border-radius: 8px;
 
         i {
-          background: #1159FC;
+          background: #1159fc;
         }
 
         svg {
-          fill: #1159FC
+          fill: #1159fc;
         }
 
-
         span {
-          color: #1159FC;
+          color: #1159fc;
         }
       }
     }
-
-
   }
-
 }
 
 nav {
@@ -125,30 +120,28 @@ nav {
   border-radius: 50em;
   display: flex;
   align-items: center;
-  padding: 10px 0px 10px 10px !important;
+  padding: 10px 0 10px 10px !important;
   height: 68px;
 }
 
 .active,
 .active * {
-
-  color: #1159FC;
+  color: #1159fc;
 }
 
 nav.navbar {
   a.nav-item {
     span:nth-child(2) {
-      font-size: 12px;
       line-height: 2;
       font-size: 12px !important;
       font-weight: 450 !important;
-      font-variation-settings: "DOTS" 1 !important;
+      font-variation-settings: 'DOTS' 1 !important;
     }
   }
 }
 
 .icon-discount-bold {
-  color: #F9441F;
+  color: #f9441f;
   top: -6px;
   right: -11px;
   font-size: 16px;
@@ -158,7 +151,6 @@ nav.navbar {
   border-radius: 50em;
 }
 
-
 .mobile-submenu {
   z-index: 111;
   background-color: #f2f3f6;
@@ -167,11 +159,9 @@ nav.navbar {
   padding: 60px 30px;
   border-radius: 0;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   overflow-y: scroll;
+
   .mobile-menu-item {
     font-size: 12px;
     font-weight: 300;
@@ -185,11 +175,23 @@ nav.navbar {
     }
   }
 }
-button{
+
+button {
   background-color: transparent;
-  div{
-    span{
-      color:#45474A
+
+  div {
+    span {
+      color: #45474a;
     }
   }
+}
+
+.header-sticky {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  position: sticky;
+  top: 10px;
+  height: 50px;
+  z-index: 11111;
 }

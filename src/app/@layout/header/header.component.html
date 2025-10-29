@@ -132,13 +132,14 @@
       </a>
     </div>
   </div>
- 
+
 </header>
 @if(responsive.isMobile()){
-  <div class="search-bar">
-    <app-search-box></app-search-box>
-  </div>
-  }
+<div class="search-bar">
+  <app-search-box></app-search-box>
+</div>
+}
+
 <nav class="navbar justify-content-start container d-lg-flex d-none">
   <a href="" class="nav-item mx-24px d-flex gap-5px active">
     <span class="icon-container">
@@ -168,7 +169,42 @@
   <app-search-box class="me-auto"></app-search-box>
 </nav>
 
-
+<header class="header-sticky">
+  <nav class="navbar justify-content-start container d-lg-flex d-none">
+    <a href="" class="nav-item mx-24px d-flex gap-5px active">
+      <span class="icon-container">
+        <i class="icon icon-home-bold"></i>
+      </span>
+      <span>خانه</span>
+    </a>
+    <a href="" class="nav-item mx-24px d-flex gap-5px">
+      <span class="icon-container">
+        <i class="icon icon-more-bold"></i>
+      </span>
+      <span>خدمات</span>
+    </a>
+    <a href="" class="nav-item mx-24px d-flex gap-5px">
+      <span class="icon-container position-relative">
+        <i class="icon icon-bag-bold"></i>
+        <i class="icon icon-discount-bold position-absolute "></i>
+      </span>
+      <span>فروشگاه‌ها</span>
+    </a>
+    <a href="" class="nav-item mx-24px d-flex gap-5px">
+      <span class="icon-container">
+        <i class="icon icon-card-to-card-bold"></i>
+      </span>
+      <span>پرداخت</span>
+    </a>
+    <button>
+      <i class="icon icon-search-bold"></i>
+    </button>
+    <button>
+      <i class="icon  icon-person-bold"></i>
+    </button>
+  
+  </nav>
+</header>
 
 
 @if (isSubmenuOpen()) {

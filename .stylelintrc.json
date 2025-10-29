@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-prettier/recommended",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-scss", "stylelint-prettier"],
+  "rules": {
+    "indentation": 4,
+    "color-hex-case": "lower",
+    "selector-class-pattern": "^[a-z0-9\\-]+$",
+    "max-nesting-depth": 3,
+    "block-no-empty": true,
+    "comment-no-empty": true, 
+    "no-empty-source": true,
+    "prettier/prettier": true,
+    "rule-empty-line-before": [
+      "always",
+      { "except": ["after-single-line-comment"] }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-@media screen and (min-width: 1200px) {
+@media screen and (width >= 1200px) {
   .hero-carousel {
     .swiper-slide {
       width: 748px !important;
@@ -23,6 +23,5 @@
   }
 }
 
-@media screen and (max-width: 1199px) {
- 
+@media screen and (width <= 1199px) {
 }

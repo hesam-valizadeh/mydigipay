@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "pretty-quick": "pretty-quick --staged",
+    "lint:css": "stylelint \"src/**/*.scss\" --fix",
     "lint": "ng lint --fix"
   },
   "private": true,
@@ -46,6 +47,11 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.6.2",
     "pretty-quick": "^4.2.2",
+    "stylelint": "^16.25.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "stylelint-scss": "^6.12.1",
     "typescript": "~5.9.3",
     "typescript-eslint": "8.34.1"
   }

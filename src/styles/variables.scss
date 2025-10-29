@@ -1,29 +1,29 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-$font-base-url: "assets/fonts";
-$image-base-url: "assets/images";
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+$font-base-url: 'assets/fonts';
+$image-base-url: 'assets/images';
 
 @function loadStaticFont($local-path) {
-  @return url($font-base-url + $local-path)
+  @return url($font-base-url + $local-path);
 }
 
-
 // Color
-$primary: #1159FC;
-$secondary: #F0003C;
-$tertiary: #2FCB5A;
+$primary: #1159fc;
+$secondary: #f0003c;
+$tertiary: #2fcb5a;
 $black: #000;
-$white: #fff  !default;
-$success: #00C958;
-$warning: #DFAE00;
-$progress: #FE8035;
-$danger: #F9441F;
-$info: #53C6DF;
-$pink:#EA58B9;
-$brand:#1159FC;
-$gray-100: #F8F9FA;
+$white: #fff !default;
+$success: #00c958;
+$warning: #dfae00;
+$progress: #fe8035;
+$danger: #f9441f;
+$info: #53c6df;
+$pink: #ea58b9;
+$brand: #1159fc;
+$gray-100: #f8f9fa;
 $gray-200: #e9ecef;
-$gray-300: #F8F9FA;
+$gray-300: #f8f9fa;
 $gray-400: #ced4da;
 $gray-500: #adb5bd;
 $gray-600: #6c757d;
@@ -31,38 +31,38 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "tertiary": $tertiary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "lighter": $light,
-  "dark": $dark,
-  "white": $white,
-  "orange": $orange,
-  "pink": $pink,
-  "100": #F8F9FA,
-  "200": #E9ECEF,
-  "300": #DEE2E6,
-  "400": #CED4DA,
-  "500": #ADB5BD,
-  "600": #6C757D,
-  "700": #495057,
-  "800": #343a40,
-  "900": #45474A,
+  'primary': $primary,
+  'secondary': $secondary,
+  'tertiary': $tertiary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'lighter': $light,
+  'dark': $dark,
+  'white': $white,
+  'orange': $orange,
+  'pink': $pink,
+  '100': #f8f9fa,
+  '200': #e9ecef,
+  '300': #dee2e6,
+  '400': #ced4da,
+  '500': #adb5bd,
+  '600': #6c757d,
+  '700': #495057,
+  '800': #343a40,
+  '900': #45474a,
 );
-
 $btn-padding-x: 20px;
 $btn-padding-y: 8px;
 $btn-font-size: 16px;
 $btn-border-radius: 25px;
 $btn-border-radius-sm: 25px;
 $btn-border-radius-lg: 25px;
-$border-radius : 30px;
-$btn-font-weight:    300;
+$border-radius: 30px;
+$btn-font-weight: 300;
+
 // Spacing
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
@@ -72,60 +72,59 @@ $btn-font-weight:    300;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
-  5px:5px,
-  6px:6px,
-  7px:7px,
-  8px:8px,
-  9px:9px,
-  10px:10px,
-  11px:11px,
-  12px:12px,
-  13px:13px,
-  14px:14px,
-  15px:15px,
-  16px:16px,
-  20px:20px,
-  24px:24px,
-  25px:25px,
-  30px:30px,
-  32px:32px,
-  35px:35px,
-  40px:40px,
-  42px:42px,
-  45px:45px,
-  50px:50px,
-  55px:55px,
-  60px:60px,
-  65px:65px,
-  70px:70px,
-  75px:75px,
-  80px:80px,
-  85px:85px,
-  90px:90px,
-  95px:95px,
-  100px:100px,
-  105px:105px,
-  110px:110px,
-  115px:115px,
-  120px:120px
-) ;
+  5px: 5px,
+  6px: 6px,
+  7px: 7px,
+  8px: 8px,
+  9px: 9px,
+  10px: 10px,
+  11px: 11px,
+  12px: 12px,
+  13px: 13px,
+  14px: 14px,
+  15px: 15px,
+  16px: 16px,
+  20px: 20px,
+  24px: 24px,
+  25px: 25px,
+  30px: 30px,
+  32px: 32px,
+  35px: 35px,
+  40px: 40px,
+  42px: 42px,
+  45px: 45px,
+  50px: 50px,
+  55px: 55px,
+  60px: 60px,
+  65px: 65px,
+  70px: 70px,
+  75px: 75px,
+  80px: 80px,
+  85px: 85px,
+  90px: 90px,
+  95px: 95px,
+  100px: 100px,
+  105px: 105px,
+  110px: 110px,
+  115px: 115px,
+  120px: 120px,
+);
+
 // scss-docs-end spacer-variables-maps
-
-
 
 // scss-docs-start form-label-variables
 $form-label-margin-bottom: 5px;
 $form-label-font-size: 16px;
 $form-label-font-weight: 300;
-$form-label-color: #343A40;
+$form-label-color: #343a40;
+
 // scss-docs-end form-label-variables
 $enable-rfs: false;
-
 $font-sizes: (
   1: $h1-font-size,
   2: $h2-font-size,
@@ -148,26 +147,26 @@ $font-sizes: (
   30px: 30px,
   32px: 32px,
 );
-$border-color:                #E3E3E3 ;
+$border-color: #e3e3e3;
+
 // scss-docs-start form-input-variables
 $input-padding-y: 13px;
 $input-padding-x: 16px;
-$input-font-family: IRANYekanX;
+$input-font-family: iranyekanx;
 $input-font-size: 14px;
 $input-font-weight: 400;
 $input-line-height: 100%;
 $input-border-radius: 25px;
 $input-color: #343a40;
-$input-placeholder-color:#ADB5BD;
+$input-placeholder-color: #adb5bd;
 $input-plaintext-color: var(--#{$prefix}body-color) !default;
-$input-border-color: #E3E3E3;
+$input-border-color: #e3e3e3;
 $input-border-width: 1px;
 $input-box-shadow: none;
 $input-focus-box-shadow: none;
-$input-focus-border-color: #E3E3E3;
+$input-focus-border-color: #e3e3e3;
+
 // scss-docs-end form-input-variables
-
-
 
 // Grid breakpoints
 // Define the minimum dimensions at which your layout will change,
@@ -175,17 +174,19 @@ $input-focus-border-color: #E3E3E3;
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   xxs: 0,
-  xs: 540px, // not used yet
-  sm: 768px, // not used yet
-  md: 992px, // not used yet
-  lg: 1200px
+  xs: 540px,
+  // not used yet
+  sm: 768px,
+  // not used yet
+  md: 992px,
+  // not used yet
+  lg: 1200px,
 );
 
 // scss-docs-end grid-breakpoints
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
-
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints, '$grid-breakpoints');
 
 // Grid containers
 //
@@ -196,24 +197,24 @@ $container-max-widths: (
   xs: 100%,
   sm: 100%,
   md: 100%,
-  lg: 1084px
+  lg: 1084px,
 );
 
 // scss-docs-end container-max-widths
 
-@include _assert-ascending($container-max-widths, "$container-max-widths");
-
+@include _assert-ascending($container-max-widths, '$container-max-widths');
 
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
 
-$grid-columns:                12 !default;
+$grid-columns: 12 !default;
 $grid-gutter-width: 30px;
-$grid-row-columns:            6 !default;
+$grid-row-columns: 6 !default;
 
 // Container padding
 
 $container-padding-x: $grid-gutter-width;
+
 // $font-size-base affects the font size of the body text
 $font-size-root: null;
 $font-size-xxs: 10px;
@@ -224,6 +225,7 @@ $font-size-md: 18px;
 $font-size-lg: 20px;
 $font-size-xl: 22px;
 $font-size-xxl: 24px;
+
 // scss-docs-start font-sizes
 $h1-font-size: 40px;
 $h2-font-size: $font-size-base * 2 !default;
@@ -232,21 +234,21 @@ $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
-
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 4px 10px 0px rgba(0,0,0,0.15);
-$box-shadow-sm:               0 4px 10px rgba(0,0,0,0.1);
-$box-shadow-lg:               0 4px 10px rgba(0,0,0,0.3);
+$box-shadow: 0 4px 10px 0px rgb(0 0 0 / 15%);
+$box-shadow-sm: 0 4px 10px rgb(0 0 0 / 10%);
+$box-shadow-lg: 0 4px 10px rgb(0 0 0 / 30%);
+
 // scss-docs-start border-radius-variables
-$border-radius-xs:            15px ;
-$border-radius-sm:            25px ;
-$border-radius-lg:            30px ;
-$border-radius-xl:            1rem ;
-$border-radius-xxl:           2rem ;
-$border-radius-pill:          50rem ;
+$border-radius-xs: 15px;
+$border-radius-sm: 25px;
+$border-radius-lg: 30px;
+$border-radius-xl: 1rem;
+$border-radius-xxl: 2rem;
+$border-radius-pill: 50rem;
 
 // typography
-$headings-margin-bottom: $spacer * .5;
+$headings-margin-bottom: $spacer * 0.5;
 $headings-font-family: null;
 $headings-font-style: null;
 $headings-font-weight: 500;
@@ -254,8 +256,8 @@ $headings-line-height: 1.2;
 $headings-color: null;
 $lead-font-size: $font-size-base * 1.25;
 $lead-font-weight: 300;
-$small-font-size: .875em;
-$sub-sup-font-size: .75em;
+$small-font-size: 0.875em;
+$sub-sup-font-size: 0.75em;
 $text-muted: $gray-600;
 $initialism-font-size: $small-font-size;
 $blockquote-margin-y: $spacer;
@@ -264,17 +266,18 @@ $blockquote-footer-color: $gray-600;
 $blockquote-footer-font-size: $small-font-size;
 $hr-margin-y: $spacer;
 $hr-color: inherit;
+
 // fusv-disable
 $hr-bg-color: null; // Deprecated in v5.2.0
 $hr-height: null; // Deprecated in v5.2.0
 // fusv-enable
 $hr-border-color: null; // Allows for inherited colors
 $hr-border-width: $border-width;
-$hr-opacity: .25;
-$legend-margin-bottom: .5rem;
+$hr-opacity: 0.25;
+$legend-margin-bottom: 0.5rem;
 $legend-font-size: 1.5rem;
 $legend-font-weight: null;
 $dt-font-weight: $font-weight-bold;
-$list-inline-padding: .5rem;
-$mark-padding: .1875em;
+$list-inline-padding: 0.5rem;
+$mark-padding: 0.1875em;
 $mark-bg: $yellow-100;
