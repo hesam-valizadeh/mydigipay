@@ -1,58 +1,65 @@
-<header class="pb-lg-16px pt-lg-42px container">
+<header class="pb-lg-16px pt-lg-42px container" >
   <div class="row-lg d-flex align-items-center">
     <div class="col-lg-5 col-12 d-flex align-items-center justify-content-between">
       <a href="" class="">
-        <img src="assets/images/logo.svg" alt="logo" width="78" height="19" class="me-lg-8px me-0">
+        <img
+          src="assets/images/logo.svg"
+          alt="logo"
+          width="78"
+          height="19"
+          class="me-lg-8px me-0"
+        />
       </a>
-      <div class=" d-lg-none d-inline-block">
-
-        <button class="hamburger-btn" (click)="toggleSubmenu()" (keydown.enter)="toggleSubmenu()"
-          (keydown.space)="toggleSubmenu(); $event.preventDefault()" aria-label="منو اصلی"
-          aria-expanded="{{isSubmenuOpen()}}" tabindex="0">
+      <div class="d-lg-none d-inline-block">
+        <button
+          class="hamburger-btn"
+          (click)="toggleSubmenu()"
+          (keydown.enter)="toggleSubmenu()"
+          (keydown.space)="toggleSubmenu(); $event.preventDefault()"
+          aria-label="منو اصلی"
+          aria-expanded="{{ isSubmenuOpen() }}"
+          tabindex="0"
+        >
           <i class="icon icon-hamburger-menu-linear text-dark"> </i>
         </button>
       </div>
-
     </div>
     <div class="col-lg-auto d-lg-block d-none p-0">
-      <menu class="p-0 ">
+      <menu class="p-0">
         <a href="" class="menu_link">
-          <span>
-            وام و اعتبار
-          </span>
+          <span> وام و اعتبار </span>
           <div class="submenu">
             <a href="" class="submenu_link">
               <i class="icon icon-credit-linear"></i>
-              <span>
-                وام خرید کالا
-              </span>
+              <span> وام خرید کالا </span>
             </a>
             <a href="" class="submenu_link">
               <i class="icon icon-bnpl-linear"></i>
-              <span>
-                الان بخر بعدا پرداخت کن
-              </span>
+              <span> الان بخر بعدا پرداخت کن </span>
             </a>
             <a href="" class="submenu_link">
               <i>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <g id="Logo Frame">
-                    <path id="Vector"
-                      d="M2.21974 11.049C1.86054 10.6139 1.95313 9.96163 2.41409 9.63763L4.02338 8.50735C4.43393 8.21861 4.99081 8.29808 5.31781 8.67949C6.98386 10.6234 9.42233 11.761 11.9999 11.761C14.5777 11.761 17.0162 10.6234 18.6821 8.67949C19.0091 8.29808 19.5659 8.21861 19.9766 8.50735L21.5858 9.63763C22.0469 9.96163 22.1395 10.6139 21.7802 11.049C19.3778 13.9578 15.7937 15.6666 11.9999 15.6666C8.20628 15.6666 4.62226 13.9578 2.21974 11.049Z">
-                    </path>
+                    <path
+                      id="Vector"
+                      d="M2.21974 11.049C1.86054 10.6139 1.95313 9.96163 2.41409 9.63763L4.02338 8.50735C4.43393 8.21861 4.99081 8.29808 5.31781 8.67949C6.98386 10.6234 9.42233 11.761 11.9999 11.761C14.5777 11.761 17.0162 10.6234 18.6821 8.67949C19.0091 8.29808 19.5659 8.21861 19.9766 8.50735L21.5858 9.63763C22.0469 9.96163 22.1395 10.6139 21.7802 11.049C19.3778 13.9578 15.7937 15.6666 11.9999 15.6666C8.20628 15.6666 4.62226 13.9578 2.21974 11.049Z"
+                    ></path>
                   </g>
                 </svg>
               </i>
-              <span>
-                خرید اقساطی از دیجی‌کالا
-              </span>
+              <span> خرید اقساطی از دیجی‌کالا </span>
             </a>
           </div>
         </a>
         <a href="" class="menu_link">
-          <span>
-            بیمه
-          </span>
+          <span> بیمه </span>
           <div class="submenu">
             <a href="" class="submenu_link">
               <i class="icon icon-car-linear"></i>
@@ -65,14 +72,10 @@
           </div>
         </a>
         <a [routerLink]="RouterLinksPath.wealthPage.wealth" class="menu_link">
-          <span>
-            مدیریت سرمایه
-          </span>
+          <span> مدیریت سرمایه </span>
         </a>
         <a href="" class="menu_link">
-          <span>
-            خدمات کسب و کارها
-          </span>
+          <span> خدمات کسب و کارها </span>
           <div class="submenu">
             <a href="" class="submenu_link">
               <i class="icon icon-bank-linear"></i>
@@ -93,31 +96,30 @@
           </div>
         </a>
         <a href="" class="menu_link">
-          <span>
-            خدمات سازمانی
-          </span>
+          <span> خدمات سازمانی </span>
           <div class="submenu">
-
-
             <a href="" class="submenu_link">
               <i>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <g id="Logo Frame">
-                    <path id="Vector"
-                      d="M2.21974 11.049C1.86054 10.6139 1.95313 9.96163 2.41409 9.63763L4.02338 8.50735C4.43393 8.21861 4.99081 8.29808 5.31781 8.67949C6.98386 10.6234 9.42233 11.761 11.9999 11.761C14.5777 11.761 17.0162 10.6234 18.6821 8.67949C19.0091 8.29808 19.5659 8.21861 19.9766 8.50735L21.5858 9.63763C22.0469 9.96163 22.1395 10.6139 21.7802 11.049C19.3778 13.9578 15.7937 15.6666 11.9999 15.6666C8.20628 15.6666 4.62226 13.9578 2.21974 11.049Z">
-                    </path>
+                    <path
+                      id="Vector"
+                      d="M2.21974 11.049C1.86054 10.6139 1.95313 9.96163 2.41409 9.63763L4.02338 8.50735C4.43393 8.21861 4.99081 8.29808 5.31781 8.67949C6.98386 10.6234 9.42233 11.761 11.9999 11.761C14.5777 11.761 17.0162 10.6234 18.6821 8.67949C19.0091 8.29808 19.5659 8.21861 19.9766 8.50735L21.5858 9.63763C22.0469 9.96163 22.1395 10.6139 21.7802 11.049C19.3778 13.9578 15.7937 15.6666 11.9999 15.6666C8.20628 15.6666 4.62226 13.9578 2.21974 11.049Z"
+                    ></path>
                   </g>
                 </svg>
               </i>
-              <span>
-                خرید اقساطی از دیجی‌کالا
-              </span>
+              <span> خرید اقساطی از دیجی‌کالا </span>
             </a>
             <a href="" class="submenu_link">
               <i class="icon icon-bnpl-linear"></i>
-              <span>
-                الان بخر بعدا پرداخت کن
-              </span>
+              <span> الان بخر بعدا پرداخت کن </span>
             </a>
           </div>
         </a>
@@ -125,19 +127,16 @@
     </div>
     <div class="col-lg-auto d-lg-block d-none p-0">
       <a href="" class="login">
-        <img src="assets/icons/person.svg" alt="logo" width="20" height="20">
-        <span>
-          ورود/ثبت نام
-        </span>
+        <img src="assets/icons/person.svg" alt="logo" width="20" height="20" />
+        <span> ورود/ثبت نام </span>
       </a>
     </div>
   </div>
-
 </header>
-@if(responsive.isMobile()){
-<div class="search-bar">
-  <app-search-box></app-search-box>
-</div>
+@if (responsive.isMobile()) {
+  <div class="search-bar">
+    <app-search-box></app-search-box>
+  </div>
 }
 
 <nav class="navbar justify-content-start container d-lg-flex d-none">
@@ -156,193 +155,238 @@
   <a href="" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container position-relative">
       <i class="icon icon-bag-bold"></i>
-      <i class="icon icon-discount-bold position-absolute "></i>
+      <i class="icon icon-discount-bold position-absolute"></i>
     </span>
     <span>فروشگاه‌ها</span>
   </a>
   <a href="" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container">
-      <i class="icon icon-card-to-card-bold"></i>
+      <i class="icon icon-card-to-card-bold"></i> 
     </span>
     <span>پرداخت</span>
   </a>
-  <app-search-box class="me-auto"></app-search-box>
+  <app-search-box class="me-auto" ></app-search-box>
 </nav>
-
-<header class="header-sticky">
-  <nav class="navbar justify-content-start container d-lg-flex d-none">
-    <a href="" class="nav-item mx-24px d-flex gap-5px active">
-      <span class="icon-container">
-        <i class="icon icon-home-bold"></i>
-      </span>
-      <span>خانه</span>
-    </a>
-    <a href="" class="nav-item mx-24px d-flex gap-5px">
-      <span class="icon-container">
-        <i class="icon icon-more-bold"></i>
-      </span>
-      <span>خدمات</span>
-    </a>
-    <a href="" class="nav-item mx-24px d-flex gap-5px">
-      <span class="icon-container position-relative">
-        <i class="icon icon-bag-bold"></i>
-        <i class="icon icon-discount-bold position-absolute "></i>
-      </span>
-      <span>فروشگاه‌ها</span>
-    </a>
-    <a href="" class="nav-item mx-24px d-flex gap-5px">
-      <span class="icon-container">
-        <i class="icon icon-card-to-card-bold"></i>
-      </span>
-      <span>پرداخت</span>
-    </a>
-    <button>
-      <i class="icon icon-search-bold"></i>
-    </button>
-    <button>
-      <i class="icon  icon-person-bold"></i>
-    </button>
-  
-  </nav>
-</header>
-
+@if (responsive.isDesktop()) {
+  <header
+    class="header-sticky"
+    [class.visible]="isStickyHeaderVisible()"
+    [class.hidden]="!isStickyHeaderVisible()"
+  >
+    <nav class="navbar justify-content-start container d-lg-flex d-none mt-10px">
+      <a href="" class="nav-item mx-24px d-flex gap-5px active">
+        <img src="assets/images/dp-logo.svg" alt="" />
+      </a>
+      <a href="" class="nav-item mx-24px d-flex gap-5px active">
+        <span class="icon-container">
+          <i class="icon icon-home-bold"></i>
+        </span>
+        <span>خانه</span>
+      </a>
+      <a href="" class="nav-item mx-24px d-flex gap-5px">
+        <span class="icon-container">
+          <i class="icon icon-more-bold"></i>
+        </span>
+        <span>خدمات</span>
+      </a>
+      <a href="" class="nav-item mx-24px d-flex gap-5px">
+        <span class="icon-container position-relative">
+          <i class="icon icon-bag-bold"></i>
+          <i class="icon icon-discount-bold position-absolute"></i>
+        </span>
+        <span>فروشگاه‌ها</span>
+      </a>
+      <a href="" class="nav-item mx-24px d-flex gap-5px">
+        <span class="icon-container">
+          <i class="icon icon-card-to-card-bold"></i>
+        </span>
+        <span>پرداخت</span>
+      </a>
+      <div class="me-auto">
+        <button class="header-sticky_search">
+          <i class="icon icon-search-bold fs-20px"></i>
+        </button>
+        <button class="header-sticky_login">
+          <i class="icon icon-person-bold fs-20px"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+}
 
 @if (isSubmenuOpen()) {
-<div class="mobile-submenu">
-  <div class="d-flex flex-column align-items-start pe-10">
-    <button
-      class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
-      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
-      aria-controls="submenu-games-1">
-      <div class="d-flex justify-content-between w-100">
-        <span class="fs-12px fw-500">
-          {{ data.loansAndCredits }}
-        </span>
-        <i class="icon icon-arrow-2-down-linear fs-20px"></i>
-      </div>
+  <div class="mobile-submenu">
+    <div class="d-flex flex-column align-items-start pe-10">
+      <button
+        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+        (click)="toggleSubmenuGames()"
+        (keydown.enter)="toggleSubmenuGames()"
+        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+        [attr.aria-expanded]="isSubmenuGamesOpen()"
+        aria-controls="submenu-games-1"
+      >
+        <div class="d-flex justify-content-between w-100">
+          <span class="fs-12px fw-500">
+            {{ data.loansAndCredits }}
+          </span>
+          <i class="icon icon-arrow-2-down-linear fs-20px"></i>
+        </div>
 
-      @if (isSubmenuGamesOpen()) {
-      <div class="w-100 d-flex flex-column gap-5px submenu-games">
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.credit }}</span>
-        </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.bnpl }}</span>
-        </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.merchants }}</span>
-        </a>
-      </div>
-      }
-    </button>
-    <button
-      class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
-      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
-      aria-controls="submenu-games-1">
-      <div class="d-flex justify-content-between w-100">
-        <span class="fs-12px fw-500">
-          {{ data.insurance }}
-        </span>
-        <i class="icon icon-arrow-2-down-linear fs-20px"></i>
-      </div>
+        @if (isSubmenuGamesOpen()) {
+          <div class="w-100 d-flex flex-column gap-5px submenu-games">
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.credit }}</span>
+            </a>
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.bnpl }}</span>
+            </a>
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.merchants }}</span>
+            </a>
+          </div>
+        }
+      </button>
+      <button
+        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+        (click)="toggleSubmenuGames()"
+        (keydown.enter)="toggleSubmenuGames()"
+        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+        [attr.aria-expanded]="isSubmenuGamesOpen()"
+        aria-controls="submenu-games-1"
+      >
+        <div class="d-flex justify-content-between w-100">
+          <span class="fs-12px fw-500">
+            {{ data.insurance }}
+          </span>
+          <i class="icon icon-arrow-2-down-linear fs-20px"></i>
+        </div>
 
-      @if (isSubmenuGamesOpen()) {
-      <div class="w-100 d-flex flex-column gap-5px submenu-games">
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.thirdPartyInsurance }}</span>
-        </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.equipment }}</span>
-        </a>
-      </div>
-      }
-    </button>
-    <button
-      class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
-      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
-      aria-controls="submenu-games-1">
-      <div class="d-flex justify-content-between w-100">
-        <span class="fs-12px fw-500">
-          {{ data.wealth }}
-        </span>
-      </div>
-    </button>
-    <button
-      class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
-      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
-      aria-controls="submenu-games-1">
-      <div class="d-flex justify-content-between w-100">
-        <span class="fs-12px fw-500">
-          {{ data.serviceBusiness }}
-        </span>
-        <i class="icon icon-arrow-2-down-linear fs-20px"></i>
-      </div>
+        @if (isSubmenuGamesOpen()) {
+          <div class="w-100 d-flex flex-column gap-5px submenu-games">
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.thirdPartyInsurance }}</span>
+            </a>
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.equipment }}</span>
+            </a>
+          </div>
+        }
+      </button>
+      <button
+        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+        (click)="toggleSubmenuGames()"
+        (keydown.enter)="toggleSubmenuGames()"
+        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+        [attr.aria-expanded]="isSubmenuGamesOpen()"
+        aria-controls="submenu-games-1"
+      >
+        <div class="d-flex justify-content-between w-100">
+          <span class="fs-12px fw-500">
+            {{ data.wealth }}
+          </span>
+        </div>
+      </button>
+      <button
+        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+        (click)="toggleSubmenuGames()"
+        (keydown.enter)="toggleSubmenuGames()"
+        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+        [attr.aria-expanded]="isSubmenuGamesOpen()"
+        aria-controls="submenu-games-1"
+      >
+        <div class="d-flex justify-content-between w-100">
+          <span class="fs-12px fw-500">
+            {{ data.serviceBusiness }}
+          </span>
+          <i class="icon icon-arrow-2-down-linear fs-20px"></i>
+        </div>
 
-      @if (isSubmenuGamesOpen()) {
-      <div class="w-100 d-flex flex-column gap-5px submenu-games">
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.bpg }}</span>
-        </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.merchantsSeller }}</span>
-        </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.ipg }}</span>
-        </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.merchantCredit }}</span>
-        </a>
-      </div>
-      }
-    </button>
-    <button
-      class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
-      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
-      aria-controls="submenu-games-1">
-      <div class="d-flex justify-content-between w-100">
-        <span class="fs-12px fw-500">
-          {{ data.serviceOrganization }}
-        </span>
-        <i class="icon icon-arrow-2-down-linear fs-20px"></i>
-      </div>
-      @if (isSubmenuGamesOpen()) {
-      <div class="w-100 d-flex flex-column gap-5px submenu-games">
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.Ocredit }}</span>
-        </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
-          class="mobile-menu-item d-flex align-items-center gap-5px  p-10px mx-5px">
-          <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-          <span class="fs-12px text-900 fw-400">{{ data.orgbnpl }}</span>
-        </a>
-      </div>
-      }
-    </button>
+        @if (isSubmenuGamesOpen()) {
+          <div class="w-100 d-flex flex-column gap-5px submenu-games">
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.bpg }}</span>
+            </a>
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.merchantsSeller }}</span>
+            </a>
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.ipg }}</span>
+            </a>
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.merchantCredit }}</span>
+            </a>
+          </div>
+        }
+      </button>
+      <button
+        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+        (click)="toggleSubmenuGames()"
+        (keydown.enter)="toggleSubmenuGames()"
+        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+        [attr.aria-expanded]="isSubmenuGamesOpen()"
+        aria-controls="submenu-games-1"
+      >
+        <div class="d-flex justify-content-between w-100">
+          <span class="fs-12px fw-500">
+            {{ data.serviceOrganization }}
+          </span>
+          <i class="icon icon-arrow-2-down-linear fs-20px"></i>
+        </div>
+        @if (isSubmenuGamesOpen()) {
+          <div class="w-100 d-flex flex-column gap-5px submenu-games">
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.Ocredit }}</span>
+            </a>
+            <a
+              [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+            >
+              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
+              <span class="fs-12px text-900 fw-400">{{ data.orgbnpl }}</span>
+            </a>
+          </div>
+        }
+      </button>
+    </div>
   </div>
-</div>
 }

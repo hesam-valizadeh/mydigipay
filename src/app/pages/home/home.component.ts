@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { HeroCarouselComponent } from '../../components/hero-carousel/hero-carousel.component';
 import { SquareBanner } from '../../components/square-banner/square-banner.component';
 import { ServiceCardComponent } from '../../components/service-card/service-card.component';
@@ -7,6 +7,7 @@ import { HomePageViewDataInterface } from '../../view-models/home-page-view-data
 import { ListModel } from '../../@core/models/list-model';
 import { ResponsiveService } from '../../@core/services/responsive.service';
 import { BottomNavigationComponent } from '../../@layout/bottom-navigation/bottom-navigation.component';
+import { SearchOverlayService } from '../../@core/services/search-overlay-service.service';
 
 @Component({
   selector: 'app-home',
@@ -597,9 +598,8 @@ export class HomeComponent {
       ],
     },
   };
-
+  searchOverlay = inject(SearchOverlayService);
   responsive = inject(ResponsiveService);
-
   get sections() {
     return Object.values(this.data).map((section, index) => ({
       id: index + 1,

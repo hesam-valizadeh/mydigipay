@@ -1,6 +1,12 @@
 <div class="search-box-container">
     <form action="">
         <i class="icon icon-search-linear "></i>
-        <input type="search" name="search-box" class="search-box" placeholder="جست‌وجو در خدمات، فروشگاه‌ها، محصولات" id="">
+        <input type="search" name="search-box" class="search-box" placeholder="جست‌وجو در خدمات، فروشگاه‌ها، محصولات" id="" (click)="opanResults()">
     </form>
+    @if(responsive.isDesktop() && searchOverlay.isSearchOpen()){
+        <div id="results">
+            test
+        </div>
+    }
 </div>
+

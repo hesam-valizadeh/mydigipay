@@ -1,6 +1,18 @@
 .search-box-container {
   position: relative;
 
+  #results {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    height: 355px;
+    width: 350px;
+    z-index: 11;
+    background-color: #fff;
+    border-radius: 0 0 24px 24px;
+    padding: 10px;
+  }
+
   i {
     font-size: 20px;
     width: 20px;
@@ -32,6 +44,7 @@
       border: 1px solid #1159fc;
       background-color: #deedff;
       color: #74777c;
+
     }
   }
 }

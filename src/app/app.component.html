@@ -1,5 +1,5 @@
 
-  <app-header></app-header>
+  <app-header  [class.active-search]="searchOverlay.isSearchOpen()"></app-header>
   <main>
     <router-outlet></router-outlet>
   </main>

@@ -1,4 +1,14 @@
-import { Component, ElementRef, HostListener, inject, OnInit, signal } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostBinding,
+  HostListener,
+  inject,
+  OnInit,
+  Output,
+  signal,
+} from '@angular/core';
 import { RouterLinksPath } from '../../@core/constants/router-links';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { SearchBoxComponent } from '../../@shared/components/search-box/search-box.component';
@@ -6,6 +16,7 @@ import { HeaderViewDataInterface } from '../../view-models/header-view-data.inte
 import { ResponsiveService } from '../../@core/services/responsive.service';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
+import { SearchOverlayService } from '../../@core/services/search-overlay-service.service';
 
 @Component({
   selector: 'app-header',
@@ -16,10 +27,13 @@ import { filter } from 'rxjs';
 export class HeaderComponent implements OnInit {
   isSubmenuOpen = signal(false);
   isSubmenuGamesOpen = signal(true);
-
+  isStickyHeaderVisible = signal(false);
+  private lastScrollTop = 1;
+  searchOverlay = inject(SearchOverlayService);
   private viewportScroller = inject(ViewportScroller);
   private router = inject(Router);
   private elementRef = inject(ElementRef);
+
   protected readonly RouterLinksPath = RouterLinksPath;
   responsive = inject(ResponsiveService);
   data: HeaderViewDataInterface = {
@@ -52,6 +66,19 @@ export class HeaderComponent implements OnInit {
 
   toggleSubmenuGames() {
     this.isSubmenuGamesOpen.update((prev) => !prev);
+  }
+  @Output() overlayToggle = new EventEmitter<boolean>();
+  onOverlayToggle(event: boolean) {
+    this.overlayToggle.emit(event);
+  }
+  @HostListener('window:scroll', [])
+  onScroll() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    if (scrollY > 200 && !this.isStickyHeaderVisible()) {
+      this.isStickyHeaderVisible.set(true);
+    } else if (scrollY <= 250 && this.isStickyHeaderVisible()) {
+      this.isStickyHeaderVisible.set(false);
+    }
   }
 
   @HostListener('document:click', ['$event'])

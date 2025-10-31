@@ -6,6 +6,7 @@ import { filter, map, mergeMap } from 'rxjs';
 import { environment } from '../enviroment/environment';
 import { FooterComponent } from './@layout/footer/footer.component';
 import { SwUpdateService } from './@core/services/sw-custom.service';
+import { SearchOverlayService } from './@core/services/search-overlay-service.service';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
   private titleService = inject(Title);
   private activatedRoute = inject(ActivatedRoute);
   private metaService = inject(Meta);
+  searchOverlay = inject(SearchOverlayService);
   private sw = inject(SwUpdateService);
   ngOnInit(): void {
     this.router.events

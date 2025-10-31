@@ -5,7 +5,7 @@ header {
   a.menu_link {
     margin: 0 -2.5px;
 
-    > span {
+    >span {
       font-size: 12px;
       font-weight: 450;
       margin: 0 16px;
@@ -65,7 +65,7 @@ header {
           -webkit-text-fill-color: transparent;
           background: #74777c;
 
-          > svg {
+          >svg {
             fill: #74777c;
           }
         }
@@ -189,9 +189,34 @@ button {
 .header-sticky {
   opacity: 0;
   visibility: hidden;
-  display: none;
-  position: sticky;
-  top: 10px;
-  height: 50px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 100px;
   z-index: 11111;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background-color: rgba(248, 249, 251, 0.8);
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+  nav{
+    padding: 24px 24px 24px 24px !important;
+    height: auto;
+    line-height: 1;
+    }
+  &_search,&_login{
+    width: 44px;
+  }
 }
+
+.header-sticky.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.1s linear;
+}
+
+.header-sticky.hidden {
+  opacity: 0;
+  transition: all 0.1s linear;
+  visibility: hidden;
+}
+
