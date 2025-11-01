@@ -969,10 +969,6 @@
 	// Emulate selection behavior of tab characters when using spaces for indentation. Selection will stick to tab stops.
 	"editor.stickyTabStops": false,
 
-	// This setting is deprecated, please use separate settings like 'editor.suggest.showKeywords' or 'editor.suggest.showSnippets' instead.
-	// 
-	"editor.suggest.filteredTypes": {},
-
 	// Controls whether filtering and sorting suggestions accounts for small typos.
 	"editor.suggest.filterGraceful": true,
 
@@ -5112,10 +5108,6 @@
 	// Controls whether bold text in the terminal will always use the "bright" ANSI color variant.
 	"terminal.integrated.drawBoldTextInBrightColors": true,
 
-	// This is now deprecated. Instead use the `terminal.integrated.enableVisualBell` and `accessibility.signals.terminalBell` settings.
-	// 
-	"terminal.integrated.enableBell": false,
-
 	// Whether to enable file links in terminals. Links can be slow when working on a network drive in particular because each file link is verified against the file system. Changing this will take effect only in new terminals.
 	//  - off: Always off.
 	//  - on: Always on.
@@ -7998,10 +7990,6 @@
 	// Enable the new Edits mode that is based on tool-calling. When this is enabled, models that don't support tool-calling are unavailable for Edits mode.
 	"chat.edits2.enabled": true,
 
-	// This setting is deprecated. Please use `chat.detectParticipant.enabled` instead.
-	// Enables chat participant autodetection for panel chat.
-	"chat.experimental.detectParticipant.enabled": null,
-
 	// Enable using tools contributed by third-party extensions in Copilot Chat agent mode.
 	"chat.extensionTools.enabled": true,
 
@@ -8324,7 +8312,7 @@
 
 	// Plays a signal - sound (audio cue) and/or announcement (alert) - when the terminal bell is ringing.
 	"accessibility.signals.terminalBell": {
-		"sound": "auto",
+		"sound": "off",
 		"announcement": "auto"
 	},
 

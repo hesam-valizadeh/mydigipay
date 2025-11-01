@@ -5,15 +5,16 @@
     position: absolute;
     top: 55px;
     right: 0;
-    height: 355px;
+    height: 600px;
     width: 350px;
     z-index: 11;
     background-color: #fff;
     border-radius: 0 0 24px 24px;
-    padding: 10px;
+    overflow-y: scroll;
+    padding: 10px 15px;
   }
 
-  i {
+  form i {
     font-size: 20px;
     width: 20px;
     height: 20px;
@@ -46,5 +47,95 @@
       color: #74777c;
 
     }
+  }
+}
+
+
+
+.pill {
+  width: auto;
+  border-radius: 50em;
+  border: 1px solid #DFE1E5;
+  padding: 4px 8px;
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+  }
+}
+
+.blueGradient {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(224deg, rgb(15, 83, 237) 11.43%, rgb(148, 191, 255) 92.87%);
+}
+
+.yellowGradient {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(224deg, rgb(247, 136, 63) 11.43%, rgb(251, 201, 23) 92.87%);
+}
+
+.purpleGradient {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(224deg, rgb(134, 67, 243) 11.43%, rgb(199, 170, 247) 92.87%);
+}
+
+.greenGradient {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(224deg, rgb(12, 186, 186) 11.43%, rgb(159, 251, 251) 92.87%);
+}
+
+.stores {
+  figure {
+    width: 40px;
+    height: 40px;
+    background-color: #F2F3F6;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.categories {
+  a {
+    max-width: 133px;
+  }
+
+  figure {
+    width: 133px;
+    height: 68px;
+    border-radius: 16px;
+    background-color: #F2F3F6;
+  }
+}
+
+#results-mobile {
+  position: absolute;
+  top: 109px;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 11;
+  background-color: #f4f4f4;
+  border-radius: 0 0 24px 24px;
+  padding: 10px 10px 350px 10px;
+  overflow-y: scroll;
+
+  .categories {
+    a {
+      max-width: 155px;
+
+      figure {
+        background-color: #fff;
+
+        width: 155px;
+      }
+    }
+
   }
 }

@@ -28,11 +28,13 @@ export class HeaderComponent implements OnInit {
   isSubmenuOpen = signal(false);
   isSubmenuGamesOpen = signal(true);
   isStickyHeaderVisible = signal(false);
+  isToggleSearch = signal(false);
   private lastScrollTop = 1;
   searchOverlay = inject(SearchOverlayService);
   private viewportScroller = inject(ViewportScroller);
   private router = inject(Router);
   private elementRef = inject(ElementRef);
+  eRef = inject(ElementRef);
 
   protected readonly RouterLinksPath = RouterLinksPath;
   responsive = inject(ResponsiveService);
@@ -87,6 +89,35 @@ export class HeaderComponent implements OnInit {
     if (!clickedInside && (this.isSubmenuOpen() || this.isSubmenuGamesOpen())) {
       this.isSubmenuOpen.set(false);
       this.isSubmenuGamesOpen.set(false);
+    }
+  }
+
+
+  toggleSearch() {
+    this.isToggleSearch.update((prev) => !prev);
+    const stickySearch = document.querySelector('.header-sticky_search') as HTMLElement;
+    if (stickySearch) {
+      if (this.isToggleSearch()) {
+        stickySearch.classList.add('hidden');
+      } else {
+        stickySearch.classList.remove('hidden');
+      }
+    }
+    if (this.isToggleSearch()) {
+      const headerHeight = document.querySelector('header')?.clientHeight || 0;
+      window.scrollTo({
+        top: headerHeight,
+        behavior: 'smooth',
+      });
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  clickOutside(event: Event) {
+    if (this.isToggleSearch() && !this.eRef.nativeElement.contains(event.target)) {
+      this.isToggleSearch.set(false);
+      const stickySearch = document.querySelector('.header-sticky_search') as HTMLElement;
+      stickySearch?.classList.remove('hidden');
     }
   }
 }

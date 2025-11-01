@@ -202,10 +202,14 @@
         </span>
         <span>پرداخت</span>
       </a>
-      <div class="me-auto">
-        <button class="header-sticky_search">
+      <div class="me-auto d-flex align-items-center flex-wrap">
+        <button class="header-sticky_search" (click)="toggleSearch()" >
           <i class="icon icon-search-bold fs-20px"></i>
         </button>
+        <div class="search-bar" [class.search-visible]="isToggleSearch()"
+        [class.search-hidden]="!isToggleSearch()">
+          <app-search-box></app-search-box>
+        </div>
         <button class="header-sticky_login">
           <i class="icon icon-person-bold fs-20px"></i>
         </button>
