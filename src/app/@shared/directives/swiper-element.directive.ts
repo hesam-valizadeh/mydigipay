@@ -1,4 +1,12 @@
-import { AfterViewInit, Directive, ElementRef, inject, Input, NgZone, PLATFORM_ID } from '@angular/core';
+import {
+  AfterViewInit,
+  Directive,
+  ElementRef,
+  inject,
+  Input,
+  NgZone,
+  PLATFORM_ID,
+} from '@angular/core';
 import { AutoplayOptions, SwiperOptions } from 'swiper/types';
 import { SwiperContainer } from 'swiper/element';
 import { isPlatformBrowser } from '@angular/common';

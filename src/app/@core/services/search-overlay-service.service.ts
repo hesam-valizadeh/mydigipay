@@ -1,9 +1,9 @@
 import { Injectable, signal } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class SearchOverlayService{
+export class SearchOverlayService {
   isSearchOpen = signal(false);
 
   openSearch() {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { HeroCarouselComponent } from '../../components/hero-carousel/hero-carousel.component';
 import { SquareBanner } from '../../components/square-banner/square-banner.component';
 import { ServiceCardComponent } from '../../components/service-card/service-card.component';
@@ -11,7 +11,13 @@ import { SearchOverlayService } from '../../@core/services/search-overlay-servic
 
 @Component({
   selector: 'app-home',
-  imports: [HeroCarouselComponent, SquareBanner, ServiceCardComponent, ProductSectionComponent, BottomNavigationComponent],
+  imports: [
+    HeroCarouselComponent,
+    SquareBanner,
+    ServiceCardComponent,
+    ProductSectionComponent,
+    BottomNavigationComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

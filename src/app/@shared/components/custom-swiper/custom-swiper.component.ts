@@ -31,7 +31,10 @@ export class CustomSwiperComponent<ItemsType> implements AfterViewInit {
 
   @ViewChild('swiperRef', { static: false }) swiperRef!: ElementRef<SwiperContainer>;
 
-  @ContentChild('swiperSlideTemplate') swiperSlideTemplate: TemplateRef<{ item: ItemsType; index: number }> | null = null;
+  @ContentChild('swiperSlideTemplate') swiperSlideTemplate: TemplateRef<{
+    item: ItemsType;
+    index: number;
+  }> | null = null;
 
   @Output() slideChange = new EventEmitter<number>();
 

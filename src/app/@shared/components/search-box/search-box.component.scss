@@ -45,17 +45,14 @@
       border: 1px solid #1159fc;
       background-color: #deedff;
       color: #74777c;
-
     }
   }
 }
 
-
-
 .pill {
   width: auto;
   border-radius: 50em;
-  border: 1px solid #DFE1E5;
+  border: 1px solid #dfe1e5;
   padding: 4px 8px;
 
   span {
@@ -66,34 +63,34 @@
 }
 
 .blueGradient {
-  -webkit-background-clip: text !important;
+  background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(224deg, rgb(15, 83, 237) 11.43%, rgb(148, 191, 255) 92.87%);
+  background: linear-gradient(224deg, rgb(15 83 237) 11.43%, rgb(148 191 255) 92.87%);
 }
 
 .yellowGradient {
-  -webkit-background-clip: text !important;
+  background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(224deg, rgb(247, 136, 63) 11.43%, rgb(251, 201, 23) 92.87%);
+  background: linear-gradient(224deg, rgb(247 136 63) 11.43%, rgb(251 201 23) 92.87%);
 }
 
 .purpleGradient {
-  -webkit-background-clip: text !important;
+  background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(224deg, rgb(134, 67, 243) 11.43%, rgb(199, 170, 247) 92.87%);
+  background: linear-gradient(224deg, rgb(134 67 243) 11.43%, rgb(199 170 247) 92.87%);
 }
 
 .greenGradient {
-  -webkit-background-clip: text !important;
+  background-clip: text !important;
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(224deg, rgb(12, 186, 186) 11.43%, rgb(159, 251, 251) 92.87%);
+  background: linear-gradient(224deg, rgb(12 186 186) 11.43%, rgb(159 251 251) 92.87%);
 }
 
 .stores {
   figure {
     width: 40px;
     height: 40px;
-    background-color: #F2F3F6;
+    background-color: #f2f3f6;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -110,7 +107,7 @@
     width: 133px;
     height: 68px;
     border-radius: 16px;
-    background-color: #F2F3F6;
+    background-color: #f2f3f6;
   }
 }
 
@@ -123,7 +120,7 @@
   z-index: 11;
   background-color: #f4f4f4;
   border-radius: 0 0 24px 24px;
-  padding: 10px 10px 350px 10px;
+  padding: 10px 10px 350px;
   overflow-y: scroll;
 
   .categories {
@@ -132,10 +129,8 @@
 
       figure {
         background-color: #fff;
-
         width: 155px;
       }
     }
-
   }
 }

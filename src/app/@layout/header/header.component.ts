@@ -2,7 +2,6 @@ import {
   Component,
   ElementRef,
   EventEmitter,
-  HostBinding,
   HostListener,
   inject,
   OnInit,
@@ -91,7 +90,6 @@ export class HeaderComponent implements OnInit {
       this.isSubmenuGamesOpen.set(false);
     }
   }
-
 
   toggleSearch() {
     this.isToggleSearch.update((prev) => !prev);

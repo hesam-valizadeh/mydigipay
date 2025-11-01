@@ -20,7 +20,7 @@
         }
       }
 
-      >div {
+      > div {
         padding: 0 0 0 34px !important;
         background-color: #f4f4f4 !important;
         z-index: 1111;
@@ -90,7 +90,6 @@
   .sub-footer {
     margin-bottom: 100px;
   }
-
 }
 
 @include media-breakpoint-up(lg) {
@@ -100,9 +99,8 @@
     left: 0;
     width: 100%;
     z-index: 111111;
-    background-color: #F2F3F6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f2f3f6;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
     padding-bottom: 30px;
   }
-
 }

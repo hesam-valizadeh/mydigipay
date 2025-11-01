@@ -7856,7 +7856,8 @@
 		"editor.quickSuggestions": {
 				"strings": true
 		},
-		"editor.suggest.insertMode": "replace"
+		"editor.suggest.insertMode": "replace",
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 
 	// Configure settings to be overridden for the jsonc language.

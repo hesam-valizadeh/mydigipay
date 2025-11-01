@@ -5,7 +5,7 @@ header {
   a.menu_link {
     margin: 0 -2.5px;
 
-    >span {
+    > span {
       font-size: 12px;
       font-weight: 450;
       margin: 0 16px;
@@ -65,7 +65,7 @@ header {
           -webkit-text-fill-color: transparent;
           background: #74777c;
 
-          >svg {
+          > svg {
             fill: #74777c;
           }
         }
@@ -194,13 +194,14 @@ button {
   width: 100%;
   height: 100px;
   z-index: 11111;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  background-color: rgba(248, 249, 251, 0.8);
-  -webkit-backdrop-filter: blur(7.5px);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  background-color: rgb(248 249 251 / 80%);
   backdrop-filter: blur(7.5px);
 
   nav {
-    padding: 16px!important;
+    padding: 16px !important;
     height: auto;
     line-height: 1;
   }
@@ -230,7 +231,6 @@ button {
   width: 0;
   transition: width 0.2s ease-in-out;
   overflow: hidden;
-
 }
 
 .search-visible {
@@ -239,10 +239,12 @@ button {
   width: 350px;
   transition: width 0.2s ease-in-out;
   overflow: hidden;
-
 }
+
 .header-sticky_search {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .header-sticky_search.hidden {
