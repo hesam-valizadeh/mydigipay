@@ -1,78 +1,87 @@
 <div class="container mt-32px">
-    <div class="row gap-16px">
-        <div class="col-lg-auto p-0">
-            <app-hero-carousel></app-hero-carousel>
-        </div>
-        <div class="col-lg-3 p-0 d-flex justify-content-center flex-column gap-16px side-banner">
-            <img src="assets/images/bannersmall.webp" alt="" width="320" height="136">
-            <app-square-banner></app-square-banner>
-        </div>
+  <div class="row gap-16px">
+    <div class="col-lg-auto p-0">
+      <app-hero-carousel></app-hero-carousel>
     </div>
+    <div class="col-lg-3 p-0 d-flex justify-content-center flex-column gap-16px side-banner">
+      <img src="assets/images/bannersmall.webp" alt="" width="320" height="136" />
+      <app-square-banner></app-square-banner>
+    </div>
+  </div>
+  <div class="row">
+    <app-service-card class="p-0"></app-service-card>
+  </div>
+  @for (section of sections; track section?.id) {
     <div class="row">
-        <app-service-card class="p-0"></app-service-card>
+      <app-product-section
+        class="p-0"
+        [category]="section?.category"
+        [products]="section?.products"
+      ></app-product-section>
     </div>
-    @for(section of sections; track section.id){
-    <div class="row">
-        <app-product-section class="p-0" [category]="section.category"
-            [products]="section.products"></app-product-section>
-    </div>
-    }
+  }
 </div>
-
 
 <div class="container p-0">
-    <div class="download-app">
-        <div class="row">
-            <div class="col-lg-3 p-0">
-                <figure>
-                    <img src="assets/images/download.webp" alt="" width="257" height="259" id="download-app">
-                </figure>
-            </div>
-            <div class="col-lg-6 p-0 d-flex">
-                <div class="d-flex align-items-start justify-content-center flex-column gap-6px me-40px">
-                    <h4 class="text-start text-white fs-16px fw-bold">با دیجی پی، به هیچ اپلیکیشن مالی نیاز نداری</h4>
-                    <p class="text-start text-white fs-xs">
-                        از خرید اقساطی و دریافت اعتبار تا خرید بیمه، سرمایه گذاری و پرداخت های روزمره را سریع و آسان با
-                        دیجی
-                        پی انجام دهید.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 d-flex gap-20px justify-content-end ">
-                <div class="d-flex flex-column align-items-center justify-content-center application">
-                    <a href="">
-                        <figure>
-                            <img src="assets/images/gp-text.svg" alt="">
-                            <img src="assets/images/gp-icon.svg" alt="">
-                        </figure>
-                    </a>
-                    <a href="">
-                        <figure>
-                            <img src="assets/images/bazaar-text.svg" alt="">
-                            <img src="assets/images/bazaar-icon.svg" alt="">
-                        </figure>
-                    </a>
-                    <a href="">
-                        <figure>
-                            <img src="assets/images/dp-text.svg" alt="">
-                            <img src="assets/images/dp-icon.svg" alt="">
-                        </figure>
-                    </a>
-                </div>
-                <div class="d-flex flex-column align-items-center justify-content-start qrcode">
-                    <span class="text-center text-white fs-xs fw-bold">دانلود اپلیکیشن</span>
-                    <figure>
-                        <img src="assets/images/qr-code.png" alt="" width="92" height="92" class="mt-12px">
-                    </figure>
-                </div>
-            </div>
+  <div class="download-app">
+    <div class="row">
+      <div class="col-lg-3 p-0">
+        <figure>
+          <img
+            src="assets/images/download.webp"
+            alt=""
+            width="257"
+            height="259"
+            id="download-app"
+          />
+        </figure>
+      </div>
+      <div class="col-lg-6 p-0 d-flex">
+        <div class="d-flex align-items-start justify-content-center flex-column gap-6px me-40px">
+          <h4 class="text-start text-white fs-16px fw-bold">
+            با دیجی پی، به هیچ اپلیکیشن مالی نیاز نداری
+          </h4>
+          <p class="text-start text-white fs-xs">
+            از خرید اقساطی و دریافت اعتبار تا خرید بیمه، سرمایه گذاری و پرداخت های روزمره را سریع و
+            آسان با دیجی پی انجام دهید.
+          </p>
         </div>
+      </div>
+      <div class="col-lg-3 d-flex gap-20px justify-content-end">
+        <div class="d-flex flex-column align-items-center justify-content-center application">
+          <a href="">
+            <figure>
+              <img src="assets/images/gp-text.svg" alt="" />
+              <img src="assets/images/gp-icon.svg" alt="" />
+            </figure>
+          </a>
+          <a href="">
+            <figure>
+              <img src="assets/images/bazaar-text.svg" alt="" />
+              <img src="assets/images/bazaar-icon.svg" alt="" />
+            </figure>
+          </a>
+          <a href="">
+            <figure>
+              <img src="assets/images/dp-text.svg" alt="" />
+              <img src="assets/images/dp-icon.svg" alt="" />
+            </figure>
+          </a>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-start qrcode">
+          <span class="text-center text-white fs-xs fw-bold">دانلود اپلیکیشن</span>
+          <figure>
+            <img src="assets/images/qr-code.png" alt="" width="92" height="92" class="mt-12px" />
+          </figure>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 
-@if (responsive.isMobile()) {
-<app-bottom-navigation></app-bottom-navigation>
+@if (responsive?.isMobile()) {
+  <app-bottom-navigation></app-bottom-navigation>
 }
-@if (responsive.isDesktop()) {
-    <div id="backdrop" [class.show-overlay]="searchOverlay.isSearchOpen()"></div>
+@if (responsive?.isDesktop()) {
+  <div id="backdrop" [class.show-overlay]="searchOverlay.isSearchOpen()"></div>
 }
