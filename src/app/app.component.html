@@ -1,6 +1,9 @@
-
-  <app-header  [class.active-search]="searchOverlay.isSearchOpen()"></app-header>
-  <main>
-    <router-outlet></router-outlet>
-  </main>
+@if (showLayout) {
+  <app-header [class.active-search]="searchOverlay.isSearchOpen()"></app-header>
+}
+<main>
+  <router-outlet></router-outlet>
+</main>
+@if (showLayout) {
   <app-footer></app-footer>
+}

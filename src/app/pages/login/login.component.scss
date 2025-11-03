@@ -1,0 +1,99 @@
+.login-page {
+    max-width: 550px;
+    height: 100vh;
+    border-inline: 1px solid #ccc;
+    margin-inline: auto;
+    position: relative;
+
+    .box {
+        border-radius: 16px !important;
+        position: absolute;
+        top: 350px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 510px;
+        height: 350px;
+        box-shadow: 0 10px 40px #10111333 !important;
+        -webkit-backdrop-filter: blur(18px) !important;
+        backdrop-filter: blur(18px) !important;
+        margin-inline: auto;
+        background-color: rgba(255, 255, 255, .6);
+        padding: 24px;
+        z-index: 111;
+        .phone-number-content {
+            padding-block: 20px;
+
+            h1 {
+                font-size: 18px;
+                padding-bottom: 6px;
+                text-align: center;
+                font-weight: 800;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 16px;
+                font-weight: 500;
+                color: #74777C;
+                text-align: center;
+            }
+
+            .login-btn {
+                width: 100%;
+                height: 56px;
+                border: none;
+                outline: none;
+                text-align: center;
+                color: #Fff;
+                background-color: #000431;
+                font-size: 16px !important;
+                font-weight: 400 !important;
+                transition:
+                    ease all .5s;
+                border-radius: 12px;
+                margin-top: 16px;
+                margin-bottom: 12px;
+
+            }
+
+            .link {
+                a {
+                    span {
+                        color: #1159FC;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form-floating {
+    input {
+        direction: rtl !important;
+        text-align: right !important;
+        font-size: 14px;
+    }
+}
+
+.form-floating>label {
+    right: 0;
+    left: unset;
+    color: #000;
+}
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-control-plaintext~label,
+.form-floating>.form-select~label {
+    transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+    color: #74777C;
+}
+
+.login-btn:disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+}
+

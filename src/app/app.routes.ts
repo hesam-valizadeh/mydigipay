@@ -22,4 +22,13 @@ export const routes: Routes = [
     },
     loadComponent: () => import('./pages/wealth/wealth.component').then((c) => c.WealthComponent),
   },
+  {
+    path: routeWithoutSlash(RouterLinksPath.loginPage.login),
+    data: {
+      showLayout: false,
+      title: '',
+      description: '',
+    },
+    loadComponent: () => import('./pages/login/login.component').then((c) => c.LoginComponent),
+  },
 ];

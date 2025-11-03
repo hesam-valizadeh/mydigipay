@@ -1,4 +1,4 @@
-export interface HeroCarousel {
+export interface StoryCarousel {
   id?: number;
   title?: string;
   image?: string;
@@ -7,4 +7,6 @@ export interface HeroCarousel {
   brand?: string;
   link?: string;
   class?: string;
+  style?: string;
+  src?: string;
 }

@@ -1,0 +1,17 @@
+<div [ngClass]="className" [ngStyle]="{'cssText': styleAttr}">
+  <div class="content">
+    <h1 class="text-white fw-900 fs-18px">خدمات بیمه‌، اقساطی</h1>
+    <p class="text-white fs-xs fw-300 text-center mx-auto">
+      از کارت به کارت، خرید شارژ و اینترنت، تا پرداخت قبض رو سریع و آسان انجام بده.
+    </p>
+    <figure>
+        <img
+          #figureImg
+          [src]="src"
+          [alt]="alt || title"
+          class="slide-image"
+          loading="eager"
+        />
+      </figure>
+  </div>
+</div>

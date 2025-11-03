@@ -21,6 +21,8 @@ export class AppComponent implements OnInit {
   private metaService = inject(Meta);
   searchOverlay = inject(SearchOverlayService);
   private sw = inject(SwUpdateService);
+  showLayout = true;
+
   ngOnInit(): void {
     this.router.events
       .pipe(
@@ -35,6 +37,7 @@ export class AppComponent implements OnInit {
         mergeMap((route) => route.data),
       )
       .subscribe((data) => {
+        this.showLayout = data['showLayout'] !== false;
         if (data['title']) {
           this.titleService.setTitle(data['title']);
         }

@@ -1,0 +1,31 @@
+<div class="login-page">
+  <app-carousel-story></app-carousel-story>
+
+  <div class="container">
+    <div class="row">
+      <div class="box">
+        <div class="phone-number-content">
+          <h1>خوش آمدید</h1>
+          <p>جهت ورود، لطفا شماره موبایل خود را وارد کنید.</p>
+          <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="phoneNumber"  formControlName="phone"  placeholder="شماره موبایل" />
+              <label for="phoneNumber">شماره موبایل</label>
+            </div>
+            <button class="login-btn" type="submit" [disabled]="loginForm.invalid">
+              قبول شرایط و ادامه
+            </button>
+          </form>
+          <div class="d-flex flex-row align-items-center justify-content-between link">
+            <a href="">
+              <span> کد معرف دارید </span>
+            </a>
+            <a href="">
+              <span> شرایط استفاده از دیجی پی </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

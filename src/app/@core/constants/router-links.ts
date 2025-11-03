@@ -13,7 +13,9 @@ export class RouterLinksPath {
     nostrajamos: '/nostrajamos-campaign',
     divar: '/divar-campaign',
   };
-
+  static loginPage = {
+    login: '/login',
+  };
   static wealthPage = {
     wealth: '/wealth',
   };
