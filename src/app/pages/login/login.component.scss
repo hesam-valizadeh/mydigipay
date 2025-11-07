@@ -21,6 +21,7 @@
         background-color: rgba(255, 255, 255, .6);
         padding: 24px;
         z-index: 111;
+
         .phone-number-content {
             padding-block: 20px;
 
@@ -58,7 +59,9 @@
             }
 
             .link {
-                a {
+                button {
+                    background-color: transparent;
+
                     span {
                         color: #1159FC;
                         font-size: 12px;
@@ -97,3 +100,13 @@
     cursor: not-allowed;
 }
 
+
+.modal-header{
+    button{
+        i{
+            width: 48px;
+            height: 48px;
+            font-size: 24px;
+        }
+    }
+}

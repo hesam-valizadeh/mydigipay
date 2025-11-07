@@ -15,6 +15,7 @@ export class RouterLinksPath {
   };
   static loginPage = {
     login: '/login',
+    AuthAppletRules:'Auth-applet-rules'
   };
   static wealthPage = {
     wealth: '/wealth',

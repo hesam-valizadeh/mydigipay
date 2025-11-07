@@ -60,3 +60,51 @@ a:focus-visible {
   border: transparent;
   outline: transparent;
 }
+
+.login-page {
+  .modal-content {
+    border-radius: 0;
+    border: 0 !important;
+
+    height: 100%;
+    padding: 0 20px;
+
+    .modal-header {
+      border: 0 !important;
+    }
+  }
+
+  .modal-dialog {
+    max-width: 550px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-block: 0;
+  }
+
+  .modal {
+    --bs-modal-margin: 0;
+    --bs-modal-box-shadow: 0;
+  }
+
+  .modal-backdrop {
+    opacity: 0 !important;
+
+    &.show {
+      opacity: 0 !important;
+    }
+  }
+
+  .modal-backdrop {
+    --bs-backdrop-zindex: 1050;
+    --bs-backdrop-bg: transparent !important;
+    --bs-backdrop-opacity: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--bs-backdrop-zindex);
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent !important
+  }
+}

@@ -16,12 +16,10 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes),
-    provideHttpClient(
-      withInterceptors([MockApiInterceptor])
-    ),
+    provideHttpClient(withInterceptors([MockApiInterceptor])),
     provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
+        enabled: !isDevMode(),
+        registrationStrategy: 'registerWhenStable:30000',
     }),
-  ],
+],
 };
