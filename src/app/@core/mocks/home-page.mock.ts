@@ -45,6 +45,8 @@ export const HOME_PAGE_DATA: HomePageViewDataInterface = {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
+          storeRate:'2'
+
         },
         {
           id: 4,
@@ -204,6 +206,8 @@ export const HOME_PAGE_DATA: HomePageViewDataInterface = {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
+          storeRate:'5'
+
         },
         {
           id: 5,
@@ -218,6 +222,8 @@ export const HOME_PAGE_DATA: HomePageViewDataInterface = {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
+          storeRate:'4.8'
+
         },
         {
           id: 6,
@@ -564,6 +570,7 @@ export const HOME_PAGE_DATA: HomePageViewDataInterface = {
           priceNoDiscount: '5,500,000',
           discountPercentage: '0',
           priceFinal: '4,500,000',
+          storeRate:'5'
         },
         {
           id: 10,

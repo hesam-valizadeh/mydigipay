@@ -30,13 +30,12 @@ export class HeaderComponent implements OnInit {
   isToggleSearch = signal(false);
   private lastScrollTop = 1;
   searchOverlay = inject(SearchOverlayService);
-  private viewportScroller = inject(ViewportScroller);
   private router = inject(Router);
   private elementRef = inject(ElementRef);
   eRef = inject(ElementRef);
+  responsive = inject(ResponsiveService);
 
   protected readonly RouterLinksPath = RouterLinksPath;
-  responsive = inject(ResponsiveService);
   data: HeaderViewDataInterface = {
     loansAndCredits: 'وام و اعتبار',
     credit: 'وام خرید کالا',

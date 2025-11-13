@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ResponsiveService } from '../../@core/services/responsive.service';
 @Component({
   selector: 'app-footer',
   imports: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {}
+export class FooterComponent {
+  responsive = inject(ResponsiveService);
+
+}

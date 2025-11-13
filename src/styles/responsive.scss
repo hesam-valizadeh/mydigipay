@@ -90,6 +90,55 @@
   .sub-footer {
     margin-bottom: 100px;
   }
+
+  .download-app {
+    flex-direction: column;
+    min-height: 480px;
+    align-items: center;
+    height: 560px !important;
+    overflow: hidden;
+    .qrcode {
+      display: none !important;
+    }
+    .application {
+      flex-wrap: wrap;
+      width: 100% !important ;
+    }
+    img#download-app {
+      right: 35% !important;
+    }
+  }
+  .apps{
+    .qrcode{
+      display: none !important;
+    }
+    .application{
+      width: 100% !important;
+    }
+  }
+  footer {
+
+    .logo,
+    .address,
+    .tell,
+    .social,
+    .logos {
+      text-align: center !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+  .sub-footer {
+    .row {
+      gap: 20px;
+
+      .logos {
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {

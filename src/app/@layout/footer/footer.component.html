@@ -17,7 +17,7 @@
                         <span>02153924000</span>
                     </a>
                 </div>
-                <div class="d-flex align-items-center justify-content-start gap-25px">
+                <div class="d-flex align-items-center justify-content-start gap-25px social">
                     <a href="">
                         <figure>
                             <img src="assets/images/instagram-icon.svg" alt="" width="32" height="33">
@@ -40,6 +40,8 @@
                     </a>
                 </div>
             </div>
+            @if (responsive.isDesktop()) {
+
             <div class="col-lg-5 footer-links">
                 <div class="">
                     <h4>درباره ما</h4>
@@ -67,6 +69,70 @@
                     </ul>
                 </div>
             </div>
+            }
+            @if(responsive.isMobile()){
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            درباره ما
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href=""><span>درباره دیجی‌پی</span></a></li>
+                                <li><a href=""><span>گزارش سالانه</span></a></li>
+                                <li><a href=""><span>فرصت‌های شغلی</span></a></li>
+                                <li><a href=""><span>مجله اینترنتی دیجی‌پی</span></a></li>
+                                <li><a href=""><span>مستندات فنی</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            خدمات ما
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href=""><span>خدمات ویژه مالی</span></a></li>
+                                <li><a href=""><span>فروشگاه‌ها</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            خدمات مشتریان
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href=""><span>سوالات متداول</span></a></li>
+                                <li><a href=""><span>قوانین و مقررات</span></a></li>
+                                <li><a href=""><span>تماس با ما</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+
         </div>
     </div>
 </footer>
@@ -93,7 +159,7 @@
             </div>
         </div>
         <div class="col-lg-3  d-flex gap-20px justify-content-end p-0">
-            <div class="d-flex flex-column align-items-center justify-content-center application">
+            <div class="d-flex flex-lg-column align-items-center justify-content-center application">
                 <a href="">
                     <figure>
                         <img src="assets/images/gp-text.svg" alt="">
@@ -141,7 +207,7 @@
                     <img src="assets/images/ics-logo.svg" alt="logo-ics" width="40" height="40">
                 </figure>
             </a>
-         
+
             <a href="">
                 <figure>
                     <img src="assets/images/ettehadie.svg" alt="ettehadie" width="40" height="40">

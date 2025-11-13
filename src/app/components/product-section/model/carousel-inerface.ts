@@ -11,4 +11,5 @@ export interface ProductCarousel {
   loading: string;
   priceNoDiscount?: string;
   storeLogoSrc: string;
+  storeRate?:string
 }

@@ -23,7 +23,8 @@
   }
 }
 
-@media screen and (width <=1199px) {}
+@media screen and (width <=1199px) {
+}
 
 .progress-container {
   z-index: 111;
@@ -33,7 +34,8 @@
   margin-top: 12px;
   position: absolute;
   top: 5px;
-  width: 100%;
+  width: 93%;
+  right: 20px;
 }
 
 .progress-bar {
@@ -55,14 +57,21 @@
 .carousel-story {
   height: 600px;
   width: 100%;
+  position: relative;
 }
 
-::ng-deep .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+::ng-deep
+  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: none !important;
 }
 
-.fade {
+.story-background-fade {
   width: 100%;
   background: linear-gradient(0deg, #f2f3f6 0% 100%);
   box-shadow: 0 -12px 30px 40px #f2f3f6;
+  z-index: 1;
+  display: block;
+  position: absolute;
+  height: 20px;
+  bottom: 50px;
 }

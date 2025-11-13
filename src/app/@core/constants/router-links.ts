@@ -20,6 +20,9 @@ export class RouterLinksPath {
   static wealthPage = {
     wealth: '/wealth',
   };
+  static hubPage = {
+    hub: '/hub',
+  };
 }
 export function routeWithoutSlash(path: string): string {
   if (path.startsWith('/')) {

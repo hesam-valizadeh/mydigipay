@@ -18,4 +18,5 @@ export class ProductItemComponent {
   @Input() storeLogoSrc: string | undefined = '';
   @Input() discountPercentage: string | undefined = '';
   @Input() priceNoDiscount: string | undefined = '';
+  @Input() storeRate: string | undefined = '';
 }

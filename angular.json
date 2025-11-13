@@ -17,10 +17,10 @@
           "build": {
             "builder": "@angular/build:application",
             "options": {
-              "outputPath": "dist/mydigipay",
+              "outputPath": "dist",
               "index": "src/index.html",
               "browser": "src/main.ts",
-              "baseHref": "/mydigipay/",
+              "baseHref": "/",
               "polyfills": [
                 "zone.js"
               ],

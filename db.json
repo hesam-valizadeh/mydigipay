@@ -1,0 +1,10 @@
+{
+    "users": [
+      { "id": 1, "name": "Ali", "role": "admin" },
+      { "id": 2, "name": "Sara", "role": "user" }
+    ],
+    "posts": [
+      { "id": 1, "title": "Hello World", "body": "Welcome to fake API" }
+    ]
+  }
+  
