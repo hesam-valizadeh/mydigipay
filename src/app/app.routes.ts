@@ -58,5 +58,15 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/hub/hub.component').then((c) => c.HubComponent),
   },
+  {
+    path: '**',
+    data: {
+      showLayout: false,
+      title: '',
+      description: '',
+    },
+    loadComponent: () =>
+      import('./pages/not-found/not-found.component').then((c) => c.NotFoundComponent),
+  },
 
 ];
