@@ -30,23 +30,24 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/wealth/wealth.component').then((c) => c.WealthComponent),
   },
-
-
-  
+  {
+    path: routeWithoutSlash(RouterLinksPath.rulesPage.rules),
+    data: {
+      title: 'قوانین و مقررات',
+      description:'شرایط جامع استفاده از خدمات دیجی‌پی',
+    },
+    loadComponent: () => import('./pages/rules/rules.component').then((c) => c.RulesComponent),
+  },
   {
     path: routeWithoutSlash(RouterLinksPath.loginPage.login),
     data: {
       showLayout: false,
-      title: '',
+      title: 'دیجی پی | خدمات مالی و پرداخت',
       description: '',
     },
     loadComponent: () =>
       import('./pages/login/login.component').then((c) => c.LoginComponent),
   },
-
-
-
-
   {
     path: routeWithoutSlash(RouterLinksPath.hubPage.hub),
     canActivate: [AuthGuard],

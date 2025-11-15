@@ -123,3 +123,47 @@
     }
   }
 }
+
+.not-referral-btn {
+  background-color: #eaeff7;
+  color: #1159fc;
+  padding: 12px 24px;
+  border-radius: 12px;
+  height: 56px;
+  min-width: 140px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  text-align: center;
+  &:hover {
+    opacity: 0.74;
+    transition: all 0.3s;
+  }
+  span {
+    padding: 2px 8px;
+  }
+}
+.referral-btn {
+  background-color: #000431;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  height: 56px;
+  min-width: 140px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  text-align: center;
+  &:hover {
+    opacity: 0.74;
+    transition: all 0.3s;
+  }
+  span {
+    padding: 2px 8px;
+  }
+}
+
+.enter-code{
+  color: #74777C;
+  font-size: 14px;
+}

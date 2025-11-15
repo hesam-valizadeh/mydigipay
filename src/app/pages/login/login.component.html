@@ -120,15 +120,31 @@
             <i class="icon icon-arrow-right-linear text-dark"></i>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body p-0">
+          <div class="mb-24px">
+            <figure>
+              <img src="assets/images/referal.svg" alt="referal" width="56" height="56">
+            </figure>
+            <span class="enter-code">در صورتیکه کد معرف دارید، وارد کنید.</span>
+          </div>
           <form action="" [formGroup]="referralForm" (ngSubmit)="onSubmitReferral()">
+
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="referral" formControlName="referral" placeholder="کد معرف" />
               <label for="referral">کد معرف</label>
             </div>
-            <button class="referral-btn bg-transparent" type="submit" [disabled]="referralForm.invalid">
-              تایید و ادامه
-            </button>
+            <div class="d-flex align-items-center justify-content-between gap-16px mt-50px">
+              <button class="not-referral-btn w-100" aria-label="Close" data-bs-dismiss="modal" >
+                <span>
+                  ندارم
+                </span>
+              </button>
+              <button class="referral-btn w-100" type="submit">
+                <span>
+                  تایید و ادامه
+                </span>
+              </button>
+            </div>
           </form>
         </div>
       </div>
