@@ -31,6 +31,24 @@ export const routes: Routes = [
       import('./pages/wealth/wealth.component').then((c) => c.WealthComponent),
   },
   {
+    path: routeWithoutSlash(RouterLinksPath.contactUsPage.contactUs),
+    data: {
+      title: 'تماس با ما',
+      description:''
+    },
+    loadComponent: () =>
+      import('./pages/contact-us/contact-us.component').then((c) => c.ContactUsComponent),
+  },
+  {
+    path: routeWithoutSlash(RouterLinksPath.faqPage.faq),
+    data: {
+      title: 'سوالات متداول',
+      description:''
+    },
+    loadComponent: () =>
+      import('./pages/faq/faq.component').then((c) => c.FaqComponent),
+  },
+  {
     path: routeWithoutSlash(RouterLinksPath.rulesPage.rules),
     data: {
       title: 'قوانین و مقررات',

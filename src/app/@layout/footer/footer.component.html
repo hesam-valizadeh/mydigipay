@@ -63,9 +63,9 @@
                 <div>
                     <h4>خدمات مشتریان</h4>
                     <ul>
-                        <li><a href=""><span>سوالات متداول</span></a></li>
+                        <li><a [routerLink]="RouterLinksPath.faqPage.faq"><span>سوالات متداول</span></a></li>
                         <li><a [routerLink]="RouterLinksPath.rulesPage.rules"><span>قوانین و مقررات</span></a></li>
-                        <li><a href=""><span>تماس با ما</span></a></li>
+                        <li><a [routerLink]="RouterLinksPath.contactUsPage.contactUs"><span>تماس با ما</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -123,10 +123,9 @@
                         aria-labelledby="panelsStayOpen-headingThree">
                         <div class="accordion-body">
                             <ul>
-                                <li><a href=""><span>سوالات متداول</span></a></li>
-                                <li><a [routerLink]="RouterLinksPath.rulesPage.rules"><span>قوانین و مقررات</span></a>
-                                </li>
-                                <li><a href=""><span>تماس با ما</span></a></li>
+                                <li><a [routerLink]="RouterLinksPath.faqPage.faq"><span>سوالات متداول</span></a></li>
+                                <li><a [routerLink]="RouterLinksPath.rulesPage.rules"><span>قوانین و مقررات</span></a></li>
+                                <li><a [routerLink]="RouterLinksPath.contactUsPage.contactUs"><span>تماس با ما</span></a></li>
                             </ul>
                         </div>
                     </div>

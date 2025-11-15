@@ -20,6 +20,12 @@ export class RouterLinksPath {
   static rulesPage = {
     rules: '/rules',
   };
+  static contactUsPage = {
+    contactUs: '/contactus',
+  };
+  static faqPage = {
+    faq: '/faq',
+  };
   static wealthPage = {
     wealth: '/wealth',
   };
