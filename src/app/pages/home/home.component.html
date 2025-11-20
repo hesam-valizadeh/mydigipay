@@ -79,9 +79,7 @@
   </div>
 </div>
 
-@if (responsive?.isMobile()) {
-  <app-bottom-navigation></app-bottom-navigation>
-}
+
 @if (responsive?.isDesktop()) {
   <div id="backdrop" [class.show-overlay]="searchOverlay.isSearchOpen()"></div>
 }

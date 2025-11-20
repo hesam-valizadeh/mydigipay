@@ -17,6 +17,7 @@ export const HOME_PAGE_DATA: HomePageViewDataInterface = {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
+          fourPay:true
         },
         {
           id: 2,
@@ -31,6 +32,8 @@ export const HOME_PAGE_DATA: HomePageViewDataInterface = {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
+          fourPay:false
+
         },
         {
           id: 3,
@@ -45,7 +48,8 @@ export const HOME_PAGE_DATA: HomePageViewDataInterface = {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
-          storeRate:'2'
+          storeRate:'2',
+          fourPay:true
 
         },
         {

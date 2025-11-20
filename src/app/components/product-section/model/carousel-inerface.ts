@@ -12,4 +12,5 @@ export interface ProductCarousel {
   priceNoDiscount?: string;
   storeLogoSrc: string;
   storeRate?:string
+  fourPay?:boolean
 }

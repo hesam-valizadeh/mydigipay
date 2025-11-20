@@ -1,6 +1,8 @@
 import { Component, ElementRef, HostListener, inject, signal } from '@angular/core';
 import { ResponsiveService } from '../../../@core/services/responsive.service';
 import { SearchOverlayService } from '../../../@core/services/search-overlay-service.service';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-search-box',
@@ -13,6 +15,7 @@ export class SearchBoxComponent {
   responsive = inject(ResponsiveService);
   elementRef = inject(ElementRef);
   searchOverlay = inject(SearchOverlayService);
+
   opanResults() {
     this.searchOverlay.openSearch();
   }

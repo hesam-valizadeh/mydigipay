@@ -4,6 +4,7 @@
     <span class="fs-16px fw-600"> جستجو </span>
   </span>
 }
+
 <div class="search-box-container">
   <form action="">
     <i class="icon icon-search-linear"></i>
@@ -16,6 +17,7 @@
       (click)="opanResults()"
     />
   </form>
+
   @if (responsive.isDesktop() && searchOverlay.isSearchOpen()) {
     <div id="results" class="d-flex gap-25px flex-column">
       <div class="pt-10px">
@@ -290,6 +292,7 @@
       </div>
     </div>
   }
+
   @if (responsive.isMobile() && searchOverlay.isSearchOpen()) {
     <div id="results-mobile">
       <div class="pt-10px">
@@ -564,4 +567,9 @@
       </div>
     </div>
   }
+
 </div>
+
+<!-- @if (showSearch()){
+  
+} -->

@@ -108,3 +108,29 @@ a:focus-visible {
     background-color: transparent !important
   }
 }
+
+::-webkit-scrollbar-thumb {
+  background: #3c6dff;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f5f8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton-shimmer {
+  animation: skeleton-shimmer 1.8s infinite linear;
+}

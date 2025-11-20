@@ -1,5 +1,6 @@
 import {
   Component,
+  computed,
   ElementRef,
   EventEmitter,
   HostListener,
@@ -7,6 +8,7 @@ import {
   OnInit,
   Output,
   signal,
+  WritableSignal,
 } from '@angular/core';
 import { RouterLinksPath } from '../../@core/constants/router-links';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
@@ -59,11 +61,32 @@ export class HeaderComponent implements OnInit {
       this.isSubmenuOpen.set(false);
       this.isSubmenuGamesOpen.set(true);
     });
+
+    //Reset Scroll 
+    this.router.events
+  .pipe(filter(event => event instanceof NavigationEnd))
+  .subscribe(() => {
+    setTimeout(() => window.scrollTo(0, 0), 0);
+  });
   }
   toggleSubmenu() {
     this.isSubmenuOpen.update((prev) => !prev);
   }
+  showSearch: WritableSignal<boolean> = signal(true);
 
+  constructor() {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const url = this.router.url.trim();
+        const isHome =
+          url === '/' ||
+          url === '' ||
+          url === '/home';
+  
+        this.showSearch.set(isHome);
+      });
+  }
   toggleSubmenuGames() {
     this.isSubmenuGamesOpen.update((prev) => !prev);
   }
@@ -105,7 +128,7 @@ export class HeaderComponent implements OnInit {
       window.scrollTo({
         top: headerHeight,
         behavior: 'smooth',
-      });
+      })
     }
   }
 

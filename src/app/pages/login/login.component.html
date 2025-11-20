@@ -5,14 +5,13 @@
     <div class="row">
       <div class="box">
         <div class="phone-number-content">
-          <h1>خوش آمدید!</h1>
+          <h1 appSkeleton [appSkeleton]="loading()">خوش آمدید!</h1>
           <p>جهت ورود، لطفا شماره موبایل خود را وارد کنید.</p>
 
           <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="phoneNumber" formControlName="phone"
-                placeholder="شماره موبایل" />
-              <label for="phoneNumber">شماره موبایل</label>
+              <app-custom-input formControlName="phone" label="شماره موبایل" placeholder="مثلاً 09121234567">
+              </app-custom-input>
             </div>
             <button class="login-btn" type="submit" [disabled]="loginForm.invalid"
               [routerLink]="RouterLinksPath.hubPage.hub">
@@ -43,7 +42,10 @@
           </button>
         </div>
         <div class="modal-body">
+
+
           <p>
+
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
             nobis dicta adipisci veniam quo harum nulla, fuga perspiciatis
             architecto aliquam velit reiciendis impedit? Perferendis sit illum
@@ -112,7 +114,8 @@
       </div>
     </div>
   </div>
-  <div class="modal" id="referralModal" tabindex="-1" aria-labelledby="referralModalLabel" aria-hidden="true">
+  <div class="modal" id="referralModal" tabindex="-1" aria-labelledby="referralModalLabel" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -134,12 +137,13 @@
               <label for="referral">کد معرف</label>
             </div>
             <div class="d-flex align-items-center justify-content-between gap-16px mt-50px">
-              <button class="not-referral-btn w-100" aria-label="Close" data-bs-dismiss="modal" >
+              <button class="not-referral-btn w-100" aria-label="Close" data-bs-dismiss="modal">
                 <span>
                   ندارم
                 </span>
               </button>
-              <button class="referral-btn w-100" type="submit">
+              <button class="referral-btn w-100" type="submit" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop">
                 <span>
                   تایید و ادامه
                 </span>
@@ -151,4 +155,11 @@
     </div>
   </div>
 
+</div>
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-body text-center d-flex">
+    <button type="button" class=" error-message" data-bs-dismiss="offcanvas" aria-label="Close">
+      کد وارد شده معتبر نیست!
+    </button>
+  </div>
 </div>

@@ -19,4 +19,5 @@ export class ProductItemComponent {
   @Input() discountPercentage: string | undefined = '';
   @Input() priceNoDiscount: string | undefined = '';
   @Input() storeRate: string | undefined = '';
+  @Input() fourPay!: boolean | undefined ;
 }

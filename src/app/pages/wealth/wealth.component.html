@@ -1,9 +1,10 @@
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1>برای سرمایه گذاری چه مراحلی رو باید طی کنم؟</h1>
-            </div>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <form [formGroup]="form" (ngSubmit)="submit()" class="flex flex-col gap-4">
+        <app-custom-input formControlName="phone" label="شماره موبایل" placeholder="مثلاً 09121234567">
+        </app-custom-input>
+      </form>
     </div>
-</section>
+  </div>
+</div>

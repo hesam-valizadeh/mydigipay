@@ -81,6 +81,14 @@
   }
 }
 
+#referral,
+#phoneNumber {
+  direction: ltr !important;
+  text-align: left !important;
+  font-family: "Yekan-Bakh";
+  &::placeholder {
+  }
+}
 .form-floating {
   input {
     direction: rtl !important;
@@ -163,7 +171,28 @@
   }
 }
 
-.enter-code{
-  color: #74777C;
+.enter-code {
+  color: #74777c;
   font-size: 14px;
+}
+
+.modal.modal-static .modal-dialog {
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+}
+.error-message {
+  width: 180px;
+  height: 40px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 32px;
+  margin: auto;
+  line-height: 3;
+  font-size: 14px;
+}
+.offcanvas.offcanvas-top {
+  z-index: 1111;
+  border-bottom: none;
+  height:45vh
 }

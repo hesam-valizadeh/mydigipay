@@ -1,0 +1,8 @@
+<div class="form-floating mb-3">
+    <input type="text" [value]="value" (input)="onInput($event)" (blur)="handleBlur()" class="form-control"
+        placeholder="{{ placeholder }}" />
+    <label for="phoneNumber">{{label}}</label>
+    @if(error && touched){
+    <span class="text-danger fs-12px">{{ error }}</span>
+    }
+</div>

@@ -7,10 +7,12 @@ import { environment } from '../enviroment/environment';
 import { FooterComponent } from './@layout/footer/footer.component';
 import { SwUpdateService } from './@core/services/sw-custom.service';
 import { SearchOverlayService } from './@core/services/search-overlay-service.service';
+import { ResponsiveService } from './@core/services/responsive.service';
+import { BottomNavigationComponent } from './@layout/bottom-navigation/bottom-navigation.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent,BottomNavigationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -22,6 +24,7 @@ export class AppComponent implements OnInit {
   searchOverlay = inject(SearchOverlayService);
   private sw = inject(SwUpdateService);
   showLayout = true;
+  responsive = inject(ResponsiveService);
 
   ngOnInit(): void {
     this.router.events

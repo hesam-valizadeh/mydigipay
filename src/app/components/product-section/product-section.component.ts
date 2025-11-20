@@ -14,6 +14,7 @@ import { ProductCarousel } from './model/carousel-inerface';
 export class ProductSectionComponent {
   @Input() category!: string;
   @Input() storeName!: string | undefined;
+  @Input() fourPay!: boolean | undefined;
   @Input() products!: ListModel<ProductCarousel>;
   @Input() imageSrc!: string | undefined;
   @Input() alt!: string | undefined;

@@ -14,6 +14,21 @@
                 <img [src]="storeLogoSrc" alt="arta logo" width="24" height="24" title="" loading="lazy" class="">
             </div>
             }
+            @if(fourPay){
+            <div class="four-pay-box d-flex gap-2px mb-12px">
+                <div class="four-pay-wrapper">
+                    <div class="four-pay">
+                        <span class="count text-white">4</span>
+                        <div class="text-white text">قسط</div>
+                    </div>
+                    <div class="d-flex gap-2px align-items-center">
+                        <span class="fw-800">913,120</span>
+                        <span class="text-onback-low fs-8px">تومانی</span>
+                    </div>
+                </div>
+            </div>
+            }@else{
+
             <div class="purchase-type">
                 <div class="credit">
                     <i class="icon icon-credit-linear"></i>
@@ -24,6 +39,7 @@
                     <span>اعتبار</span>
                 </div>
             </div>
+            }
 
         </div>
         <div class="store-info">
