@@ -1,7 +1,7 @@
 <header class="pb-lg-16px pt-lg-42px container">
   <div class="row-lg d-flex align-items-center">
     <div class="col-lg-5 col-12 d-flex align-items-center justify-content-between">
-      <a href="" class="">
+      <a [routerLink]="''" class="">
         <img src="assets/images/logo.svg" alt="logo" width="78" height="19" class="me-lg-8px me-0" />
       </a>
       <div class="d-lg-none d-inline-block">
@@ -17,15 +17,15 @@
         <a href="" class="menu_link">
           <span> وام و اعتبار </span>
           <div class="submenu">
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.loanPage.loanProduct" class="submenu_link">
               <i class="icon icon-credit-linear"></i>
               <span> وام خرید کالا </span>
             </a>
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.loanPage.bnpl" class="submenu_link">
               <i class="icon icon-bnpl-linear"></i>
               <span> الان بخر بعدا پرداخت کن </span>
             </a>
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.loanPage.digikalaInstallment" class="submenu_link">
               <i>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="Logo Frame">
@@ -42,11 +42,11 @@
         <a href="" class="menu_link">
           <span> بیمه </span>
           <div class="submenu">
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.insurancePage.thirdParty" class="submenu_link">
               <i class="icon icon-car-linear"></i>
               <span>بیمه شخص ثالث</span>
             </a>
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.insurancePage.electronicEquipment" class="submenu_link">
               <i class="icon icon-digital-device-linear"></i>
               <span>بیمه تجهیزات الکترونیک</span>
             </a>
@@ -58,19 +58,19 @@
         <a href="" class="menu_link">
           <span> خدمات کسب و کارها </span>
           <div class="submenu">
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.businessServicesPage.creditPaymentGateway" class="submenu_link">
               <i class="icon icon-bank-linear"></i>
               <span>درگاه پرداخت اعتباری</span>
             </a>
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.businessServicesPage.merchantLoan" class="submenu_link">
               <i class="icon icon-credit-linear"></i>
               <span>وام فروشندگان</span>
             </a>
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.businessServicesPage.comprehensivePaymentGateway" class="submenu_link">
               <i class="icon icon-bank-linear"></i>
               <span>درگاه پرداخت جامع</span>
             </a>
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.businessServicesPage.earlySettlement" class="submenu_link">
               <i class="icon icon-cash-out-linear"></i>
               <span>تسویه زودهنگام</span>
             </a>
@@ -79,7 +79,7 @@
         <a href="" class="menu_link">
           <span> خدمات سازمانی </span>
           <div class="submenu">
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.organizationalServicesPage.organizationalInstallment" class="submenu_link">
               <i>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="Logo Frame">
@@ -91,7 +91,7 @@
               </i>
               <span> خرید اقساطی از دیجی‌کالا </span>
             </a>
-            <a href="" class="submenu_link">
+            <a [routerLink]="RouterLinksPath.organizationalServicesPage.organizationalBnpl" class="submenu_link">
               <i class="icon icon-bnpl-linear"></i>
               <span> الان بخر بعدا پرداخت کن </span>
             </a>
@@ -117,26 +117,26 @@
 }
 
 <nav class="navbar justify-content-start container d-lg-flex d-none">
-  <a href="" class="nav-item mx-24px d-flex gap-5px active">
+  <a [routerLink]="''" class="nav-item mx-24px d-flex gap-5px active">
     <span class="icon-container">
       <i class="icon icon-home-bold"></i>
     </span>
     <span>خانه</span>
   </a>
-  <a href="" class="nav-item mx-24px d-flex gap-5px">
+  <a [routerLink]="RouterLinksPath.servicesPage.services" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container">
       <i class="icon icon-more-bold"></i>
     </span>
     <span>خدمات</span>
   </a>
-  <a href="" class="nav-item mx-24px d-flex gap-5px">
+  <a [routerLink]="RouterLinksPath.shopsPage.shops" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container position-relative">
       <i class="icon icon-bag-bold"></i>
       <i class="icon icon-discount-bold position-absolute"></i>
     </span>
     <span>فروشگاه‌ها</span>
   </a>
-  <a href="" class="nav-item mx-24px d-flex gap-5px">
+  <a [routerLink]="RouterLinksPath.paymentPage.payment" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container">
       <i class="icon icon-card-to-card-bold"></i>
     </span>
@@ -149,29 +149,29 @@
 @if (responsive.isDesktop()) {
 <header class="header-sticky" [class.visible]="isStickyHeaderVisible()" [class.hidden]="!isStickyHeaderVisible()">
   <nav class="navbar justify-content-start container d-lg-flex d-none mt-10px">
-    <a href="" class="nav-item mx-24px d-flex gap-5px active">
+    <a [routerLink]="''" class="nav-item mx-24px d-flex gap-5px active">
       <img src="assets/images/dp-logo.svg" alt="" />
     </a>
-    <a href="" class="nav-item mx-24px d-flex gap-5px active">
+    <a [routerLink]="''" class="nav-item mx-24px d-flex gap-5px active">
       <span class="icon-container">
         <i class="icon icon-home-bold"></i>
       </span>
       <span>خانه</span>
     </a>
-    <a href="" class="nav-item mx-24px d-flex gap-5px">
+    <a [routerLink]="RouterLinksPath.servicesPage.services" class="nav-item mx-24px d-flex gap-5px">
       <span class="icon-container">
         <i class="icon icon-more-bold"></i>
       </span>
       <span>خدمات</span>
     </a>
-    <a href="" class="nav-item mx-24px d-flex gap-5px">
+    <a [routerLink]="RouterLinksPath.shopsPage.shops" class="nav-item mx-24px d-flex gap-5px">
       <span class="icon-container position-relative">
         <i class="icon icon-bag-bold"></i>
         <i class="icon icon-discount-bold position-absolute"></i>
       </span>
       <span>فروشگاه‌ها</span>
     </a>
-    <a href="" class="nav-item mx-24px d-flex gap-5px">
+    <a [routerLink]="RouterLinksPath.paymentPage.payment" class="nav-item mx-24px d-flex gap-5px">
       <span class="icon-container">
         <i class="icon icon-card-to-card-bold"></i>
       </span>
@@ -212,17 +212,17 @@
 
       @if (isSubmenuGamesOpen()) {
       <div class="w-100 d-flex flex-column gap-5px submenu-games">
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.loanPage.loanProduct"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.credit }}</span>
         </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.loanPage.bnpl"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.bnpl }}</span>
         </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.loanPage.digikalaInstallment"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.merchants }}</span>
@@ -244,12 +244,12 @@
 
       @if (isSubmenuGamesOpen()) {
       <div class="w-100 d-flex flex-column gap-5px submenu-games">
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.insurancePage.thirdParty"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.thirdPartyInsurance }}</span>
         </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.insurancePage.electronicEquipment"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.equipment }}</span>
@@ -257,17 +257,14 @@
       </div>
       }
     </button>
-    <button
-      class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-      (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
-      (keydown.space)="toggleSubmenuGames(); $event.preventDefault()" [attr.aria-expanded]="isSubmenuGamesOpen()"
-      aria-controls="submenu-games-1">
+    <a [routerLink]="RouterLinksPath.wealthPage.wealth"
+      class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px">
       <div class="d-flex justify-content-between w-100">
         <span class="fs-12px fw-500">
           {{ data.wealth }}
         </span>
       </div>
-    </button>
+    </a>
     <button
       class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
       (click)="toggleSubmenuGames()" (keydown.enter)="toggleSubmenuGames()"
@@ -282,22 +279,22 @@
 
       @if (isSubmenuGamesOpen()) {
       <div class="w-100 d-flex flex-column gap-5px submenu-games">
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.businessServicesPage.creditPaymentGateway"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.bpg }}</span>
         </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.businessServicesPage.merchantLoan"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.merchantsSeller }}</span>
         </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.businessServicesPage.comprehensivePaymentGateway"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.ipg }}</span>
         </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.businessServicesPage.earlySettlement"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.merchantCredit }}</span>
@@ -318,12 +315,12 @@
       </div>
       @if (isSubmenuGamesOpen()) {
       <div class="w-100 d-flex flex-column gap-5px submenu-games">
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.organizationalServicesPage.organizationalInstallment"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.Ocredit }}</span>
         </a>
-        <a [routerLink]="RouterLinksPath.gamesPage.singleRoulette"
+        <a [routerLink]="RouterLinksPath.organizationalServicesPage.organizationalBnpl"
           class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px">
           <i class="icon icon-credit-linear fs-24px lh-0px"></i>
           <span class="fs-12px text-900 fw-400">{{ data.orgbnpl }}</span>

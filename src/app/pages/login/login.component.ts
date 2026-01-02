@@ -25,42 +25,33 @@ import { SkeletonDirective } from '../../@shared/directives/skeleton.directive';
 })
 export class LoginComponent {
   loading = signal(true);     // ← این همونه که باید باشه
-  authService: any;           // ← اگر واقعی داری inject کن، فعلاً برای رفع ارور
+  private authService = inject(AuthService);
+  private fb = inject(FormBuilder);
+  private router = inject(Router);
+  protected readonly RouterLinksPath = RouterLinksPath;
+  phoneNumber:any;
+  error = '';
 
   constructor() {
-    // شبیه‌سازی لودینگ (۳ ثانیه)
     setTimeout(() => this.loading.set(false), 3000);
   }
 
   login() {
     this.loading.set(true);
-    // اینجا سرویس واقعی inject کن
-    // const success = this.authService.login(this.phoneNumber);
-    console.log('لاگین با شماره:', this.phoneNumber);
-
     setTimeout(() => {
       this.loading.set(false);
       alert('ورود موفق!');
     }, 2000);
   }
   
-  
-  private router = inject(Router);
-  protected readonly RouterLinksPath = RouterLinksPath;
-  
-  phoneNumber:any;
-  error = '';
 
-  private fb = inject(FormBuilder);
+  
+
+
   loginForm = this.fb.group({
     phone: ['', [Validators.required, Validators.pattern(/^09\d{9}$/)]],
   });
 
-  
-  // loginForm = new FormGroup({
-  //   phone: new FormControl('', Validators.required)
-  // });
-  
   referralForm = this.fb.group({
     referral: ['', [Validators.required]],
   });
@@ -72,16 +63,15 @@ export class LoginComponent {
 
 
   onSubmit() {
-    this.phoneNumber = this.loginForm.value.phone
-    const success = this.authService.login(this.phoneNumber);
+    if (this.loginForm.invalid) return;
+
+    const phone = this.loginForm.value.phone!;
+    const success = this.authService.login(phone);
 
     if (success) {
-      // ✅ بعد از لاگین موفق، بره به hub
       this.router.navigate(['/hub']);
     } else {
       this.error = 'نام کاربری یا رمز عبور اشتباه است.';
-      console.log(this.error);
-      
     }
   }
-}
+  }

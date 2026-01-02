@@ -10,7 +10,6 @@ export class AuthService {
   constructor(private router: Router) {}
 
   login(phoneNumber: string): boolean {
-    // ✅ در حالت واقعی اینجا باید call API بزنی و token بگیری
     if (phoneNumber === '09212441074') {
       localStorage.setItem(this.isLoggedInKey, 'true');
       return true;
