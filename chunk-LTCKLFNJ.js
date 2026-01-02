@@ -1,1 +1,0 @@
-import{Ka as n}from"./chunk-D2L2GIVQ.js";var o=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-hub"]],decls:0,vars:0,template:function(t,a){},encapsulation:2})};export{o as HubComponent};
