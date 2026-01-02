@@ -117,26 +117,30 @@
 }
 
 <nav class="navbar justify-content-start container d-lg-flex d-none">
-  <a [routerLink]="''" class="nav-item mx-24px d-flex gap-5px active">
+  <a [routerLink]="''"  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px ">
     <span class="icon-container">
       <i class="icon icon-home-bold"></i>
     </span>
     <span>خانه</span>
   </a>
-  <a [routerLink]="RouterLinksPath.servicesPage.services" class="nav-item mx-24px d-flex gap-5px">
+  <a [routerLink]="RouterLinksPath.servicesPage.services" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container">
       <i class="icon icon-more-bold"></i>
     </span>
     <span>خدمات</span>
   </a>
-  <a [routerLink]="RouterLinksPath.shopsPage.shops" class="nav-item mx-24px d-flex gap-5px">
+  <a [routerLink]="RouterLinksPath.shopsPage.shops" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container position-relative">
       <i class="icon icon-bag-bold"></i>
       <i class="icon icon-discount-bold position-absolute"></i>
     </span>
     <span>فروشگاه‌ها</span>
   </a>
-  <a [routerLink]="RouterLinksPath.paymentPage.payment" class="nav-item mx-24px d-flex gap-5px">
+  <a [routerLink]="RouterLinksPath.paymentPage.payment" routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container">
       <i class="icon icon-card-to-card-bold"></i>
     </span>

@@ -1,8 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './@layout/header/header.component';
 import { Meta, Title } from '@angular/platform-browser';
-import { filter, map, mergeMap } from 'rxjs';
+import { filter, map, mergeMap, Subscription } from 'rxjs';
 import { environment } from '../enviroment/environment';
 import { FooterComponent } from './@layout/footer/footer.component';
 import { SwUpdateService } from './@core/services/sw-custom.service';
@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   private router = inject(Router);
   private titleService = inject(Title);
   private activatedRoute = inject(ActivatedRoute);
+  
   private metaService = inject(Meta);
   searchOverlay = inject(SearchOverlayService);
   private sw = inject(SwUpdateService);
@@ -60,4 +61,7 @@ export class AppComponent implements OnInit {
         });
       });
   }
+
+
+
 }

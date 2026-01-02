@@ -11,7 +11,7 @@ import {
   WritableSignal,
 } from '@angular/core';
 import { RouterLinksPath } from '../../@core/constants/router-links';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterModule } from '@angular/router';
 import { SearchBoxComponent } from '../../@shared/components/search-box/search-box.component';
 import { HeaderViewDataInterface } from '../../view-models/header-view-data.interface';
 import { ResponsiveService } from '../../@core/services/responsive.service';
@@ -21,7 +21,7 @@ import { SearchOverlayService } from '../../@core/services/search-overlay-servic
 
 @Component({
   selector: 'app-header',
-  imports: [SearchBoxComponent, RouterLink],
+  imports: [SearchBoxComponent, RouterModule   ,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

@@ -108,22 +108,28 @@
       right: 35% !important;
     }
   }
-  .apps{
-    .qrcode{
+  .apps {
+    .qrcode {
       display: none !important;
     }
-    .application{
+    .application {
       width: 100% !important;
     }
   }
-  footer {
 
+  .not-found-img {
+    width: auto;
+    height: auto;
+    max-width: 400px !important;
+  }
+
+  footer {
     .logo,
     .address,
     .tell,
     .social,
     .logos {
-      text-align: center !important;
+      text-align: center !important;  
       align-items: center !important;
       justify-content: center !important;
     }

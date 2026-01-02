@@ -8,6 +8,7 @@ import { AuthAppletRulesComponent } from './auth-applet-rules/auth-applet-rules.
 import { AuthService } from '../../@core/services/auth.service';
 import { CustomInputComponent } from '../../@shared/components/form-controls/custom-input';
 import { SkeletonDirective } from '../../@shared/directives/skeleton.directive';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,7 @@ import { SkeletonDirective } from '../../@shared/directives/skeleton.directive';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-  loading = signal(true);     // ← این همونه که باید باشه
+  loading = signal(true);
   private authService = inject(AuthService);
   private fb = inject(FormBuilder);
   private router = inject(Router);
@@ -69,9 +70,32 @@ export class LoginComponent {
     const success = this.authService.login(phone);
 
     if (success) {
-      this.router.navigate(['/hub']);
-    } else {
+      this.router.navigate(['/hub'], { replaceUrl: true });
+        } else {
       this.error = 'نام کاربری یا رمز عبور اشتباه است.';
     }
+  }
+  private referralModal?: Modal;
+
+  openReferralModal() {
+    const modalEl = document.getElementById('referralModal');
+    if (!modalEl) return;
+
+    this.referralModal = new Modal(modalEl, {
+      backdrop: 'static',
+      keyboard: false
+    });
+
+    this.referralModal.show();
+  }
+
+  ngOnDestroy() {
+    this.referralModal?.hide();
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+
+    document.body.style.removeProperty;
+    document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
   }
   }

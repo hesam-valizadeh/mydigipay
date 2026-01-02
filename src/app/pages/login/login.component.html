@@ -1,7 +1,10 @@
 <div class="login-page">
+  
   <app-carousel-story>
+
   </app-carousel-story>
   <div class="container">
+
     <div class="row">
       <div class="box">
         <div class="phone-number-content">
@@ -10,18 +13,19 @@
 
           <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="form-floating mb-3">
-              <app-custom-input formControlName="phone" label="شماره موبایل" placeholder="مثلاً 09121234567">
+              <app-custom-input formControlName="phone" label="شماره موبایل" >
               </app-custom-input>
             </div>
+            <span class="text-center fs-12px">شماره موبایل برای ورود : 09212441074</span>
             <button class="login-btn" type="submit" [disabled]="loginForm.invalid"
-              [routerLink]="RouterLinksPath.hubPage.hub">
+             >
               قبول شرایط و ادامه
             </button>
           </form>
 
 
           <div class="d-flex flex-row align-items-center justify-content-between link">
-            <button data-bs-toggle="modal" data-bs-target="#referralModal">
+            <button data-bs-toggle="modal" (click)="openReferralModal()">
               <span> کد معرف دارید </span>
             </button>
             <button data-bs-toggle="modal" data-bs-target="#rulesModal">

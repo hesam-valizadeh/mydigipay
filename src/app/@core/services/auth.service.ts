@@ -1,28 +1,28 @@
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+  import { Injectable } from '@angular/core';
+  import { Router } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class AuthService {
-  private isLoggedInKey = 'isLoggedIn';
+  @Injectable({
+    providedIn: 'root',
+  })
+  export class AuthService {
+    private isLoggedInKey = 'isLoggedIn';
 
-  constructor(private router: Router) {}
+    constructor(private router: Router) {}
 
-  login(phoneNumber: string): boolean {
-    if (phoneNumber === '09212441074') {
-      localStorage.setItem(this.isLoggedInKey, 'true');
-      return true;
+    login(phoneNumber: string): boolean {
+      if (phoneNumber === '09212441074') {
+        localStorage.setItem(this.isLoggedInKey, 'true');
+        return true;
+      }
+      return false;
     }
-    return false;
-  }
 
-  logout(): void {
-    localStorage.removeItem(this.isLoggedInKey);
-    this.router.navigate(['/login']);
-  }
+    logout(): void {
+      localStorage.removeItem(this.isLoggedInKey);
+      this.router.navigate(['/login']);
+    }
 
-  isAuthenticated(): boolean {
-    return localStorage.getItem(this.isLoggedInKey) === 'true';
+    isAuthenticated(): boolean {
+      return localStorage.getItem(this.isLoggedInKey) === 'true';
+    }
   }
-}
