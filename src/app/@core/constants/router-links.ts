@@ -32,6 +32,44 @@ export class RouterLinksPath {
   static hubPage = {
     hub: '/hub',
   };
+  static servicesPage = {
+    services: '/services',
+  };
+  static shopsPage = {
+    shops: '/shops',
+  };
+  static paymentPage = {
+    payment: '/payment',
+  };
+  static loanPage = {
+    loanProduct: '/loan-product',
+    bnpl: '/bnpl',
+    digikalaInstallment: '/digikala-installment',
+  };
+  static insurancePage = {
+    thirdParty: '/third-party-insurance',
+    electronicEquipment: '/electronic-equipment-insurance',
+  };
+  static businessServicesPage = {
+    creditPaymentGateway: '/credit-payment-gateway',
+    merchantLoan: '/merchant-loan',
+    comprehensivePaymentGateway: '/comprehensive-payment-gateway',
+    earlySettlement: '/early-settlement',
+  };
+  static organizationalServicesPage = {
+    organizationalInstallment: '/organizational-installment',
+    organizationalBnpl: '/organizational-bnpl',
+  };
+  static aboutPage = {
+    about: '/about',
+    annualReport: '/annual-report',
+    careers: '/careers',
+    blog: '/blog',
+    technicalDocs: '/technical-docs',
+  };
+  static specialServicesPage = {
+    specialFinancialServices: '/special-financial-services',
+  };
 }
 export function routeWithoutSlash(path: string): string {
   if (path.startsWith('/')) {
