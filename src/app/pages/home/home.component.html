@@ -12,13 +12,10 @@
     <app-service-card class="p-0"></app-service-card>
   </div>
   @for (section of sections; track section?.id) {
-    <div class="row">
-      <app-product-section
-        class="p-0"
-        [category]="section?.category"
-        [products]="section?.products"
-      ></app-product-section>
-    </div>
+  <div class="row">
+    <app-product-section class="p-0" [category]="section?.category"
+      [products]="section?.products"></app-product-section>
+  </div>
   }
 </div>
 
@@ -27,13 +24,7 @@
     <div class="row">
       <div class="col-lg-3 p-0">
         <figure>
-          <img
-            src="assets/images/download.webp"
-            alt=""
-            width="257"
-            height="259"
-            id="download-app"
-          />
+          <img src="assets/images/download.webp" width="1053" height="990" alt="" loading="lazy" id="download-app" />
         </figure>
       </div>
       <div class="col-lg-6 p-0 d-flex">
@@ -49,19 +40,19 @@
       </div>
       <div class="col-lg-3 d-flex gap-20px justify-content-end">
         <div class="d-flex flex-row flex-lg-column align-items-center justify-content-center application">
-          <a href="">
+          <a href="" aria-label="Google Play Store">
             <figure>
               <img src="assets/images/gp-text.svg" alt="" />
               <img src="assets/images/gp-icon.svg" alt="" />
             </figure>
           </a>
-          <a href="">
+          <a href="" aria-label="کافه بازار">
             <figure>
               <img src="assets/images/bazaar-text.svg" alt="" />
               <img src="assets/images/bazaar-icon.svg" alt="" />
             </figure>
           </a>
-          <a href="">
+          <a href="" aria-label="وب اپلیکیشن">
             <figure>
               <img src="assets/images/dp-text.svg" alt="" />
               <img src="assets/images/dp-icon.svg" alt="" />
@@ -81,5 +72,5 @@
 
 
 @if (responsive?.isDesktop()) {
-  <div id="backdrop" [class.show-overlay]="searchOverlay.isSearchOpen()"></div>
+<div id="backdrop" [class.show-overlay]="searchOverlay.isSearchOpen()"></div>
 }

@@ -18,22 +18,22 @@
                     </a>
                 </div>
                 <div class="d-flex align-items-center justify-content-start gap-25px social">
-                    <a href="">
+                    <a href="" aria-label="instagram">
                         <figure>
                             <img src="assets/images/instagram-icon.svg" alt="" width="32" height="33">
                         </figure>
                     </a>
-                    <a href="">
+                    <a href="" aria-label="linkedin">
                         <figure>
                             <img src="assets/images/linkedin-icon.svg" alt="" width="25" height="25">
                         </figure>
                     </a>
-                    <a href="">
+                    <a href="" aria-label="x">
                         <figure>
                             <img src="assets/images/x-icon.svg" alt="" width="32" height="33">
                         </figure>
                     </a>
-                    <a href="">
+                    <a href="" aria-label="aparat">
                         <figure>
                             <img src="assets/images/aparat-icon.svg" alt="" width="32" height="33">
                         </figure>
@@ -56,7 +56,8 @@
                 <div>
                     <h4>خدمات ما</h4>
                     <ul>
-                        <li><a [routerLink]="RouterLinksPath.specialServicesPage.specialFinancialServices"><span>خدمات ویژه مالی</span></a></li>
+                        <li><a [routerLink]="RouterLinksPath.specialServicesPage.specialFinancialServices"><span>خدمات
+                                    ویژه مالی</span></a></li>
                         <li><a [routerLink]="RouterLinksPath.shopsPage.shops"><span>فروشگاه‌ها</span></a></li>
                     </ul>
                 </div>
@@ -84,11 +85,16 @@
                         aria-labelledby="panelsStayOpen-headingOne">
                         <div class="accordion-body">
                             <ul>
-                                <li><a [routerLink]="RouterLinksPath.aboutPage.about"><span>درباره دیجی‌پی</span></a></li>
-                                <li><a [routerLink]="RouterLinksPath.aboutPage.annualReport"><span>گزارش سالانه</span></a></li>
-                                <li><a [routerLink]="RouterLinksPath.aboutPage.careers"><span>فرصت‌های شغلی</span></a></li>
-                                <li><a [routerLink]="RouterLinksPath.aboutPage.blog"><span>مجله اینترنتی دیجی‌پی</span></a></li>
-                                <li><a [routerLink]="RouterLinksPath.aboutPage.technicalDocs"><span>مستندات فنی</span></a></li>
+                                <li><a [routerLink]="RouterLinksPath.aboutPage.about"><span>درباره دیجی‌پی</span></a>
+                                </li>
+                                <li><a [routerLink]="RouterLinksPath.aboutPage.annualReport"><span>گزارش
+                                            سالانه</span></a></li>
+                                <li><a [routerLink]="RouterLinksPath.aboutPage.careers"><span>فرصت‌های شغلی</span></a>
+                                </li>
+                                <li><a [routerLink]="RouterLinksPath.aboutPage.blog"><span>مجله اینترنتی
+                                            دیجی‌پی</span></a></li>
+                                <li><a [routerLink]="RouterLinksPath.aboutPage.technicalDocs"><span>مستندات
+                                            فنی</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -105,7 +111,8 @@
                         aria-labelledby="panelsStayOpen-headingTwo">
                         <div class="accordion-body">
                             <ul>
-                                <li><a [routerLink]="RouterLinksPath.specialServicesPage.specialFinancialServices"><span>خدمات ویژه مالی</span></a></li>
+                                <li><a [routerLink]="RouterLinksPath.specialServicesPage.specialFinancialServices"><span>خدمات
+                                            ویژه مالی</span></a></li>
                                 <li><a [routerLink]="RouterLinksPath.shopsPage.shops"><span>فروشگاه‌ها</span></a></li>
                             </ul>
                         </div>
@@ -124,8 +131,10 @@
                         <div class="accordion-body">
                             <ul>
                                 <li><a [routerLink]="RouterLinksPath.faqPage.faq"><span>سوالات متداول</span></a></li>
-                                <li><a [routerLink]="RouterLinksPath.rulesPage.rules"><span>قوانین و مقررات</span></a></li>
-                                <li><a [routerLink]="RouterLinksPath.contactUsPage.contactUs"><span>تماس با ما</span></a></li>
+                                <li><a [routerLink]="RouterLinksPath.rulesPage.rules"><span>قوانین و مقررات</span></a>
+                                </li>
+                                <li><a [routerLink]="RouterLinksPath.contactUsPage.contactUs"><span>تماس با
+                                            ما</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -180,19 +189,20 @@
         </div>
         <div class="col-lg-3  d-flex gap-20px justify-content-end p-0">
             <div class="d-flex flex-lg-column align-items-center justify-content-center application">
-                <a href="">
+                <a href="" aria-label="Google Play Store">
+
                     <figure>
                         <img src="assets/images/gp-text.svg" alt="">
                         <img src="assets/images/gp-icon.svg" alt="">
                     </figure>
                 </a>
-                <a href="">
+                <a href="" aria-label="کافه بازار">
                     <figure>
                         <img src="assets/images/bazaar-text.svg" alt="">
                         <img src="assets/images/bazaar-icon.svg" alt="">
                     </figure>
                 </a>
-                <a href="">
+                <a href="" aria-label="وب اپلیکیشن">
                     <figure>
                         <img src="assets/images/dp-text.svg" alt="">
                         <img src="assets/images/dp-icon.svg" alt="">
@@ -204,7 +214,7 @@
                     دانلود اپلیکیشن
                 </span>
                 <figure>
-                    <img src="assets/images/qr-code.png" alt="" width="92" height="92" class="mt-12px">
+                    <img src="assets/images/qr-code.png" alt="qrcode" width="92" height="92" class="mt-12px">
                 </figure>
             </div>
         </div>
@@ -222,28 +232,28 @@
             </p>
         </div>
         <div class="col-lg-4 p-0 logos">
-            <a href="">
+            <a href="" aria-label="ics Icon">
                 <figure>
                     <img src="assets/images/ics-logo.svg" alt="logo-ics" width="40" height="40">
                 </figure>
             </a>
 
-            <a href="">
+            <a href="" aria-label="ettehadie Icon">
                 <figure>
                     <img src="assets/images/ettehadie.svg" alt="ettehadie" width="40" height="40">
                 </figure>
             </a>
-            <a href="">
+            <a href="" aria-label="samandehi Icon">
                 <figure>
                     <img src="assets/images/logo-samandehi.png" alt="samandehi" width="40" height="40">
                 </figure>
             </a>
-            <a href="">
+            <a href="" aria-label="saramad Icon">
                 <figure>
                     <img src="assets/images/saramad.svg" alt="saramad" width="40" height="40">
                 </figure>
             </a>
-            <a href="">
+            <a href="" aria-label="enamad Icon">
                 <figure>
                     <img src="assets/images/enamad.png" alt="enamad" width="40" height="40">
                 </figure>
