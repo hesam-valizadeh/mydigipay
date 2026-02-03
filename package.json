@@ -9,7 +9,8 @@
     "test": "ng test",
     "pretty-quick": "pretty-quick --staged",
     "lint:css": "stylelint \"src/**/*.scss\" --fix",
-    "lint": "ng lint --fix"
+    "lint": "ng lint --fix",
+    "cy:open": "cypress open"
   },
   "private": true,
   "dependencies": {
@@ -33,12 +34,14 @@
     "@angular/build": "^20.3.7",
     "@angular/cli": "^20.3.7",
     "@angular/compiler-cli": "^20.3.7",
+    "@cucumber/cucumber": "^12.6.0",
     "@types/bootstrap": "^5.2.10",
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "angular-cli-ghpages": "^2.0.3",
     "angular-eslint": "20.1.1",
+    "cypress": "^15.9.0",
     "jasmine-core": "~5.6.0",
     "json-server": "^1.0.0-beta.3",
     "karma": "~6.4.0",
