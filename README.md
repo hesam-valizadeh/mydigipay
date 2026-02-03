@@ -1,6 +1,3 @@
-# AngularV21
-##   <a href="https://hesam-valizadeh.github.io/mydigipay" target="_blank">Demo</a>
-
 # MyDigiPay
 
 ![Angular](https://img.shields.io/badge/Angular-Framework-red?style=for-the-badge&logo=angular)
@@ -26,23 +23,41 @@ This project is suitable for:
 
 ---
 
-## 🧱 Tech Stack
+## ✨ Features
 
-| Category | Technology |
-|--------|------------|
-| Framework | Angular |
-| Language | TypeScript |
-| Styling | SCSS |
-| Tooling | Angular CLI |
-| Package Manager | npm |
-| CI/CD | GitHub Actions |
-| Deployment | GitHub Pages / Vercel (optional) |
+- Modular and scalable architecture
+- Responsive design with SCSS
+- Accessibility compliance
+- CI/CD integration with GitHub Actions
+- Unit and E2E testing with Cypress
+- Deployment-ready configuration
 
 ---
 
+## 🧱 Tech Stack
+
+| **Category**         | **Technology**                                      |
+|----------------------|----------------------------------------------------|
+| **Framework**        | Angular                                           |
+| **Language**         | TypeScript                                        |
+| **Styling**          | SCSS                                              |
+| **Tooling**          | Angular CLI                                       |
+| **Package Manager**  | npm                                               |
+| **Unit Testing**     | Jasmine, Karma                                    |
+| **E2E Testing**      | Cypress                                           |
+| **Accessibility Testing** | Cypress with a11y plugins                     |
+| **Integration Testing** | Cypress                                         |
+| **Linting**          | ESLint                                            |
+| **Formatting**       | Prettier                                          |
+| **CI/CD**            | GitHub Actions                                    |
+| **Deployment**       | GitHub Pages, Vercel (optional)                   |
+| **Performance Tools**| Lighthouse                                        |
+| **Debugging Tools**  | Angular DevTools, Chrome DevTools                 |
+| **Code Coverage**    | Istanbul (via Karma)                              |
 ## ⚙️ Getting Started
 
 ### Prerequisites
+
 - Node.js (v18 or later)
 - npm
 - Angular CLI
@@ -53,3 +68,78 @@ This project is suitable for:
 git clone https://github.com/hesam-valizadeh/mydigipay.git
 cd mydigipay
 npm install
+```
+
+### Running the Application
+
+```bash
+ng serve
+```
+
+Visit `http://localhost:4200` to view the application.
+
+---
+
+## 🧪 Testing
+
+### Unit Tests
+
+```bash
+ng test
+```
+
+### End-to-End Tests
+
+```bash
+npx cypress open
+```
+
+---
+
+## 📂 Folder Structure
+
+```plaintext
+src/
+├── app/                # Main application code
+│   ├── @core/         # Core services and utilities
+│   ├── @layout/       # Layout components
+│   ├── @shared/       # Shared components, directives, and pipes
+│   ├── components/    # Feature-specific components
+│   ├── pages/         # Application pages
+│   └── view-models/   # View models for data handling
+├── assets/             # Static assets (images, fonts, etc.)
+├── styles/             # Global styles
+└── environments/       # Environment-specific configurations
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- [Angular](https://angular.io/)
+- [Cypress](https://www.cypress.io/)
+- [GitHub Actions](https://github.com/features/actions)
+
+---
+
+## 🌐 Demo
+
+Check out the live demo [here](https://hesam-valizadeh.github.io/mydigipay).

@@ -1,0 +1,695 @@
+{
+  "F:/resume/Project/mydigipay/src/app/@core/constants/labels.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/constants/labels.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/constants/router-links.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/constants/router-links.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/guards/auth.guard.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/guards/auth.guard.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/models/base-classes/base-class.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/models/base-classes/base-class.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/models/enums/deploy-target-enum.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/models/enums/deploy-target-enum.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/models/enums/index.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/models/enums/index.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/models/interfaces/environment.interface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/models/interfaces/environment.interface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/models/interfaces/user-model.interface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/models/interfaces/user-model.interface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/models/list-model.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/models/list-model.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/models/types/responsive.types.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/models/types/responsive.types.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/services/auth.service.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/services/auth.service.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/services/responsive.service.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/services/responsive.service.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/services/search-overlay-service.service.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/services/search-overlay-service.service.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/services/sw-custom.service.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/services/sw-custom.service.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@core/utils/config.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@core/utils/config.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@layout/bottom-navigation/bottom-navigation.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@layout/bottom-navigation/bottom-navigation.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@layout/footer/footer.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@layout/footer/footer.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@layout/header/header.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@layout/header/header.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-services/carousel-services-item/carousel-services-item.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-services/carousel-services-item/carousel-services-item.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-services/carousel-services.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-services/carousel-services.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-services/model/services-carousel-inerface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-services/model/services-carousel-inerface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-story/carousel-story-item/carousel-story-item.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-story/carousel-story-item/carousel-story-item.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-story/carousel-story.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-story/carousel-story.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-story/model/carousel-inerface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/carousel-story/model/carousel-inerface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/custom-swiper/custom-swiper.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/custom-swiper/custom-swiper.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/form-controls/custom-input/custom-input.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/form-controls/custom-input/custom-input.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/form-controls/custom-input/index.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/form-controls/custom-input/index.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/components/search-box/search-box.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/components/search-box/search-box.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/directives/read-more.directive.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/directives/read-more.directive.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/directives/skeleton.directive.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/directives/skeleton.directive.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/@shared/directives/swiper-element.directive.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/@shared/directives/swiper-element.directive.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/app.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/app.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/app.routes.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/app.routes.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/hero-carousel/hero-carousel-item/hero-carousel-item.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/hero-carousel/hero-carousel-item/hero-carousel-item.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/hero-carousel/hero-carousel.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/hero-carousel/hero-carousel.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/hero-carousel/model/carousel-inerface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/hero-carousel/model/carousel-inerface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/product-section/model/carousel-inerface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/product-section/model/carousel-inerface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/product-section/product-item/product-item.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/product-section/product-item/product-item.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/product-section/product-section.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/product-section/product-section.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/service-card/service-card.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/service-card/service-card.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/square-banner/model/carousel-inerface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/square-banner/model/carousel-inerface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/square-banner/square-banner-item/square-banner-item.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/square-banner/square-banner-item/square-banner-item.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/components/square-banner/square-banner.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/components/square-banner/square-banner.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/about/about.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/about/about.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/annual-report/annual-report.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/annual-report/annual-report.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/blog/blog.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/blog/blog.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/bnpl/bnpl.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/bnpl/bnpl.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/careers/careers.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/careers/careers.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/comprehensive-payment-gateway/comprehensive-payment-gateway.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/comprehensive-payment-gateway/comprehensive-payment-gateway.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/contact-us/contact-us.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/contact-us/contact-us.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/credit-payment-gateway/credit-payment-gateway.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/credit-payment-gateway/credit-payment-gateway.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/digikala-installment/digikala-installment.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/digikala-installment/digikala-installment.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/early-settlement/early-settlement.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/early-settlement/early-settlement.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/electronic-equipment-insurance/electronic-equipment-insurance.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/electronic-equipment-insurance/electronic-equipment-insurance.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/faq/faq.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/faq/faq.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/home/home.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/home/home.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/hub/hub.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/hub/hub.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/loan-product/loan-product.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/loan-product/loan-product.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/login/auth-applet-rules/auth-applet-rules.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/login/auth-applet-rules/auth-applet-rules.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/login/login.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/login/login.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/merchant-loan/merchant-loan.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/merchant-loan/merchant-loan.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/not-found/not-found.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/not-found/not-found.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/organizational-bnpl/organizational-bnpl.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/organizational-bnpl/organizational-bnpl.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/organizational-installment/organizational-installment.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/organizational-installment/organizational-installment.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/payment/payment.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/payment/payment.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/rules/rules.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/rules/rules.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/services/services.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/services/services.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/shops/shops.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/shops/shops.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/special-financial-services/special-financial-services.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/special-financial-services/special-financial-services.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/technical-docs/technical-docs.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/technical-docs/technical-docs.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/third-party-insurance/third-party-insurance.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/third-party-insurance/third-party-insurance.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/pages/wealth/wealth.component.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/pages/wealth/wealth.component.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/view-models/header-view-data.interface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/view-models/header-view-data.interface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/view-models/home-page-view-data.interface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/view-models/home-page-view-data.interface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/app/view-models/nav-view-data.interface.ts": {
+    "path": "F:/resume/Project/mydigipay/src/app/view-models/nav-view-data.interface.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/enviroment/environment.ts": {
+    "path": "F:/resume/Project/mydigipay/src/enviroment/environment.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  },
+  "F:/resume/Project/mydigipay/src/main.ts": {
+    "path": "F:/resume/Project/mydigipay/src/main.ts",
+    "statementMap": {},
+    "fnMap": {},
+    "branchMap": {},
+    "s": {},
+    "f": {},
+    "b": {}
+  }
+}
