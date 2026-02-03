@@ -14,7 +14,7 @@
     </div>
     <div class="col-lg-auto d-lg-block d-none p-0">
       <menu class="p-0">
-        <a href="" class="menu_link">
+        <button class="menu_link">
           <span> وام و اعتبار </span>
           <div class="submenu">
             <a [routerLink]="RouterLinksPath.loanPage.loanProduct" class="submenu_link">
@@ -38,8 +38,8 @@
               <span> خرید اقساطی از دیجی‌کالا </span>
             </a>
           </div>
-        </a>
-        <a href="" class="menu_link">
+        </button>
+        <button class="menu_link">
           <span> بیمه </span>
           <div class="submenu">
             <a [routerLink]="RouterLinksPath.insurancePage.thirdParty" class="submenu_link">
@@ -51,11 +51,11 @@
               <span>بیمه تجهیزات الکترونیک</span>
             </a>
           </div>
-        </a>
+        </button>
         <a [routerLink]="RouterLinksPath.wealthPage.wealth" class="menu_link">
           <span> مدیریت سرمایه </span>
         </a>
-        <a href="" class="menu_link">
+        <button class="menu_link">
           <span> خدمات کسب و کارها </span>
           <div class="submenu">
             <a [routerLink]="RouterLinksPath.businessServicesPage.creditPaymentGateway" class="submenu_link">
@@ -75,8 +75,8 @@
               <span>تسویه زودهنگام</span>
             </a>
           </div>
-        </a>
-        <a href="" class="menu_link">
+        </button>
+        <button class="menu_link">
           <span> خدمات سازمانی </span>
           <div class="submenu">
             <a [routerLink]="RouterLinksPath.organizationalServicesPage.organizationalInstallment" class="submenu_link">
@@ -96,7 +96,7 @@
               <span> الان بخر بعدا پرداخت کن </span>
             </a>
           </div>
-        </a>
+        </button>
       </menu>
     </div>
     <div class="col-lg-auto d-lg-block d-none p-0">
@@ -117,15 +117,15 @@
 }
 
 <nav class="navbar justify-content-start container d-lg-flex d-none">
-  <a [routerLink]="''"  routerLinkActive="active"
-  [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px ">
+  <a [routerLink]="''" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+    class="nav-item mx-24px d-flex gap-5px ">
     <span class="icon-container">
       <i class="icon icon-home-bold"></i>
     </span>
     <span>خانه</span>
   </a>
   <a [routerLink]="RouterLinksPath.servicesPage.services" routerLinkActive="active"
-  [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px">
+    [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container">
       <i class="icon icon-more-bold"></i>
     </span>
@@ -140,7 +140,7 @@
     <span>فروشگاه‌ها</span>
   </a>
   <a [routerLink]="RouterLinksPath.paymentPage.payment" routerLinkActive="active"
-  [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px">
+    [routerLinkActiveOptions]="{ exact: true }" class="nav-item mx-24px d-flex gap-5px">
     <span class="icon-container">
       <i class="icon icon-card-to-card-bold"></i>
     </span>

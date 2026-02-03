@@ -1,8 +1,8 @@
-@import '../../node_modules/bootstrap/scss/functions';
-@import '../../node_modules/bootstrap/scss/variables';
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
 
-$font-base-url: 'assets/fonts';
-$image-base-url: 'assets/images';
+$font-base-url: "assets/fonts";
+$image-base-url: "assets/images";
 
 @function loadStaticFont($local-path) {
   @return url($font-base-url + $local-path);
@@ -31,28 +31,28 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $theme-colors: (
-  'primary': $primary,
-  'secondary': $secondary,
-  'tertiary': $tertiary,
-  'success': $success,
-  'info': $info,
-  'warning': $warning,
-  'danger': $danger,
-  'light': $light,
-  'lighter': $light,
-  'dark': $dark,
-  'white': $white,
-  'orange': $orange,
-  'pink': $pink,
-  '100': #f8f9fa,
-  '200': #e9ecef,
-  '300': #dee2e6,
-  '400': #ced4da,
-  '500': #adb5bd,
-  '600': #6c757d,
-  '700': #495057,
-  '800': #343a40,
-  '900': #45474a,
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "lighter": $light,
+  "dark": $dark,
+  "white": $white,
+  "orange": $orange,
+  "pink": $pink,
+  "100": #f8f9fa,
+  "200": #e9ecef,
+  "300": #dee2e6,
+  "400": #ced4da,
+  "500": #adb5bd,
+  "600": #6c757d,
+  "700": #495057,
+  "800": #343a40,
+  "900": #45474a,
 );
 $btn-padding-x: 20px;
 $btn-padding-y: 8px;
@@ -118,6 +118,7 @@ $spacers: (
   115px: 115px,
   120px: 120px,
   150px: 150px,
+  725px: 725px,
 );
 
 // scss-docs-end spacer-variables-maps
@@ -179,6 +180,8 @@ $font-sizes: (
   38px: 38px,
   39px: 39px,
   40px: 40px,
+  50px: 50px,
+  725px: 725px,
 );
 $border-color: #e3e3e3;
 
@@ -218,8 +221,8 @@ $grid-breakpoints: (
 
 // scss-docs-end grid-breakpoints
 
-@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
-@include _assert-starts-at-zero($grid-breakpoints, '$grid-breakpoints');
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 // Grid containers
 //
@@ -235,7 +238,7 @@ $container-max-widths: (
 
 // scss-docs-end container-max-widths
 
-@include _assert-ascending($container-max-widths, '$container-max-widths');
+@include _assert-ascending($container-max-widths, "$container-max-widths");
 
 // Grid columns
 // Set the number of columns and specify the width of the gutters.
@@ -315,7 +318,6 @@ $list-inline-padding: 0.5rem;
 $mark-padding: 0.1875em;
 $mark-bg: $yellow-100;
 
-
-$zindex-modal-backdrop:             0 ;
-$modal-backdrop-bg:                 $white;
-$modal-backdrop-opacity:            0 ;
+$zindex-modal-backdrop: 0;
+$modal-backdrop-bg: $white;
+$modal-backdrop-opacity: 0;

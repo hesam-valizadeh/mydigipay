@@ -206,8 +206,8 @@ export const routes: Routes = [
   {
     path: routeWithoutSlash(RouterLinksPath.aboutPage.about),
     data: {
-      title: 'درباره دیجی‌پی',
-      description: 'درباره دیجی‌پی',
+      title: 'درباره ما - دیجی‌پی دریافت وام خرید کالا و خدمات',
+      description: 'با دیجی‌پی، پرداخت‌ها، خریدهای اعتباری ۱ قسطه و ۴ قسطه، دریافت وام خرید کالا و خدمات، خرید اقساطی بیمه، سرمایه‌گذاری و همچنین خدمات روزمره مالی را فقط با چند کلیک انجام دهید.',
     },
     loadComponent: () =>
       import('./pages/about/about.component').then((c) => c.AboutComponent),

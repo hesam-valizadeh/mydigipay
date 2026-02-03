@@ -2,7 +2,7 @@ header {
   height: 90px;
   padding-left: 0 !important;
 
-  a.menu_link {
+  .menu_link {
     margin: 0 -2.5px;
 
     > span {
@@ -29,7 +29,7 @@ header {
       opacity: 0;
       visibility: hidden;
       position: absolute;
-      top: 21px;
+      top: 25px;
       right: -25px;
       background-color: #fff;
       width: 245px;
@@ -72,14 +72,14 @@ header {
       }
     }
 
-    a.menu_link {
+    .menu_link {
       position: relative;
 
       &:hover {
         color: #1159fc;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 20px;
           height: 2px;
@@ -135,7 +135,7 @@ nav.navbar {
       line-height: 2;
       font-size: 12px !important;
       font-weight: 450 !important;
-      font-variation-settings: 'DOTS' 1 !important;
+      font-variation-settings: "DOTS" 1 !important;
     }
   }
 }
