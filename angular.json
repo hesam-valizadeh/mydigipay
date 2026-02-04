@@ -52,7 +52,6 @@
                 "fonts": true
               },
               "sourceMap": false,
-
               "budgets": [
                 {
                   "type": "initial",

@@ -12,7 +12,14 @@
           "/index.html",
           "/manifest.webmanifest",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/assets/**",
+          "/images/**",
+          "/**/*.webp",
+          "/**/*.png",
+          "/**/*.jpg",
+          "/**/*.svg",
+          "/**/*.woff2"
         ]
       }
     },
@@ -29,13 +36,13 @@
   ],
   "dataGroups": [
     {
-      "name": "api-cache",
-      "urls": ["https://api.example.com/**"],
+      "name": "static-assets-ttl",
+      "urls": ["/assets/**", "/images/**"],
       "cacheConfig": {
-        "strategy": "freshness",
-        "maxSize": 100,
-        "maxAge": "1h",
-        "timeout": "10s"
+        "strategy": "performance",
+        "maxSize": 200,
+        "maxAge": "30d",
+        "timeout": "5s"
       }
     }
   ]
