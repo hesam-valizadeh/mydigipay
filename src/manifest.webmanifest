@@ -1,7 +1,8 @@
 {
-  "name": "DigiPay",
-  "short_name": "DigiPay",
-  "start_url": "/",
+  "name": "Digipay",
+  "short_name": "Digipay",
+  "start_url": "/mydigipay/",
+  "scope": "/mydigipay/",
   "display": "standalone",
   "background_color": "#0038FF",
   "theme_color": "#ffffff",
