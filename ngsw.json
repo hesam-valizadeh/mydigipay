@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770240550677,
+  "timestamp": 1770242302156,
   "index": "/mydigipay/index.html",
   "assetGroups": [
     {
@@ -1089,7 +1089,7 @@
     "/mydigipay/chunk-ZTI7IG5F.js": "6c994d8691c6839f595b6eb61c356f2a37d80542",
     "/mydigipay/index.html": "078d208b72765e0f22d85dd3d48443d4aab31662",
     "/mydigipay/main-YSIQCZIZ.js": "a3fdab32963d5a3eaae7cc957a1b6a37e0f40e0d",
-    "/mydigipay/manifest.webmanifest": "a2ddd27704115002e915c2939883c466b9e2cfc8",
+    "/mydigipay/manifest.webmanifest": "96145255411878982cccc6d5df96c041bfcca7de",
     "/mydigipay/media/YekanBakhFaNum-Black-F2CQVXA2.woff": "d4ae3908b1dbb30584ff97d0299f557316c62f8d",
     "/mydigipay/media/YekanBakhFaNum-Black-VYXMUH3K.woff2": "5e85acd2eea3d4f26472f5419c7bd454d078523b",
     "/mydigipay/media/YekanBakhFaNum-Bold-7CVCFUCF.woff2": "6b226880c8b149234127ae7e39e44acafd15e858",
