@@ -15,13 +15,13 @@ import { NavigationEnd, Router, RouterLink, RouterModule } from '@angular/router
 import { SearchBoxComponent } from '../../@shared/components/search-box/search-box.component';
 import { HeaderViewDataInterface } from '../../view-models/header-view-data.interface';
 import { ResponsiveService } from '../../@core/services/responsive.service';
-import { ViewportScroller } from '@angular/common';
+import { NgOptimizedImage, ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
 import { SearchOverlayService } from '../../@core/services/search-overlay-service.service';
 
 @Component({
   selector: 'app-header',
-  imports: [SearchBoxComponent, RouterModule   ,RouterLink],
+  imports: [SearchBoxComponent, RouterModule,NgOptimizedImage,RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

@@ -2,7 +2,7 @@
   <div class="row-lg d-flex align-items-center">
     <div class="col-lg-5 col-12 d-flex align-items-center justify-content-between">
       <a [routerLink]="''" class="">
-        <img src="assets/images/logo.svg" alt="logo" width="78" height="19" class="me-lg-8px me-0" />
+        <img ngOptimizedImage ngSrc="assets/images/logo.svg" alt="logo" width="78" height="19" class="me-lg-8px me-0" />
       </a>
       <div class="d-lg-none d-inline-block">
         <button class="hamburger-btn" (click)="toggleSubmenu()" (keydown.enter)="toggleSubmenu()"
@@ -102,7 +102,7 @@
     <div class="col-lg-auto d-lg-block d-none p-0">
 
       <a [routerLink]="RouterLinksPath.loginPage.login" class="login">
-        <img src="assets/icons/person.svg" alt="logo" width="20" height="20" />
+        <img ngOptimizedImage ngSrc="assets/icons/person.svg" alt="logo" width="20" height="20" />
         <span> ورود/ثبت نام </span>
       </a>
 
@@ -154,7 +154,7 @@
 <header class="header-sticky" [class.visible]="isStickyHeaderVisible()" [class.hidden]="!isStickyHeaderVisible()">
   <nav class="navbar justify-content-start container d-lg-flex d-none mt-10px">
     <a [routerLink]="''" class="nav-item mx-24px d-flex gap-5px active">
-      <img src="assets/images/dp-logo.svg" alt="" />
+      <img ngOptimizedImage ngSrc="assets/images/dp-logo.svg" alt="" width="16" height="22" />
     </a>
     <a [routerLink]="''" class="nav-item mx-24px d-flex gap-5px active">
       <span class="icon-container">

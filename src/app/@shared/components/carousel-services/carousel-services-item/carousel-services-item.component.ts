@@ -1,8 +1,9 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-carousel-services-item',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './carousel-services-item.component.html',
   styleUrl: './carousel-services-item.component.scss',
 })

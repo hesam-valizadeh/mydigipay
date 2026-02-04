@@ -91,6 +91,7 @@ export class LoginComponent {
 
   ngOnDestroy() {
     this.referralModal?.hide();
+    this.referralModal?.dispose()
     document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';

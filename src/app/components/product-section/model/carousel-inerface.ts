@@ -8,7 +8,6 @@ export interface ProductCarousel {
   discountPercentage?: string;
   width: string;
   height: string;
-  loading: string;
   priceNoDiscount?: string;
   storeLogoSrc: string;
   storeRate?:string

@@ -1,20 +1,14 @@
 <div class="item">
-    <div class="contain">
-        <a href=""> </a>
-        <div>
-            <div class="item-icon">
-                <figure>
-                    <img
-                      #figureImg
-                      [src]="src"
-                      [alt]="alt || title"
-                      class="slide-image"
-                      loading="eager"
-                    />
-                    <figcaption>{{title}}</figcaption>
-                  </figure>
-            </div>
-        </div>
+  <div class="contain">
+    <a href=""> </a>
+    <div>
+      <div class="item-icon">
+        <figure>
+          <img #figureImg [ngSrc]="src ?? ''" [alt]="alt || title" class="slide-image" loading="lazy"
+            ngOptimizedImage />
+          <figcaption>{{title}}</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
-  
+</div>

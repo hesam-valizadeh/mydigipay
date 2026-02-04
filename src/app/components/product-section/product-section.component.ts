@@ -4,10 +4,11 @@ import { ListModel } from '../../@core/models/list-model';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductCarousel } from './model/carousel-inerface';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-product-section',
-  imports: [CustomSwiperComponent, ProductItemComponent],
+  imports: [CustomSwiperComponent, ProductItemComponent,NgOptimizedImage],
   templateUrl: './product-section.component.html',
   styleUrl: './product-section.component.scss',
 })

@@ -5,13 +5,8 @@
       از کارت به کارت، خرید شارژ و اینترنت، تا پرداخت قبض رو سریع و آسان انجام بده.
     </p>
     <figure>
-        <img
-          #figureImg
-          [src]="src"
-          [alt]="alt || title"
-          class="slide-image"
-          loading="eager"
-        />
-      </figure>
+      <img #figureImg [ngSrc]="src" [alt]="alt || title" class="slide-image" loading="lazy" ngOptimizedImage width="100"
+        height="100" />
+    </figure>
   </div>
 </div>

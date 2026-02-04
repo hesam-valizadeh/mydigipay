@@ -1,15 +1,15 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carousel-story-item',
-  imports: [CommonModule],
+  imports: [CommonModule,NgOptimizedImage],
   templateUrl: './carousel-story-item.component.html',
   styleUrl: './carousel-story-item.component.scss',
 })
 export class CarouselStoryItemComponent implements OnChanges{
 
-  @Input() src?: string;
+  @Input() src: string='';
   @Input() alt?: string;
   @Input() title?: string;
   @Input() description?: string;

@@ -2,7 +2,7 @@
   <app-custom-swiper [config]="SwiperConfig" [startIndex]="1" [slides]="slider?.data ?? []" pagination="false"
     #swiperRef>
     <ng-template #swiperSlideTemplate let-index="index">
-      <app-carousel-story-item [src]="slider?.item(index)?.src" [alt]="slider?.item(index)?.imageAlt"
+      <app-carousel-story-item [src]="slider?.item(index)?.src ?? ''" [alt]="slider?.item(index)?.imageAlt"
         [title]="slider?.item(index)?.title" [description]="slider?.item(index)?.description"
         [brand]="slider?.item(index)?.brand" [link]="slider?.item(index)?.link" [className]="slider?.item(index)?.class"
         [styleAttr]="slider?.item(index)?.style" [isActive]="index === activeIndex"></app-carousel-story-item>

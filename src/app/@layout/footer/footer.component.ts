@@ -3,9 +3,11 @@ import { ResponsiveService } from '../../@core/services/responsive.service';
 import { ReadMoreDirective } from '../../@shared/directives/read-more.directive';
 import { RouterLinksPath } from '../../@core/constants/router-links';
 import { RouterLink } from '@angular/router';
+import {NgOptimizedImage} from '@angular/common';
+
 @Component({
   selector: 'app-footer',
-  imports: [ReadMoreDirective,RouterLink],
+  imports: [ReadMoreDirective,RouterLink,NgOptimizedImage],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
