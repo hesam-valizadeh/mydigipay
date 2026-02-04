@@ -1,154 +1,143 @@
-  {
-    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-    "version": 1,
-    "newProjectRoot": "projects",
-    "projects": {
-      "mydigipay": {
-        "projectType": "application",
-        "schematics": {
-          "@schematics/angular:component": {
-            "style": "scss"
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "mydigipay": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "baseHref": "/mydigipay/",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.webmanifest",
+              {
+                "glob": "**/*",
+                "input": "assets"
+              }
+            ],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.scss"
+            ],
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
+          },
+          "configurations": {
+            "production": {
+              "aot": true,
+              "optimization": true,
+              "sourceMap": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "mydigipay:build:production"
+            },
+            "development": {
+              "buildTarget": "mydigipay:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": ["src/styles.scss"],
+            "scripts": []
           }
         },
-        "root": "",
-        "sourceRoot": "src",
-        "prefix": "app",
-        "architect": {
-          "build": {
-            "builder": "@angular/build:application",
-            "options": {
-              "outputPath": "dist",
-              "index": "src/index.html",
-              "browser": "src/main.ts",
-              "baseHref": "/mydigipay/",
-              "polyfills": [
-                "zone.js"
-              ],
-              "tsConfig": "tsconfig.app.json",
-              "inlineStyleLanguage": "scss",
-              "assets": [
-                "src/favicon.ico",
-                "src/assets",
-                 "src/manifest.webmanifest",
-                {
-                  "glob": "**/*",
-                  "input": "assets"
-                }
-              ],
-              "styles": [
-                "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-                "src/styles.scss"
-              ],
-              "scripts": [
-                "./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
-              ]
-            },
-            "configurations": {
-              "production": {
-                "budgets": [
-                  {
-                    "type": "initial",
-                    "maximumWarning": "2mb",
-                    "maximumError": "3mb"
-                  },
-                  {
-                    "type": "anyComponentStyle",
-                    "maximumWarning": "4kB",
-                    "maximumError": "8kB"
-                  }
-                ],
-                "outputHashing": "all",
-                "serviceWorker": "ngsw-config.json"
-              },
-              "development": {
-                "optimization": false,
-                "extractLicenses": false,
-                "sourceMap": true
-              }
-            },
-            "defaultConfiguration": "production"
-          },
-          "serve": {
-            "builder": "@angular/build:dev-server",
-            "configurations": {
-              "production": {
-                "buildTarget": "mydigipay:build:production"
-              },
-              "development": {
-                "buildTarget": "mydigipay:build:development"
-              }
-            },
-            "defaultConfiguration": "development"
-          },
-          "extract-i18n": {
-            "builder": "@angular/build:extract-i18n"
-          },
-          "test": {
-            "builder": "@angular/build:karma",
-            "options": {
-              "polyfills": [
-                "zone.js",
-                "zone.js/testing"
-              ],
-              "tsConfig": "tsconfig.spec.json",
-              "inlineStyleLanguage": "scss",
-              "assets": [
-                {
-                  "glob": "**/*",
-                  "input": "public"
-                }
-              ],
-              "styles": [
-                "src/styles.scss"
-              ],
-              "scripts": []
-            }
-          },
-          "lint": {
-            "builder": "@angular-eslint/builder:lint",
-            "options": {
-              "lintFilePatterns": [
-                "src/**/*.ts",
-                "src/**/*.html"
-              ]
-            }
-          },
-          "deploy": {
-            "builder": "angular-cli-ghpages:deploy"
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
+    }
+  },
+  "cli": {
+    "analytics": false,
+    "schematicCollections": ["angular-eslint"]
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "type": "component"
     },
-    "cli": {
-      "analytics": false,
-      "schematicCollections": [
-        "angular-eslint"
-      ]
+    "@schematics/angular:directive": {
+      "type": "directive"
     },
-    "schematics": {
-      "@schematics/angular:component": {
-        "type": "component"
-      },
-      "@schematics/angular:directive": {
-        "type": "directive"
-      },
-      "@schematics/angular:service": {
-        "type": "service"
-      },
-      "@schematics/angular:guard": {
-        "typeSeparator": "."
-      },
-      "@schematics/angular:interceptor": {
-        "typeSeparator": "."
-      },
-      "@schematics/angular:module": {
-        "typeSeparator": "."
-      },
-      "@schematics/angular:pipe": {
-        "typeSeparator": "."
-      },
-      "@schematics/angular:resolver": {
-        "typeSeparator": "."
-      }
+    "@schematics/angular:service": {
+      "type": "service"
+    },
+    "@schematics/angular:guard": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:interceptor": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:pipe": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:resolver": {
+      "typeSeparator": "."
     }
   }
+}
