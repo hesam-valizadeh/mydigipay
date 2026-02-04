@@ -42,8 +42,16 @@
           "configurations": {
             "production": {
               "aot": true,
-              "optimization": true,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": true
+                },
+                "fonts": true
+              },
               "sourceMap": false,
+
               "budgets": [
                 {
                   "type": "initial",
