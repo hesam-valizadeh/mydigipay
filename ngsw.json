@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770208567458,
+  "timestamp": 1770216949537,
   "index": "/mydigipay/index.html",
   "assetGroups": [
     {
@@ -553,7 +553,22 @@
       "patterns": []
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "api-cache",
+      "patterns": [
+        "https:\\/\\/api\\.example\\.com\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 3600000,
+      "timeoutMs": 10000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
   "hashTable": {
     "/mydigipay/assets/fonts/IRANYekanX/IRANYekanXFaNum-Black.ttf": "2e22fe9b2645039894bea4377517a5bde1574a0b",
     "/mydigipay/assets/fonts/IRANYekanX/IRANYekanXFaNum-Black.woff": "b2903672100f99575ec0958322e2cad731e9d4e9",
