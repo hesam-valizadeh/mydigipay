@@ -4,6 +4,7 @@
   "assetGroups": [
     {
       "name": "app",
+      "updateMode": "prefetch",
       "installMode": "prefetch",
       "resources": {
         "files": [
