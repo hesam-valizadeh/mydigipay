@@ -4,10 +4,11 @@ import { CarouselServicesItemComponent } from './carousel-services-item/carousel
 import { ListModel } from '../../../@core/models/list-model';
 import { ServicesCarousel } from './model/services-carousel-inerface';
 import { SwiperOptions } from 'swiper/types';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-carousel-services',
-  imports: [CustomSwiperComponent,CarouselServicesItemComponent],
+  imports: [CustomSwiperComponent,CarouselServicesItemComponent,NgOptimizedImage],
   templateUrl: './carousel-services.component.html',
   styleUrl: './carousel-services.component.scss',
 })

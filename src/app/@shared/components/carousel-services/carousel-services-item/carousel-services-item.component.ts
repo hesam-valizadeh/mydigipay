@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CarouselServicesItemComponent {
 
-  @Input() src?: string;
+  @Input() src: string = '';
   @Input() alt?: string;
   @Input() title?: string;
   @Input() description?: string;

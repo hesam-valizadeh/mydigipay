@@ -4,8 +4,8 @@
     <div>
       <div class="item-icon">
         <figure>
-          <img #figureImg [ngSrc]="src ?? ''" [alt]="alt || title" class="slide-image" loading="lazy"
-            ngOptimizedImage />
+          <img #figureImg ngOptimizedImage [ngSrc]="src" [alt]="alt || title" class="slide-image" loading="lazy"
+            width="53" height="54" />
           <figcaption>{{title}}</figcaption>
         </figure>
       </div>
