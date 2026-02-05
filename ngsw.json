@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770296090215,
+  "timestamp": 1770297834558,
   "index": "/mydigipay/index.html",
   "assetGroups": [
     {
@@ -555,6 +555,16 @@
         "/mydigipay/media/YekanBakhFaNum-SemiBold-SERHGRYA.woff",
         "/mydigipay/media/YekanBakhFaNum-Thin-ZCSJUIOB.woff"
       ],
+      "patterns": []
+    },
+    {
+      "name": "lazy-chunks",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [],
       "patterns": []
     }
   ],
