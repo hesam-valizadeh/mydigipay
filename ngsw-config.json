@@ -32,6 +32,17 @@
           "/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
         ]
       }
+    },
+    {
+      "name": "lazy-chunks",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/mydigipay/chunk-*.js",
+          "/mydigipay/browser/chunk-*.js",
+          "/mydigipay/dist/browser/chunk-*.js"
+        ]
+      }
     }
   ],
   "dataGroups": [
