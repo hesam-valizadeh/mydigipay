@@ -47,7 +47,8 @@ This project is suitable for:
 | **Styling**          | SCSS                                              |
 | **Tooling**          | Angular CLI                                       |
 | **Package Manager**  | npm                                               |
-| **Unit Testing**     | Jasmine, Karma                                    |
+| **State Management**     | NgRX                                          |
+| **Unit Testing**     | Jest                                              |
 | **E2E Testing**      | Cypress                                           |
 | **Accessibility Testing** | Cypress with a11y plugins                     |
 | **Integration Testing** | Cypress                                         |
