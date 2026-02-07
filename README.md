@@ -1,5 +1,9 @@
 # MyDigiPay
 
+## 🌐 Demo
+
+Check out the live demo [here](https://hesam-valizadeh.github.io/mydigipay).
+
 ![Angular](https://img.shields.io/badge/Angular-Framework-red?style=for-the-badge&logo=angular)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Language-blue?style=for-the-badge&logo=typescript)
 ![CI](https://img.shields.io/badge/GitHub%20Actions-CI/CD-success?style=for-the-badge&logo=githubactions)
@@ -138,8 +142,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Cypress](https://www.cypress.io/)
 - [GitHub Actions](https://github.com/features/actions)
 
----
-
-## 🌐 Demo
-
-Check out the live demo [here](https://hesam-valizadeh.github.io/mydigipay).
