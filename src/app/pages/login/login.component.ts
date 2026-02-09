@@ -40,13 +40,11 @@ export class LoginComponent implements OnDestroy {
 
   loginForm = this.fb.group({
     phone: ['', {
-      // eslint-disable-next-line @typescript-eslint/unbound-method
       validators: [Validators.required, Validators.pattern(/^09\d{9}$/)],
       updateOn: 'change' 
     }],
   });
   referralForm = this.fb.group({
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     referral: ['', [Validators.required]],
   });
   
