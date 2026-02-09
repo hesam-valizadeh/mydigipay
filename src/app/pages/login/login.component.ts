@@ -24,9 +24,9 @@ import { Modal } from 'bootstrap';
 })
 export class LoginComponent implements OnDestroy {
   loading = signal(true);
-  private authService = inject(AuthService);
-  private fb = inject(FormBuilder);
-  private router = inject(Router);
+  private readonly authService = inject(AuthService);
+  private readonly fb = inject(FormBuilder);
+  private readonly router = inject(Router);
   protected readonly RouterLinksPath = RouterLinksPath;
 
   phoneNumber: string | null = null;

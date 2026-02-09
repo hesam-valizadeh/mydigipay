@@ -3,7 +3,7 @@ import { SwUpdate } from '@angular/service-worker';
 
 @Injectable({ providedIn: 'root' })
 export class SwUpdateService {
-  private updates = inject(SwUpdate);
+  private readonly updates = inject(SwUpdate);
 
   constructor() {
     if (this.updates.isEnabled) {

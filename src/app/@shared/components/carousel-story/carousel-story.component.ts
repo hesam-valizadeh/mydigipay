@@ -55,7 +55,7 @@ export class CarouselStoryComponent {
   ]);
   activeIndex = 0;
   progress = 100;
-  private cdr = inject(ChangeDetectorRef);
+  private readonly cdr = inject(ChangeDetectorRef);
   onAutoplayProgress(swiper: Swiper, time: number, progress: number) {
     this.progress = 1 - progress;
     this.cdr.detectChanges();

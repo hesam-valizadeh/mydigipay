@@ -30,8 +30,8 @@ export class HeaderComponent implements OnInit {
   isStickyHeaderVisible = signal(false);
   isToggleSearch = signal(false);
   searchOverlay = inject(SearchOverlayService);
-  private router = inject(Router);
-  private elementRef = inject(ElementRef);
+  private readonly router = inject(Router);
+  private readonly elementRef = inject(ElementRef);
   eRef = inject(ElementRef);
   responsive = inject(ResponsiveService);
 

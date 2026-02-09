@@ -10,8 +10,8 @@ export class ReadMoreDirective implements AfterViewInit {
 
   private expanded = false;
 
-  private el = inject(ElementRef<HTMLElement>);
-  private renderer = inject(Renderer2);
+  private readonly el = inject(ElementRef<HTMLElement>);
+  private readonly renderer = inject(Renderer2);
 
   ngAfterViewInit(): void {
     this.applyClamp();

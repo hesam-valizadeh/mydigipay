@@ -16,10 +16,10 @@ import { BottomNavigationComponent } from './@layout/bottom-navigation/bottom-na
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  private router = inject(Router);
-  private titleService = inject(Title);
-  private activatedRoute = inject(ActivatedRoute);
-  private metaService = inject(Meta);
+  private readonly router = inject(Router);
+  private readonly titleService = inject(Title);
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly metaService = inject(Meta);
   searchOverlay = inject(SearchOverlayService);
   showLayout = true;
   responsive = inject(ResponsiveService);

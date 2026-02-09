@@ -5,9 +5,9 @@
     providedIn: 'root',
   })
   export class AuthService {
-    private isLoggedInKey = 'isLoggedIn';
+    private readonly isLoggedInKey = 'isLoggedIn';
 
-    private router = inject(Router);
+    private readonly router = inject(Router);
 
     login(phoneNumber: string): boolean {
       if (phoneNumber === '09212441074') {
