@@ -1,6 +1,6 @@
 <div class="carousel-story">
-  <app-custom-swiper [config]="SwiperConfig" [startIndex]="1" [slides]="slider?.data ?? []" pagination="false"
-    #swiperRef>
+  <app-custom-swiper #swiperRef pagination="false" [config]="SwiperConfig" [startIndex]="1"
+    [slides]="slider?.data ?? []">
     <ng-template #swiperSlideTemplate let-index="index">
       <app-carousel-story-item [src]="slider?.item(index)?.src ?? ''" [alt]="slider?.item(index)?.imageAlt"
         [title]="slider?.item(index)?.title" [description]="slider?.item(index)?.description"

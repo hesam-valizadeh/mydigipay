@@ -3,7 +3,7 @@ import { HeroCarouselComponent } from '../../components/hero-carousel/hero-carou
 import { SquareBanner } from '../../components/square-banner/square-banner.component';
 import { ServiceCardComponent } from '../../components/service-card/service-card.component';
 import { ProductSectionComponent } from '../../components/product-section/product-section.component';
-import { HomePageViewDataInterface } from '../../view-models/home-page-view-data.interface';
+import { IHomePageViewDataInterface } from '../../view-models/home-page-view-data.interface';
 import { ListModel } from '../../@core/models/list-model';
 import { ResponsiveService } from '../../@core/services/responsive.service';
 import { SearchOverlayService } from '../../@core/services/search-overlay-service.service';
@@ -23,7 +23,7 @@ import { NgOptimizedImage } from '@angular/common';
   
 })
 export class HomeComponent  {
-  data: HomePageViewDataInterface =  {
+  data: IHomePageViewDataInterface =  {
     smartSwitches: {
       category: 'کلید و پریز هوشمند',
       sliderProducts: [
@@ -581,11 +581,18 @@ export class HomeComponent  {
   cdr = inject(ChangeDetectorRef);
 
   get sections() {
-    if (!this.data) return [];
-    return Object?.values(this?.data).map((section, index) => ({
-      id: index + 1,
-      ...section,
-      products: new ListModel(section?.sliderProducts || []),
-    }));
+    const data = this.data;
+    if (!data) return [];
+
+    return Object.keys(data).map((key, index) => {
+      // دسترسی به هر بخش با استفاده از کلید آن در اینترفیس
+      const section = data[key as keyof IHomePageViewDataInterface];
+      
+      return {
+        id: index + 1,
+        category: section.category,
+        products: new ListModel(section.sliderProducts),
+      };
+    });
   }
 }

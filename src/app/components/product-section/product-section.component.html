@@ -6,7 +6,7 @@
       <i class="icon icon-arrow-2-left-linear text-primary"></i>
     </a>
   </div>
-  <app-custom-swiper [config]="SwiperConfig" [startIndex]="1" [slides]="slider.data" #swiperRef>
+  <app-custom-swiper #swiperRef [config]="SwiperConfig" [startIndex]="1" [slides]="slider.data">
     <ng-template #swiperSlideTemplate let-index="index">
       <app-product-item [src]="slider?.item(index)?.imageSrc ?? ''" [alt]="slider?.item(index)?.alt"
         [width]="slider?.item(index)?.width" [height]="slider?.item(index)?.height" [title]="slider?.item(index)?.title"

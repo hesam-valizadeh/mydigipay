@@ -1,4 +1,4 @@
-export interface StoryCarousel {
+export interface IStoryCarousel {
   id?: number;
   title?: string;
   image?: string;

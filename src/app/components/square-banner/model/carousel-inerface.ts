@@ -1,4 +1,4 @@
-export interface SquareBannerCarousel {
+export interface ISquareBannerCarousel {
   id?: number;
   title?: string;
   image?: string;

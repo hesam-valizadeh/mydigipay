@@ -3,12 +3,11 @@ import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
 import { ProductItemComponent } from './product-item/product-item.component';
-import { ProductCarousel } from './model/carousel-inerface';
-import { NgOptimizedImage } from '@angular/common';
+import { IProductCarousel } from './model/carousel-inerface';
 
 @Component({
   selector: 'app-product-section',
-  imports: [CustomSwiperComponent, ProductItemComponent,NgOptimizedImage],
+  imports: [CustomSwiperComponent, ProductItemComponent],
   templateUrl: './product-section.component.html',
   styleUrl: './product-section.component.scss',
 })
@@ -16,7 +15,7 @@ export class ProductSectionComponent {
   @Input() category!: string;
   @Input() storeName!: string | undefined;
   @Input() fourPay!: boolean | undefined;
-  @Input() products!: ListModel<ProductCarousel>;
+  @Input() products!: ListModel<IProductCarousel>;
   @Input() imageSrc!: string | undefined;
   @Input() alt!: string | undefined;
   @Input() width!: string | undefined;

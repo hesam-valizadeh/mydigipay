@@ -1,5 +1,5 @@
-export class config {
+export class Config {
   static apiUrl = {
-    sendMessage: '/ns/contact-us',
+    sendMessage: '',
   };
 }

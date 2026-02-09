@@ -1,4 +1,4 @@
-export interface HeaderViewDataInterface {
+export interface IHeaderViewDataInterface {
   loansAndCredits: string;
   credit: string;
   bnpl: string;

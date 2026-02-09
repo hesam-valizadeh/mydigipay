@@ -1,10 +1,9 @@
 import { Component, inject, signal, OnDestroy } from '@angular/core';
 import { CarouselStoryComponent } from '../../@shared/components/carousel-story/carousel-story.component';
-import { FormBuilder, Validators, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 import { RouterLinksPath } from '../../@core/constants/router-links';
-import { AuthAppletRulesComponent } from './auth-applet-rules/auth-applet-rules.component';
 import { AuthService } from '../../@core/services/auth.service';
 import { CustomInputComponent } from '../../@shared/components/form-controls/custom-input';
 import { SkeletonDirective } from '../../@shared/directives/skeleton.directive';
@@ -12,15 +11,14 @@ import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-login',
-    imports: [
-      RouterOutlet,
-      CarouselStoryComponent,
-      ReactiveFormsModule,
-      CommonModule,
-      RouterLink,CustomInputComponent,
-      SkeletonDirective,
-      AuthAppletRulesComponent,
-    ],
+  standalone: true,
+  imports: [
+    CarouselStoryComponent,
+    ReactiveFormsModule,
+    CommonModule,
+    CustomInputComponent,
+    SkeletonDirective,
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
@@ -30,73 +28,70 @@ export class LoginComponent implements OnDestroy {
   private fb = inject(FormBuilder);
   private router = inject(Router);
   protected readonly RouterLinksPath = RouterLinksPath;
-  phoneNumber:any;
+
+  phoneNumber: string | null = null;
   error = '';
+
+  private referralModal?: Modal;
 
   constructor() {
     setTimeout(() => this.loading.set(false), 3000);
   }
 
-  login() {
+  loginForm = this.fb.group({
+    phone: ['', {
+      // eslint-disable-next-line @typescript-eslint/unbound-method
+      validators: [Validators.required, Validators.pattern(/^09\d{9}$/)],
+      updateOn: 'change' 
+    }],
+  });
+  referralForm = this.fb.group({
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    referral: ['', [Validators.required]],
+  });
+  
+  login = (): void => {
     this.loading.set(true);
     setTimeout(() => {
       this.loading.set(false);
       alert('ورود موفق!');
     }, 2000);
-  }
-  
-
-  
-
-
-  loginForm = this.fb.group({
-    phone: ['', [Validators.required, Validators.pattern(/^09\d{9}$/)]],
-  });
-
-  referralForm = this.fb.group({
-    referral: ['', [Validators.required]],
-  });
-
-  onSubmitReferral() {
+  };
+  onSubmitReferral = (): void => {
     if (this.referralForm.invalid) return;
-  }
+  };
 
-
-
-  onSubmit() {
+  onSubmit = (): void => {
     if (this.loginForm.invalid) return;
 
     const phone = this.loginForm.value.phone!;
     const success = this.authService.login(phone);
 
     if (success) {
-      this.router.navigate(['/hub'], { replaceUrl: true });
-        } else {
+      void this.router.navigate([this.RouterLinksPath.hubPage.hub], { replaceUrl: true });
+    } else {
       this.error = 'نام کاربری یا رمز عبور اشتباه است.';
     }
-  }
-  private referralModal?: Modal;
+  };
 
-  openReferralModal() {
+  openReferralModal = (): void => {
     const modalEl = document.getElementById('referralModal');
     if (!modalEl) return;
 
     this.referralModal = new Modal(modalEl, {
       backdrop: 'static',
-      keyboard: false
+      keyboard: false,
     });
 
     this.referralModal.show();
-  }
+  };
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.referralModal?.hide();
-    this.referralModal?.dispose()
+    this.referralModal?.dispose();
     document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
-
-    document.body.style.removeProperty;
-    document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
+    document.querySelectorAll('.modal-backdrop').forEach((b) => b.remove());
   }
-  }
+}

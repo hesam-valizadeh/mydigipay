@@ -1,38 +1,37 @@
 import { Directive, ElementRef, HostListener, Input, Renderer2, AfterViewInit, inject } from '@angular/core';
 
 @Directive({
-  selector: '[appReadMore]'
+  selector: '[appReadMore]',
+  standalone: true 
 })
 export class ReadMoreDirective implements AfterViewInit {
-  @Input() maxLines = 2; // تعداد خطوط
-  @Input() toggleButton!: HTMLElement; // دکمه کم/بیشتر (اختیاری)
+  @Input() maxLines = 2;
+  @Input() toggleButton!: HTMLElement; 
 
   private expanded = false;
 
-  private el = inject(ElementRef);
+  private el = inject(ElementRef<HTMLElement>);
   private renderer = inject(Renderer2);
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.applyClamp();
 
-    // اگر دکمه جدا پاس دادیم
     if (this.toggleButton) {
-      this.renderer.listen(this.toggleButton, 'click', (event) => {
+      this.renderer.listen(this.toggleButton, 'click', (event: Event) => {
         event.preventDefault();
         this.toggle();
       });
     }
   }
 
-  // اگر کاربر روی خود متن کلیک کند (آپشنال)
   @HostListener('click')
-  onTextClick() {
+  onTextClick(): void {
     if (!this.toggleButton) {
       this.toggle();
     }
   }
 
-  private toggle() {
+  private toggle(): void {
     this.expanded = !this.expanded;
 
     if (this.expanded) {
@@ -44,22 +43,25 @@ export class ReadMoreDirective implements AfterViewInit {
     }
   }
 
-  private applyClamp() {
-    this.renderer.setStyle(this.el.nativeElement, 'display', '-webkit-box');
-    this.renderer.setStyle(this.el.nativeElement, '-webkit-line-clamp', this.maxLines);
-    this.renderer.setStyle(this.el.nativeElement, '-webkit-box-orient', 'vertical');
-    this.renderer.setStyle(this.el.nativeElement, 'overflow', 'hidden');
+  private applyClamp(): void {
+    const nativeEl = this.el.nativeElement as HTMLElement; 
+    
+    this.renderer.setStyle(nativeEl, 'display', '-webkit-box');
+    this.renderer.setStyle(nativeEl, '-webkit-line-clamp', this.maxLines.toString());
+    this.renderer.setStyle(nativeEl, '-webkit-box-orient', 'vertical');
+    this.renderer.setStyle(nativeEl, 'overflow', 'hidden');
   }
 
-  private removeClamp() {
-    this.renderer.removeStyle(this.el.nativeElement, '-webkit-line-clamp');
-    this.renderer.removeStyle(this.el.nativeElement, 'overflow');
+  private removeClamp(): void {
+    const nativeEl = this.el.nativeElement as HTMLElement;
+    
+    this.renderer.removeStyle(nativeEl, '-webkit-line-clamp');
+    this.renderer.removeStyle(nativeEl, 'overflow');
   }
 
-  private updateButtonText(text: string) {
+  private updateButtonText(text: string): void {
     if (this.toggleButton) {
       this.toggleButton.innerText = text;
     }
   }
-
 }

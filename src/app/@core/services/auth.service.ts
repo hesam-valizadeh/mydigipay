@@ -19,8 +19,8 @@
 
     logout(): void {
       localStorage.removeItem(this.isLoggedInKey);
-      this.router.navigate(['/login']);
-    }
+      void this.router.navigate(['/login']);
+        }
 
     isAuthenticated(): boolean {
       return localStorage.getItem(this.isLoggedInKey) === 'true';

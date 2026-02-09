@@ -1,32 +1,54 @@
 {
-    "root": true,
-    "ignorePatterns": ["projects/**/*"],
-    "overrides": [
-      {
-        "files": ["*.ts"],
-        "parserOptions": {
-          "project": ["tsconfig.app.json", "tsconfig.spec.json"],
-          "createDefaultProgram": true
-        },
-        "extends": [
-          "plugin:@angular-eslint/recommended",
-          "plugin:@angular-eslint/template/process-inline-templates"
-        ],
-        "rules": {
-          "@angular-eslint/directive-selector": [
-            "error",
-            { "type": "attribute", "prefix": "app", "style": "camelCase" }
-          ],
-          "@angular-eslint/component-selector": [
-            "error",
-            { "type": "element", "prefix": "app", "style": "kebab-case" }
-          ]
-        }
+  "root": true,
+  "ignorePatterns": ["projects/**/*", "dist/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.app.json", "tsconfig.spec.json"],
+        "createDefaultProgram": false 
       },
-      {
-        "files": ["*.html"],
-        "extends": ["plugin:@angular-eslint/template/recommended"],
-        "rules": {}
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        // --- استانداردهای آنگولار ---
+        "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": "app", "style": "kebab-case" }],
+        "@angular-eslint/directive-selector": ["error", { "type": "attribute", "prefix": "app", "style": "camelCase" }],
+        "@angular-eslint/prefer-standalone": "error", // اجبار به استفاده از کامپوننت‌های Standalone
+        "@angular-eslint/use-injectable-provided-in": "error",
+        
+        // --- پاکیزگی کد (Clean Code) ---
+        "no-console": ["warn", { "allow": ["warn", "error"] }], // جلوگیری از باقی ماندن console.log
+        "eqeqeq": ["error", "always"], // اجبار به استفاده از === به جای ==
+        "no-unused-vars": "off", // غیرفعال کردن نسخه اصلی برای فعالسازی نسخه تایپ‌اسکریپت
+        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }], // خطا برای متغیرهای استفاده نشده
+        "@typescript-eslint/no-explicit-any": "error", // ممنوعیت استفاده از any (بسیار مهم برای پروژه‌های حرفه‌ای)
+        "@typescript-eslint/naming-convention": [ // استاندارد نام‌گذاری متغیرها و کلاس‌ها
+          "error",
+          { "selector": "interface", "format": ["PascalCase"], "prefix": ["I"] },
+          { "selector": "class", "format": ["PascalCase"] }
+        ],
+        
+        // --- پیچیدگی کد ---
+        "complexity": ["warn", 10], // هشدار اگر یک متد بیش از ۱۰ خط منطق پیچیده داشته باشد
+        "max-lines-per-function": ["warn", 50] // جلوگیری از نوشتن توابع خیلی طولانی
       }
-    ]
-  }
+    },
+    {
+      "files": ["*.html"],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility" // اضافه کردن استانداردهای دسترسی‌پذیری (A11y)
+      ],
+      "rules": {
+        "@angular-eslint/template/no-negated-async": "error", // جلوگیری از اشتباهات رایج در Pipe Async
+        "@angular-eslint/template/attributes-order": "error" // مرتب‌سازی صفت‌ها در HTML
+      }
+    }
+  ]
+}

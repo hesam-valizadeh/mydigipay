@@ -1,4 +1,4 @@
-export interface ProductCarousel {
+export interface IProductCarousel {
   id: number;
   imageSrc: string;
   alt: string;

@@ -1,20 +1,14 @@
 import {
-  AfterViewInit,
   ChangeDetectorRef,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
-  ElementRef,
   inject,
-  OnDestroy,
-  ViewChild,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { gsap } from 'gsap';
 import { CustomSwiperComponent } from '../custom-swiper/custom-swiper.component';
 import { CarouselStoryItemComponent } from './carousel-story-item/carousel-story-item.component';
 import { ListModel } from '../../../@core/models/list-model';
-import { SwiperOptions } from 'swiper/types';
-import { StoryCarousel } from './model/carousel-inerface';
+import { Swiper, SwiperOptions } from 'swiper/types';
+import { IStoryCarousel } from './model/carousel-inerface';
 
 @Component({
   selector: 'app-carousel-story',
@@ -25,7 +19,7 @@ import { StoryCarousel } from './model/carousel-inerface';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CarouselStoryComponent {
-  slider?: ListModel<StoryCarousel> = new ListModel<StoryCarousel>([
+  slider?: ListModel<IStoryCarousel> = new ListModel<IStoryCarousel>([
     {
       id: 1,
       title: 'pic 1',
@@ -62,11 +56,11 @@ export class CarouselStoryComponent {
   activeIndex = 0;
   progress = 100;
   private cdr = inject(ChangeDetectorRef);
-  onAutoplayProgress(swiper: any, time: number, progress: number) {
+  onAutoplayProgress(swiper: Swiper, time: number, progress: number) {
     this.progress = 1 - progress;
     this.cdr.detectChanges();
   }
-  trackById = (_: number, item: StoryCarousel) => item.id;
+  trackById = (_: number, item: IStoryCarousel) => item.id;
 
   SwiperConfig: SwiperOptions = {
     slidesPerView: 1,

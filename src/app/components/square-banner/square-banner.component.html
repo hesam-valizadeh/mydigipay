@@ -1,5 +1,5 @@
 <div class="square-banner">
-  <app-custom-swiper [config]="SwiperConfig" [startIndex]="1" [slides]="slider?.data ?? []" #swiperRef>
+  <app-custom-swiper #swiperRef [config]="SwiperConfig" [startIndex]="1" [slides]="slider?.data ?? []">
     <ng-template #swiperSlideTemplate let-index="index">
       <app-square-banner-item [src]="slider?.item(index)?.image" [alt]="slider?.item(index)?.imageAlt"
         [title]="slider?.item(index)?.title" [description]="slider?.item(index)?.description"

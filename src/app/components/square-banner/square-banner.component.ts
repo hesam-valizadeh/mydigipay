@@ -3,7 +3,7 @@ import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/cu
 import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
 import { SquareBannerItem } from './square-banner-item/square-banner-item.component';
-import { SquareBannerCarousel } from './model/carousel-inerface';
+import { ISquareBannerCarousel } from './model/carousel-inerface';
 
 @Component({
   selector: 'app-square-banner',
@@ -13,7 +13,7 @@ import { SquareBannerCarousel } from './model/carousel-inerface';
   styleUrl: './square-banner.component.scss',
 })
 export class SquareBanner {
-  slider?: ListModel<SquareBannerCarousel> = new ListModel<SquareBannerCarousel>([
+  slider?: ListModel<ISquareBannerCarousel> = new ListModel<ISquareBannerCarousel>([
     {
       id: 1,
       image: 'assets/images/banner/01.webp',

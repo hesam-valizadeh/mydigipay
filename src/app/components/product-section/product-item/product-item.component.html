@@ -2,19 +2,19 @@
     <div class="product-box">
         <div class="surface-back">
             <figure class="product-img">
-                <img ngOptimizedImage [ngSrc]="src" [alt]="alt" [width]="width" [height]="height" title="{{ title }}"
+                <img title="{{ title }}" ngOptimizedImage [ngSrc]="src" [alt]="alt" [width]="width" [height]="height"
                     [loading]="'lazy'">
             </figure>
             @if(storeRate){
             <div class="store-logo" style=" border-radius: 100px 100px 48px 48px;">
-                <img ngOptimizedImage [ngSrc]="storeLogoSrc" alt="arta logo" width="24" height="24" title=""
-                    loading="lazy" class="">
+                <img ngOptimizedImage alt="arta logo" width="24" height="24" title="" loading="lazy"
+                    class="" [ngSrc]="storeLogoSrc">
                 <span class="store-rate">{{storeRate}}</span>
             </div>
             }@else {
             <div class="store-logo" style="border-radius: 100em;">
-                <img ngOptimizedImage [ngSrc]="storeLogoSrc" alt="arta logo" width="24" height="24" title=""
-                    loading="lazy" class="">
+                <img ngOptimizedImage alt="arta logo" width="24" height="24" title="" loading="lazy"
+                    class="" [ngSrc]="storeLogoSrc">
             </div>
             }
             @if(fourPay){

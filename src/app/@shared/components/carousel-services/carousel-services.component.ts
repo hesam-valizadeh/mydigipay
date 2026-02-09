@@ -2,18 +2,17 @@ import { Component } from '@angular/core';
 import { CustomSwiperComponent } from '../custom-swiper/custom-swiper.component';
 import { CarouselServicesItemComponent } from './carousel-services-item/carousel-services-item.component';
 import { ListModel } from '../../../@core/models/list-model';
-import { ServicesCarousel } from './model/services-carousel-inerface';
+import { IServicesCarousel } from './model/services-carousel-inerface';
 import { SwiperOptions } from 'swiper/types';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-carousel-services',
-  imports: [CustomSwiperComponent,CarouselServicesItemComponent,NgOptimizedImage],
+  imports: [CustomSwiperComponent,CarouselServicesItemComponent],
   templateUrl: './carousel-services.component.html',
   styleUrl: './carousel-services.component.scss',
 })
 export class CarouselServicesComponent {
- slider?: ListModel<ServicesCarousel> = new ListModel<ServicesCarousel>([
+ slider?: ListModel<IServicesCarousel> = new ListModel<IServicesCarousel>([
     {
       id: 1,
       class: '',

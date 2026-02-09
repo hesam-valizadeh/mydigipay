@@ -1,6 +1,5 @@
 import {
   Component,
-  computed,
   ElementRef,
   EventEmitter,
   HostListener,
@@ -13,9 +12,9 @@ import {
 import { RouterLinksPath } from '../../@core/constants/router-links';
 import { NavigationEnd, Router, RouterLink, RouterModule } from '@angular/router';
 import { SearchBoxComponent } from '../../@shared/components/search-box/search-box.component';
-import { HeaderViewDataInterface } from '../../view-models/header-view-data.interface';
+import { IHeaderViewDataInterface } from '../../view-models/header-view-data.interface';
 import { ResponsiveService } from '../../@core/services/responsive.service';
-import { NgOptimizedImage, ViewportScroller } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { filter } from 'rxjs';
 import { SearchOverlayService } from '../../@core/services/search-overlay-service.service';
 
@@ -30,7 +29,6 @@ export class HeaderComponent implements OnInit {
   isSubmenuGamesOpen = signal(true);
   isStickyHeaderVisible = signal(false);
   isToggleSearch = signal(false);
-  private lastScrollTop = 1;
   searchOverlay = inject(SearchOverlayService);
   private router = inject(Router);
   private elementRef = inject(ElementRef);
@@ -38,7 +36,7 @@ export class HeaderComponent implements OnInit {
   responsive = inject(ResponsiveService);
 
   protected readonly RouterLinksPath = RouterLinksPath;
-  data: HeaderViewDataInterface = {
+  data: IHeaderViewDataInterface = {
     loansAndCredits: 'وام و اعتبار',
     credit: 'وام خرید کالا',
     bnpl: 'الان بخر بعدا پرداخت کن',
@@ -105,8 +103,11 @@ export class HeaderComponent implements OnInit {
   }
 
   @HostListener('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent) {
-    const clickedInside = this.elementRef.nativeElement.contains(event.target);
+  onDocumentClick(event: MouseEvent): void {
+    const container = this.elementRef.nativeElement as HTMLElement;
+    const target = event.target as Node; 
+    const clickedInside = container.contains(target);
+    
     if (!clickedInside && (this.isSubmenuOpen() || this.isSubmenuGamesOpen())) {
       this.isSubmenuOpen.set(false);
       this.isSubmenuGamesOpen.set(false);
@@ -133,10 +134,13 @@ export class HeaderComponent implements OnInit {
   }
 
   @HostListener('document:click', ['$event'])
-  clickOutside(event: Event) {
-    if (this.isToggleSearch() && !this.eRef.nativeElement.contains(event.target)) {
+  clickOutside(event: Event): void {
+    const container = this.eRef.nativeElement as HTMLElement;
+    const target = event.target as Node;
+
+    if (this.isToggleSearch() && target && !container.contains(target)) {
       this.isToggleSearch.set(false);
-      const stickySearch = document.querySelector('.header-sticky_search') as HTMLElement;
+      const stickySearch = document.querySelector('.header-sticky_search');
       stickySearch?.classList.remove('hidden');
     }
   }

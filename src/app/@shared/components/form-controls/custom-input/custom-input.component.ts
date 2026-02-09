@@ -1,5 +1,7 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { OnChangeFn, OnTouchedFn } from '@core/models/types/custom-input.types';
+
 
 @Component({
   selector: 'app-custom-input',
@@ -12,22 +14,22 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor, ReactiveFormsModule, FormsModu
       multi: true,
     },
   ],
-  templateUrl:"./custom-input.component.html" ,
-  styleUrl:"./custom-input.component.scss" ,
+  templateUrl: "./custom-input.component.html",
+  styleUrl: "./custom-input.component.scss",
 })
 export class CustomInputComponent implements ControlValueAccessor {
-  @Input() label: string = 'Phone Number';
-  @Input() placeholder: string = '09123456789';
+  @Input() label = 'Phone Number';
+  @Input() placeholder = '09123456789';
 
-  value: string = '';
+  value = '';
   error: string | null = null;
-  touched: boolean = false;
+  touched = false;
 
-  onChange: any = () => {};
-  onTouched: any = () => {};
+  onChange: OnChangeFn = () => {};
+  onTouched: OnTouchedFn = () => {};
 
   // ---- VALIDATION ----
-  validate(value: string) {
+  validate(value: string): void {
     const v = (value ?? '').trim();
 
     if (!v) {
@@ -54,7 +56,7 @@ export class CustomInputComponent implements ControlValueAccessor {
   }
 
   // ---- INPUT ----
-  onInput(event: Event) {
+  onInput(event: Event): void {
     const inputValue = (event.target as HTMLInputElement).value;
     this.value = inputValue;
     this.validate(this.value);
@@ -62,24 +64,24 @@ export class CustomInputComponent implements ControlValueAccessor {
   }
 
   // ---- BLUR ----
-  handleBlur() {
+  handleBlur(): void {
     this.touched = true;
     this.onTouched();
   }
 
   // ---- CVA REQUIRED METHODS ----
-  writeValue(value: any): void {
+  writeValue(value: string | null): void {
     this.value = value || '';
     this.validate(this.value);
   }
 
-  registerOnChange(fn: any): void {
+  registerOnChange(fn: OnChangeFn): void {
     this.onChange = fn;
   }
 
-  registerOnTouched(fn: any): void {
+  registerOnTouched(fn: OnTouchedFn): void {
     this.onTouched = fn;
   }
 
-  setDisabledState?(isDisabled: boolean): void {}
+  setDisabledState?(_isDisabled: boolean): void {}
 }

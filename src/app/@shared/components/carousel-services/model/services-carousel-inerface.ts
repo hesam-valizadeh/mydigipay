@@ -1,4 +1,4 @@
-export interface ServicesCarousel {
+export interface IServicesCarousel {
   id?: number;
   title?: string;
   image?: string;

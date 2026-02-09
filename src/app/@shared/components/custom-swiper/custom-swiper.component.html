@@ -1,6 +1,6 @@
 @if (slides) {
-<swiper-container class="{{swiperClass}} {{toggleContainerEndClass}}" #swiperRef init="false" appSwiperElement
-  [config]="config" [dir]="swiperDir" pagination="true">
+<swiper-container #swiperRef class="{{swiperClass}} {{toggleContainerEndClass}}" init="false" appSwiperElement
+  pagination="true" [config]="config" [dir]="swiperDir">
   @for (item of slides; track item; let i = $index) {
   <swiper-slide class="swiper-slide">
     <ng-container *ngTemplateOutlet="swiperSlideTemplate; context: {item: item, index:i}"></ng-container>

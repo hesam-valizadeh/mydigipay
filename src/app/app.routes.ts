@@ -4,7 +4,6 @@ import {
   RouterLinksPath,
   routeWithoutSlash,
 } from './@core/constants/router-links';
-import { HubComponent } from './pages/hub/hub.component';
 import { AuthGuard } from './@core/guards/auth.guard';
 
 export const routes: Routes = [

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
 import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
-import { HeroCarousel } from './model/carousel-inerface';
+import { IHeroCarousel } from './model/carousel-inerface';
 import { HeroCarouselItemComponent } from './hero-carousel-item/hero-carousel-item.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { HeroCarouselItemComponent } from './hero-carousel-item/hero-carousel-it
   styleUrl: './hero-carousel.component.scss',
 })
 export class HeroCarouselComponent {
-  slider?: ListModel<HeroCarousel> = new ListModel<HeroCarousel>([
+  slider?: ListModel<IHeroCarousel> = new ListModel<IHeroCarousel>([
     {
       id: 1,
       image: 'assets/images/01.webp',

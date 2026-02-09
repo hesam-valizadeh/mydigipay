@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "baseUrl": "./", // این خط کلیدی است که فراموش شده بود
+    "baseUrl": "./", 
     "paths": {
       "@core/*": [
         "src/app/@core/*"

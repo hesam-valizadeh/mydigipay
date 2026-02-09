@@ -1,4 +1,4 @@
-export interface HeroCarousel {
+export interface IHeroCarousel {
   id?: number;
   title?: string;
   image?: string;
