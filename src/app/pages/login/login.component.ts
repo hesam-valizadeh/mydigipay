@@ -1,17 +1,19 @@
-import { Component, inject, signal, OnDestroy } from '@angular/core';
+import { Component, inject, signal, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { CarouselStoryComponent } from '../../@shared/components/carousel-story/carousel-story.component';
-import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { RouterLinksPath } from '../../@core/constants/router-links';
+import { routerLinksPath } from '../../@core/constants/router-links';
 import { AuthService } from '../../@core/services/auth.service';
 import { CustomInputComponent } from '../../@shared/components/form-controls/custom-input';
 import { SkeletonDirective } from '../../@shared/directives/skeleton.directive';
 import { Modal } from 'bootstrap';
-
+const LOADING_TIMEOUT = 3000;
+const LOGIN_DELAY = 2000;
 @Component({
   selector: 'app-login',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush, 
   imports: [
     CarouselStoryComponent,
     ReactiveFormsModule,
@@ -23,58 +25,67 @@ import { Modal } from 'bootstrap';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent implements OnDestroy {
-  loading = signal(true);
-  private readonly authService = inject(AuthService);
-  private readonly fb = inject(FormBuilder);
-  private readonly router = inject(Router);
-  protected readonly RouterLinksPath = RouterLinksPath;
+  public loading = signal<boolean>(true);
+  public phoneNumber: string | null = null;
+  public error: string = '';
 
-  phoneNumber: string | null = null;
-  error = '';
-
-  private referralModal?: Modal;
-
-  constructor() {
-    setTimeout(() => this.loading.set(false), 3000);
-  }
-
-  loginForm = this.fb.group({
+  // --- فیلدهای فرم ---
+  public readonly loginForm: FormGroup = inject(FormBuilder).group({
     phone: ['', {
       validators: [Validators.required, Validators.pattern(/^09\d{9}$/)],
       updateOn: 'change' 
     }],
   });
-  referralForm = this.fb.group({
+
+  public readonly referralForm: FormGroup = inject(FormBuilder).group({
     referral: ['', [Validators.required]],
   });
-  
-  login = (): void => {
+
+  protected readonly routerLinksPath = routerLinksPath;
+
+  private readonly authService = inject(AuthService);
+  private readonly router = inject(Router);
+  private referralModal?: Modal;
+
+  public constructor() {
+    setTimeout((): void => this.loading.set(false), LOADING_TIMEOUT);
+  }
+
+
+  public login = (): void => {
     this.loading.set(true);
-    setTimeout(() => {
+    setTimeout((): void => {
       this.loading.set(false);
       alert('ورود موفق!');
-    }, 2000);
-  };
-  onSubmitReferral = (): void => {
-    if (this.referralForm.invalid) return;
+    }, LOGIN_DELAY);
   };
 
-  onSubmit = (): void => {
-    if (this.loginForm.invalid) return;
+  public onSubmitReferral = (): void => {
+    if (this.referralForm.invalid) {
+      return;
+    }
+  };
 
-    const phone = this.loginForm.value.phone!;
-    const success = this.authService.login(phone);
+  public onSubmit = (): void => {
+    if (this.loginForm.invalid) {
+      return;
+    }
+
+    const phone: string = this.loginForm.get('phone')?.value as string;
+    const success: boolean = this.authService.login(phone);
 
     if (success) {
-      void this.router.navigate([this.RouterLinksPath.hubPage.hub], { replaceUrl: true });
+      void this.router.navigate([this.routerLinksPath.hubPage.hub], { replaceUrl: true });
     } else {
       this.error = 'نام کاربری یا رمز عبور اشتباه است.';
     }
   };
 
-  openReferralModal = (): void => {
-    const modalEl = document.getElementById('referralModal');
-    if (!modalEl) return;
+  public openReferralModal = (): void => {
+    const modalEl: HTMLElement | null = document.getElementById('referralModal');
+    if (!modalEl) {
+      return;
+    }
 
     this.referralModal = new Modal(modalEl, {
       backdrop: 'static',
@@ -84,12 +95,12 @@ export class LoginComponent implements OnDestroy {
     this.referralModal.show();
   };
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.referralModal?.hide();
     this.referralModal?.dispose();
     document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
-    document.querySelectorAll('.modal-backdrop').forEach((b) => b.remove());
+    document.querySelectorAll('.modal-backdrop').forEach((b: Element): void => b.remove());
   }
 }

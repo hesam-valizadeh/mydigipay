@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
@@ -8,24 +8,26 @@ import { IProductCarousel } from './model/carousel-inerface';
 @Component({
   selector: 'app-product-section',
   imports: [CustomSwiperComponent, ProductItemComponent],
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './product-section.component.html',
   styleUrl: './product-section.component.scss',
 })
 export class ProductSectionComponent {
-  @Input() category!: string;
-  @Input() storeName!: string | undefined;
-  @Input() fourPay!: boolean | undefined;
-  @Input() products!: ListModel<IProductCarousel>;
-  @Input() imageSrc!: string | undefined;
-  @Input() alt!: string | undefined;
-  @Input() width!: string | undefined;
-  @Input() height!: string | undefined;
-  @Input() title!: string | undefined;
-  @Input() loading!: string | undefined;
-  @Input() storeLogoSrc!: string | undefined;
-  @Input() priceNoDiscount!: string | undefined;
-  @Input() priceFinal!: string | undefined;
-  @Input() discountPercentage!: string | undefined;
+  @Input() public category!: string;
+  @Input() public storeName!: string | undefined;
+  @Input() public fourPay!: boolean | undefined;
+  @Input() public products!: ListModel<IProductCarousel>;
+  @Input() public imageSrc!: string | undefined;
+  @Input() public alt!: string | undefined;
+  @Input() public width!: string | undefined;
+  @Input() public height!: string | undefined;
+  @Input() public title!: string | undefined;
+  @Input() public loading!: string | undefined;
+  @Input() public storeLogoSrc!: string | undefined;
+  @Input() public priceNoDiscount!: string | undefined;
+  @Input() public priceFinal!: string | undefined;
+  @Input() public discountPercentage!: string | undefined;
   get slider() {
     return this.products || new ListModel([]);
   }

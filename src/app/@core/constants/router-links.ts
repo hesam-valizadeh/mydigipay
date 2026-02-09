@@ -1,76 +1,76 @@
-export class RouterLinksPath {
-  static gamesPage = {
+export const routerLinksPath = {
+   gamesPage : {
     singleRoulette: '/single-roulette',
     doubleRoulette: '/double-roulette',
     tripleRoulette: '/triple-roulette',
     paperScissorsRock: '/paper-scissors-rock',
     jackpot: '/jackpot',
     quiz: '/quiz',
-  };
-  static campaignPage = {
+  },
+   campaignPage : {
     alibaba: '/alibaba-campaign',
     khanomi: '/khanomi-campaign',
     nostrajamos: '/nostrajamos-campaign',
     divar: '/divar-campaign',
-  };
-  static loginPage = {
+  },
+   loginPage : {
     login: '/login',
     AuthAppletRules:'Auth-applet-rules'
-  };
-  static rulesPage = {
+  },
+   rulesPage : {
     rules: '/rules',
-  };
-  static contactUsPage = {
+  },
+   contactUsPage : {
     contactUs: '/contactus',
-  };
-  static faqPage = {
+  },
+   faqPage : {
     faq: '/faq',
-  };
-  static wealthPage = {
+  },
+   wealthPage : {
     wealth: '/wealth',
-  };
-  static hubPage = {
+  },
+   hubPage : {
     hub: '/hub',
-  };
-  static servicesPage = {
+  },
+   servicesPage : {
     services: '/services',
-  };
-  static shopsPage = {
+  },
+   shopsPage : {
     shops: '/shops',
-  };
-  static paymentPage = {
+  },
+   paymentPage : {
     payment: '/payment',
-  };
-  static loanPage = {
+  },
+   loanPage : {
     loanProduct: '/loan-product',
     bnpl: '/bnpl',
     digikalaInstallment: '/digikala-installment',
-  };
-  static insurancePage = {
+  },
+   insurancePage : {
     thirdParty: '/third-party-insurance',
     electronicEquipment: '/electronic-equipment-insurance',
-  };
-  static businessServicesPage = {
+  },
+   businessServicesPage : {
     creditPaymentGateway: '/credit-payment-gateway',
     merchantLoan: '/merchant-loan',
     comprehensivePaymentGateway: '/comprehensive-payment-gateway',
     earlySettlement: '/early-settlement',
-  };
-  static organizationalServicesPage = {
+  },
+   organizationalServicesPage : {
     organizationalInstallment: '/organizational-installment',
     organizationalBnpl: '/organizational-bnpl',
-  };
-  static aboutPage = {
+  },
+   aboutPage : {
     about: '/about',
     annualReport: '/annual-report',
     careers: '/careers',
     blog: '/blog',
     technicalDocs: '/technical-docs',
-  };
-  static specialServicesPage = {
+  },
+   specialServicesPage : {
     specialFinancialServices: '/special-financial-services',
-  };
-}
+  }
+} as const;
 export function routeWithoutSlash(path: string): string {
   if (path.startsWith('/')) {
     return path.replace('/', '');

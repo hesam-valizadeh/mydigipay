@@ -9,7 +9,7 @@ import {
   signal,
   WritableSignal,
 } from '@angular/core';
-import { RouterLinksPath } from '../../@core/constants/router-links';
+import { routerLinksPath } from '../../@core/constants/router-links';
 import { NavigationEnd, Router, RouterLink, RouterModule } from '@angular/router';
 import { SearchBoxComponent } from '../../@shared/components/search-box/search-box.component';
 import { IHeaderViewDataInterface } from '../../view-models/header-view-data.interface';
@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
   eRef = inject(ElementRef);
   responsive = inject(ResponsiveService);
 
-  protected readonly RouterLinksPath = RouterLinksPath;
+  protected readonly routerLinksPath = routerLinksPath;
   data: IHeaderViewDataInterface = {
     loansAndCredits: 'وام و اعتبار',
     credit: 'وام خرید کالا',

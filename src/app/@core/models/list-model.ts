@@ -1,9 +1,15 @@
 export class ListModel<DataModel> {
-  data: DataModel[];
-  item = (index: number): DataModel | null =>
-    this.data && this.data.length && this.data[index] ? this.data[index] : null;
+  public data: DataModel[];
 
-  constructor(data?: DataModel[]) {
+  public constructor(data?: DataModel[]) {
     this.data = data ?? [];
   }
+  public item = (index: number): DataModel | null => {
+    const exists = 
+      this.data !== null && 
+      this.data.length > index && 
+      this.data[index] !== undefined;
+
+    return exists ? this.data[index] : null;
+  };
 }

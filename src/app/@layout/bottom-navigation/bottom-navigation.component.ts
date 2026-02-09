@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLinksPath } from '../../@core/constants/router-links';
+import { routerLinksPath } from '../../@core/constants/router-links';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './bottom-navigation.component.scss',
 })
 export class BottomNavigationComponent {
-  protected readonly RouterLinksPath = RouterLinksPath;
+  protected readonly routerLinksPath = routerLinksPath;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
 import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
@@ -7,6 +7,8 @@ import { HeroCarouselItemComponent } from './hero-carousel-item/hero-carousel-it
 
 @Component({
   selector: 'app-hero-carousel',
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CustomSwiperComponent, HeroCarouselItemComponent],
   templateUrl: './hero-carousel.component.html',
   styleUrl: './hero-carousel.component.scss',

@@ -1,9 +1,9 @@
-export class Labels {
-  static generals = {
+export const labels = {
+  generals: {
     startBuildingTheCampaign: 'شروع ساخت کمپین',
     requestForAdvice: 'درخواست مشاوره',
-  };
-  static header = {
+  },
+  header: {
     home: 'صفحه اصلی',
     games: 'بازی‌ها',
     about: 'درباره ما',
@@ -11,5 +11,5 @@ export class Labels {
     singleRoulette: 'گردونه تک لایه',
     doubleRoulette: 'گردونه دو لایه',
     tripleRoulette: 'گردونه سه لایه',
-  };
-}
+  },
+} as const;

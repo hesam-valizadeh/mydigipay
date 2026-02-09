@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ResponsiveService } from '../../@core/services/responsive.service';
 import { ReadMoreDirective } from '../../@shared/directives/read-more.directive';
-import { RouterLinksPath } from '../../@core/constants/router-links';
+import { routerLinksPath } from '../../@core/constants/router-links';
 import { RouterLink } from '@angular/router';
 import {NgOptimizedImage} from '@angular/common';
 
@@ -13,6 +13,6 @@ import {NgOptimizedImage} from '@angular/common';
 })
 export class FooterComponent {
   responsive = inject(ResponsiveService);
-  protected readonly RouterLinksPath = RouterLinksPath;
+  protected readonly routerLinksPath = routerLinksPath;
 
 }

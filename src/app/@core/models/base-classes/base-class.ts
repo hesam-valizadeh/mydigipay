@@ -1,7 +1,7 @@
 import { Directive } from '@angular/core';
-import { Labels } from '@core/constants/labels';
+import { labels } from '@core/constants/labels';
 
 @Directive()
 export class BaseClass {
-  protected readonly labels = Labels;
+  protected readonly labels = labels;
 }
