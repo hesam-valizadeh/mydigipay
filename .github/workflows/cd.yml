@@ -6,30 +6,39 @@ on:
     types: [completed]
     branches: [dev]
 
+# دسترسی‌های لازم برای نوشتن روی شاخه gh-pages و ارسال ایمیج به پکیج‌ها
+permissions:
+  contents: write
+  packages: write
+
 jobs:
   deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # --- بخش اول: آماده‌سازی فایل‌ها ---
+      # --- بخش اول: آماده‌سازی نهایی و بیلد با Base Href ---
       - name: Setup Node & Build
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "npm"
+
       - run: npm ci
+
+      # نکته: base-href برای نمایش درست سایت در آدرس گیت‌هاب ضروری است
       - run: npm run build -- --configuration=production --base-href /mydigipay/
 
-      # --- بخش دوم: انتشار در GitHub Pages (رایگان و سریع) ---
+      # --- بخش دوم: انتشار در GitHub Pages ---
       - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/browser
+          publish_dir: ./dist/browser # طبق ساختار پروژه شما
 
-      # --- بخش سوم: ساخت داکر برای هاست‌های دیگر (آینده‌نگری) ---
+      # --- بخش سوم: ساخت و ارسال داکر به GHCR (برای آینده) ---
       - name: Login to GHCR
         uses: docker/login-action@v3
         with:
@@ -43,4 +52,6 @@ jobs:
           context: .
           file: docker/Dockerfile.prod
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/mydigipay:latest
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/mydigipay:latest
+            ghcr.io/${{ github.repository_owner }}/mydigipay:${{ github.sha }}
