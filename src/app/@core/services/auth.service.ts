@@ -1,4 +1,4 @@
-  import { Injectable } from '@angular/core';
+  import { inject, Injectable } from '@angular/core';
   import { Router } from '@angular/router';
 
   @Injectable({
@@ -7,7 +7,7 @@
   export class AuthService {
     private isLoggedInKey = 'isLoggedIn';
 
-    constructor(private router: Router) {}
+    private router = inject(Router);
 
     login(phoneNumber: string): boolean {
       if (phoneNumber === '09212441074') {

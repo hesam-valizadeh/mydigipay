@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, OnDestroy } from '@angular/core';
 import { CarouselStoryComponent } from '../../@shared/components/carousel-story/carousel-story.component';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -24,7 +24,7 @@ import { Modal } from 'bootstrap';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
-export class LoginComponent {
+export class LoginComponent implements OnDestroy {
   loading = signal(true);
   private authService = inject(AuthService);
   private fb = inject(FormBuilder);

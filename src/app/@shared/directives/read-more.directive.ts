@@ -1,15 +1,16 @@
-import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, Renderer2, AfterViewInit, inject } from '@angular/core';
 
 @Directive({
   selector: '[appReadMore]'
 })
-export class ReadMoreDirective {
+export class ReadMoreDirective implements AfterViewInit {
   @Input() maxLines = 2; // تعداد خطوط
   @Input() toggleButton!: HTMLElement; // دکمه کم/بیشتر (اختیاری)
 
   private expanded = false;
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  private el = inject(ElementRef);
+  private renderer = inject(Renderer2);
 
   ngAfterViewInit() {
     this.applyClamp();

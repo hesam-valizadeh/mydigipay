@@ -22,7 +22,7 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './home.component.scss',
   
 })
-export class HomeComponent {
+export class HomeComponent  {
   data: HomePageViewDataInterface =  {
     smartSwitches: {
       category: 'کلید و پریز هوشمند',
@@ -579,10 +579,6 @@ export class HomeComponent {
   searchOverlay = inject(SearchOverlayService);
   responsive = inject(ResponsiveService);
   cdr = inject(ChangeDetectorRef);
-
-  ngOnInit(): void {
-  }
-
 
   get sections() {
     if (!this.data) return [];

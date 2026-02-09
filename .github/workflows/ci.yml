@@ -27,7 +27,7 @@ jobs:
 
       - name: Lint
         run: npm run lint
-        continue-on-error: true
+        continue-on-error: false
 
       - name: Build Angular
         run: npm run build -- --configuration=production
