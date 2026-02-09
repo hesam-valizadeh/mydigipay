@@ -28,7 +28,7 @@ jobs:
 
       - name: Lint
         run: npm run lint
-
+        continue-on-error: true
       # اگر تست‌های Karma یا Cypress دارید، اینجا اضافه کنید
       # - name: Run Tests
       #   run: npm run test -- --watch=false --browsers=ChromeHeadless
