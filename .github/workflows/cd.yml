@@ -1,14 +1,10 @@
-name: Pipeline
+name: CD Pipeline
 
 on:
   workflow_run:
-    workflows: ["CI Pipeline"] # زمانی اجرا شو که فایل قبلی تمام شد
+    workflows: ["CI Pipeline"]
     types: [completed]
     branches: [dev]
-
-permissions:
-  packages: write
-  contents: read
 
 jobs:
   deploy:
@@ -17,6 +13,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # --- بخش اول: آماده‌سازی فایل‌ها ---
+      - name: Setup Node & Build
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+      - run: npm ci
+      - run: npm run build -- --configuration=production --base-href /mydigipay/
+
+      # --- بخش دوم: انتشار در GitHub Pages (رایگان و سریع) ---
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/browser
+
+      # --- بخش سوم: ساخت داکر برای هاست‌های دیگر (آینده‌نگری) ---
       - name: Login to GHCR
         uses: docker/login-action@v3
         with:
@@ -24,7 +37,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and Push Docker Image
+      - name: Build and Push Docker
         uses: docker/build-push-action@v6
         with:
           context: .
