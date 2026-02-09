@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+
+# Angular cache
+.angular
+
+# Tests & coverage
+coverage
+cypress
+
+# VCS
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+
+# Docs
+README.md
+
+# Docker
+docker-compose.yml
+Dockerfile
