@@ -1,1 +1,0 @@
-import{Sa as n}from"./chunk-3YIIS7UO.js";var r=(()=>{class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-wealth"]],decls:0,vars:0,template:function(t,a){},encapsulation:2})}return e})();export{r as WealthComponent};
