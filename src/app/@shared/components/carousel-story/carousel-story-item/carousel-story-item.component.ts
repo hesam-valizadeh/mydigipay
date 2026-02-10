@@ -1,36 +1,35 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carousel-story-item',
   imports: [CommonModule,NgOptimizedImage],
   templateUrl: './carousel-story-item.component.html',
   styleUrl: './carousel-story-item.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselStoryItemComponent implements OnChanges{
 
-  @Input() src: string='';
-  @Input() alt?: string;
-  @Input() title?: string;
-  @Input() description?: string;
-  @Input() brand?: string;
-  @Input() link?: string;
-  @Input() className?: string;
-  @Input() styleAttr?: string;
-  @Input() isActive = false;
+  @Input() public src: string='';
+  @Input() public alt?: string;
+  @Input() public title?: string;
+  @Input() public description?: string;
+  @Input() public brand?: string;
+  @Input() public link?: string;
+  @Input() public className?: string;
+  @Input() public styleAttr?: string;
+  @Input() public isActive = false;
 
-  @ViewChild('figureImg', { static: true }) figureImg!: ElementRef<HTMLImageElement>;
+  @ViewChild('figureImg', { static: true }) public figureImg!: ElementRef<HTMLImageElement>;
 
-  ngOnChanges(changes: SimpleChanges) {
-    // وقتی isActive true میشه، انیمیشن رو ری‌تریگر کن
-    if (changes['isActive'] && this.figureImg) {
-      if (this.isActive) {
-        const el = this.figureImg.nativeElement;
-        el.classList.remove('animation');
-        // force reflow برای اطمینان از ری‌تریگر شدن
-        void el.offsetWidth;
-        el.classList.add('animation');
-      }
+  public ngOnChanges(changes: SimpleChanges): void {
+    if ('isActive' in changes && this.isActive) {
+      const el = this.figureImg.nativeElement;
+      el.classList.remove('animation');
+      
+      void el.offsetWidth;
+      
+      el.classList.add('animation');
     }
   }
 }

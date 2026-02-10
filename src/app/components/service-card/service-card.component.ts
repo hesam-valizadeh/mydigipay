@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ResponsiveService } from '../../@core/services/responsive.service';
 
 @Component({
@@ -7,9 +7,11 @@ import { ResponsiveService } from '../../@core/services/responsive.service';
   standalone: true,
   templateUrl: './service-card.component.html',
   styleUrl: './service-card.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class ServiceCardComponent {
-  cards = [
+  public cards = [
     {
       src: 'assets/images/credit.webp',
       alt: 'خدمات وام و اعتبار',
@@ -47,5 +49,13 @@ export class ServiceCardComponent {
       link: 'خدمات بیمه',
     },
   ];
-  responsive = inject(ResponsiveService);
+  public responsive = inject(ResponsiveService);
+
+  public get isMobile(): boolean {
+    return this.responsive.isMobile();
+  }
+
+  public get isDesktop(): boolean {
+    return this.responsive.isDesktop();
+  }
 }

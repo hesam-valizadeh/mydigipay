@@ -16,35 +16,42 @@ import { isPlatformBrowser } from '@angular/common';
   standalone: true 
 })
 export class SwiperElementDirective implements AfterViewInit {
-  @Input() config?: SwiperOptions;
+  @Input() public config?: SwiperOptions;
 
   private readonly element = inject(ElementRef<SwiperContainer>);
   private readonly ngZone = inject(NgZone);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly _swiperElement: SwiperContainer = this.element.nativeElement as SwiperContainer;
   
-      ngAfterViewInit(): void {
+  public ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
 
-    let autoplay: AutoplayOptions | boolean | undefined = false;
+    let autoplay: AutoplayOptions | undefined;
 
-    if (this.config?.autoplay) {
+    if (this.config && this.config.autoplay !== undefined && this.config.autoplay !== false) {
       autoplay = { ...(this.config.autoplay as AutoplayOptions) };
       delete this.config.autoplay;
     }
 
     // اعمال کانفیگ روی المنت
-    Object.assign(this._swiperElement, this.config);
+    if (this.config) {
+      Object.assign(this._swiperElement, this.config);
+    }
 
     this._swiperElement.initialize();
 
-    if (autoplay) {
+    if (autoplay !== undefined) {
       this.ngZone.runOutsideAngular(() => {
-        if (this._swiperElement.swiper) {
-          this._swiperElement.swiper.params.autoplay = autoplay;
-          this._swiperElement.swiper.autoplay?.start();
+        const swiperInstance = this._swiperElement.swiper;
+        swiperInstance.params.autoplay = autoplay;
+
+        const swiperAutoplay = swiperInstance.autoplay as { start?: () => void } | undefined;
+        const canStartAutoplay = typeof swiperAutoplay?.start === 'function';
+
+        if (canStartAutoplay) {
+          (swiperAutoplay as { start: () => void }).start();
         }
       });
     }

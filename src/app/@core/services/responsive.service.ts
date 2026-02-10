@@ -5,7 +5,19 @@ import { BreakpointKey } from '../models/types/responsive.types';
   providedIn: 'root',
 })
 export class ResponsiveService {
-  /** Breakpoints definition (you can adjust as needed) */
+  /** 1. Public Properties / Signals */
+  public readonly isXs: WritableSignal<boolean> = signal(false);
+  public readonly isSm: WritableSignal<boolean> = signal(false);
+  public readonly isMd: WritableSignal<boolean> = signal(false);
+  public readonly isLg: WritableSignal<boolean> = signal(false);
+  public readonly isXl: WritableSignal<boolean> = signal(false);
+
+  /** Combined signals */
+  public readonly isMobile = computed(() => this.isXs());
+  public readonly isTablet = computed(() => this.isMd());
+  public readonly isDesktop = computed(() => this.isLg());
+
+  /** 2. Private Properties */
   private readonly breakpoints: Record<BreakpointKey, string> = {
     xs: '(max-width: 1199px)',
     sm: '(min-width: 600px) and (max-width: 959px)',
@@ -14,37 +26,33 @@ export class ResponsiveService {
     xl: '(min-width: 1920px)',
   };
 
-  /** Signals for each breakpoint */
-  readonly isXs: WritableSignal<boolean> = signal(false);
-  readonly isSm: WritableSignal<boolean> = signal(false);
-  readonly isMd: WritableSignal<boolean> = signal(false);
-  readonly isLg: WritableSignal<boolean> = signal(false);
-  readonly isXl: WritableSignal<boolean> = signal(false);
-
-  /** Combined signals */
-  readonly isMobile = computed(() => this.isXs());
-  readonly isTablet = computed(() => this.isMd());
-  readonly isDesktop = computed(() => this.isLg());
-
-  constructor() {
-    // Only run in browser (avoid SSR issues)
+  /** 3. Constructor (باید قبل از متدها باشد) */
+  public constructor() {
     if (typeof window === 'undefined') return;
     this.initListeners();
   }
 
-  /** Initialize all matchMedia listeners */
-  private initListeners() {
+  /** 4. Public Methods (باید قبل از متدهای Private باشد) */
+  public getCurrentSize(): string {
+    if (this.isXs()) return 'XS';
+    if (this.isSm()) return 'SM';
+    if (this.isMd()) return 'MD';
+    if (this.isLg()) return 'LG';
+    if (this.isXl()) return 'XL';
+    return 'Unknown';
+  }
+
+  /** 5. Private Methods (در انتهای کلاس) */
+  private initListeners(): void {
     Object.entries(this.breakpoints).forEach(([key, query]) => {
       const media = window.matchMedia(query);
       this.updateSignal(key, media.matches);
 
-      // Listen for changes
       media.addEventListener('change', (e) => this.updateSignal(key, e.matches));
     });
   }
 
-  /** Map breakpoint name to signal */
-  private updateSignal(breakpoint: string, value: boolean) {
+  private updateSignal(breakpoint: string, value: boolean): void {
     switch (breakpoint) {
       case 'xs':
         this.isXs.set(value);
@@ -62,15 +70,5 @@ export class ResponsiveService {
         this.isXl.set(value);
         break;
     }
-  }
-
-  /** Optional utility for debugging */
-  getCurrentSize(): string {
-    if (this.isXs()) return 'XS';
-    if (this.isSm()) return 'SM';
-    if (this.isMd()) return 'MD';
-    if (this.isLg()) return 'LG';
-    if (this.isXl()) return 'XL';
-    return 'Unknown';
   }
 }

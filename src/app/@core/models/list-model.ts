@@ -6,7 +6,6 @@ export class ListModel<DataModel> {
   }
   public item = (index: number): DataModel | null => {
     const exists = 
-      this.data !== null && 
       this.data.length > index && 
       this.data[index] !== undefined;
 

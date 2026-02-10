@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
 import { SwiperOptions } from 'swiper/types';
 import { ListModel } from '../../@core/models/list-model';
@@ -11,9 +11,11 @@ import { ISquareBannerCarousel } from './model/carousel-inerface';
   standalone: true,
   templateUrl: './square-banner.component.html',
   styleUrl: './square-banner.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class SquareBanner {
-  slider?: ListModel<ISquareBannerCarousel> = new ListModel<ISquareBannerCarousel>([
+  public slider?: ListModel<ISquareBannerCarousel> = new ListModel<ISquareBannerCarousel>([
     {
       id: 1,
       image: 'assets/images/banner/01.webp',
@@ -31,7 +33,7 @@ export class SquareBanner {
     },
   ]);
 
-  SwiperConfig: SwiperOptions = {
+  public SwiperConfig: SwiperOptions = {
     slidesPerView: 'auto',
     spaceBetween: 15,
     centeredSlides: false,

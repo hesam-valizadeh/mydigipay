@@ -14,7 +14,7 @@ import { HeroCarouselItemComponent } from './hero-carousel-item/hero-carousel-it
   styleUrl: './hero-carousel.component.scss',
 })
 export class HeroCarouselComponent {
-  slider?: ListModel<IHeroCarousel> = new ListModel<IHeroCarousel>([
+  public slider?: ListModel<IHeroCarousel> = new ListModel<IHeroCarousel>([
     {
       id: 1,
       image: 'assets/images/01.webp',
@@ -53,7 +53,7 @@ export class HeroCarouselComponent {
     },
   ]);
 
-  SwiperConfig: SwiperOptions = {
+  public SwiperConfig: SwiperOptions = {
     slidesPerView: 'auto',
     spaceBetween: 15,
     centeredSlides: false,

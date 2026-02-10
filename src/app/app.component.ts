@@ -1,29 +1,32 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Data, NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './@layout/header/header.component';
 import { Meta, Title } from '@angular/platform-browser';
-import { filter, map, mergeMap } from 'rxjs';
 import { environment } from '../enviroment/environment';
 import { FooterComponent } from './@layout/footer/footer.component';
 import { SearchOverlayService } from './@core/services/search-overlay-service.service';
 import { ResponsiveService } from './@core/services/responsive.service';
 import { BottomNavigationComponent } from './@layout/bottom-navigation/bottom-navigation.component';
+import { HeaderComponent } from './@layout/header/header.component';
+import { filter, map, mergeMap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent, FooterComponent,BottomNavigationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class AppComponent implements OnInit {
+  public searchOverlay = inject(SearchOverlayService);
+  public showLayout = true;
+  public responsive = inject(ResponsiveService);
+
   private readonly router = inject(Router);
   private readonly titleService = inject(Title);
   private readonly activatedRoute = inject(ActivatedRoute);
   private readonly metaService = inject(Meta);
-  searchOverlay = inject(SearchOverlayService);
-  showLayout = true;
-  responsive = inject(ResponsiveService);
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.router.events
     .pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd),
@@ -42,12 +45,12 @@ export class AppComponent implements OnInit {
       this.showLayout = data['showLayout'] !== false;
       
       const pageTitle = data['title'] as string | undefined;
-      if (pageTitle) {
+      if (pageTitle !== undefined && pageTitle !== '') {
         this.titleService.setTitle(pageTitle);
       }
 
       const description = data['description'] as string | undefined;
-      if (description) {
+      if (description !== undefined && description !== '') {
         this.metaService.updateTag({
           name: 'description',
           content: description,

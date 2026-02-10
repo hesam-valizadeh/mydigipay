@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { routerLinksPath } from '../../@core/constants/router-links';
 import { RouterLink } from '@angular/router';
 
@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   templateUrl: './bottom-navigation.component.html',
   styleUrl: './bottom-navigation.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BottomNavigationComponent {
   protected readonly routerLinksPath = routerLinksPath;

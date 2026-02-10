@@ -1,22 +1,18 @@
 import { Directive, ElementRef, HostListener, Input, Renderer2, AfterViewInit, inject } from '@angular/core';
-
+const DEFAULT_MAX_LINES = 2;
 @Directive({
   selector: '[appReadMore]',
   standalone: true 
 })
 export class ReadMoreDirective implements AfterViewInit {
-  @Input() maxLines = 2;
-  @Input() toggleButton!: HTMLElement; 
-
+  @Input() public maxLines = DEFAULT_MAX_LINES;
+  @Input() public toggleButton: HTMLElement | null | undefined; 
   private expanded = false;
-
-  private readonly el = inject(ElementRef<HTMLElement>);
+  private readonly el = inject<ElementRef<HTMLElement>>(ElementRef);
   private readonly renderer = inject(Renderer2);
-
-  ngAfterViewInit(): void {
+  public ngAfterViewInit(): void {
     this.applyClamp();
-
-    if (this.toggleButton) {
+    if (this.toggleButton !== null && this.toggleButton !== undefined) {
       this.renderer.listen(this.toggleButton, 'click', (event: Event) => {
         event.preventDefault();
         this.toggle();
@@ -25,8 +21,8 @@ export class ReadMoreDirective implements AfterViewInit {
   }
 
   @HostListener('click')
-  onTextClick(): void {
-    if (!this.toggleButton) {
+  public onTextClick(): void {
+    if (this.toggleButton === null || this.toggleButton === undefined) {
       this.toggle();
     }
   }
@@ -44,7 +40,7 @@ export class ReadMoreDirective implements AfterViewInit {
   }
 
   private applyClamp(): void {
-    const nativeEl = this.el.nativeElement as HTMLElement; 
+    const nativeEl: HTMLElement = this.el.nativeElement; 
     
     this.renderer.setStyle(nativeEl, 'display', '-webkit-box');
     this.renderer.setStyle(nativeEl, '-webkit-line-clamp', this.maxLines.toString());
@@ -53,14 +49,14 @@ export class ReadMoreDirective implements AfterViewInit {
   }
 
   private removeClamp(): void {
-    const nativeEl = this.el.nativeElement as HTMLElement;
+    const nativeEl: HTMLElement = this.el.nativeElement;
     
     this.renderer.removeStyle(nativeEl, '-webkit-line-clamp');
     this.renderer.removeStyle(nativeEl, 'overflow');
   }
 
   private updateButtonText(text: string): void {
-    if (this.toggleButton) {
+    if (this.toggleButton !== null && this.toggleButton !== undefined) {
       this.toggleButton.innerText = text;
     }
   }

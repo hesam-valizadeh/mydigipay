@@ -4,19 +4,19 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class SearchOverlayService {
-  isSearchOpen = signal(false);
+  public isSearchOpen = signal(false);
 
-  openSearch() {
+  public openSearch(): void {
     this.isSearchOpen.set(true);
     document.body.style.overflow = 'hidden';
   }
 
-  closeSearch() {
+  public closeSearch(): void {
     this.isSearchOpen.set(false);
     document.body.style.overflow = '';
   }
 
-  toggleSearch() {
+  public toggleSearch(): void {
     this.isSearchOpen.update((v) => !v);
   }
 }

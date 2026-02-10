@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, forwardRef, Input, ChangeDetectionStrategy } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { OnChangeFn, OnTouchedFn } from '@core/models/types/custom-input.types';
 
@@ -16,23 +16,26 @@ import { OnChangeFn, OnTouchedFn } from '@core/models/types/custom-input.types';
   ],
   templateUrl: "./custom-input.component.html",
   styleUrl: "./custom-input.component.scss",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CustomInputComponent implements ControlValueAccessor {
-  @Input() label = 'Phone Number';
-  @Input() placeholder = '09123456789';
+  // eslint-disable-next-line no-magic-numbers
+  private static readonly PHONE_LENGTH = 11;
+  @Input() public label = 'Phone Number';
+  @Input() public placeholder = '09123456789';
 
-  value = '';
-  error: string | null = null;
-  touched = false;
+  public value = '';
+  public error: string | null = null;
+  public touched = false;
 
-  onChange: OnChangeFn = () => {};
-  onTouched: OnTouchedFn = () => {};
+  public onChange: OnChangeFn = () => {};
+  public onTouched: OnTouchedFn = () => {};
 
   // ---- VALIDATION ----
-  validate(value: string): void {
+  public validate(value: string | null | undefined): void {
     const v = (value ?? '').trim();
 
-    if (!v) {
+    if (v.length === 0) {
       this.error = 'شماره تماس الزامی است';
       return;
     }
@@ -42,12 +45,12 @@ export class CustomInputComponent implements ControlValueAccessor {
       return;
     }
 
-    if (v.length < 11) {
+    if (v.length < CustomInputComponent.PHONE_LENGTH) {
       this.error = 'شماره باید دقیقاً 11 رقم باشد (کمتر است)';
       return;
     }
 
-    if (v.length > 11) {
+    if (v.length > CustomInputComponent.PHONE_LENGTH) {
       this.error = 'شماره باید دقیقاً 11 رقم باشد (بیشتر است)';
       return;
     }
@@ -56,7 +59,7 @@ export class CustomInputComponent implements ControlValueAccessor {
   }
 
   // ---- INPUT ----
-  onInput(event: Event): void {
+  public onInput(event: Event): void {
     const inputValue = (event.target as HTMLInputElement).value;
     this.value = inputValue;
     this.validate(this.value);
@@ -64,24 +67,24 @@ export class CustomInputComponent implements ControlValueAccessor {
   }
 
   // ---- BLUR ----
-  handleBlur(): void {
+  public handleBlur(): void {
     this.touched = true;
     this.onTouched();
   }
 
   // ---- CVA REQUIRED METHODS ----
-  writeValue(value: string | null): void {
-    this.value = value || '';
+  public writeValue(value: string | null): void {
+    this.value = value ?? '';
     this.validate(this.value);
   }
 
-  registerOnChange(fn: OnChangeFn): void {
+  public registerOnChange(fn: OnChangeFn): void {
     this.onChange = fn;
   }
 
-  registerOnTouched(fn: OnTouchedFn): void {
+  public registerOnTouched(fn: OnTouchedFn): void {
     this.onTouched = fn;
   }
 
-  setDisabledState?(_isDisabled: boolean): void {}
+  public setDisabledState?(): void {}
 }

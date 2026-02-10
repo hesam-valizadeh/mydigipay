@@ -6,7 +6,6 @@ on:
     types: [completed]
     branches: [dev]
 
-# دسترسی‌های لازم برای نوشتن روی شاخه gh-pages و ارسال ایمیج به پکیج‌ها
 permissions:
   contents: write
   packages: write
@@ -19,7 +18,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # --- بخش اول: آماده‌سازی نهایی و بیلد با Base Href ---
       - name: Setup Node & Build
         uses: actions/setup-node@v4
         with:
@@ -28,17 +26,14 @@ jobs:
 
       - run: npm ci
 
-      # نکته: base-href برای نمایش درست سایت در آدرس گیت‌هاب ضروری است
       - run: npm run build -- --configuration=production --base-href /mydigipay/
 
-      # --- بخش دوم: انتشار در GitHub Pages ---
       - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/browser # طبق ساختار پروژه شما
+          publish_dir: ./dist/browser
 
-      # --- بخش سوم: ساخت و ارسال داکر به GHCR (برای آینده) ---
       - name: Login to GHCR
         uses: docker/login-action@v3
         with:

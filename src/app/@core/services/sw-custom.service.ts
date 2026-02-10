@@ -5,7 +5,7 @@ import { SwUpdate } from '@angular/service-worker';
 export class SwUpdateService {
   private readonly updates = inject(SwUpdate);
 
-  constructor() {
+  public constructor() {
     if (this.updates.isEnabled) {
       this.updates.versionUpdates.subscribe((evt) => {
         if (evt.type === 'VERSION_READY') {

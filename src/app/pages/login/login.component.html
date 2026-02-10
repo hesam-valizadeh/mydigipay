@@ -1,16 +1,11 @@
 <div class="login-page">
-  
-  <app-carousel-story>
-
-  </app-carousel-story>
+  <app-carousel-story> </app-carousel-story>
   <div class="container">
-
     <div class="row">
       <div class="box">
         <div class="phone-number-content">
           <h1 appSkeleton [appSkeleton]="loading()">خوش آمدید!</h1>
           <p>جهت ورود، لطفا شماره موبایل خود را وارد کنید.</p>
-
           <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="form-floating mb-3">
               <app-custom-input formControlName="phone" label="شماره موبایل" >
@@ -22,8 +17,6 @@
               قبول شرایط و ادامه
             </button>
           </form>
-
-
           <div class="d-flex flex-row align-items-center justify-content-between link">
             <button data-bs-toggle="modal" (click)="openReferralModal()">
               <span> کد معرف دارید </span>
@@ -34,7 +27,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <div class="modal" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
@@ -46,10 +38,7 @@
           </button>
         </div>
         <div class="modal-body">
-
-
           <p>
-
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
             nobis dicta adipisci veniam quo harum nulla, fuga perspiciatis
             architecto aliquam velit reiciendis impedit? Perferendis sit illum

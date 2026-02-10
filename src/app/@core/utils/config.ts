@@ -1,5 +1,5 @@
-export class Config {
-  static apiUrl = {
+export const config = {
+  apiUrl: {
     sendMessage: '',
-  };
-}
+  },
+};

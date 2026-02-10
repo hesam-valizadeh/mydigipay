@@ -18,22 +18,23 @@ import {
   },
 })
 export class SkeletonDirective {
-  readonly isLoading = input(false, { 
+  // اضافه کردن public به ورودی‌ها
+  public readonly isLoading = input(false, { 
     alias: 'appSkeleton', 
     transform: Boolean 
   });
   
-  readonly background = input<string>('#e2e8f0');
-  readonly highlight = input<string>('#f1f5f9');
-  readonly borderRadius = input<string>('8px');
-  readonly height = input<string | null>(null);
-  readonly width = input<string | null>(null);
+  public readonly background = input<string>('#e2e8f0');
+  public readonly highlight = input<string>('#f1f5f9');
+  public readonly borderRadius = input<string>('8px');
+  public readonly height = input<string | null>(null);
+  public readonly width = input<string | null>(null);
 
-  private readonly el = inject(ElementRef); // حذف جنریک اینجا و استفاده از as در متدها مطمئن‌تر است
+  private readonly el = inject(ElementRef);
   private readonly renderer = inject(Renderer2);
   private readonly injector = inject(Injector);
 
-  constructor() {
+  public constructor() {
     afterNextRender(() => {
       runInInjectionContext(this.injector, () => {
         effect(() => {
@@ -49,7 +50,6 @@ export class SkeletonDirective {
   }
 
   private apply(): void {
-    // راه حل نهایی: Casting مستقیم به HTMLElement
     const e = this.el.nativeElement as HTMLElement; 
     
     this.renderer.setStyle(e, 'background-color', this.background());
@@ -59,17 +59,18 @@ export class SkeletonDirective {
     this.renderer.setStyle(e, 'color', 'transparent');
 
     const h = this.height();
-    if (h) {
+    // اصلاح شرط برای بررسی صریح null و خالی نبودن رشته
+    if (h !== null && h !== '') {
       this.renderer.setStyle(e, 'height', h);
       this.renderer.setStyle(e, 'min-height', h);
     }
 
     const w = this.width();
-    if (w) {
+    // اصلاح شرط برای بررسی صریح null و خالی نبودن رشته
+    if (w !== null && w !== '') {
       this.renderer.setStyle(e, 'width', w);
     }
 
-    // حالا e.children دیگر any نیست
     Array.from(e.children).forEach((child) => {
       this.renderer.setStyle(child, 'opacity', '0');
     });
@@ -78,8 +79,7 @@ export class SkeletonDirective {
   private addShimmer(): void {
     const e = this.el.nativeElement as HTMLElement;
     
-    // حالا querySelector دیگر unsafe call نیست
-    if (e.querySelector('.shimmer')) return;
+    if (e.querySelector('.shimmer') !== null) return;
 
     const div = this.renderer.createElement('div') as HTMLElement;
     this.renderer.addClass(div, 'shimmer');
@@ -115,7 +115,7 @@ export class SkeletonDirective {
     });
 
     const shimmer = e.querySelector('.shimmer');
-    if (shimmer) {
+    if (shimmer !== null) {
       this.renderer.removeChild(e, shimmer);
     }
   }

@@ -1,6 +1,7 @@
 import {
   ChangeDetectorRef,
   Component,
+  ChangeDetectionStrategy,
   CUSTOM_ELEMENTS_SCHEMA,
   inject,
 } from '@angular/core';
@@ -10,6 +11,9 @@ import { ListModel } from '../../../@core/models/list-model';
 import { Swiper, SwiperOptions } from 'swiper/types';
 import { IStoryCarousel } from './model/carousel-inerface';
 
+const CAROUSEL_PROGRESS_MAX = 100;
+const CAROUSEL_AUTOPLAY_DELAY_MS = 3000;
+
 @Component({
   selector: 'app-carousel-story',
   standalone: true,
@@ -17,9 +21,12 @@ import { IStoryCarousel } from './model/carousel-inerface';
   templateUrl: './carousel-story.component.html',
   styleUrl: './carousel-story.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselStoryComponent {
-  slider?: ListModel<IStoryCarousel> = new ListModel<IStoryCarousel>([
+  public activeIndex = 0;
+  public progress = CAROUSEL_PROGRESS_MAX;
+  public slider?: ListModel<IStoryCarousel> = new ListModel<IStoryCarousel>([
     {
       id: 1,
       title: 'pic 1',
@@ -53,21 +60,12 @@ export class CarouselStoryComponent {
       src: 'assets/images/login/wealth.webp',
     },
   ]);
-  activeIndex = 0;
-  progress = 100;
-  private readonly cdr = inject(ChangeDetectorRef);
-  onAutoplayProgress(swiper: Swiper, time: number, progress: number) {
-    this.progress = 1 - progress;
-    this.cdr.detectChanges();
-  }
-  trackById = (_: number, item: IStoryCarousel) => item.id;
-
-  SwiperConfig: SwiperOptions = {
+  public SwiperConfig: SwiperOptions = {
     slidesPerView: 1,
     loop: true,
     effect: 'fade',
     autoplay: {
-      delay: 3000,
+      delay: CAROUSEL_AUTOPLAY_DELAY_MS,
       disableOnInteraction: false,
     },
     on: {
@@ -75,9 +73,24 @@ export class CarouselStoryComponent {
         this.onAutoplayProgress(swiper, time, progress);
       },
       slideChange: (swiper) => {
-        this.activeIndex = swiper.realIndex ?? 0;
+        this.activeIndex = swiper.realIndex;
         this.cdr.detectChanges();
       },
     },
   };
+
+  private readonly cdr = inject(ChangeDetectorRef);
+  public trackById = (_: number, item: IStoryCarousel): number => item.id!;
+
+  public onAutoplayProgress(_swiper: Swiper, _time: number, progress: number): void {
+    this.progress = CAROUSEL_PROGRESS_MAX * (1 - progress);
+    this.cdr.detectChanges();
+  }
+
+  public getProgressWidth(index: number): number {
+    if (index === this.activeIndex) {
+      return this.progress;
+    }
+    return index < this.activeIndex ? CAROUSEL_PROGRESS_MAX : 0;
+  }
 }

@@ -1,5 +1,5 @@
 export interface IStoryCarousel {
-  id?: number;
+  id?: number | undefined;
   title?: string;
   image?: string;
   imageAlt?: string;

@@ -1,5 +1,6 @@
 import {
   Component,
+  ChangeDetectionStrategy,
   ElementRef,
   EventEmitter,
   HostListener,
@@ -7,7 +8,6 @@ import {
   OnInit,
   Output,
   signal,
-  WritableSignal,
 } from '@angular/core';
 import { routerLinksPath } from '../../@core/constants/router-links';
 import { NavigationEnd, Router, RouterLink, RouterModule } from '@angular/router';
@@ -18,25 +18,25 @@ import { NgOptimizedImage } from '@angular/common';
 import { filter } from 'rxjs';
 import { SearchOverlayService } from '../../@core/services/search-overlay-service.service';
 
+const SCROLL_THRESHOLD_START = 200;
+const SCROLL_THRESHOLD_END = 250;
+
 @Component({
   selector: 'app-header',
-  imports: [SearchBoxComponent, RouterModule,NgOptimizedImage,RouterLink],
+  imports: [SearchBoxComponent, RouterModule, NgOptimizedImage, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
-  isSubmenuOpen = signal(false);
-  isSubmenuGamesOpen = signal(true);
-  isStickyHeaderVisible = signal(false);
-  isToggleSearch = signal(false);
-  searchOverlay = inject(SearchOverlayService);
-  private readonly router = inject(Router);
-  private readonly elementRef = inject(ElementRef);
-  eRef = inject(ElementRef);
-  responsive = inject(ResponsiveService);
+  public eRef = inject(ElementRef);
+  public responsive = inject(ResponsiveService);
+  public routerLinksPath = routerLinksPath;
+  public searchOverlay = inject(SearchOverlayService);
 
-  protected readonly routerLinksPath = routerLinksPath;
-  data: IHeaderViewDataInterface = {
+  @Output() public overlayToggle = new EventEmitter<boolean>();
+
+  public data: IHeaderViewDataInterface = {
     loansAndCredits: 'وام و اعتبار',
     credit: 'وام خرید کالا',
     bnpl: 'الان بخر بعدا پرداخت کن',
@@ -47,101 +47,117 @@ export class HeaderComponent implements OnInit {
     wealth: 'مدیریت سرمایه',
     serviceBusiness: 'خدمات کسب و کارها',
     bpg: 'درگاه پرداخت اعتباری',
-    merchantsSeller: 'وام فروشمدگان',
+    merchantsSeller: 'وام فروشندگان',
     ipg: 'درگاه پرداخت جامع',
     merchantCredit: 'تسویه زودهنگام',
     serviceOrganization: 'خدمات سازمانی',
     Ocredit: 'خرید اقساطی از دیجی‌کالا',
     orgbnpl: 'الان بخر بعدا پرداخت کن',
   };
-  ngOnInit() {
-    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
-      this.isSubmenuOpen.set(false);
-      this.isSubmenuGamesOpen.set(true);
-    });
 
-    //Reset Scroll 
-    this.router.events
-  .pipe(filter(event => event instanceof NavigationEnd))
-  .subscribe(() => {
-    setTimeout(() => window.scrollTo(0, 0), 0);
-  });
+  public showSearch = signal(true);
+  public isSubmenuOpen = signal(false);
+  public isToggleSearch = signal(false);
+  public isStickyHeaderVisible = signal(false);
+
+  private readonly _isSubmenuGamesOpen = signal(true);
+
+  public get submenuGamesOpen(): boolean {
+    return this._isSubmenuGamesOpen();
   }
-  toggleSubmenu() {
-    this.isSubmenuOpen.update((prev) => !prev);
-  }
-  showSearch: WritableSignal<boolean> = signal(true);
+
+  private readonly router = inject(Router);
+  private readonly elementRef = inject(ElementRef);
 
   constructor() {
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
+      .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         const url = this.router.url.trim();
-        const isHome =
-          url === '/' ||
-          url === '' ||
-          url === '/home';
-  
+        const isHome = url === '/' || url === '' || url === '/home';
         this.showSearch.set(isHome);
       });
   }
-  toggleSubmenuGames() {
-    this.isSubmenuGamesOpen.update((prev) => !prev);
+
+  ngOnInit(): void {
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      this.isSubmenuOpen.set(false);
+      this._isSubmenuGamesOpen.set(true);
+    });
+
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        setTimeout(() => window.scrollTo(0, 0), 0);
+      });
   }
-  @Output() overlayToggle = new EventEmitter<boolean>();
-  onOverlayToggle(event: boolean) {
+
+  public get isMobile(): boolean {
+    return this.responsive.isMobile();
+  }
+
+  public get isDesktop(): boolean {
+    return this.responsive.isDesktop();
+  }
+
+  public toggleSubmenu(): void {
+    this.isSubmenuOpen.update((prev) => !prev);
+  }
+
+  public toggleSubmenuGames(): void {
+    this._isSubmenuGamesOpen.update((prev) => !prev);
+  }
+
+  public onOverlayToggle(event: boolean): void {
     this.overlayToggle.emit(event);
   }
+
   @HostListener('window:scroll', [])
-  onScroll() {
+  public onScroll(): void {
     const scrollY = window.scrollY || document.documentElement.scrollTop;
-    if (scrollY > 200 && !this.isStickyHeaderVisible()) {
+    if (scrollY > SCROLL_THRESHOLD_START && !this.isStickyHeaderVisible()) {
       this.isStickyHeaderVisible.set(true);
-    } else if (scrollY <= 250 && this.isStickyHeaderVisible()) {
+    } else if (scrollY <= SCROLL_THRESHOLD_END && this.isStickyHeaderVisible()) {
       this.isStickyHeaderVisible.set(false);
     }
   }
 
   @HostListener('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent): void {
+  public onDocumentClick(event: MouseEvent): void {
     const container = this.elementRef.nativeElement as HTMLElement;
-    const target = event.target as Node; 
-    const clickedInside = container.contains(target);
-    
-    if (!clickedInside && (this.isSubmenuOpen() || this.isSubmenuGamesOpen())) {
-      this.isSubmenuOpen.set(false);
-      this.isSubmenuGamesOpen.set(false);
+    if (!container.contains(event.target as Node)) {
+      if (this.isSubmenuOpen() || this.submenuGamesOpen) {
+        this.isSubmenuOpen.set(false);
+        this._isSubmenuGamesOpen.set(false);
+      }
     }
   }
 
-  toggleSearch() {
+  public toggleSearch(): void {
     this.isToggleSearch.update((prev) => !prev);
-    const stickySearch = document.querySelector('.header-sticky_search') as HTMLElement;
-    if (stickySearch) {
+    const stickySearch = document.querySelector('.header-sticky_search');
+
+    if (stickySearch instanceof HTMLElement) {
       if (this.isToggleSearch()) {
         stickySearch.classList.add('hidden');
+        const header = document.querySelector('header');
+        const headerHeight = header?.clientHeight ?? 0;
+        window.scrollTo({ top: headerHeight, behavior: 'smooth' });
       } else {
         stickySearch.classList.remove('hidden');
       }
     }
-    if (this.isToggleSearch()) {
-      const headerHeight = document.querySelector('header')?.clientHeight || 0;
-      window.scrollTo({
-        top: headerHeight,
-        behavior: 'smooth',
-      })
-    }
   }
 
   @HostListener('document:click', ['$event'])
-  clickOutside(event: Event): void {
+  public clickOutside(event: Event): void {
     const container = this.eRef.nativeElement as HTMLElement;
-    const target = event.target as Node;
-
-    if (this.isToggleSearch() && target && !container.contains(target)) {
+    if (this.isToggleSearch() && !container.contains(event.target as Node)) {
       this.isToggleSearch.set(false);
       const stickySearch = document.querySelector('.header-sticky_search');
-      stickySearch?.classList.remove('hidden');
+      if (stickySearch instanceof HTMLElement) {
+        stickySearch.classList.remove('hidden');
+      }
     }
   }
 }

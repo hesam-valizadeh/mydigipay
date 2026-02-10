@@ -72,6 +72,6 @@
 </div>
 
 
-@if (responsive?.isDesktop()) {
-<div id="backdrop" [class.show-overlay]="searchOverlay.isSearchOpen()"></div>
+@if (isDesktop) {
+<div id="backdrop" [class.show-overlay]="isSearchOpen"></div>
 }

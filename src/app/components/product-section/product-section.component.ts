@@ -17,7 +17,7 @@ export class ProductSectionComponent {
   @Input() public category!: string;
   @Input() public storeName!: string | undefined;
   @Input() public fourPay!: boolean | undefined;
-  @Input() public products!: ListModel<IProductCarousel>;
+  @Input() public products!: ListModel<IProductCarousel> | null | undefined;
   @Input() public imageSrc!: string | undefined;
   @Input() public alt!: string | undefined;
   @Input() public width!: string | undefined;
@@ -28,11 +28,12 @@ export class ProductSectionComponent {
   @Input() public priceNoDiscount!: string | undefined;
   @Input() public priceFinal!: string | undefined;
   @Input() public discountPercentage!: string | undefined;
-  get slider() {
-    return this.products || new ListModel([]);
+
+  public get slider(): ListModel<IProductCarousel> {
+    return this.products ?? new ListModel<IProductCarousel>([]);
   }
 
-  SwiperConfig: SwiperOptions = {
+  public SwiperConfig: SwiperOptions = {
     centeredSlides: false,
     grabCursor: true,
     loopPreventsSliding: false,

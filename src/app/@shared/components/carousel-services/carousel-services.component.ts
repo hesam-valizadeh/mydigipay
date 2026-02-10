@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CustomSwiperComponent } from '../custom-swiper/custom-swiper.component';
 import { CarouselServicesItemComponent } from './carousel-services-item/carousel-services-item.component';
 import { ListModel } from '../../../@core/models/list-model';
@@ -10,9 +10,10 @@ import { SwiperOptions } from 'swiper/types';
   imports: [CustomSwiperComponent,CarouselServicesItemComponent],
   templateUrl: './carousel-services.component.html',
   styleUrl: './carousel-services.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselServicesComponent {
- slider?: ListModel<IServicesCarousel> = new ListModel<IServicesCarousel>([
+ public slider?: ListModel<IServicesCarousel> = new ListModel<IServicesCarousel>([
     {
       id: 1,
       class: '',
@@ -51,7 +52,7 @@ export class CarouselServicesComponent {
     },
   ]);
 
-    SwiperConfig: SwiperOptions = {
+    public SwiperConfig: SwiperOptions = {
       slidesPerView: 5,
       centeredSlides: false,
       grabCursor: true,
@@ -61,7 +62,7 @@ export class CarouselServicesComponent {
         el: '',
       },
       loop: false,
- 
+
     
     };
 }

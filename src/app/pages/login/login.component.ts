@@ -32,12 +32,14 @@ export class LoginComponent implements OnDestroy {
   // --- فیلدهای فرم ---
   public readonly loginForm: FormGroup = inject(FormBuilder).group({
     phone: ['', {
+      // eslint-disable-next-line @typescript-eslint/unbound-method
       validators: [Validators.required, Validators.pattern(/^09\d{9}$/)],
       updateOn: 'change' 
     }],
   });
 
   public readonly referralForm: FormGroup = inject(FormBuilder).group({
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     referral: ['', [Validators.required]],
   });
 

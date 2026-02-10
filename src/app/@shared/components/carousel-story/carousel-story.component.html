@@ -12,7 +12,7 @@
   <div class="progress-container">
     @for (item of slider?.data; track item; let i = $index) {
     <div class="progress-bar" [class.active]="i === activeIndex">
-      <div class="progress-fill" [style.width.%]="i === activeIndex ? progress * 100 : i < activeIndex ? 100 : 0"></div>
+      <div class="progress-fill" [style.width.%]="getProgressWidth(i)"></div>
     </div>
     }
   </div>

@@ -9,7 +9,7 @@
 
     private readonly router = inject(Router);
 
-    login(phoneNumber: string): boolean {
+    public login(phoneNumber: string): boolean {
       if (phoneNumber === '09212441074') {
         localStorage.setItem(this.isLoggedInKey, 'true');
         return true;
@@ -17,12 +17,12 @@
       return false;
     }
 
-    logout(): void {
+    public logout(): void {
       localStorage.removeItem(this.isLoggedInKey);
       void this.router.navigate(['/login']);
         }
 
-    isAuthenticated(): boolean {
+    public isAuthenticated(): boolean {
       return localStorage.getItem(this.isLoggedInKey) === 'true';
     }
   }
