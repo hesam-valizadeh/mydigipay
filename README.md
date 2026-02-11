@@ -55,10 +55,10 @@ This project is suitable for:
 | **Linting**          | ESLint                                            |
 | **Formatting**       | Prettier                                          |
 | **CI/CD**            | GitHub Actions                                    |
-| **Deployment**       | GitHub Pages, Vercel (optional)                   |
+| **Deployment**       | GitHub Pages                                      |
 | **Performance Tools**| Lighthouse                                        |
 | **Debugging Tools**  | Angular DevTools, Chrome DevTools                 |
-| **Code Coverage**    | Istanbul (via Karma)                              |
+| **Code Coverage**    | Cypress                                           |
 ## ⚙️ Getting Started
 
 ### Prerequisites
