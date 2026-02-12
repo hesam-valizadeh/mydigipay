@@ -1,5 +1,5 @@
 <div class="login-page">
-  <app-carousel-story> </app-carousel-story>
+  <app-carousel-story></app-carousel-story>
   <div class="container">
     <div class="row">
       <div class="box">
@@ -8,7 +8,7 @@
           <p>جهت ورود، لطفا شماره موبایل خود را وارد کنید.</p>
           <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="form-floating mb-3">
-              <app-custom-input formControlName="phone" label="شماره موبایل"> </app-custom-input>
+              <app-custom-input formControlName="phone" label="شماره موبایل"></app-custom-input>
             </div>
             <span class="text-center fs-12px">شماره موبایل برای ورود : 09212441074</span>
             <button class="login-btn" type="submit" [disabled]="loginForm.invalid">
@@ -17,10 +17,10 @@
           </form>
           <div class="d-flex flex-row align-items-center justify-content-between link">
             <button data-bs-toggle="modal" (click)="openReferralModal()">
-              <span> کد معرف دارید </span>
+              <span>کد معرف دارید</span>
             </button>
             <button data-bs-toggle="modal" data-bs-target="#rulesModal">
-              <span> شرایط استفاده از دیجی پی </span>
+              <span>شرایط استفاده از دیجی پی</span>
             </button>
           </div>
         </div>
@@ -144,7 +144,7 @@
             </div>
             <div class="d-flex align-items-center justify-content-between gap-16px mt-50px">
               <button class="not-referral-btn w-100" aria-label="Close" data-bs-dismiss="modal">
-                <span> ندارم </span>
+                <span>ندارم</span>
               </button>
               <button
                 class="referral-btn w-100"
@@ -153,7 +153,7 @@
                 data-bs-target="#offcanvasTop"
                 aria-controls="offcanvasTop"
               >
-                <span> تایید و ادامه </span>
+                <span>تایید و ادامه</span>
               </button>
             </div>
           </form>

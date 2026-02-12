@@ -11,6 +11,8 @@
     "lint:fix": "ng lint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "quality:fix": "npm run format && npm run lint:fix",
+    "quality:check": "npm run format:check && npm run lint",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:run:component": "cypress run --component",
