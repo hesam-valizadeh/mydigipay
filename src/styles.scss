@@ -14,7 +14,7 @@
   padding: 0;
   direction: rtl;
   box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -38,13 +38,14 @@ button {
   display: -webkit-box;
   display: flexbox;
   display: flexbox;
+  display: flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   line-height: 1 !important;
   width: 20px;
   height: 20px;
@@ -134,40 +135,52 @@ a:focus-visible {
 @keyframes skeleton-shimmer {
   0% {
     transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   100% {
     transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
 @keyframes skeleton-shimmer {
   0% {
     transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   100% {
     transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
 @keyframes skeleton-shimmer {
   0% {
     transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
   100% {
     transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
 .skeleton-shimmer {
   animation: skeleton-shimmer 1.8s infinite linear;
-          animation: skeleton-shimmer 1.8s infinite linear;
+  animation: skeleton-shimmer 1.8s infinite linear;
 }

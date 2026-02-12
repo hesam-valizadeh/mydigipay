@@ -95,7 +95,7 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
-        flex-direction: column;
+    flex-direction: column;
     min-height: 480px;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -109,7 +109,7 @@
 
     .application {
       flex-wrap: wrap;
-          flex-wrap: wrap;
+      flex-wrap: wrap;
       width: 100% !important ;
     }
 
@@ -176,7 +176,7 @@
     z-index: 111111;
     background-color: #f2f3f6;
     box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
-            box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
     padding-bottom: 30px;
   }
 }

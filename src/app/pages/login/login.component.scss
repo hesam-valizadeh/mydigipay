@@ -24,7 +24,7 @@
     width: 510px;
     height: 350px;
     box-shadow: 0 10px 40px #10111333 !important;
-            box-shadow: 0 10px 40px #10111333 !important;
+    box-shadow: 0 10px 40px #10111333 !important;
     backdrop-filter: blur(18px) !important;
     margin-inline: auto;
     background-color: rgb(255 255 255 / 60%);
@@ -111,6 +111,18 @@
 
 .form-floating > .form-control:not(:placeholder) ~ label {
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  color: #74777c;
+}
+
+.form-floating > .form-control:not(:input-placeholder) ~ label {
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  color: #74777c;
+}
+
+.form-floating > .form-control:not(:placeholder) ~ label {
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
           transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
@@ -122,12 +134,12 @@
 }
 
 .form-floating > .form-control:not(:placeholder) ~ label {
-          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
 .form-floating > .form-control:not(:input-placeholder) ~ label {
-          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
@@ -136,7 +148,7 @@
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
@@ -208,7 +220,7 @@
 
 .modal.modal-static .modal-dialog {
   transform: none !important;
-          transform: none !important;
+  transform: none !important;
 }
 
 .error-message {

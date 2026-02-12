@@ -20,17 +20,18 @@
       display: flexbox;
       display: flexbox;
       display: flexbox;
+      display: flexbox;
       display: flex;
       -ms-flex-align: center;
       -webkit-box-align: center;
-              align-items: center;
+      align-items: center;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       flex-direction: column;
-          flex-direction: column;
+      flex-direction: column;
 
       .item-icon {
         width: 100%;
@@ -40,10 +41,11 @@
         display: flexbox;
         display: flexbox;
         display: flexbox;
+        display: flexbox;
         display: flex;
         -ms-flex-align: center;
         -webkit-box-align: center;
-                align-items: center;
+        align-items: center;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;

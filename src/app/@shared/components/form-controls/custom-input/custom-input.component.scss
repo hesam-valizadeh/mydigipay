@@ -19,6 +19,18 @@
 
 .form-floating > .form-control:not(:placeholder) ~ label {
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  color: #74777c;
+}
+
+.form-floating > .form-control:not(:input-placeholder) ~ label {
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  color: #74777c;
+}
+
+.form-floating > .form-control:not(:placeholder) ~ label {
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
           transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
@@ -30,12 +42,12 @@
 }
 
 .form-floating > .form-control:not(:placeholder) ~ label {
-          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
 .form-floating > .form-control:not(:input-placeholder) ~ label {
-          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
@@ -44,7 +56,7 @@
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 

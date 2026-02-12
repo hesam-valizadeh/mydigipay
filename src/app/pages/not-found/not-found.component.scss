@@ -41,13 +41,14 @@ a.btn.btn-primary {
   display: -webkit-box;
   display: flexbox;
   display: flexbox;
+  display: flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 48px;
   font-weight: 700;
   border: 1px solid #0040ff;
@@ -55,7 +56,7 @@ a.btn.btn-primary {
   color: #fff;
   border-radius: 12px;
   box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   cursor: pointer;
 }
 
@@ -66,14 +67,15 @@ a.btn.btn-primary {
   display: -webkit-box;
   display: flexbox;
   display: flexbox;
+  display: flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin: auto auto 32px;
   padding: 24px 24px 50px;
 
@@ -100,17 +102,18 @@ a.btn.btn-primary {
       display: -webkit-box;
       display: flexbox;
       display: flexbox;
+      display: flexbox;
       display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          flex-direction: row;
-              flex-direction: row;
+      flex-direction: row;
+      flex-direction: row;
       -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
 
       .item-icon {
         background-color: #fff5ee;
@@ -120,13 +123,14 @@ a.btn.btn-primary {
         display: -webkit-box;
         display: flexbox;
         display: flexbox;
+        display: flexbox;
         display: flex;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         border-radius: 8px;
 
         img {

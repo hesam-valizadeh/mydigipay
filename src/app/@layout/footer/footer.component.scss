@@ -9,15 +9,15 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     font-size: 12px;
     color: #101113;
     margin-bottom: 0;
@@ -41,11 +41,11 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
     padding-right: 40px;
 
     > div,
@@ -54,15 +54,15 @@ footer {
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: start;
+      -ms-flex-align: start;
+      align-items: start;
       -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: start;
+      -ms-flex-pack: start;
+      justify-content: start;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
       gap: 10px;
     }
 
@@ -120,11 +120,11 @@ hr {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     gap: 6px;
 
     figure {
@@ -150,11 +150,11 @@ hr {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
   gap: 12px;
 
   figure {
@@ -166,15 +166,15 @@ hr {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 
     img {
       -o-object-fit: contain;
-         object-fit: contain;
+      object-fit: contain;
     }
   }
 }
@@ -196,7 +196,7 @@ hr {
   .accordion-item:last-of-type,
   .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
     -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
     border: none;
     border-radius: 0 !important;
   }
@@ -213,7 +213,7 @@ hr {
 
     .accordion-button:not(.collapsed) {
       -webkit-box-shadow: none !important;
-              box-shadow: none !important;
+      box-shadow: none !important;
       background-color: transparent !important;
     }
 
