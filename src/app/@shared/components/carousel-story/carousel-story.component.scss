@@ -23,13 +23,15 @@
   }
 }
 
-@media screen and (width <=1199px) {
-}
-
 .progress-container {
   z-index: 111;
+  display: -webkit-box;
+  display: flexbox;
+  display: flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 8px;
   margin-top: 12px;
   position: absolute;
@@ -41,7 +43,7 @@
 .progress-bar {
   width: 25%;
   height: 6px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgb(255 255 255 / 30%);
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -51,6 +53,7 @@
   height: 100%;
   background: #fff;
   width: 0%;
+  transition: width 0.1s linear;
   transition: width 0.1s linear;
 }
 
@@ -66,8 +69,10 @@
 
 .story-background-fade {
   width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f2f3f6));
   background: linear-gradient(0deg, #f2f3f6 0% 100%);
   box-shadow: 0 -12px 30px 40px #f2f3f6;
+          box-shadow: 0 -12px 30px 40px #f2f3f6;
   z-index: 1;
   display: block;
   position: absolute;

@@ -18,7 +18,14 @@
     "cy:run:component": "cypress run --component",
     "cy:run:e2e": "cypress run --e2e",
     "cy:run:coverage": "cypress run --component --env codeCoverageTasksRegistered=true",
-    "test:coverage": "npm run cy:run:coverage && nyc report"
+    "test:coverage": "npm run cy:run:coverage && nyc report",
+    "prepare": "husky",
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "private": true,
   "dependencies": {
@@ -50,6 +57,8 @@
     "@angular/cli": "^20.3.7",
     "@angular/compiler-cli": "^20.3.7",
     "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
+    "@commitlint/cli": "^20.4.1",
+    "@commitlint/config-conventional": "^20.4.1",
     "@cucumber/cucumber": "^12.6.0",
     "@cypress/code-coverage": "^3.14.7",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
@@ -58,13 +67,17 @@
     "@types/jest": "^30.0.0",
     "angular-cli-ghpages": "^2.0.3",
     "angular-eslint": "20.1.1",
+    "autoprefixer": "^10.4.24",
     "babel-plugin-istanbul": "^7.0.1",
+    "commitizen": "^4.3.1",
     "cypress": "^15.9.0",
     "cypress-axe": "^1.7.0",
+    "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.27.2",
     "eslint": "8.57.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^9.1.7",
     "jasmine-core": "~5.6.0",
     "json-server": "^1.0.0-beta.3",
     "karma": "~6.4.0",
@@ -72,7 +85,14 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^16.2.7",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
     "prettier": "^3.8.1",
+    "stylelint": "^17.2.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-scss": "^7.0.0",
     "typescript": "~5.8.2"
   }
 }

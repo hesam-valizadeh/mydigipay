@@ -4,11 +4,15 @@
   font-feature-settings:
     'liga' off,
     'clig' off;
+          font-feature-settings:
+    'liga' off,
+    'clig' off;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 67px;
 }
+
 .desc {
   color: #515151;
   text-align: center;
@@ -17,6 +21,7 @@
   line-height: 177% !important;
   font-variation-settings: 'DOTS' 0 !important;
 }
+
 // .about-page {
 //   background: linear-gradient(180deg, #1159fc00 12.5%, #1159fc1f 26.62%);
 // }
@@ -25,6 +30,7 @@
   max-width: 1200px;
   width: 100%;
 }
+
 .intro-section {
   width: 725px;
 }

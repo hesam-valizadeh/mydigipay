@@ -4,6 +4,7 @@
   border-inline: 1px solid #ccc;
   margin-inline: auto;
   position: relative;
+
   .form-control {
     border-radius: 12px;
     border: 1px solid #c9cbcf;
@@ -15,20 +16,18 @@
       color: #74777c;
     }
   }
+
   .box {
     border-radius: 16px !important;
     position: absolute;
-    top: 350px;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    inset: 350px 0 0;
     width: 510px;
     height: 350px;
     box-shadow: 0 10px 40px #10111333 !important;
-    -webkit-backdrop-filter: blur(18px) !important;
+            box-shadow: 0 10px 40px #10111333 !important;
     backdrop-filter: blur(18px) !important;
     margin-inline: auto;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgb(255 255 255 / 60%);
     padding: 24px;
     z-index: 111;
 
@@ -61,6 +60,7 @@
         font-size: 16px !important;
         font-weight: 400 !important;
         transition: ease all 0.5s;
+        transition: ease all 0.5s;
         border-radius: 12px;
         margin-top: 16px;
         margin-bottom: 12px;
@@ -82,13 +82,12 @@
 }
 
 #referral,
-#phoneNumber {
+#phone-number {
   direction: ltr !important;
   text-align: left !important;
-  font-family: 'Yekan-Bakh';
-  &::placeholder {
-  }
+  font-family: Yekan-Bakh;
 }
+
 .form-floating {
   input {
     direction: rtl !important;
@@ -106,7 +105,30 @@
   font-size: 14px;
   line-height: 1;
   transition: all 0.3s;
+  transition: all 0.3s;
   z-index: 1;
+}
+
+.form-floating > .form-control:not(:placeholder) ~ label {
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  color: #74777c;
+}
+
+.form-floating > .form-control:not(:input-placeholder) ~ label {
+  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  color: #74777c;
+}
+
+.form-floating > .form-control:not(:placeholder) ~ label {
+          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  color: #74777c;
+}
+
+.form-floating > .form-control:not(:input-placeholder) ~ label {
+          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+  color: #74777c;
 }
 
 .form-floating > .form-control:focus ~ label,
@@ -114,6 +136,7 @@
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
@@ -141,16 +164,20 @@
   min-width: 140px;
   cursor: pointer;
   transition: all 0.3s;
-
+  transition: all 0.3s;
   text-align: center;
+
   &:hover {
     opacity: 0.74;
     transition: all 0.3s;
+    transition: all 0.3s;
   }
+
   span {
     padding: 2px 8px;
   }
 }
+
 .referral-btn {
   background-color: #000431;
   color: #fff;
@@ -160,12 +187,15 @@
   min-width: 140px;
   cursor: pointer;
   transition: all 0.3s;
-
+  transition: all 0.3s;
   text-align: center;
+
   &:hover {
     opacity: 0.74;
     transition: all 0.3s;
+    transition: all 0.3s;
   }
+
   span {
     padding: 2px 8px;
   }
@@ -177,20 +207,21 @@
 }
 
 .modal.modal-static .modal-dialog {
-  -webkit-transform: none !important;
-  -ms-transform: none !important;
   transform: none !important;
+          transform: none !important;
 }
+
 .error-message {
   width: 180px;
   height: 40px;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   border-radius: 32px;
   margin: auto;
   line-height: 3;
   font-size: 14px;
 }
+
 .offcanvas.offcanvas-top {
   z-index: 1111;
   border-bottom: none;

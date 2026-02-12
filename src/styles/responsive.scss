@@ -92,26 +92,37 @@
   }
 
   .download-app {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        flex-direction: column;
+            flex-direction: column;
     min-height: 480px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 560px !important;
     overflow: hidden;
+
     .qrcode {
       display: none !important;
     }
+
     .application {
       flex-wrap: wrap;
+          flex-wrap: wrap;
       width: 100% !important ;
     }
+
     img#download-app {
       right: 35% !important;
     }
   }
+
   .apps {
     .qrcode {
       display: none !important;
     }
+
     .application {
       width: 100% !important;
     }
@@ -130,18 +141,27 @@
     .social,
     .logos {
       text-align: center !important;
-      align-items: center !important;
-      justify-content: center !important;
+      -webkit-box-align: center !important;
+          -ms-flex-align: center !important;
+              align-items: center !important;
+      -webkit-box-pack: center !important;
+          -ms-flex-pack: center !important;
+              justify-content: center !important;
     }
   }
+
   .sub-footer {
     .row {
       gap: 20px;
 
       .logos {
         text-align: center !important;
-        align-items: center !important;
-        justify-content: center !important;
+        -webkit-box-align: center !important;
+            -ms-flex-align: center !important;
+                align-items: center !important;
+        -webkit-box-pack: center !important;
+            -ms-flex-pack: center !important;
+                justify-content: center !important;
       }
     }
   }
@@ -156,6 +176,7 @@
     z-index: 111111;
     background-color: #f2f3f6;
     box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+            box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
     padding-bottom: 30px;
   }
 }

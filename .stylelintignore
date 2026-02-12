@@ -1,0 +1,8 @@
+# Ignore Bootstrap utility file
+src/styles/utility.scss
+
+# Ignore variables file
+src/styles/variables.scss
+
+# Ignore specific component
+src/app/@layout/footer/footer.component.scss
