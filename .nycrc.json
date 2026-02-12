@@ -2,13 +2,7 @@
   "extends": "@istanbuljs/nyc-config-typescript",
   "all": true,
   "check-coverage": true,
-  "reporter": [
-    "text",
-    "text-summary",
-    "html",
-    "lcov",
-    "json"
-  ],
+  "reporter": ["text", "text-summary", "html", "lcov", "json"],
   "exclude": [
     "**/*.spec.ts",
     "**/*.cy.ts",
@@ -18,8 +12,6 @@
     "**/*.config.ts",
     "**/environments/**"
   ],
-  "include": [
-    "src/**/*.ts"
-  ],
+  "include": ["src/**/*.ts"],
   "report-dir": "coverage"
 }

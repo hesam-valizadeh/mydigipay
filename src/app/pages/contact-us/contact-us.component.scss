@@ -24,13 +24,13 @@
 }
 .map-contain {
   position: relative;
- 
+
   .map {
     height: 800px;
     z-index: -2;
     position: relative;
     &::after {
-      content: "";
+      content: '';
       background: -webkit-linear-gradient(
         top,
         #f2f3f6 0%,

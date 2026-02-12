@@ -6,7 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './digikala-installment.component.html',
   styleUrl: './digikala-installment.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class DigikalaInstallmentComponent {
   public trackEffect(): void {}

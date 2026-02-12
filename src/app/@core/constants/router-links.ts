@@ -1,5 +1,5 @@
 export const routerLinksPath = {
-   gamesPage : {
+  gamesPage: {
     singleRoulette: '/single-roulette',
     doubleRoulette: '/double-roulette',
     tripleRoulette: '/triple-roulette',
@@ -7,69 +7,69 @@ export const routerLinksPath = {
     jackpot: '/jackpot',
     quiz: '/quiz',
   },
-   campaignPage : {
+  campaignPage: {
     alibaba: '/alibaba-campaign',
     khanomi: '/khanomi-campaign',
     nostrajamos: '/nostrajamos-campaign',
     divar: '/divar-campaign',
   },
-   loginPage : {
+  loginPage: {
     login: '/login',
-    AuthAppletRules:'Auth-applet-rules'
+    AuthAppletRules: 'Auth-applet-rules',
   },
-   rulesPage : {
+  rulesPage: {
     rules: '/rules',
   },
-   contactUsPage : {
+  contactUsPage: {
     contactUs: '/contactus',
   },
-   faqPage : {
+  faqPage: {
     faq: '/faq',
   },
-   wealthPage : {
+  wealthPage: {
     wealth: '/wealth',
   },
-   hubPage : {
+  hubPage: {
     hub: '/hub',
   },
-   servicesPage : {
+  servicesPage: {
     services: '/services',
   },
-   shopsPage : {
+  shopsPage: {
     shops: '/shops',
   },
-   paymentPage : {
+  paymentPage: {
     payment: '/payment',
   },
-   loanPage : {
+  loanPage: {
     loanProduct: '/loan-product',
     bnpl: '/bnpl',
     digikalaInstallment: '/digikala-installment',
   },
-   insurancePage : {
+  insurancePage: {
     thirdParty: '/third-party-insurance',
     electronicEquipment: '/electronic-equipment-insurance',
   },
-   businessServicesPage : {
+  businessServicesPage: {
     creditPaymentGateway: '/credit-payment-gateway',
     merchantLoan: '/merchant-loan',
     comprehensivePaymentGateway: '/comprehensive-payment-gateway',
     earlySettlement: '/early-settlement',
   },
-   organizationalServicesPage : {
+  organizationalServicesPage: {
     organizationalInstallment: '/organizational-installment',
     organizationalBnpl: '/organizational-bnpl',
   },
-   aboutPage : {
+  aboutPage: {
     about: '/about',
     annualReport: '/annual-report',
     careers: '/careers',
     blog: '/blog',
     technicalDocs: '/technical-docs',
   },
-   specialServicesPage : {
+  specialServicesPage: {
     specialFinancialServices: '/special-financial-services',
-  }
+  },
 } as const;
 export function routeWithoutSlash(path: string): string {
   if (path.startsWith('/')) {

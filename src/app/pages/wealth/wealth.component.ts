@@ -5,7 +5,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './wealth.component.html',
   styleUrl: './wealth.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class WealthComponent {
   public trackEffect(): void {}

@@ -2,8 +2,8 @@
   color: #1e1e1e;
   text-align: center;
   font-feature-settings:
-    "liga" off,
-    "clig" off;
+    'liga' off,
+    'clig' off;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -15,16 +15,16 @@
   font-size: 18px !important;
   font-weight: 600 !important;
   line-height: 177% !important;
-  font-variation-settings: "DOTS" 0 !important;
+  font-variation-settings: 'DOTS' 0 !important;
 }
 // .about-page {
 //   background: linear-gradient(180deg, #1159fc00 12.5%, #1159fc1f 26.62%);
 // }
 .container {
-    margin: auto;
-    max-width: 1200px;
-    width: 100%;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
 }
-.intro-section{
-    width: 725px;
+.intro-section {
+  width: 725px;
 }

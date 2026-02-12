@@ -7,18 +7,18 @@ import { SwiperOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-carousel-services',
-  imports: [CustomSwiperComponent,CarouselServicesItemComponent],
+  imports: [CustomSwiperComponent, CarouselServicesItemComponent],
   templateUrl: './carousel-services.component.html',
   styleUrl: './carousel-services.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselServicesComponent {
- public slider?: ListModel<IServicesCarousel> = new ListModel<IServicesCarousel>([
+  public slider?: ListModel<IServicesCarousel> = new ListModel<IServicesCarousel>([
     {
       id: 1,
       class: '',
       src: 'assets/images/contact-us/item-1.webp',
-      title:" خرید شارژ "
+      title: ' خرید شارژ ',
     },
     {
       id: 2,
@@ -52,17 +52,15 @@ export class CarouselServicesComponent {
     },
   ]);
 
-    public SwiperConfig: SwiperOptions = {
-      slidesPerView: 5,
-      centeredSlides: false,
-      grabCursor: true,
-      loopPreventsSliding: false,
-      pagination: {
-        type: 'bullets',
-        el: '',
-      },
-      loop: false,
-
-    
-    };
+  public SwiperConfig: SwiperOptions = {
+    slidesPerView: 5,
+    centeredSlides: false,
+    grabCursor: true,
+    loopPreventsSliding: false,
+    pagination: {
+      type: 'bullets',
+      el: '',
+    },
+    loop: false,
+  };
 }

@@ -14,13 +14,13 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 
 // Import code coverage
-import '@cypress/code-coverage/support'
+import '@cypress/code-coverage/support';
 
 // Import cypress-axe for accessibility testing
-import 'cypress-axe'
+import 'cypress-axe';
 
 // Example use:
 // cy.visit('/')

@@ -1,20 +1,11 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*",
-    "dist/**/*",
-    "node_modules/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*", "dist/**/*", "node_modules/**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "tsconfig.app.json",
-          "tsconfig.spec.json"
-        ],
+        "project": ["tsconfig.app.json", "tsconfig.spec.json"],
         "createDefaultProgram": false
       },
       "extends": [
@@ -23,7 +14,8 @@
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:@typescript-eslint/strict",
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
       ],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": [
@@ -49,6 +41,12 @@
           {
             "assertionStyle": "as",
             "objectLiteralTypeAssertions": "never"
+          }
+        ],
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "lf"
           }
         ],
         "@typescript-eslint/no-unnecessary-condition": "error",
@@ -81,14 +79,8 @@
             "skipComments": true
           }
         ],
-        "complexity": [
-          "error",
-          7
-        ],
-        "max-params": [
-          "error",
-          3
-        ],
+        "complexity": ["error", 7],
+        "max-params": ["error", 3],
         "@angular-eslint/prefer-on-push-component-change-detection": "error",
         "@angular-eslint/use-lifecycle-interface": "error",
         "@angular-eslint/prefer-standalone": "error",
@@ -97,24 +89,14 @@
         "no-console": [
           "error",
           {
-            "allow": [
-              "error",
-              "warn"
-            ]
+            "allow": ["error", "warn"]
           }
         ],
-        "eqeqeq": [
-          "error",
-          "always"
-        ],
+        "eqeqeq": ["error", "always"],
         "no-magic-numbers": [
           "error",
           {
-            "ignore": [
-              0,
-              1,
-              -1
-            ],
+            "ignore": [0, 1, -1],
             "ignoreArrayIndexes": true
           }
         ],
@@ -122,33 +104,22 @@
           "error",
           {
             "selector": "interface",
-            "format": [
-              "PascalCase"
-            ],
-            "prefix": [
-              "I"
-            ]
+            "format": ["PascalCase"],
+            "prefix": ["I"]
           },
           {
             "selector": "class",
-            "format": [
-              "PascalCase"
-            ]
+            "format": ["PascalCase"]
           },
           {
             "selector": "variable",
-            "format": [
-              "camelCase",
-              "UPPER_CASE"
-            ]
+            "format": ["camelCase", "UPPER_CASE"]
           }
         ]
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
+      "files": ["*.html"],
       "parser": "@angular-eslint/template-parser",
       "extends": [
         "plugin:@angular-eslint/template/recommended",

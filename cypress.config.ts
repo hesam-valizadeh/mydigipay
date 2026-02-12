@@ -1,6 +1,6 @@
 // cypress.config.ts
-import { defineConfig } from 'cypress'
-import codeCoverageTask from '@cypress/code-coverage/task'
+import { defineConfig } from 'cypress';
+import codeCoverageTask from '@cypress/code-coverage/task';
 
 export default defineConfig({
   // ------------------------------
@@ -14,7 +14,7 @@ export default defineConfig({
     specPattern: 'cypress/components/**/*.cy.ts',
     supportFile: 'cypress/support/component.ts',
     setupNodeEvents(on, config) {
-      return config
+      return config;
     },
   },
 
@@ -34,8 +34,8 @@ export default defineConfig({
     responseTimeout: 30000,
 
     setupNodeEvents(on, config) {
-      codeCoverageTask(on, config)
-      return config
+      codeCoverageTask(on, config);
+      return config;
     },
   },
-})
+});

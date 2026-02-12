@@ -6,9 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './bnpl.component.html',
   styleUrl: './bnpl.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class BnplComponent {
   public trackEffect(): void {}
-
 }

@@ -1,7 +1,11 @@
 import { Component, forwardRef, Input, ChangeDetectionStrategy } from '@angular/core';
-import { NG_VALUE_ACCESSOR, ControlValueAccessor, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {
+  NG_VALUE_ACCESSOR,
+  ControlValueAccessor,
+  ReactiveFormsModule,
+  FormsModule,
+} from '@angular/forms';
 import { OnChangeFn, OnTouchedFn } from '@core/models/types/custom-input.types';
-
 
 @Component({
   selector: 'app-custom-input',
@@ -14,8 +18,8 @@ import { OnChangeFn, OnTouchedFn } from '@core/models/types/custom-input.types';
       multi: true,
     },
   ],
-  templateUrl: "./custom-input.component.html",
-  styleUrl: "./custom-input.component.scss",
+  templateUrl: './custom-input.component.html',
+  styleUrl: './custom-input.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CustomInputComponent implements ControlValueAccessor {

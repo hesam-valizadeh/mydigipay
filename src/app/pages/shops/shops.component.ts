@@ -6,9 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './shops.component.html',
   styleUrl: './shops.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class ShopsComponent {
   public trackEffect(): void {}
-
 }

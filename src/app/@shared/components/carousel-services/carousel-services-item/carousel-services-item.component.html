@@ -4,9 +4,17 @@
     <div>
       <div class="item-icon">
         <figure>
-          <img #figureImg ngOptimizedImage class="slide-image" loading="lazy" width="53" height="54"
-            [ngSrc]="src" [alt]="alt || title" />
-          <figcaption>{{title}}</figcaption>
+          <img
+            #figureImg
+            ngOptimizedImage
+            class="slide-image"
+            loading="lazy"
+            width="53"
+            height="54"
+            [ngSrc]="src"
+            [alt]="alt || title"
+          />
+          <figcaption>{{ title }}</figcaption>
         </figure>
       </div>
     </div>

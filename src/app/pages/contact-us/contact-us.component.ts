@@ -7,9 +7,7 @@ import { CarouselServicesComponent } from '../../@shared/components/carousel-ser
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class ContactUsComponent {
   public trackEffect(): void {}
-
 }

@@ -70,13 +70,11 @@ export class HeaderComponent implements OnInit {
   private readonly elementRef = inject(ElementRef);
 
   constructor() {
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        const url = this.router.url.trim();
-        const isHome = url === '/' || url === '' || url === '/home';
-        this.showSearch.set(isHome);
-      });
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      const url = this.router.url.trim();
+      const isHome = url === '/' || url === '' || url === '/home';
+      this.showSearch.set(isHome);
+    });
   }
 
   ngOnInit(): void {
@@ -85,11 +83,9 @@ export class HeaderComponent implements OnInit {
       this._isSubmenuGamesOpen.set(true);
     });
 
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        setTimeout(() => window.scrollTo(0, 0), 0);
-      });
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      setTimeout(() => window.scrollTo(0, 0), 0);
+    });
   }
 
   public get isMobile(): boolean {

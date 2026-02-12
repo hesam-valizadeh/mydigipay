@@ -19,11 +19,11 @@ import {
 })
 export class SkeletonDirective {
   // اضافه کردن public به ورودی‌ها
-  public readonly isLoading = input(false, { 
-    alias: 'appSkeleton', 
-    transform: Boolean 
+  public readonly isLoading = input(false, {
+    alias: 'appSkeleton',
+    transform: Boolean,
   });
-  
+
   public readonly background = input<string>('#e2e8f0');
   public readonly highlight = input<string>('#f1f5f9');
   public readonly borderRadius = input<string>('8px');
@@ -50,8 +50,8 @@ export class SkeletonDirective {
   }
 
   private apply(): void {
-    const e = this.el.nativeElement as HTMLElement; 
-    
+    const e = this.el.nativeElement as HTMLElement;
+
     this.renderer.setStyle(e, 'background-color', this.background());
     this.renderer.setStyle(e, 'border-radius', this.borderRadius());
     this.renderer.setStyle(e, 'position', 'relative');
@@ -78,7 +78,7 @@ export class SkeletonDirective {
 
   private addShimmer(): void {
     const e = this.el.nativeElement as HTMLElement;
-    
+
     if (e.querySelector('.shimmer') !== null) return;
 
     const div = this.renderer.createElement('div') as HTMLElement;
@@ -88,10 +88,14 @@ export class SkeletonDirective {
     this.renderer.setStyle(div, 'left', '0');
     this.renderer.setStyle(div, 'width', '100%');
     this.renderer.setStyle(div, 'height', '100%');
-    this.renderer.setStyle(div, 'background', `linear-gradient(90deg, transparent, ${this.highlight()}, transparent)`);
+    this.renderer.setStyle(
+      div,
+      'background',
+      `linear-gradient(90deg, transparent, ${this.highlight()}, transparent)`,
+    );
     this.renderer.setStyle(div, 'transform', 'translateX(-100%)');
     this.renderer.setStyle(div, 'animation', 'shimmer 1.8s infinite');
-    
+
     this.renderer.appendChild(e, div);
   }
 

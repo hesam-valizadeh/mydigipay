@@ -13,7 +13,7 @@ import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: '[appSwiperElement]',
-  standalone: true 
+  standalone: true,
 })
 export class SwiperElementDirective implements AfterViewInit {
   @Input() public config?: SwiperOptions;
@@ -22,7 +22,7 @@ export class SwiperElementDirective implements AfterViewInit {
   private readonly ngZone = inject(NgZone);
   private readonly platformId = inject(PLATFORM_ID);
   private readonly _swiperElement: SwiperContainer = this.element.nativeElement as SwiperContainer;
-  
+
   public ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;

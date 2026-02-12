@@ -11,11 +11,10 @@ import { filter, map, mergeMap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent,BottomNavigationComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, BottomNavigationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class AppComponent implements OnInit {
   public searchOverlay = inject(SearchOverlayService);
@@ -28,43 +27,48 @@ export class AppComponent implements OnInit {
   private readonly metaService = inject(Meta);
   public ngOnInit(): void {
     this.router.events
-    .pipe(
-      filter((event): event is NavigationEnd => event instanceof NavigationEnd),
-      map(() => {
-        let route = this.activatedRoute;
-        while (route.firstChild) {
-          route = route.firstChild;
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        map(() => {
+          let route = this.activatedRoute;
+          while (route.firstChild) {
+            route = route.firstChild;
+          }
+          return route;
+        }),
+        mergeMap((route) => route.data),
+      )
+      // تعیین تایپ صریح برای پارامتر ورودی subscribe
+      .subscribe((data: Data) => {
+        // حالا با استفاده از تایپ Data، دسترسی به این کلیدها مجاز است
+        this.showLayout = data['showLayout'] !== false;
+
+        const pageTitle = data['title'] as string | undefined;
+        if (pageTitle !== undefined && pageTitle !== '') {
+          this.titleService.setTitle(pageTitle);
         }
-        return route;
-      }),
-      mergeMap((route) => route.data)
-    )
-    // تعیین تایپ صریح برای پارامتر ورودی subscribe
-    .subscribe((data: Data) => {
-      // حالا با استفاده از تایپ Data، دسترسی به این کلیدها مجاز است
-      this.showLayout = data['showLayout'] !== false;
-      
-      const pageTitle = data['title'] as string | undefined;
-      if (pageTitle !== undefined && pageTitle !== '') {
-        this.titleService.setTitle(pageTitle);
-      }
 
-      const description = data['description'] as string | undefined;
-      if (description !== undefined && description !== '') {
-        this.metaService.updateTag({
-          name: 'description',
-          content: description,
-        });
-      }
-      
-      this.updateCanonicalUrl();
-    });
+        const description = data['description'] as string | undefined;
+        if (description !== undefined && description !== '') {
+          this.metaService.updateTag({
+            name: 'description',
+            content: description,
+          });
+        }
+
+        this.updateCanonicalUrl();
+      });
   }
-
+  public get isMobile(): boolean {
+    return this.responsive.isMobile();
+  }
+  public get isSearchOpen(): boolean {
+    return this.searchOverlay.isSearchOpen();
+  }
   private updateCanonicalUrl(): void {
     const currentPath = this.router.url.split('?')[0];
     const canonicalUrl = `${environment.baseURL}${currentPath}`;
-    
+
     // رفع خطا: متد addTag فقط MetaDefinition را می‌پذیرد (rel استاندارد نیست)
     // برای Canonical Link از روش استاندارد DOM یا MetaService اختصاصی استفاده می‌شود
     let link: HTMLLinkElement | null = document.querySelector("link[rel='canonical']");
@@ -75,5 +79,4 @@ export class AppComponent implements OnInit {
     }
     link.setAttribute('href', canonicalUrl);
   }
-
 }

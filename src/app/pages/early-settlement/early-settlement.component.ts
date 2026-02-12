@@ -6,7 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './early-settlement.component.html',
   styleUrl: './early-settlement.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class EarlySettlementComponent {
   public trackEffect(): void {}

@@ -1,21 +1,32 @@
 <div class="carousel-story">
-  <app-custom-swiper #swiperRef pagination="false" [config]="SwiperConfig" [startIndex]="1"
-    [slides]="slider?.data ?? []">
+  <app-custom-swiper
+    #swiperRef
+    pagination="false"
+    [config]="SwiperConfig"
+    [startIndex]="1"
+    [slides]="slider?.data ?? []"
+  >
     <ng-template #swiperSlideTemplate let-index="index">
-      <app-carousel-story-item [src]="slider?.item(index)?.src ?? ''" [alt]="slider?.item(index)?.imageAlt"
-        [title]="slider?.item(index)?.title" [description]="slider?.item(index)?.description"
-        [brand]="slider?.item(index)?.brand" [link]="slider?.item(index)?.link" [className]="slider?.item(index)?.class"
-        [styleAttr]="slider?.item(index)?.style" [isActive]="index === activeIndex"></app-carousel-story-item>
+      <app-carousel-story-item
+        [src]="slider?.item(index)?.src ?? ''"
+        [alt]="slider?.item(index)?.imageAlt"
+        [title]="slider?.item(index)?.title"
+        [description]="slider?.item(index)?.description"
+        [brand]="slider?.item(index)?.brand"
+        [link]="slider?.item(index)?.link"
+        [className]="slider?.item(index)?.class"
+        [styleAttr]="slider?.item(index)?.style"
+        [isActive]="index === activeIndex"
+      ></app-carousel-story-item>
     </ng-template>
   </app-custom-swiper>
 
   <div class="progress-container">
     @for (item of slider?.data; track item; let i = $index) {
-    <div class="progress-bar" [class.active]="i === activeIndex">
-      <div class="progress-fill" [style.width.%]="getProgressWidth(i)"></div>
-    </div>
+      <div class="progress-bar" [class.active]="i === activeIndex">
+        <div class="progress-fill" [style.width.%]="getProgressWidth(i)"></div>
+      </div>
     }
   </div>
   <div class="story-background-fade"></div>
-
 </div>

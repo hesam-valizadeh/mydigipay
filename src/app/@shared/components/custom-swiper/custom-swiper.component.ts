@@ -51,7 +51,7 @@ export class CustomSwiperComponent<ItemsType> implements AfterViewInit {
     // وقتی swiperRef را با "!" تعریف کردی، یعنی nativeElement همیشه هست.
     // همچنین swiper در SwiperContainer همیشه یک آبجکت است (Truthy).
     const swiperInstance = this.swiperRef.nativeElement.swiper;
-    
+
     // مستقیماً ایونت را ست می‌کنیم چون swiperInstance طبق تایپ‌ها همیشه وجود دارد
     swiperInstance.on('slideChange', (swiper: Swiper): void => {
       this.slideChange.emit(swiper.activeIndex);
@@ -78,7 +78,7 @@ export class CustomSwiperComponent<ItemsType> implements AfterViewInit {
 
   public get toggleContainerEndClass(): string {
     const slidesPerView = this.config.slidesPerView;
-    
+
     if (slidesPerView !== 'auto' && slidesPerView !== undefined) {
       // رفع ارور non-null assertion با چک کردن مستقیم
       if (this.slides.length <= slidesPerView) {

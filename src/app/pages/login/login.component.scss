@@ -85,7 +85,7 @@
 #phoneNumber {
   direction: ltr !important;
   text-align: left !important;
-  font-family: "Yekan-Bakh";
+  font-family: 'Yekan-Bakh';
   &::placeholder {
   }
 }
@@ -194,5 +194,5 @@
 .offcanvas.offcanvas-top {
   z-index: 1111;
   border-bottom: none;
-  height:45vh
+  height: 45vh;
 }

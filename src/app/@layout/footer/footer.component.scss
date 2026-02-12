@@ -136,25 +136,25 @@ hr {
   }
 }
 .accordion {
-  ul{
+  ul {
     list-style: none;
   }
-  .accordion-button::after{
+  .accordion-button::after {
     margin-right: auto !important;
-    margin-left:unset !important;
+    margin-left: unset !important;
   }
-  border:none;
+  border: none;
   .accordion-item:first-of-type > .accordion-header .accordion-button,
   .accordion-item:first-of-type,
   .accordion-item:last-of-type,
   .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
-      box-shadow: none !important;
-  border:none;
-  border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none;
+    border-radius: 0 !important;
   }
   .accordion-item {
-  border:none;
-  background-color: transparent !important;
+    border: none;
+    background-color: transparent !important;
   }
   background-color: transparent !important;
   .accordion-header {
@@ -168,5 +168,3 @@ hr {
     }
   }
 }
-
-

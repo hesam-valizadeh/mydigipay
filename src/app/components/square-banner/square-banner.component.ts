@@ -12,7 +12,6 @@ import { ISquareBannerCarousel } from './model/carousel-inerface';
   templateUrl: './square-banner.component.html',
   styleUrl: './square-banner.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class SquareBanner {
   public slider?: ListModel<ISquareBannerCarousel> = new ListModel<ISquareBannerCarousel>([

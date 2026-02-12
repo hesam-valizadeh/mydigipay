@@ -1,5 +1,5 @@
 export enum DeployTargetEnum {
-  LOCAL ,
+  LOCAL,
   STAGING,
   PRODUCTION,
 }

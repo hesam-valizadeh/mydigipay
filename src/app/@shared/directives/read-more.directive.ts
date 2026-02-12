@@ -1,12 +1,20 @@
-import { Directive, ElementRef, HostListener, Input, Renderer2, AfterViewInit, inject } from '@angular/core';
+import {
+  Directive,
+  ElementRef,
+  HostListener,
+  Input,
+  Renderer2,
+  AfterViewInit,
+  inject,
+} from '@angular/core';
 const DEFAULT_MAX_LINES = 2;
 @Directive({
   selector: '[appReadMore]',
-  standalone: true 
+  standalone: true,
 })
 export class ReadMoreDirective implements AfterViewInit {
   @Input() public maxLines = DEFAULT_MAX_LINES;
-  @Input() public toggleButton: HTMLElement | null | undefined; 
+  @Input() public toggleButton: HTMLElement | null | undefined;
   private expanded = false;
   private readonly el = inject<ElementRef<HTMLElement>>(ElementRef);
   private readonly renderer = inject(Renderer2);
@@ -40,8 +48,8 @@ export class ReadMoreDirective implements AfterViewInit {
   }
 
   private applyClamp(): void {
-    const nativeEl: HTMLElement = this.el.nativeElement; 
-    
+    const nativeEl: HTMLElement = this.el.nativeElement;
+
     this.renderer.setStyle(nativeEl, 'display', '-webkit-box');
     this.renderer.setStyle(nativeEl, '-webkit-line-clamp', this.maxLines.toString());
     this.renderer.setStyle(nativeEl, '-webkit-box-orient', 'vertical');
@@ -50,7 +58,7 @@ export class ReadMoreDirective implements AfterViewInit {
 
   private removeClamp(): void {
     const nativeEl: HTMLElement = this.el.nativeElement;
-    
+
     this.renderer.removeStyle(nativeEl, '-webkit-line-clamp');
     this.renderer.removeStyle(nativeEl, 'overflow');
   }

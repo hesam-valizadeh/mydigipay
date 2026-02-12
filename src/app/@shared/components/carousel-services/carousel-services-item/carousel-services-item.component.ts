@@ -9,7 +9,6 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselServicesItemComponent {
-
   @Input() public src: string = '';
   @Input() public alt?: string;
   @Input() public title?: string;
@@ -18,5 +17,4 @@ export class CarouselServicesItemComponent {
   @Input() public link?: string;
   @Input() public className?: string;
   @Input() public styleAttr?: string;
-
 }

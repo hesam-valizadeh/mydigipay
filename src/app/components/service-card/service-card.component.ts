@@ -8,7 +8,6 @@ import { ResponsiveService } from '../../@core/services/responsive.service';
   templateUrl: './service-card.component.html',
   styleUrl: './service-card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class ServiceCardComponent {
   public cards = [

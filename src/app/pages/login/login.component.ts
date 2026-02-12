@@ -13,7 +13,7 @@ const LOGIN_DELAY = 2000;
 @Component({
   selector: 'app-login',
   standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush, 
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CarouselStoryComponent,
     ReactiveFormsModule,
@@ -31,11 +31,14 @@ export class LoginComponent implements OnDestroy {
 
   // --- فیلدهای فرم ---
   public readonly loginForm: FormGroup = inject(FormBuilder).group({
-    phone: ['', {
-      // eslint-disable-next-line @typescript-eslint/unbound-method
-      validators: [Validators.required, Validators.pattern(/^09\d{9}$/)],
-      updateOn: 'change' 
-    }],
+    phone: [
+      '',
+      {
+        // eslint-disable-next-line @typescript-eslint/unbound-method
+        validators: [Validators.required, Validators.pattern(/^09\d{9}$/)],
+        updateOn: 'change',
+      },
+    ],
   });
 
   public readonly referralForm: FormGroup = inject(FormBuilder).group({
@@ -52,7 +55,6 @@ export class LoginComponent implements OnDestroy {
   public constructor() {
     setTimeout((): void => this.loading.set(false), LOADING_TIMEOUT);
   }
-
 
   public login = (): void => {
     this.loading.set(true);

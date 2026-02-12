@@ -1,9 +1,6 @@
 import { Routes } from '@angular/router';
 import { environment } from '../enviroment/environment';
-import {
-  routerLinksPath,
-  routeWithoutSlash,
-} from './@core/constants/router-links';
+import { routerLinksPath, routeWithoutSlash } from './@core/constants/router-links';
 import { authGuard } from './@core/guards/auth.guard';
 
 export const routes: Routes = [
@@ -15,9 +12,7 @@ export const routes: Routes = [
         'با دیجی پی، به هیچ اپلیکیشن مالی نیاز نداری از خرید اقساطی و دریافت اعتبار تا خرید بیمه، سرمایه گذاری و پرداخت های روزمره را سریع و آسان با دیجی پی انجام دهید.',
       canonical: environment.baseURL,
     },
-    loadComponent: () =>
-      import('./pages/home/home.component').then((c) => c.HomeComponent),
-
+    loadComponent: () => import('./pages/home/home.component').then((c) => c.HomeComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.wealthPage.wealth),
@@ -26,14 +21,13 @@ export const routes: Routes = [
       description:
         'با هر مبلغی که داری سرمایه گذاری کن و ارزش پولت رو در برابر تورم نه تنها حفظ کن بلکه افزایش بده. صندوق سرمایه‌گذاری دیجی‌پی یک فرصت مناسب برای افرادی است که به دنبال رشد سرمایه خود با مدیریت حرفه‌ای هستند.',
     },
-    loadComponent: () =>
-      import('./pages/wealth/wealth.component').then((c) => c.WealthComponent),
+    loadComponent: () => import('./pages/wealth/wealth.component').then((c) => c.WealthComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.contactUsPage.contactUs),
     data: {
       title: 'تماس با ما',
-      description:''
+      description: '',
     },
     loadComponent: () =>
       import('./pages/contact-us/contact-us.component').then((c) => c.ContactUsComponent),
@@ -42,16 +36,15 @@ export const routes: Routes = [
     path: routeWithoutSlash(routerLinksPath.faqPage.faq),
     data: {
       title: 'سوالات متداول',
-      description:''
+      description: '',
     },
-    loadComponent: () =>
-      import('./pages/faq/faq.component').then((c) => c.FaqComponent),
+    loadComponent: () => import('./pages/faq/faq.component').then((c) => c.FaqComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.rulesPage.rules),
     data: {
       title: 'قوانین و مقررات',
-      description:'شرایط جامع استفاده از خدمات دیجی‌پی',
+      description: 'شرایط جامع استفاده از خدمات دیجی‌پی',
     },
     loadComponent: () => import('./pages/rules/rules.component').then((c) => c.RulesComponent),
   },
@@ -62,8 +55,7 @@ export const routes: Routes = [
       title: 'دیجی پی | خدمات مالی و پرداخت',
       description: '',
     },
-    loadComponent: () =>
-      import('./pages/login/login.component').then((c) => c.LoginComponent),
+    loadComponent: () => import('./pages/login/login.component').then((c) => c.LoginComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.hubPage.hub),
@@ -73,8 +65,7 @@ export const routes: Routes = [
       title: '',
       description: '',
     },
-    loadComponent: () =>
-      import('./pages/hub/hub.component').then((c) => c.HubComponent),
+    loadComponent: () => import('./pages/hub/hub.component').then((c) => c.HubComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.servicesPage.services),
@@ -91,8 +82,7 @@ export const routes: Routes = [
       title: 'فروشگاه‌ها | دیجی‌پی',
       description: 'فروشگاه‌های دیجی‌پی',
     },
-    loadComponent: () =>
-      import('./pages/shops/shops.component').then((c) => c.ShopsComponent),
+    loadComponent: () => import('./pages/shops/shops.component').then((c) => c.ShopsComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.paymentPage.payment),
@@ -118,8 +108,7 @@ export const routes: Routes = [
       title: 'الان بخر بعدا پرداخت کن | دیجی‌پی',
       description: 'خرید اعتباری با دیجی‌پی',
     },
-    loadComponent: () =>
-      import('./pages/bnpl/bnpl.component').then((c) => c.BnplComponent),
+    loadComponent: () => import('./pages/bnpl/bnpl.component').then((c) => c.BnplComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.loanPage.digikalaInstallment),
@@ -128,7 +117,9 @@ export const routes: Routes = [
       description: 'خرید اقساطی از دیجی‌کالا با دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/digikala-installment/digikala-installment.component').then((c) => c.DigikalaInstallmentComponent),
+      import('./pages/digikala-installment/digikala-installment.component').then(
+        (c) => c.DigikalaInstallmentComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.insurancePage.thirdParty),
@@ -137,7 +128,9 @@ export const routes: Routes = [
       description: 'خرید بیمه شخص ثالث با دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/third-party-insurance/third-party-insurance.component').then((c) => c.ThirdPartyInsuranceComponent),
+      import('./pages/third-party-insurance/third-party-insurance.component').then(
+        (c) => c.ThirdPartyInsuranceComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.insurancePage.electronicEquipment),
@@ -146,7 +139,9 @@ export const routes: Routes = [
       description: 'خرید بیمه تجهیزات الکترونیک با دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/electronic-equipment-insurance/electronic-equipment-insurance.component').then((c) => c.ElectronicEquipmentInsuranceComponent),
+      import('./pages/electronic-equipment-insurance/electronic-equipment-insurance.component').then(
+        (c) => c.ElectronicEquipmentInsuranceComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.businessServicesPage.creditPaymentGateway),
@@ -155,7 +150,9 @@ export const routes: Routes = [
       description: 'درگاه پرداخت اعتباری دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/credit-payment-gateway/credit-payment-gateway.component').then((c) => c.CreditPaymentGatewayComponent),
+      import('./pages/credit-payment-gateway/credit-payment-gateway.component').then(
+        (c) => c.CreditPaymentGatewayComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.businessServicesPage.merchantLoan),
@@ -173,7 +170,9 @@ export const routes: Routes = [
       description: 'درگاه پرداخت جامع دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/comprehensive-payment-gateway/comprehensive-payment-gateway.component').then((c) => c.ComprehensivePaymentGatewayComponent),
+      import('./pages/comprehensive-payment-gateway/comprehensive-payment-gateway.component').then(
+        (c) => c.ComprehensivePaymentGatewayComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.businessServicesPage.earlySettlement),
@@ -182,7 +181,9 @@ export const routes: Routes = [
       description: 'تسویه زودهنگام دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/early-settlement/early-settlement.component').then((c) => c.EarlySettlementComponent),
+      import('./pages/early-settlement/early-settlement.component').then(
+        (c) => c.EarlySettlementComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.organizationalServicesPage.organizationalInstallment),
@@ -191,7 +192,9 @@ export const routes: Routes = [
       description: 'خرید اقساطی سازمانی دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/organizational-installment/organizational-installment.component').then((c) => c.OrganizationalInstallmentComponent),
+      import('./pages/organizational-installment/organizational-installment.component').then(
+        (c) => c.OrganizationalInstallmentComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.organizationalServicesPage.organizationalBnpl),
@@ -200,16 +203,18 @@ export const routes: Routes = [
       description: 'خرید اعتباری سازمانی دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/organizational-bnpl/organizational-bnpl.component').then((c) => c.OrganizationalBnplComponent),
+      import('./pages/organizational-bnpl/organizational-bnpl.component').then(
+        (c) => c.OrganizationalBnplComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.aboutPage.about),
     data: {
       title: 'درباره ما - دیجی‌پی دریافت وام خرید کالا و خدمات',
-      description: 'با دیجی‌پی، پرداخت‌ها، خریدهای اعتباری ۱ قسطه و ۴ قسطه، دریافت وام خرید کالا و خدمات، خرید اقساطی بیمه، سرمایه‌گذاری و همچنین خدمات روزمره مالی را فقط با چند کلیک انجام دهید.',
+      description:
+        'با دیجی‌پی، پرداخت‌ها، خریدهای اعتباری ۱ قسطه و ۴ قسطه، دریافت وام خرید کالا و خدمات، خرید اقساطی بیمه، سرمایه‌گذاری و همچنین خدمات روزمره مالی را فقط با چند کلیک انجام دهید.',
     },
-    loadComponent: () =>
-      import('./pages/about/about.component').then((c) => c.AboutComponent),
+    loadComponent: () => import('./pages/about/about.component').then((c) => c.AboutComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.aboutPage.annualReport),
@@ -235,8 +240,7 @@ export const routes: Routes = [
       title: 'مجله اینترنتی دیجی‌پی',
       description: 'مجله اینترنتی دیجی‌پی',
     },
-    loadComponent: () =>
-      import('./pages/blog/blog.component').then((c) => c.BlogComponent),
+    loadComponent: () => import('./pages/blog/blog.component').then((c) => c.BlogComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.aboutPage.technicalDocs),
@@ -245,7 +249,9 @@ export const routes: Routes = [
       description: 'مستندات فنی دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/technical-docs/technical-docs.component').then((c) => c.TechnicalDocsComponent),
+      import('./pages/technical-docs/technical-docs.component').then(
+        (c) => c.TechnicalDocsComponent,
+      ),
   },
   {
     path: routeWithoutSlash(routerLinksPath.specialServicesPage.specialFinancialServices),
@@ -254,7 +260,9 @@ export const routes: Routes = [
       description: 'خدمات ویژه مالی دیجی‌پی',
     },
     loadComponent: () =>
-      import('./pages/special-financial-services/special-financial-services.component').then((c) => c.SpecialFinancialServicesComponent),
+      import('./pages/special-financial-services/special-financial-services.component').then(
+        (c) => c.SpecialFinancialServicesComponent,
+      ),
   },
   {
     path: '**',
@@ -266,5 +274,4 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/not-found/not-found.component').then((c) => c.NotFoundComponent),
   },
-
 ];

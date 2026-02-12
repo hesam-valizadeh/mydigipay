@@ -9,5 +9,5 @@ export interface IServicesCarousel {
   class?: string;
   style?: string;
   src?: string;
-  test?:string
+  test?: string;
 }

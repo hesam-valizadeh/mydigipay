@@ -10,6 +10,6 @@ export interface IProductCarousel {
   height: string;
   priceNoDiscount?: string;
   storeLogoSrc: string;
-  storeRate?:string
-  fourPay?:boolean
+  storeRate?: string;
+  fourPay?: boolean;
 }

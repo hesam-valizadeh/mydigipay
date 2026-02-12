@@ -60,8 +60,7 @@
   position: relative;
 }
 
-::ng-deep
-  .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+::ng-deep .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: none !important;
 }
 

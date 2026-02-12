@@ -1,4 +1,11 @@
-import { Component, ChangeDetectionStrategy, ElementRef, HostListener, inject, signal } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  ElementRef,
+  HostListener,
+  inject,
+  signal,
+} from '@angular/core';
 import { ResponsiveService } from '../../../@core/services/responsive.service';
 import { SearchOverlayService } from '../../../@core/services/search-overlay-service.service';
 

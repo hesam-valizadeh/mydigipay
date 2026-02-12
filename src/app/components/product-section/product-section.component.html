@@ -8,12 +8,20 @@
   </div>
   <app-custom-swiper #swiperRef [config]="SwiperConfig" [startIndex]="1" [slides]="slider.data">
     <ng-template #swiperSlideTemplate let-index="index">
-      <app-product-item [src]="slider?.item(index)?.imageSrc ?? ''" [alt]="slider?.item(index)?.alt"
-        [width]="slider?.item(index)?.width" [height]="slider?.item(index)?.height" [title]="slider?.item(index)?.title"
-        [storeName]="slider?.item(index)?.storeName ?? ''" [storeLogoSrc]="slider?.item(index)?.storeLogoSrc ?? ''"
-        [priceNoDiscount]="slider.item(index)?.priceNoDiscount" [priceFinal]="slider?.item(index)?.priceFinal"
-        [storeRate]="slider?.item(index)?.storeRate" [fourPay]="slider?.item(index)?.fourPay!"
-        [discountPercentage]="slider?.item(index)?.discountPercentage"></app-product-item>
+      <app-product-item
+        [src]="slider?.item(index)?.imageSrc ?? ''"
+        [alt]="slider?.item(index)?.alt"
+        [width]="slider?.item(index)?.width"
+        [height]="slider?.item(index)?.height"
+        [title]="slider?.item(index)?.title"
+        [storeName]="slider?.item(index)?.storeName ?? ''"
+        [storeLogoSrc]="slider?.item(index)?.storeLogoSrc ?? ''"
+        [priceNoDiscount]="slider.item(index)?.priceNoDiscount"
+        [priceFinal]="slider?.item(index)?.priceFinal"
+        [storeRate]="slider?.item(index)?.storeRate"
+        [fourPay]="slider?.item(index)?.fourPay!"
+        [discountPercentage]="slider?.item(index)?.discountPercentage"
+      ></app-product-item>
     </ng-template>
   </app-custom-swiper>
 </section>

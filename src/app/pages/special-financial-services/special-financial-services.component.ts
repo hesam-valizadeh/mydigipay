@@ -8,6 +8,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpecialFinancialServicesComponent {
-  public trackEffect(): void {
-  }
+  public trackEffect(): void {}
 }

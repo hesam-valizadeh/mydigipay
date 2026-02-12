@@ -79,7 +79,7 @@ header {
         color: #1159fc;
 
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           width: 20px;
           height: 2px;
@@ -135,7 +135,7 @@ nav.navbar {
       line-height: 2;
       font-size: 12px !important;
       font-weight: 450 !important;
-      font-variation-settings: "DOTS" 1 !important;
+      font-variation-settings: 'DOTS' 1 !important;
     }
   }
 }

@@ -6,7 +6,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './annual-report.component.html',
   styleUrl: './annual-report.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class AnnualReportComponent {
   public trackEffect(): void {}

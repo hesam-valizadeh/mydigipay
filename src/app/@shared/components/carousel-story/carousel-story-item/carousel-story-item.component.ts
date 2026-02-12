@@ -1,16 +1,23 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component, ChangeDetectionStrategy, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  ElementRef,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-carousel-story-item',
-  imports: [CommonModule,NgOptimizedImage],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './carousel-story-item.component.html',
   styleUrl: './carousel-story-item.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CarouselStoryItemComponent implements OnChanges{
-
-  @Input() public src: string='';
+export class CarouselStoryItemComponent implements OnChanges {
+  @Input() public src: string = '';
   @Input() public alt?: string;
   @Input() public title?: string;
   @Input() public description?: string;
@@ -26,9 +33,9 @@ export class CarouselStoryItemComponent implements OnChanges{
     if ('isActive' in changes && this.isActive) {
       const el = this.figureImg.nativeElement;
       el.classList.remove('animation');
-      
+
       void el.offsetWidth;
-      
+
       el.classList.add('animation');
     }
   }

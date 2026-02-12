@@ -4,7 +4,13 @@
       <app-hero-carousel></app-hero-carousel>
     </div>
     <div class="col-lg-3 p-0 d-flex justify-content-center flex-column gap-16px side-banner">
-      <img ngOptimizedImage ngSrc="assets/images/bannersmall.webp" alt="" width="320" height="136" />
+      <img
+        ngOptimizedImage
+        ngSrc="assets/images/bannersmall.webp"
+        alt=""
+        width="320"
+        height="136"
+      />
       <app-square-banner></app-square-banner>
     </div>
   </div>
@@ -12,10 +18,13 @@
     <app-service-card class="p-0"></app-service-card>
   </div>
   @for (section of sections; track section?.id) {
-  <div class="row">
-    <app-product-section class="p-0" [category]="section?.category"
-      [products]="section?.products"></app-product-section>
-  </div>
+    <div class="row">
+      <app-product-section
+        class="p-0"
+        [category]="section?.category"
+        [products]="section?.products"
+      ></app-product-section>
+    </div>
   }
 </div>
 
@@ -24,8 +33,15 @@
     <div class="row">
       <div class="col-lg-3 p-0">
         <figure>
-          <img ngOptimizedImage ngSrc="assets/images/download.webp" width="1053" height="990" alt="" loading="lazy"
-            id="download-app" />
+          <img
+            ngOptimizedImage
+            ngSrc="assets/images/download.webp"
+            width="1053"
+            height="990"
+            alt=""
+            loading="lazy"
+            id="download-app"
+          />
         </figure>
       </div>
       <div class="col-lg-6 p-0 d-flex">
@@ -40,30 +56,75 @@
         </div>
       </div>
       <div class="col-lg-3 d-flex gap-20px justify-content-end">
-        <div class="d-flex flex-row flex-lg-column align-items-center justify-content-center application">
+        <div
+          class="d-flex flex-row flex-lg-column align-items-center justify-content-center application"
+        >
           <a href="" aria-label="Google Play Store">
             <figure>
-              <img ngOptimizedImage ngSrc="assets/images/gp-text.svg" alt="" width="57" height="19">
-              <img ngOptimizedImage ngSrc="assets/images/gp-icon.svg" alt="" width="17" height="19">
+              <img
+                ngOptimizedImage
+                ngSrc="assets/images/gp-text.svg"
+                alt=""
+                width="57"
+                height="19"
+              />
+              <img
+                ngOptimizedImage
+                ngSrc="assets/images/gp-icon.svg"
+                alt=""
+                width="17"
+                height="19"
+              />
             </figure>
           </a>
           <a href="" aria-label="کافه بازار">
             <figure>
-              <img ngOptimizedImage ngSrc="assets/images/bazaar-text.svg" alt="" width="53" height="18">
-              <img ngOptimizedImage ngSrc="assets/images/bazaar-icon.svg" alt="" width="17" height="18">
+              <img
+                ngOptimizedImage
+                ngSrc="assets/images/bazaar-text.svg"
+                alt=""
+                width="53"
+                height="18"
+              />
+              <img
+                ngOptimizedImage
+                ngSrc="assets/images/bazaar-icon.svg"
+                alt=""
+                width="17"
+                height="18"
+              />
             </figure>
           </a>
           <a href="" aria-label="وب اپلیکیشن">
             <figure>
-              <img ngOptimizedImage ngSrc="assets/images/dp-text.svg" alt="" width="47" height="20">
-              <img ngOptimizedImage ngSrc="assets/images/dp-icon.svg" alt="" width="10" height="20">
+              <img
+                ngOptimizedImage
+                ngSrc="assets/images/dp-text.svg"
+                alt=""
+                width="47"
+                height="20"
+              />
+              <img
+                ngOptimizedImage
+                ngSrc="assets/images/dp-icon.svg"
+                alt=""
+                width="10"
+                height="20"
+              />
             </figure>
           </a>
         </div>
         <div class="d-flex flex-column align-items-center justify-content-start qrcode">
           <span class="text-center text-white fs-xs fw-bold">دانلود اپلیکیشن</span>
           <figure>
-            <img ngOptimizedImage ngSrc="assets/images/qr-code.png" alt="" width="92" height="92" class="mt-12px" />
+            <img
+              ngOptimizedImage
+              ngSrc="assets/images/qr-code.png"
+              alt=""
+              width="92"
+              height="92"
+              class="mt-12px"
+            />
           </figure>
         </div>
       </div>
@@ -71,7 +132,6 @@
   </div>
 </div>
 
-
 @if (isDesktop) {
-<div id="backdrop" [class.show-overlay]="isSearchOpen"></div>
+  <div id="backdrop" [class.show-overlay]="isSearchOpen"></div>
 }

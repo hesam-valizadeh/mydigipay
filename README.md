@@ -16,11 +16,13 @@ Check out the live demo [here](https://hesam-valizadeh.github.io/mydigipay).
 ## 🚀 Project Overview
 
 MyDigiPay focuses on:
+
 - Building a modular and maintainable Angular application
 - Applying frontend best practices and clean architecture
 - Providing a solid base for CI/CD automation and deployment
 
 This project is suitable for:
+
 - Portfolio & resume showcase
 - Angular architecture experiments
 - CI/CD and deployment practice
@@ -40,25 +42,26 @@ This project is suitable for:
 
 ## 🧱 Tech Stack
 
-| **Category**         | **Technology**                                      |
-|----------------------|----------------------------------------------------|
-| **Framework**        | Angular                                           |
-| **Language**         | TypeScript                                        |
-| **Styling**          | SCSS                                              |
-| **Tooling**          | Angular CLI                                       |
-| **Package Manager**  | npm                                               |
-| **State Management**     | NgRX                                          |
-| **Unit Testing**     | Jest                                              |
-| **E2E Testing**      | Cypress                                           |
-| **Accessibility Testing** | Cypress with a11y plugins                     |
-| **Integration Testing** | Cypress                                         |
-| **Linting**          | ESLint                                            |
-| **Formatting**       | Prettier                                          |
-| **CI/CD**            | GitHub Actions                                    |
-| **Deployment**       | GitHub Pages, Vercel (optional)                   |
-| **Performance Tools**| Lighthouse                                        |
-| **Debugging Tools**  | Angular DevTools, Chrome DevTools                 |
-| **Code Coverage**    | Istanbul (via Karma)                              |
+| **Category**              | **Technology**                    |
+| ------------------------- | --------------------------------- |
+| **Framework**             | Angular                           |
+| **Language**              | TypeScript                        |
+| **Styling**               | SCSS                              |
+| **Tooling**               | Angular CLI                       |
+| **Package Manager**       | npm                               |
+| **State Management**      | NgRX                              |
+| **Unit Testing**          | Jest                              |
+| **E2E Testing**           | Cypress                           |
+| **Accessibility Testing** | Cypress with a11y plugins         |
+| **Integration Testing**   | Cypress                           |
+| **Linting**               | ESLint                            |
+| **Formatting**            | Prettier                          |
+| **CI/CD**                 | GitHub Actions                    |
+| **Deployment**            | GitHub Pages, Vercel (optional)   |
+| **Performance Tools**     | Lighthouse                        |
+| **Debugging Tools**       | Angular DevTools, Chrome DevTools |
+| **Code Coverage**         | Istanbul (via Karma)              |
+
 ## ⚙️ Getting Started
 
 ### Prerequisites
@@ -142,4 +145,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Angular](https://angular.io/)
 - [Cypress](https://www.cypress.io/)
 - [GitHub Actions](https://github.com/features/actions)
-

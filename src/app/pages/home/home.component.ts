@@ -16,16 +16,14 @@ import { NgOptimizedImage } from '@angular/common';
     SquareBanner,
     ServiceCardComponent,
     ProductSectionComponent,
-    NgOptimizedImage
+    NgOptimizedImage,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
-export class HomeComponent  {
-
-  public data: IHomePageViewDataInterface =  {
+export class HomeComponent {
+  public data: IHomePageViewDataInterface = {
     smartSwitches: {
       category: 'کلید و پریز هوشمند',
       sliderProducts: [
@@ -41,7 +39,7 @@ export class HomeComponent  {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
-          fourPay:true
+          fourPay: true,
         },
         {
           id: 2,
@@ -55,8 +53,7 @@ export class HomeComponent  {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
-          fourPay:false
-
+          fourPay: false,
         },
         {
           id: 3,
@@ -70,9 +67,8 @@ export class HomeComponent  {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
-          storeRate:'2',
-          fourPay:true
-
+          storeRate: '2',
+          fourPay: true,
         },
         {
           id: 4,
@@ -221,8 +217,7 @@ export class HomeComponent  {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
-          storeRate:'5'
-
+          storeRate: '5',
         },
         {
           id: 5,
@@ -236,8 +231,7 @@ export class HomeComponent  {
           priceNoDiscount: '5,500,000',
           discountPercentage: '25',
           priceFinal: '4,500,000',
-          storeRate:'4.8'
-
+          storeRate: '4.8',
         },
         {
           id: 6,
@@ -560,7 +554,7 @@ export class HomeComponent  {
           priceNoDiscount: '5,500,000',
           discountPercentage: '0',
           priceFinal: '4,500,000',
-          storeRate:'5'
+          storeRate: '5',
         },
         {
           id: 10,
@@ -585,7 +579,7 @@ export class HomeComponent  {
   public get isDesktop(): boolean {
     return this.responsive.isDesktop();
   }
-  
+
   public get isSearchOpen(): boolean {
     return this.searchOverlay.isSearchOpen();
   }

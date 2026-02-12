@@ -6,9 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './third-party-insurance.component.html',
   styleUrl: './third-party-insurance.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class ThirdPartyInsuranceComponent {
   public trackEffect(): void {}
-
 }

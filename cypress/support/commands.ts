@@ -11,34 +11,34 @@
  * Usage: cy.checkA11y()
  */
 Cypress.Commands.add('checkA11y', (context?: string, options?: any) => {
-  cy.injectAxe()
-  cy.checkA11y(context, options)
-})
+  cy.injectAxe();
+  cy.checkA11y(context, options);
+});
 
 /**
  * Custom command to wait for page to be fully loaded
  * Usage: cy.waitForPageLoad()
  */
 Cypress.Commands.add('waitForPageLoad', () => {
-  cy.get('body').should('be.visible')
-  cy.window().its('document.readyState').should('eq', 'complete')
-})
+  cy.get('body').should('be.visible');
+  cy.window().its('document.readyState').should('eq', 'complete');
+});
 
 /**
  * Custom command to check if element is visible and accessible
  * Usage: cy.checkElementAccessibility('[data-cy="example"]')
  */
 Cypress.Commands.add('checkElementAccessibility', (selector: string) => {
-  cy.get(selector).should('be.visible')
-  cy.get(selector).should('not.have.attr', 'aria-hidden', 'true')
-})
+  cy.get(selector).should('be.visible');
+  cy.get(selector).should('not.have.attr', 'aria-hidden', 'true');
+});
 
 declare global {
   namespace Cypress {
     interface Chainable {
-      checkA11y(context?: string, options?: any): Chainable<void>
-      waitForPageLoad(): Chainable<void>
-      checkElementAccessibility(selector: string): Chainable<void>
+      checkA11y(context?: string, options?: any): Chainable<void>;
+      waitForPageLoad(): Chainable<void>;
+      checkElementAccessibility(selector: string): Chainable<void>;
     }
   }
 }
