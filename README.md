@@ -42,26 +42,25 @@ This project is suitable for:
 
 ## 🧱 Tech Stack
 
-| **Category**              | **Technology**                    |
-| ------------------------- | --------------------------------- |
-| **Framework**             | Angular                           |
-| **Language**              | TypeScript                        |
-| **Styling**               | SCSS                              |
-| **Tooling**               | Angular CLI                       |
-| **Package Manager**       | npm                               |
-| **State Management**      | NgRX                              |
-| **Unit Testing**          | Jest                              |
-| **E2E Testing**           | Cypress                           |
-| **Accessibility Testing** | Cypress with a11y plugins         |
-| **Integration Testing**   | Cypress                           |
-| **Linting**               | ESLint                            |
-| **Formatting**            | Prettier                          |
-| **CI/CD**                 | GitHub Actions                    |
-| **Deployment**            | GitHub Pages, Vercel (optional)   |
-| **Performance Tools**     | Lighthouse                        |
-| **Debugging Tools**       | Angular DevTools, Chrome DevTools |
-| **Code Coverage**         | Istanbul (via Karma)              |
-
+| **Category**         | **Technology**                                      |
+|----------------------|----------------------------------------------------|
+| **Framework**        | Angular                                           |
+| **Language**         | TypeScript                                        |
+| **Styling**          | SCSS                                              |
+| **Tooling**          | Angular CLI                                       |
+| **Package Manager**  | npm                                               |
+| **State Management**     | NgRX                                          |
+| **Unit Testing**     | Jest                                              |
+| **E2E Testing**      | Cypress                                           |
+| **Accessibility Testing** | Cypress with a11y plugins                     |
+| **Integration Testing** | Cypress                                         |
+| **Linting**          | ESLint                                            |
+| **Formatting**       | Prettier                                          |
+| **CI/CD**            | GitHub Actions                                    |
+| **Deployment**       | GitHub Pages                                      |
+| **Performance Tools**| Lighthouse                                        |
+| **Debugging Tools**  | Angular DevTools, Chrome DevTools                 |
+| **Code Coverage**    | Cypress                                           |
 ## ⚙️ Getting Started
 
 ### Prerequisites
