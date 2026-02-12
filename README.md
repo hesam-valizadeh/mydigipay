@@ -42,25 +42,44 @@ This project is suitable for:
 
 ## 🧱 Tech Stack
 
-| **Category**              | **Technology**                    |
-| ------------------------- | --------------------------------- |
-| **Framework**             | Angular                           |
-| **Language**              | TypeScript                        |
-| **Styling**               | SCSS                              |
-| **Tooling**               | Angular CLI                       |
-| **Package Manager**       | npm                               |
-| **State Management**      | NgRX                              |
-| **Unit Testing**          | Jest                              |
-| **E2E Testing**           | Cypress                           |
-| **Accessibility Testing** | Cypress with a11y plugins         |
-| **Integration Testing**   | Cypress                           |
-| **Linting**               | ESLint                            |
-| **Formatting**            | Prettier                          |
-| **CI/CD**                 | GitHub Actions                    |
-| **Deployment**            | GitHub Pages                      |
-| **Performance Tools**     | Lighthouse                        |
-| **Debugging Tools**       | Angular DevTools, Chrome DevTools |
-| **Code Coverage**         | Cypress                           |
+| Category                    | Technology                                                   | Purpose / Notes                                                                                                                                                                                                 |
+| --------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Framework**               | Angular 20 (v20.3.x)                                         | Modern SPA framework with **stable Signals** for fine-grained reactivity, standalone components by default, improved hydration, and preparation for zoneless apps. Focus on performance & developer experience. |
+| **Language**                | TypeScript ~5.8                                              | Strict typing, modern JS features (nullish coalescing, optional chaining, etc.), excellent IDE support & refactor safety.                                                                                       |
+| **Build & CLI**             | Angular CLI                                                  | Official tooling for scaffolding, dev server with HMR, production builds (esbuild-based in newer versions), tree-shaking, differential loading & lazy-loading optimization.                                     |
+| **Styling**                 | SCSS + PostCSS + Autoprefixer                                | Modular, nested & mixin-friendly stylesheets; PostCSS for future-proof CSS (nesting, custom properties) + vendor prefixing automation.                                                                          |
+| **UI Library**              | Bootstrap 5.3                                                | Battle-tested responsive grid, utilities & components (modals, cards, navs); customized via SCSS variables for branding consistency.                                                                            |
+| **Animations**              | GSAP 3.13                                                    | Industry-standard library for smooth, performant scroll-triggered, timeline-based & complex animations beyond CSS limits.                                                                                       |
+| **Carousels / Sliders**     | Swiper 12                                                    | Modern, hardware-accelerated, touch-friendly sliders with modular architecture, lazy loading, pagination, autoplay & accessibility support.                                                                     |
+| **Unit Testing**            | Jest 30 + jest-preset-angular 16                             | Blazing-fast isolated testing of components, services & pipes; Angular-specific transformers & setup for seamless Angular + Jest integration (no more Karma).                                                   |
+| **E2E & Component Testing** | Cypress 15                                                   | Real browser end-to-end + component testing in the same runner; automatic waiting, time-travel debugging, excellent DX & screenshot/video recording on failure.                                                 |
+| **BDD Testing**             | Cypress + @badeball/cypress-cucumber-preprocessor + Cucumber | Gherkin syntax (.feature files) for readable, business-oriented E2E scenarios; bridges developers, QA & stakeholders.                                                                                           |
+| **Code Coverage**           | Istanbul / NYC + @cypress/code-coverage                      | Unified reports from Jest unit tests + Cypress component/E2E; detailed branch/line coverage, HTML reports & CI integration.                                                                                     |
+| **Linting**                 | ESLint 8 + @angular-eslint (v20)                             | Enforces Angular best practices, template linting, RxJS & Signals rules, accessibility hints & custom project rules.                                                                                            |
+| **Formatting**              | Prettier 3                                                   | Opinionated, zero-config code formatting for consistent style (no more style debates in PRs). Integrated with ESLint & Husky.                                                                                   |
+| **Style Linting**           | Stylelint 17 + standard SCSS + SCSS plugins                  | Enforces consistent SCSS syntax, order, nesting depth, BEM-like naming & prevents common CSS pitfalls.                                                                                                          |
+| **Git Hooks**               | Husky 9 + lint-staged                                        | Runs lint/format/type-check/tests only on staged files before commit → fast & reliable quality gate.                                                                                                            |
+| **Conventional Commits**    | Commitizen (cz-conventional-changelog) + commitlint          | Standardized commit messages (feat:, fix:, chore:, etc.) → automatic changelog generation & semantic versioning readiness.                                                                                      |
+| **CI / CD**                 | GitHub Actions                                               | Parallelized workflows for lint, unit, component, E2E, coverage, build & deploy; badges & status checks for PRs.                                                                                                |
+| **Deployment**              | GitHub Pages (via angular-cli-ghpages)                       | Zero-config static hosting for demo; supports custom domains, HTTPS & automatic deploys from main branch.                                                                                                       |
+| **Mock Backend**            | json-server                                                  | Instant fake REST API from JSON file; supports CRUD, filtering, pagination & delays → perfect for dev & testing without real backend.                                                                           |
+| **Performance**             | Lighthouse (Chrome DevTools / CI)                            | Audits Core Web Vitals (LCP, FID/INP, CLS), accessibility, SEO & best practices; recommended in CI for regression prevention.                                                                                   |
+| **Browser Dev Tools**       | Angular DevTools + Chrome DevTools                           | Component tree inspection, change detection profiling, state debugging (Signals support), network & performance analysis.                                                                                       |
+
+### 🛠️ Modern Angular Practices Demonstrated in This Project
+
+- **Standalone components & lazy-loading** everywhere — no NgModules needed in most cases
+- **Signals-ready architecture** (preparation for zoneless & fine-grained updates in future upgrades)
+- **Strict template & type checking** with modern tsconfig settings
+- **Feature-based modular structure** (core / shared / features separation)
+- **Accessibility-first** approach with cypress-axe + semantic HTML
+- **Full testing pyramid** — fast unit → component → BDD-style E2E
+- **Quality automation** on every commit/push via Husky + GitHub Actions
+- **Docker multi-stage builds** (dev hot-reload + optimized prod)
+- **Bundle analysis** ready (webpack-bundle-analyzer integration possible)
+- **Responsive & mobile-first** design with GSAP + Swiper for premium UX
+
+This stack reflects a **production-grade**, maintainable Angular application in 2026 — clean, testable, automated and ready for scaling or team collaboration.
 
 ## ⚙️ Getting Started
 
