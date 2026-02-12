@@ -94,12 +94,12 @@
   .download-app {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    flex-direction: column;
         flex-direction: column;
-            flex-direction: column;
     min-height: 480px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 560px !important;
     overflow: hidden;
 
@@ -142,11 +142,11 @@
     .logos {
       text-align: center !important;
       -webkit-box-align: center !important;
-          -ms-flex-align: center !important;
-              align-items: center !important;
+      -ms-flex-align: center !important;
+      align-items: center !important;
       -webkit-box-pack: center !important;
-          -ms-flex-pack: center !important;
-              justify-content: center !important;
+      -ms-flex-pack: center !important;
+      justify-content: center !important;
     }
   }
 
@@ -157,11 +157,11 @@
       .logos {
         text-align: center !important;
         -webkit-box-align: center !important;
-            -ms-flex-align: center !important;
-                align-items: center !important;
+        -ms-flex-align: center !important;
+        align-items: center !important;
         -webkit-box-pack: center !important;
-            -ms-flex-pack: center !important;
-                justify-content: center !important;
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
       }
     }
   }
