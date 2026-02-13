@@ -12,8 +12,6 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
-  flex-direction: column;
-  transition: background-color ease 0.5s;
   transition: background-color ease 0.5s;
   gap: 8px;
   padding: 4px;
@@ -28,7 +26,6 @@
         mix-blend-mode: multiply;
         border-radius: 20px;
         object-fit: cover;
-        object-fit: cover;
       }
     }
 
@@ -36,7 +33,6 @@
       img {
         // mix-blend-mode: multiply;
         border-radius: 20px;
-        object-fit: cover;
         object-fit: cover;
       }
     }
@@ -57,7 +53,6 @@
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-      flex-direction: column;
       flex-direction: column;
       gap: 2px;
     }
@@ -224,7 +219,6 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
-    flex-direction: column;
     gap: 2px;
   }
 
@@ -245,10 +239,6 @@
     'ss01' on,
     'liga' off,
     'clig' off;
-  font-feature-settings:
-    'ss01' on,
-    'liga' off,
-    'clig' off;
   font-size: 8px;
   font-style: normal;
   font-weight: 300;
@@ -260,7 +250,6 @@
   bottom: -7px;
   left: 50%;
   transform: translateX(-50%);
-  transform: translateX(-50%);
   width: calc(100% - 16px);
 }
 
@@ -268,7 +257,6 @@
   position: absolute;
   bottom: -3px;
   left: 55%;
-  transform: translateX(-50%);
   transform: translateX(-50%);
   width: calc(100% - 16px);
 

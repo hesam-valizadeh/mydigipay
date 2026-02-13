@@ -5,7 +5,12 @@ module.exports = {
     'scss/at-rule-no-unknown': true,
     'scss/dollar-variable-no-missing-interpolation': true,
     'scss/operator-no-unspaced': true,
-
+    'declaration-block-no-duplicate-properties': [
+      true,
+      {
+        ignore: ['consecutive-duplicates-with-different-values'],
+      },
+    ],
     'at-rule-no-unknown': null,
     'selector-class-pattern': null,
     'declaration-no-important': null,

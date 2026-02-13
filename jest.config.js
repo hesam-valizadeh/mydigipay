@@ -8,9 +8,7 @@ module.exports = {
     '^.+\\.(ts|tsx|js|jsx|html|svg)$': 'jest-preset-angular',
   },
 
-  transformIgnorePatterns: [
-    'node_modules/(?!.*\\.mjs$|tslib|rxjs|@angular|zone\\.js)',
-  ],
+  transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$|tslib|rxjs|@angular|zone\\.js)'],
 
   moduleNameMapper: {
     '@environment/(.*)': '<rootDir>/src/environments/$1',

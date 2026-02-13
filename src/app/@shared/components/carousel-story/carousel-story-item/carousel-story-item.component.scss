@@ -32,29 +32,19 @@
 }
 
 .slide-image.animation {
-  -webkit-animation: zoom-in 0.5s ease-out;
-          animation: zoom-in 0.5s ease-out;
   animation: zoom-in 0.5s ease-out;
   will-change: transform, opacity;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) scale(1) translateZ(0);
-          transform: translateX(-50%) scale(1) translateZ(0);
   transform: translateX(-50%) scale(1) translateZ(0);
 }
 
-@-webkit-keyframes zoom-in {
+@keyframes zoom-in {
   0% {
-    -webkit-transform: translateX(-50%) scale(0);
-            transform: translateX(-50%) scale(0);
     transform: translateX(-50%) scale(0);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: translateX(-50%) scale(1);
-            transform: translateX(-50%) scale(1);
     transform: translateX(-50%) scale(1);
     opacity: 1;
   }
@@ -62,31 +52,11 @@
 
 @keyframes zoom-in {
   0% {
-    -webkit-transform: translateX(-50%) scale(0);
-            transform: translateX(-50%) scale(0);
     transform: translateX(-50%) scale(0);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: translateX(-50%) scale(1);
-            transform: translateX(-50%) scale(1);
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes zoom-in {
-  0% {
-    -webkit-transform: translateX(-50%) scale(0);
-            transform: translateX(-50%) scale(0);
-    transform: translateX(-50%) scale(0);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: translateX(-50%) scale(1);
-            transform: translateX(-50%) scale(1);
     transform: translateX(-50%) scale(1);
     opacity: 1;
   }

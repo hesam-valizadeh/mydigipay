@@ -13,31 +13,26 @@
   font-size: 14px;
   line-height: 1;
   transition: all 0.3s;
-  transition: all 0.3s;
   z-index: 1;
 }
 
 .form-floating > .form-control:not(:placeholder) ~ label {
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
 .form-floating > .form-control:not(:input-placeholder) ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
 .form-floating > .form-control:not(:placeholder) ~ label {
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
 .form-floating > .form-control:not(:input-placeholder) ~ label {
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-          transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
 
@@ -55,7 +50,6 @@
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
   color: #74777c;
 }
