@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/payment/payment.component.ts", "src/app/pages/payment/payment.component.html"],
+  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-payment',\n  imports: [],\n  templateUrl: './payment.component.html',\n  styleUrl: './payment.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class PaymentComponent {\n  public trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n  <div class=\"row px-lg-150px\">\n    <h1 class=\"fs-32px fw-bold text-center\">پرداخت</h1>\n    <div>\n      <p>صفحه پرداخت دیجی‌پی</p>\n    </div>\n  </div>\n</div>\n"],
+  "mappings": "iEASA,IAAaA,GAAgB,IAAA,CAAvB,MAAOA,CAAgB,CACpBC,aAAW,CAAU,4CADjBD,EAAgB,2BAAhBA,EAAgBE,UAAA,CAAA,CAAA,aAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICT7BE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACJ,EAAA,KAAA,CAAA,EACaC,EAAA,EAAA,sCAAA,EAAMC,EAAA,EAC9CF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACAC,EAAA,EAAA,0GAAA,EAAmBC,EAAA,EAAI,EACtB,EACF,+CDGKX,CAAgB,GAAA",
+  "names": ["PaymentComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
+}

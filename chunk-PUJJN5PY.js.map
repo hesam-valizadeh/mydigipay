@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/blog/blog.component.ts", "src/app/pages/blog/blog.component.html"],
+  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-blog',\n  imports: [],\n  templateUrl: './blog.component.html',\n  styleUrl: './blog.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class BlogComponent {\n  public trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n  <div class=\"row px-lg-150px\">\n    <h1 class=\"fs-32px fw-bold text-center\">مجله اینترنتی دیجی‌پی</h1>\n    <div>\n      <p>صفحه مجله اینترنتی دیجی‌پی</p>\n    </div>\n  </div>\n</div>\n"],
+  "mappings": "iEASA,IAAaA,GAAa,IAAA,CAApB,MAAOA,CAAa,CACjBC,aAAW,CAAU,4CADjBD,EAAa,2BAAbA,EAAaE,UAAA,CAAA,CAAA,UAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICT1BE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACJ,EAAA,KAAA,CAAA,EACaC,EAAA,EAAA,sHAAA,EAAqBC,EAAA,EAC7DF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACAC,EAAA,EAAA,+IAAA,EAA0BC,EAAA,EAAI,EAC7B,EACF,+CDGKX,CAAa,GAAA",
+  "names": ["BlogComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
+}

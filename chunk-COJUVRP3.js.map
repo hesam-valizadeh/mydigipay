@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/wealth/wealth.component.ts"],
+  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n@Component({\n  selector: 'app-wealth',\n  imports: [],\n  templateUrl: './wealth.component.html',\n  styleUrl: './wealth.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class WealthComponent {\n  public trackEffect(): void {}\n}\n"],
+  "mappings": "yCAQA,IAAaA,GAAe,IAAA,CAAtB,MAAOA,CAAe,CACnBC,aAAW,CAAU,4CADjBD,EAAe,2BAAfA,EAAeE,UAAA,CAAA,CAAA,YAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAA,EAAAC,cAAA,EAAAC,gBAAA,CAAA,CAAA,SAAfT,CAAe,GAAA",
+  "names": ["WealthComponent", "trackEffect", "selectors", "decls", "vars", "template", "rf", "ctx", "encapsulation", "changeDetection"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/faq/faq.component.scss"],
+  "sourcesContent": ["h1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  color: #2c3544;\n  margin-bottom: 8px;\n  line-height: 1.5;\n  font-size: 16px;\n}\n"],
+  "mappings": "AAAA,GAAA,GAAA,GAAA,GAAA,GAAA,GAME,MAAA,QACA,cAAA,IACA,YAAA,IACA,UAAA",
+  "names": []
+}
