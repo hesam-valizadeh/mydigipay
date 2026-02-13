@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --stats-json",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "lint": "ng lint",
@@ -14,8 +14,6 @@
     "stylelint:check": "stylelint \"src/**/*.{scss,css}\"",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "quality:fix": "npm run format && npm run lint:fix",
-    "quality:check": "npm run format:check && npm run lint",
     "test:watch": "jest --watch",
     "test:coverage": "npm run cy:run:coverage && nyc report",
     "test:ci": "jest --runInBand --coverage",
@@ -25,7 +23,8 @@
     "cy:run:e2e": "cypress run --e2e",
     "cy:run:coverage": "cypress run --component --env codeCoverageTasksRegistered=true",
     "prepare": "husky",
-    "commit": "cz"
+    "commit": "cz",
+    "analys": "npx esbuild-visualizer --metadata dist/stats.json --open"
   },
   "config": {
     "commitizen": {
@@ -79,6 +78,7 @@
     "cypress-axe": "^1.7.0",
     "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.27.2",
+    "esbuild-visualizer": "^0.7.0",
     "eslint": "8.57.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
@@ -93,7 +93,6 @@
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-scss": "^7.0.0",
     "ts-jest": "^29.4.6",
-    "typescript": "~5.8.2",
-    "webpack-bundle-analyzer": "^5.2.0"
+    "typescript": "~5.8.2"
   }
 }

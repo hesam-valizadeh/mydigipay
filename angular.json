@@ -48,7 +48,7 @@
                 },
                 "fonts": true
               },
-              "sourceMap": false,
+              "sourceMap": true,
               "budgets": [
                 {
                   "type": "initial",
