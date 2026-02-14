@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+html,body{
+  min-height: 100vh;              
+  margin: 0;
+}
+
 body {
   font-family: Yekan-Bakh;
   direction: rtl;
