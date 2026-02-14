@@ -1,19 +1,23 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
+
   "assetGroups": [
     {
-      "name": "app",
-      "updateMode": "prefetch",
+      "name": "app-shell",
       "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": ["/favicon.ico", "/index.html", "/manifest.webmanifest", "/*.css", "/*.js"]
+      }
+    },
+
+    {
+      "name": "static-assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/favicon.ico",
-          "/index.csr.html",
-          "/index.html",
-          "/manifest.webmanifest",
-          "/*.css",
-          "/*.js",
           "/assets/**",
           "/images/**",
           "/**/*.webp",
@@ -23,36 +27,18 @@
           "/**/*.woff2"
         ]
       }
-    },
-    {
-      "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "resources": {
-        "files": ["/**/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"]
-      }
-    },
-    {
-      "name": "lazy-chunks",
-      "installMode": "prefetch",
-      "resources": {
-        "files": [
-          "/mydigipay/chunk-*.js",
-          "/mydigipay/browser/chunk-*.js",
-          "/mydigipay/dist/browser/chunk-*.js"
-        ]
-      }
     }
   ],
+
   "dataGroups": [
     {
-      "name": "static-assets-ttl",
-      "urls": ["/assets/**", "/images/**"],
+      "name": "api-cache",
+      "urls": ["/api/**"],
       "cacheConfig": {
-        "strategy": "performance",
-        "maxSize": 200,
-        "maxAge": "30d",
-        "timeout": "5s"
+        "strategy": "freshness",
+        "maxSize": 100,
+        "maxAge": "5m",
+        "timeout": "10s"
       }
     }
   ]
