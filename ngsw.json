@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1771095392701,
+  "timestamp": 1771096753831,
   "index": "/mydigipay/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,6 @@
         "/mydigipay/chunk-7RWPYD3Z.js",
         "/mydigipay/chunk-AER2V7ZM.js",
         "/mydigipay/chunk-BCEOYCRW.js",
-        "/mydigipay/chunk-BRH3ZWWZ.js",
         "/mydigipay/chunk-COJUVRP3.js",
         "/mydigipay/chunk-DG3GKXCN.js",
         "/mydigipay/chunk-EQ6EU37D.js",
@@ -33,6 +32,7 @@
         "/mydigipay/chunk-PUJJN5PY.js",
         "/mydigipay/chunk-R66OGIDF.js",
         "/mydigipay/chunk-RJKD7SWS.js",
+        "/mydigipay/chunk-SDVFID7N.js",
         "/mydigipay/chunk-SETX3WKG.js",
         "/mydigipay/chunk-SOF36MFO.js",
         "/mydigipay/chunk-TL5EG63N.js",
@@ -45,11 +45,11 @@
         "/mydigipay/chunk-YKIMAIBH.js",
         "/mydigipay/chunk-ZBXFKXDE.js",
         "/mydigipay/index.html",
-        "/mydigipay/main-JUFHRSWY.js",
+        "/mydigipay/main-QEUZWYFO.js",
         "/mydigipay/manifest.webmanifest",
         "/mydigipay/polyfills-JUTM3XWE.js",
         "/mydigipay/scripts-KDEA36TY.js",
-        "/mydigipay/styles-JEBOIRC7.css"
+        "/mydigipay/styles-VV6XQWXN.css"
       ],
       "patterns": []
     },
@@ -1048,7 +1048,6 @@
     "/mydigipay/chunk-7RWPYD3Z.js": "5bb28420fa4725c1f101bb0035a5edbfeb2efd30",
     "/mydigipay/chunk-AER2V7ZM.js": "6b48fd58a02d8220348d55d8f325d4139c8b4534",
     "/mydigipay/chunk-BCEOYCRW.js": "7997a9be612f2ba03e32c8539deaded3a94ab640",
-    "/mydigipay/chunk-BRH3ZWWZ.js": "ad06a4335acf54b04923482d70933a049fb61120",
     "/mydigipay/chunk-COJUVRP3.js": "789be689305ed44f13d3722315b200b03387da0a",
     "/mydigipay/chunk-DG3GKXCN.js": "b91107ad3490626b4ae2f61da811547b4a400cde",
     "/mydigipay/chunk-EQ6EU37D.js": "88011a5ff5bd3d3424f14ed0b1aacc81788e07ab",
@@ -1066,6 +1065,7 @@
     "/mydigipay/chunk-PUJJN5PY.js": "0df1db6b3a080e3254e201f9109a396608969a82",
     "/mydigipay/chunk-R66OGIDF.js": "c134c020f837d7403fd9b9e30135037f0e9a4445",
     "/mydigipay/chunk-RJKD7SWS.js": "3775301ec7a0764382cdf90c2f040d17969a2429",
+    "/mydigipay/chunk-SDVFID7N.js": "709b0b657c5f99ef464c6a1bd1c750f06e7af22a",
     "/mydigipay/chunk-SETX3WKG.js": "2409713e5ef5ad04c4c77495ae2074e6026b7877",
     "/mydigipay/chunk-SOF36MFO.js": "bfbfef8344da932335937dd44ffb9a90f8b27986",
     "/mydigipay/chunk-TL5EG63N.js": "1536cdcff62f49575969c712f718329108c7c1ac",
@@ -1077,8 +1077,8 @@
     "/mydigipay/chunk-WMYDRDD7.js": "58faa025a4eaa54e07b6898d53d1be16b07aa772",
     "/mydigipay/chunk-YKIMAIBH.js": "afd0136276ed61fb2b7ac6a849ee08c2fda81741",
     "/mydigipay/chunk-ZBXFKXDE.js": "6cd2dada3afa64ed74dbdf3ba44313dbc9bbbc6a",
-    "/mydigipay/index.html": "176cfc993f63f176eb416c99c7489c312881a427",
-    "/mydigipay/main-JUFHRSWY.js": "2c1429f7035a783bf6d32d7ef447eebb434288fe",
+    "/mydigipay/index.html": "01f265cbd92ae8cdb54234ab841239eb843bb231",
+    "/mydigipay/main-QEUZWYFO.js": "6fd847fec9ba203ddd95edd740e162a599517ea8",
     "/mydigipay/manifest.webmanifest": "a08ee4e426f3f9da97b2c0ab765f186d85a356a8",
     "/mydigipay/media/YekanBakhFaNum-Black-VYXMUH3K.woff2": "5e85acd2eea3d4f26472f5419c7bd454d078523b",
     "/mydigipay/media/YekanBakhFaNum-Bold-7CVCFUCF.woff2": "6b226880c8b149234127ae7e39e44acafd15e858",
@@ -1090,7 +1090,7 @@
     "/mydigipay/media/icons-3KZ4YDM2.woff2": "c6e41a55af00d79fff52445ce624f4e74e63f330",
     "/mydigipay/polyfills-JUTM3XWE.js": "0f6422efb2ab40d839d1957e4130a29a0e38626f",
     "/mydigipay/scripts-KDEA36TY.js": "af100ab839613c7d33e9a1528b9e9b031140b9a8",
-    "/mydigipay/styles-JEBOIRC7.css": "7e44c2b193ad41ade8210f48d7d7b92f49eee35f"
+    "/mydigipay/styles-VV6XQWXN.css": "02abb0381d1a3f290647118b2ba05d954e843c34"
   },
   "navigationUrls": [
     {
