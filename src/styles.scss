@@ -16,8 +16,9 @@
   box-sizing: border-box;
 }
 
-html,body{
-  min-height: 100vh;              
+html,
+body {
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -25,6 +26,19 @@ body {
   font-family: Yekan-Bakh;
   direction: rtl;
   background-color: #f2f3f6;
+}
+
+body,
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+div {
+  font-family: Yekan-Bakh, YekanBakh, Tahoma, 'Segoe UI', system-ui, sans-serif;
 }
 
 a {
