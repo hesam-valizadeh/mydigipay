@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1771095022333,
+  "timestamp": 1771095392701,
   "index": "/mydigipay/index.html",
   "assetGroups": [
     {
@@ -49,7 +49,7 @@
         "/mydigipay/manifest.webmanifest",
         "/mydigipay/polyfills-JUTM3XWE.js",
         "/mydigipay/scripts-KDEA36TY.js",
-        "/mydigipay/styles-ZFAIFT4A.css"
+        "/mydigipay/styles-JEBOIRC7.css"
       ],
       "patterns": []
     },
@@ -1077,7 +1077,7 @@
     "/mydigipay/chunk-WMYDRDD7.js": "58faa025a4eaa54e07b6898d53d1be16b07aa772",
     "/mydigipay/chunk-YKIMAIBH.js": "afd0136276ed61fb2b7ac6a849ee08c2fda81741",
     "/mydigipay/chunk-ZBXFKXDE.js": "6cd2dada3afa64ed74dbdf3ba44313dbc9bbbc6a",
-    "/mydigipay/index.html": "8b3ce47446fb5925ae9948f9b29ed51dec8161ee",
+    "/mydigipay/index.html": "176cfc993f63f176eb416c99c7489c312881a427",
     "/mydigipay/main-JUFHRSWY.js": "2c1429f7035a783bf6d32d7ef447eebb434288fe",
     "/mydigipay/manifest.webmanifest": "a08ee4e426f3f9da97b2c0ab765f186d85a356a8",
     "/mydigipay/media/YekanBakhFaNum-Black-VYXMUH3K.woff2": "5e85acd2eea3d4f26472f5419c7bd454d078523b",
@@ -1090,7 +1090,7 @@
     "/mydigipay/media/icons-3KZ4YDM2.woff2": "c6e41a55af00d79fff52445ce624f4e74e63f330",
     "/mydigipay/polyfills-JUTM3XWE.js": "0f6422efb2ab40d839d1957e4130a29a0e38626f",
     "/mydigipay/scripts-KDEA36TY.js": "af100ab839613c7d33e9a1528b9e9b031140b9a8",
-    "/mydigipay/styles-ZFAIFT4A.css": "9f378192cd9d3e0737a585492c635c608cbacbff"
+    "/mydigipay/styles-JEBOIRC7.css": "7e44c2b193ad41ade8210f48d7d7b92f49eee35f"
   },
   "navigationUrls": [
     {
