@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1771097033062,
+  "timestamp": 1771097636074,
   "index": "/mydigipay/index.html",
   "assetGroups": [
     {
@@ -49,7 +49,7 @@
         "/mydigipay/manifest.webmanifest",
         "/mydigipay/polyfills-JUTM3XWE.js",
         "/mydigipay/scripts-KDEA36TY.js",
-        "/mydigipay/styles-VV6XQWXN.css"
+        "/mydigipay/styles-OWDJZP6B.css"
       ],
       "patterns": []
     },
@@ -538,13 +538,6 @@
         "/mydigipay/assets/images/stores/tapsi-shop.svg",
         "/mydigipay/assets/images/wealth.webp",
         "/mydigipay/assets/images/x-icon.svg",
-        "/mydigipay/media/YekanBakhFaNum-Black-VYXMUH3K.woff2",
-        "/mydigipay/media/YekanBakhFaNum-Bold-7CVCFUCF.woff2",
-        "/mydigipay/media/YekanBakhFaNum-ExtraBold-RTCO5Y4L.woff2",
-        "/mydigipay/media/YekanBakhFaNum-Light-ZN5A4MFD.woff2",
-        "/mydigipay/media/YekanBakhFaNum-Regular-F3YMY3PT.woff2",
-        "/mydigipay/media/YekanBakhFaNum-SemiBold-KORF35UE.woff2",
-        "/mydigipay/media/YekanBakhFaNum-Thin-7RPXGNCA.woff2",
         "/mydigipay/media/icons-3KZ4YDM2.woff2"
       ],
       "patterns": []
@@ -1077,20 +1070,13 @@
     "/mydigipay/chunk-WMYDRDD7.js": "58faa025a4eaa54e07b6898d53d1be16b07aa772",
     "/mydigipay/chunk-YKIMAIBH.js": "afd0136276ed61fb2b7ac6a849ee08c2fda81741",
     "/mydigipay/chunk-ZBXFKXDE.js": "6cd2dada3afa64ed74dbdf3ba44313dbc9bbbc6a",
-    "/mydigipay/index.html": "f7460a4a074fb0e2bd5a23f3d514f79fa57966d2",
+    "/mydigipay/index.html": "93bc64ff54cb9e206be6cbdf547c78d4e7e3256c",
     "/mydigipay/main-3OLLVMQJ.js": "ae4d854ba82d273aa9598ad814bee55077ee0119",
     "/mydigipay/manifest.webmanifest": "a08ee4e426f3f9da97b2c0ab765f186d85a356a8",
-    "/mydigipay/media/YekanBakhFaNum-Black-VYXMUH3K.woff2": "5e85acd2eea3d4f26472f5419c7bd454d078523b",
-    "/mydigipay/media/YekanBakhFaNum-Bold-7CVCFUCF.woff2": "6b226880c8b149234127ae7e39e44acafd15e858",
-    "/mydigipay/media/YekanBakhFaNum-ExtraBold-RTCO5Y4L.woff2": "f96fc2408c4698f2049ceae07b649c0ab75e1164",
-    "/mydigipay/media/YekanBakhFaNum-Light-ZN5A4MFD.woff2": "e20970020775456ca0294f31b368c4b9e8a5737f",
-    "/mydigipay/media/YekanBakhFaNum-Regular-F3YMY3PT.woff2": "7b79309badb9c67a341806e0a3922bdf542ef663",
-    "/mydigipay/media/YekanBakhFaNum-SemiBold-KORF35UE.woff2": "0c0598b29ebaff81a45e6c7d72e156d0bd0a2eda",
-    "/mydigipay/media/YekanBakhFaNum-Thin-7RPXGNCA.woff2": "500dd8219b2839b210b52eb713ccf240461b474c",
     "/mydigipay/media/icons-3KZ4YDM2.woff2": "c6e41a55af00d79fff52445ce624f4e74e63f330",
     "/mydigipay/polyfills-JUTM3XWE.js": "0f6422efb2ab40d839d1957e4130a29a0e38626f",
     "/mydigipay/scripts-KDEA36TY.js": "af100ab839613c7d33e9a1528b9e9b031140b9a8",
-    "/mydigipay/styles-VV6XQWXN.css": "02abb0381d1a3f290647118b2ba05d954e843c34"
+    "/mydigipay/styles-OWDJZP6B.css": "031c4d0774bc2ab33b7f701cdbf91ea04ddc6b43"
   },
   "navigationUrls": [
     {
