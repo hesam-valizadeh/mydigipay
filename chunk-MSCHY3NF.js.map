@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/pages/hub/hub.component.ts"],
-  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-hub',\n  imports: [],\n  templateUrl: './hub.component.html',\n  styleUrl: './hub.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class HubComponent {\n  public trackEffect(): void {}\n}\n"],
-  "mappings": "yCASA,IAAaA,GAAY,IAAA,CAAnB,MAAOA,CAAY,CAChBC,aAAW,CAAU,4CADjBD,EAAY,2BAAZA,EAAYE,UAAA,CAAA,CAAA,SAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAA,EAAAC,cAAA,EAAAC,gBAAA,CAAA,CAAA,SAAZT,CAAY,GAAA",
-  "names": ["HubComponent", "trackEffect", "selectors", "decls", "vars", "template", "rf", "ctx", "encapsulation", "changeDetection"]
-}

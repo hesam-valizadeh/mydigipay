@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/annual-report/annual-report.component.ts", "src/app/pages/annual-report/annual-report.component.html"],
+  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-annual-report',\n  imports: [],\n  templateUrl: './annual-report.component.html',\n  styleUrl: './annual-report.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class AnnualReportComponent {\n  public trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n  <div class=\"row px-lg-150px\">\n    <h1 class=\"fs-32px fw-bold text-center\">گزارش سالانه</h1>\n    <div>\n      <p>صفحه گزارش سالانه دیجی‌پی</p>\n    </div>\n  </div>\n</div>\n"],
+  "mappings": "iEASA,IAAaA,GAAqB,IAAA,CAA5B,MAAOA,CAAqB,CACzBC,aAAW,CAAU,4CADjBD,EAAqB,2BAArBA,EAAqBE,UAAA,CAAA,CAAA,mBAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICTlCE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACJ,EAAA,KAAA,CAAA,EACaC,EAAA,EAAA,qEAAA,EAAYC,EAAA,EACpDF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACAC,EAAA,EAAA,yIAAA,EAAyBC,EAAA,EAAI,EAC5B,EACF,2GDGKX,CAAqB,GAAA",
+  "names": ["AnnualReportComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
+}

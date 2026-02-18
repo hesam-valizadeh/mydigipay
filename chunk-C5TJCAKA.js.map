@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/early-settlement/early-settlement.component.ts", "src/app/pages/early-settlement/early-settlement.component.html"],
+  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-early-settlement',\n  imports: [],\n  templateUrl: './early-settlement.component.html',\n  styleUrl: './early-settlement.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class EarlySettlementComponent {\n  public trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n  <div class=\"row px-lg-150px\">\n    <h1 class=\"fs-32px fw-bold text-center\">تسویه زودهنگام</h1>\n    <div>\n      <p>صفحه تسویه زودهنگام دیجی‌پی</p>\n    </div>\n  </div>\n</div>\n"],
+  "mappings": "iEASA,IAAaA,GAAwB,IAAA,CAA/B,MAAOA,CAAwB,CAC5BC,aAAW,CAAU,4CADjBD,EAAwB,2BAAxBA,EAAwBE,UAAA,CAAA,CAAA,sBAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICTrCE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACJ,EAAA,KAAA,CAAA,EACaC,EAAA,EAAA,iFAAA,EAAcC,EAAA,EACtDF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACAC,EAAA,EAAA,qJAAA,EAA2BC,EAAA,EAAI,EAC9B,EACF,8GDGKX,CAAwB,GAAA",
+  "names": ["EarlySettlementComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
+}

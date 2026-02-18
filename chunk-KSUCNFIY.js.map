@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/shops/shops.component.ts", "src/app/pages/shops/shops.component.html"],
+  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-shops',\n  imports: [],\n  templateUrl: './shops.component.html',\n  styleUrl: './shops.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ShopsComponent {\n  public trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n  <div class=\"row px-lg-150px\">\n    <h1 class=\"fs-32px fw-bold text-center\">فروشگاه‌ها</h1>\n    <div>\n      <p>صفحه فروشگاه‌های دیجی‌پی</p>\n    </div>\n  </div>\n</div>\n"],
+  "mappings": "iEASA,IAAaA,GAAc,IAAA,CAArB,MAAOA,CAAc,CAClBC,aAAW,CAAU,4CADjBD,EAAc,2BAAdA,EAAcE,UAAA,CAAA,CAAA,WAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICT3BE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACJ,EAAA,KAAA,CAAA,EACaC,EAAA,EAAA,8DAAA,EAAUC,EAAA,EAClDF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACAC,EAAA,EAAA,wIAAA,EAAwBC,EAAA,EAAI,EAC3B,EACF,mGDGKX,CAAc,GAAA",
+  "names": ["ShopsComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
+}

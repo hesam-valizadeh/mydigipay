@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/pages/credit-payment-gateway/credit-payment-gateway.component.ts", "src/app/pages/credit-payment-gateway/credit-payment-gateway.component.html"],
-  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-credit-payment-gateway',\n  imports: [],\n  templateUrl: './credit-payment-gateway.component.html',\n  styleUrl: './credit-payment-gateway.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class CreditPaymentGatewayComponent {\n  public trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n  <div class=\"row px-lg-150px\">\n    <h1 class=\"fs-32px fw-bold text-center\">درگاه پرداخت اعتباری</h1>\n    <div>\n      <p>صفحه درگاه پرداخت اعتباری دیجی‌پی</p>\n    </div>\n  </div>\n</div>\n"],
-  "mappings": "iEASA,IAAaA,GAA6B,IAAA,CAApC,MAAOA,CAA6B,CACjCC,aAAW,CAAU,4CADjBD,EAA6B,2BAA7BA,EAA6BE,UAAA,CAAA,CAAA,4BAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICT1CE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACJ,EAAA,KAAA,CAAA,EACaC,EAAA,EAAA,gHAAA,EAAoBC,EAAA,EAC5DF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACAC,EAAA,EAAA,oLAAA,EAAiCC,EAAA,EAAI,EACpC,EACF,+CDGKX,CAA6B,GAAA",
-  "names": ["CreditPaymentGatewayComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
-}

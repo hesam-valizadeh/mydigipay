@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/pages/services/services.component.ts", "src/app/pages/services/services.component.html"],
-  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-services',\n  imports: [],\n  templateUrl: './services.component.html',\n  styleUrl: './services.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ServicesComponent {\n  public trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n  <div class=\"row px-lg-150px\">\n    <h1 class=\"fs-32px fw-bold text-center\">خدمات</h1>\n    <div>\n      <p>صفحه خدمات دیجی‌پی</p>\n    </div>\n  </div>\n</div>\n"],
-  "mappings": "iEASA,IAAaA,GAAiB,IAAA,CAAxB,MAAOA,CAAiB,CACrBC,aAAW,CAAU,4CADjBD,EAAiB,2BAAjBA,EAAiBE,UAAA,CAAA,CAAA,cAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICT9BE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACJ,EAAA,KAAA,CAAA,EACaC,EAAA,EAAA,gCAAA,EAAKC,EAAA,EAC7CF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACAC,EAAA,EAAA,oGAAA,EAAkBC,EAAA,EAAI,EACrB,EACF,+CDGKX,CAAiB,GAAA",
-  "names": ["ServicesComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
-}
