@@ -26,6 +26,16 @@ export class SearchBoxComponent {
     this.searchOverlay.openSearch();
   }
 
+  public get isMobile(): boolean {
+    return this.responsive.isMobile();
+  }
+
+  public get isDesktop(): boolean {
+    return this.responsive.isDesktop();
+  }
+  public get isSearchOpen(): boolean {
+    return this.searchOverlay.isSearchOpen();
+  }
   @HostListener('document:click', ['$event'])
   public handleOutsideClick(event: MouseEvent): void {
     const target = event.target as HTMLElement;

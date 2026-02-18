@@ -10,6 +10,7 @@ import { CarouselStoryItemComponent } from './carousel-story-item/carousel-story
 import { ListModel } from '../../../@core/models/list-model';
 import { Swiper, SwiperOptions } from 'swiper/types';
 import { IStoryCarousel } from './model/carousel-inerface';
+import { ProgressWidthPipe } from '@shared/pipes/progress-width.pipe';
 
 const CAROUSEL_PROGRESS_MAX = 100;
 const CAROUSEL_AUTOPLAY_DELAY_MS = 3000;
@@ -17,7 +18,7 @@ const CAROUSEL_AUTOPLAY_DELAY_MS = 3000;
 @Component({
   selector: 'app-carousel-story',
   standalone: true,
-  imports: [CustomSwiperComponent, CarouselStoryItemComponent],
+  imports: [CustomSwiperComponent, CarouselStoryItemComponent, ProgressWidthPipe],
   templateUrl: './carousel-story.component.html',
   styleUrl: './carousel-story.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -80,7 +81,7 @@ export class CarouselStoryComponent {
   };
 
   private readonly cdr = inject(ChangeDetectorRef);
-  public trackById = (_: number, item: IStoryCarousel): number => item.id!;
+  // public trackById = (_: number, item: IStoryCarousel): number => item.id!;
 
   public onAutoplayProgress(_swiper: Swiper, _time: number, progress: number): void {
     this.progress = CAROUSEL_PROGRESS_MAX * (1 - progress);

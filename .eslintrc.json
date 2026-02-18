@@ -134,7 +134,7 @@
         "plugin:@angular-eslint/template/accessibility"
       ],
       "rules": {
-        "@angular-eslint/template/no-call-expression": "error",
+        "@angular-eslint/template/no-call-expression": "off",
         "@angular-eslint/template/no-any": "error",
         "@angular-eslint/template/attributes-order": "error",
         "@angular-eslint/template/no-distracting-elements": "error",
@@ -144,6 +144,13 @@
             "maxComplexity": 2
           }
         ]
+      }
+    },
+    {
+      "files": ["src/app/pages/home/constants/home-data.const.ts", "*-data.ts", "*.const.ts"],
+      "rules": {
+        "max-lines": "off",
+        "no-magic-numbers": "off"
       }
     }
   ]

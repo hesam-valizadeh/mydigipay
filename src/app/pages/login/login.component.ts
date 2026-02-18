@@ -25,11 +25,10 @@ const LOGIN_DELAY = 2000;
   styleUrl: './login.component.scss',
 })
 export class LoginComponent implements OnDestroy {
-  public loading = signal<boolean>(true);
   public phoneNumber: string | null = null;
   public error: string = '';
+  public loading = signal<boolean>(true);
 
-  // --- فیلدهای فرم ---
   public readonly loginForm: FormGroup = inject(FormBuilder).group({
     phone: [
       '',
@@ -106,5 +105,9 @@ export class LoginComponent implements OnDestroy {
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
     document.querySelectorAll('.modal-backdrop').forEach((b: Element): void => b.remove());
+  }
+
+  public get isLoading(): boolean {
+    return this.loading();
   }
 }

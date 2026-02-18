@@ -69,7 +69,7 @@ export class HeaderComponent implements OnInit {
   private readonly router = inject(Router);
   private readonly elementRef = inject(ElementRef);
 
-  constructor() {
+  public constructor() {
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
       const url = this.router.url.trim();
       const isHome = url === '/' || url === '' || url === '/home';
@@ -77,7 +77,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
       this.isSubmenuOpen.set(false);
       this._isSubmenuGamesOpen.set(true);

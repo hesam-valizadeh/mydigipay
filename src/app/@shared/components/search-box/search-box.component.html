@@ -1,4 +1,4 @@
-@if (responsive.isMobile() && searchOverlay.isSearchOpen()) {
+@if (isMobile && isSearchOpen) {
   <span class="d-flex align-items-center lh-1">
     <i class="icon icon-arrow-right-linear fs-24px"></i>
     <span class="fs-16px fw-600">جستجو</span>
@@ -18,7 +18,7 @@
     />
   </form>
 
-  @if (responsive.isDesktop() && searchOverlay.isSearchOpen()) {
+  @if (isDesktop && isSearchOpen) {
     <div id="results" class="d-flex gap-25px flex-column">
       <div class="pt-10px">
         <span class="text-dark fs-xs fw-600">همین‌ حالا، پرطرفدارترین‌ها</span>
@@ -293,7 +293,7 @@
     </div>
   }
 
-  @if (responsive.isMobile() && searchOverlay.isSearchOpen()) {
+  @if (isMobile && isSearchOpen) {
     <div id="results-mobile">
       <div class="pt-10px">
         <span class="text-dark fs-xs fw-600">همین‌ حالا، پرطرفدارترین‌ها</span>
@@ -568,7 +568,3 @@
     </div>
   }
 </div>
-
-<!-- @if (showSearch()){
-  
-} -->
