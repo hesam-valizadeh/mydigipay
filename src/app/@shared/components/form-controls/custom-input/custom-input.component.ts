@@ -6,6 +6,7 @@ import {
   FormsModule,
 } from '@angular/forms';
 import { OnChangeFn, OnTouchedFn } from '@core/models/types/custom-input.types';
+const PHONE_LENGTH = 11;
 
 @Component({
   selector: 'app-custom-input',
@@ -23,8 +24,6 @@ import { OnChangeFn, OnTouchedFn } from '@core/models/types/custom-input.types';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CustomInputComponent implements ControlValueAccessor {
-  // eslint-disable-next-line no-magic-numbers
-  private static readonly PHONE_LENGTH = 11;
   @Input() public label = 'Phone Number';
   @Input() public placeholder = '09123456789';
 
@@ -35,7 +34,6 @@ export class CustomInputComponent implements ControlValueAccessor {
   public onChange: OnChangeFn = () => {};
   public onTouched: OnTouchedFn = () => {};
 
-  // ---- VALIDATION ----
   public validate(value: string | null | undefined): void {
     const v = (value ?? '').trim();
 
@@ -49,12 +47,12 @@ export class CustomInputComponent implements ControlValueAccessor {
       return;
     }
 
-    if (v.length < CustomInputComponent.PHONE_LENGTH) {
+    if (v.length < PHONE_LENGTH) {
       this.error = 'شماره باید دقیقاً 11 رقم باشد (کمتر است)';
       return;
     }
 
-    if (v.length > CustomInputComponent.PHONE_LENGTH) {
+    if (v.length > PHONE_LENGTH) {
       this.error = 'شماره باید دقیقاً 11 رقم باشد (بیشتر است)';
       return;
     }
@@ -62,7 +60,6 @@ export class CustomInputComponent implements ControlValueAccessor {
     this.error = null;
   }
 
-  // ---- INPUT ----
   public onInput(event: Event): void {
     const inputValue = (event.target as HTMLInputElement).value;
     this.value = inputValue;
@@ -70,13 +67,11 @@ export class CustomInputComponent implements ControlValueAccessor {
     this.onChange(this.value);
   }
 
-  // ---- BLUR ----
   public handleBlur(): void {
     this.touched = true;
     this.onTouched();
   }
 
-  // ---- CVA REQUIRED METHODS ----
   public writeValue(value: string | null): void {
     this.value = value ?? '';
     this.validate(this.value);

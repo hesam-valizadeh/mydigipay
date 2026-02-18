@@ -18,7 +18,6 @@ import {
   },
 })
 export class SkeletonDirective {
-  // اضافه کردن public به ورودی‌ها
   public readonly isLoading = input(false, {
     alias: 'appSkeleton',
     transform: Boolean,
@@ -59,14 +58,12 @@ export class SkeletonDirective {
     this.renderer.setStyle(e, 'color', 'transparent');
 
     const h = this.height();
-    // اصلاح شرط برای بررسی صریح null و خالی نبودن رشته
     if (h !== null && h !== '') {
       this.renderer.setStyle(e, 'height', h);
       this.renderer.setStyle(e, 'min-height', h);
     }
 
     const w = this.width();
-    // اصلاح شرط برای بررسی صریح null و خالی نبودن رشته
     if (w !== null && w !== '') {
       this.renderer.setStyle(e, 'width', w);
     }

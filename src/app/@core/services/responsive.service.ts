@@ -5,19 +5,16 @@ import { BreakpointKey } from '../models/types/responsive.types';
   providedIn: 'root',
 })
 export class ResponsiveService {
-  /** 1. Public Properties / Signals */
   public readonly isXs: WritableSignal<boolean> = signal(false);
   public readonly isSm: WritableSignal<boolean> = signal(false);
   public readonly isMd: WritableSignal<boolean> = signal(false);
   public readonly isLg: WritableSignal<boolean> = signal(false);
   public readonly isXl: WritableSignal<boolean> = signal(false);
 
-  /** Combined signals */
   public readonly isMobile = computed(() => this.isXs());
   public readonly isTablet = computed(() => this.isMd());
   public readonly isDesktop = computed(() => this.isLg());
 
-  /** 2. Private Properties */
   private readonly breakpoints: Record<BreakpointKey, string> = {
     xs: '(max-width: 1199px)',
     sm: '(min-width: 600px) and (max-width: 959px)',
@@ -26,13 +23,11 @@ export class ResponsiveService {
     xl: '(min-width: 1920px)',
   };
 
-  /** 3. Constructor (باید قبل از متدها باشد) */
   public constructor() {
     if (typeof window === 'undefined') return;
     this.initListeners();
   }
 
-  /** 4. Public Methods (باید قبل از متدهای Private باشد) */
   public getCurrentSize(): string {
     if (this.isXs()) return 'XS';
     if (this.isSm()) return 'SM';
@@ -42,7 +37,6 @@ export class ResponsiveService {
     return 'Unknown';
   }
 
-  /** 5. Private Methods (در انتهای کلاس) */
   private initListeners(): void {
     Object.entries(this.breakpoints).forEach(([key, query]) => {
       const media = window.matchMedia(query);

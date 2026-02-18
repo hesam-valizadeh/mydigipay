@@ -35,7 +35,6 @@ export class SwiperElementDirective implements AfterViewInit {
       delete this.config.autoplay;
     }
 
-    // اعمال کانفیگ روی المنت
     if (this.config) {
       Object.assign(this._swiperElement, this.config);
     }

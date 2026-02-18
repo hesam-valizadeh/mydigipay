@@ -81,7 +81,6 @@ export class CarouselStoryComponent {
   };
 
   private readonly cdr = inject(ChangeDetectorRef);
-  // public trackById = (_: number, item: IStoryCarousel): number => item.id!;
 
   public onAutoplayProgress(_swiper: Swiper, _time: number, progress: number): void {
     this.progress = CAROUSEL_PROGRESS_MAX * (1 - progress);

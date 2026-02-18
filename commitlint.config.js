@@ -23,8 +23,8 @@ module.exports = {
     'type-empty': [2, 'never'],
     'subject-empty': [2, 'never'],
     'subject-max-length': [2, 'always', 72],
-    'scope-empty': [1, 'never'], // warn اگر scope خالی بود
-    'body-max-line-length': [1, 'always', 100], // warn
+    'scope-empty': [1, 'never'], 
+    'body-max-line-length': [1, 'always', 100], 
     'footer-max-line-length': [1, 'always', 100],
   },
 };

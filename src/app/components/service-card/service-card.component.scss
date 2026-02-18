@@ -125,19 +125,19 @@
   border-radius: 16px !important;
 
   &.bnpl {
-    background: var(--Purple-Gradient, linear-gradient(221deg, #8643f3 4.59%, #c7aaf7 92.92%));
+    background: var(--purple-gradient, linear-gradient(221deg, #8643f3 4.59%, #c7aaf7 92.92%));
   }
 
   &.card-to-card {
-    background: var(--Blue-Gradient, linear-gradient(220deg, #1159fc 3.65%, #8eb1fe 95.95%));
+    background: var(--blue-gradient, linear-gradient(220deg, #1159fc 3.65%, #8eb1fe 95.95%));
   }
 
   &.bar-chart-upward {
-    background: var(--Green-Gradient, linear-gradient(224deg, #14a654 11.43%, #79fab2 92.87%));
+    background: var(--green-gradient, linear-gradient(224deg, #14a654 11.43%, #79fab2 92.87%));
   }
 
   &.insurance {
-    background: var(--Dark-Blue-Gradient, linear-gradient(220deg, #0e0c7c 3.65%, #89a7ec 95.95%));
+    background: var(--dark-blue-gradient, linear-gradient(220deg, #0e0c7c 3.65%, #89a7ec 95.95%));
   }
 
   i {

@@ -38,9 +38,7 @@ export class AppComponent implements OnInit {
         }),
         mergeMap((route) => route.data),
       )
-      // تعیین تایپ صریح برای پارامتر ورودی subscribe
       .subscribe((data: Data) => {
-        // حالا با استفاده از تایپ Data، دسترسی به این کلیدها مجاز است
         this.showLayout = data['showLayout'] !== false;
 
         const pageTitle = data['title'] as string | undefined;
@@ -69,8 +67,6 @@ export class AppComponent implements OnInit {
     const currentPath = this.router.url.split('?')[0];
     const canonicalUrl = `${environment.baseURL}${currentPath}`;
 
-    // رفع خطا: متد addTag فقط MetaDefinition را می‌پذیرد (rel استاندارد نیست)
-    // برای Canonical Link از روش استاندارد DOM یا MetaService اختصاصی استفاده می‌شود
     let link: HTMLLinkElement | null = document.querySelector("link[rel='canonical']");
     if (!link) {
       link = document.createElement('link');
