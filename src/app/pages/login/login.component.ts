@@ -9,7 +9,6 @@ import { CustomInputComponent } from '../../@shared/components/form-controls/cus
 import { SkeletonDirective } from '../../@shared/directives/skeleton.directive';
 import { Modal } from 'bootstrap';
 const LOADING_TIMEOUT = 3000;
-const LOGIN_DELAY = 2000;
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -54,14 +53,6 @@ export class LoginComponent implements OnDestroy {
   public constructor() {
     setTimeout((): void => this.loading.set(false), LOADING_TIMEOUT);
   }
-
-  public login = (): void => {
-    this.loading.set(true);
-    setTimeout((): void => {
-      this.loading.set(false);
-      alert('ورود موفق!');
-    }, LOGIN_DELAY);
-  };
 
   public onSubmitReferral = (): void => {
     if (this.referralForm.invalid) {
