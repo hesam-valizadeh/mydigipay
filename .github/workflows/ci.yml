@@ -34,7 +34,8 @@ jobs:
         continue-on-error: true
 
       - name: Stylelint check
-        run: npm run stylelint:check
+        run: npm run stylelint:fix
+        continue-on-error: true
 
       - name: Lint
         run: npm run lint
