@@ -13,6 +13,7 @@ describe('CarouselServicesItemComponent', () => {
 
     fixture = TestBed.createComponent(CarouselServicesItemComponent);
     component = fixture.componentInstance;
+    component.src = '/assets/test.png';
     fixture.detectChanges();
   });
 

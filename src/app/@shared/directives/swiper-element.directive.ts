@@ -11,6 +11,17 @@ import { AutoplayOptions, SwiperOptions } from 'swiper/types';
 import { SwiperContainer } from 'swiper/element';
 import { isPlatformBrowser } from '@angular/common';
 
+interface IExtendedSwiperElement extends HTMLElement {
+  initialize: () => void;
+  swiper: {
+    params: SwiperOptions;
+    autoplay: {
+      start: () => void;
+      stop: () => void;
+    };
+  };
+}
+
 @Directive({
   selector: '[appSwiperElement]',
   standalone: true,
@@ -21,38 +32,55 @@ export class SwiperElementDirective implements AfterViewInit {
   private readonly element = inject(ElementRef<SwiperContainer>);
   private readonly ngZone = inject(NgZone);
   private readonly platformId = inject(PLATFORM_ID);
-  private readonly _swiperElement: SwiperContainer = this.element.nativeElement as SwiperContainer;
 
+  private readonly _swiperElement: SwiperContainer = this.element
+    .nativeElement as unknown as SwiperContainer;
   public ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
 
-    let autoplay: AutoplayOptions | undefined;
+    const swiperNode = this._swiperElement as unknown as IExtendedSwiperElement;
 
-    if (this.config && this.config.autoplay !== undefined && this.config.autoplay !== false) {
-      autoplay = { ...(this.config.autoplay as AutoplayOptions) };
-      delete this.config.autoplay;
+    if (typeof swiperNode.initialize !== 'function') {
+      return;
     }
 
-    if (this.config) {
+    this.initSwiperWithAutoplay(swiperNode);
+  }
+
+  private initSwiperWithAutoplay(swiperNode: IExtendedSwiperElement): void {
+    const autoplayConfig = this.extractAutoplayConfig();
+
+    if (this.config !== undefined) {
       Object.assign(this._swiperElement, this.config);
     }
 
-    this._swiperElement.initialize();
+    swiperNode.initialize();
 
-    if (autoplay !== undefined) {
-      this.ngZone.runOutsideAngular(() => {
-        const swiperInstance = this._swiperElement.swiper;
-        swiperInstance.params.autoplay = autoplay;
-
-        const swiperAutoplay = swiperInstance.autoplay as { start?: () => void } | undefined;
-        const canStartAutoplay = typeof swiperAutoplay?.start === 'function';
-
-        if (canStartAutoplay) {
-          (swiperAutoplay as { start: () => void }).start();
-        }
-      });
+    if (autoplayConfig !== undefined) {
+      this.activateAutoplay(swiperNode);
     }
+  }
+
+  private extractAutoplayConfig(): AutoplayOptions | undefined {
+    const currentConfig = this.config;
+    if (currentConfig?.autoplay !== undefined && typeof currentConfig.autoplay === 'object') {
+      const autoplay = { ...currentConfig.autoplay };
+      delete currentConfig.autoplay;
+      return autoplay;
+    }
+    return undefined;
+  }
+
+  private activateAutoplay(swiperNode: IExtendedSwiperElement): void {
+    this.ngZone.runOutsideAngular(() => {
+      const swiperInstance = swiperNode.swiper;
+
+      const startFn = swiperInstance.autoplay.start;
+      if (typeof startFn === 'function') {
+        startFn.call(swiperInstance.autoplay);
+      }
+    });
   }
 }

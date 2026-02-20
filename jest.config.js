@@ -1,11 +1,16 @@
-// jest.config.js
 module.exports = {
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testEnvironment: 'jsdom',
 
   transform: {
-    '^.+\\.(ts|tsx|js|jsx|html|svg)$': 'jest-preset-angular',
+    '^.+\\.(ts|mjs|js|html)$': [
+      'jest-preset-angular',
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+        stringifyContentPathRegex: '\\.(html|svg)$',
+      },
+    ],
   },
 
   transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$|tslib|rxjs|@angular|zone\\.js)'],
@@ -31,7 +36,6 @@ module.exports = {
     '!src/main.ts',
     '!src/**/*.mock.ts',
   ],
-
   coverageThreshold: {
     global: {
       branches: 70,

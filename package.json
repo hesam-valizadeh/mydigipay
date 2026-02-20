@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --stats-json",
     "watch": "ng build --watch --configuration development",
-    "test": "jest",
+    "test:unit": "jest",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "stylelint": "stylelint \"src/**/*.{scss,css}\"",
