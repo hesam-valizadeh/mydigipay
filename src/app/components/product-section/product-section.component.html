@@ -1,11 +1,10 @@
 <section class="product-section gap-20px mt-32px p-0 d-flex flex-column">
-  <div class="heading d-flex justify-content-between aling-items-center p-0">
-    <h3 class="text-dark fs-14px fw-600 product-section-title">{{ category }}</h3>
-    <a href="" class="text-primary product-section-link">
-      <span class="text-primary">همه</span>
-      <i class="icon icon-arrow-2-left-linear text-primary"></i>
-    </a>
-  </div>
+  <app-product-section-header
+    [title]="category"
+    [viewAllLink]="viewAllLink"
+    [timerEndDate]="timerEndDate"
+    [class]="style"
+  ></app-product-section-header>
   <app-custom-swiper #swiperRef [config]="SwiperConfig" [startIndex]="1" [slides]="slider.data">
     <ng-template #swiperSlideTemplate let-index="index">
       <app-product-item

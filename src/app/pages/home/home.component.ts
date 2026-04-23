@@ -9,6 +9,7 @@ import { ResponsiveService } from '../../@core/services/responsive.service';
 import { SearchOverlayService } from '../../@core/services/search-overlay-service.service';
 import { NgOptimizedImage } from '@angular/common';
 import { homeData } from './constants/home-data.const';
+import { IncredibleDiscountBoxComponent } from '@shared/components/incredible-discount-box/incredible-discount-box.component';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ import { homeData } from './constants/home-data.const';
     ServiceCardComponent,
     ProductSectionComponent,
     NgOptimizedImage,
+    IncredibleDiscountBoxComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -38,14 +40,13 @@ export class HomeComponent {
   public data: IHomePageViewDataInterface = homeData;
   public get sections(): Array<{ id: number; category?: string; products: ListModel<unknown> }> {
     const data = this.data;
-
     return Object.keys(data).map((key, index) => {
       const section = data[key as keyof IHomePageViewDataInterface];
-
       return {
         id: index + 1,
         category: section.category,
         products: new ListModel(section.sliderProducts),
+        link: section.link ?? null,
       };
     });
   }

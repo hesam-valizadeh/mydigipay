@@ -14,8 +14,12 @@
       <app-square-banner></app-square-banner>
     </div>
   </div>
+
   <div class="row">
     <app-service-card class="p-0"></app-service-card>
+  </div>
+  <div class="row">
+    <app-incredible-discount-box class="p-0"></app-incredible-discount-box>
   </div>
   @for (section of sections; track section?.id) {
     <div class="row">
@@ -23,6 +27,7 @@
         class="p-0"
         [category]="section?.category"
         [products]="section?.products"
+        [viewAllLink]="section?.link"
       ></app-product-section>
     </div>
   }

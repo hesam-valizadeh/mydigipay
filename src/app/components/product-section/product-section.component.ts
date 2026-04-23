@@ -4,17 +4,17 @@ import { ListModel } from '../../@core/models/list-model';
 import { CustomSwiperComponent } from '../../@shared/components/custom-swiper/custom-swiper.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { IProductCarousel } from './model/carousel-inerface';
+import { ProductSectionHeaderComponent } from './product-section-header/product-section-header.component';
 
 @Component({
   selector: 'app-product-section',
-  imports: [CustomSwiperComponent, ProductItemComponent],
+  imports: [CustomSwiperComponent, ProductItemComponent, ProductSectionHeaderComponent],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './product-section.component.html',
   styleUrl: './product-section.component.scss',
 })
 export class ProductSectionComponent {
-  @Input() public category!: string;
   @Input() public storeName!: string | undefined;
   @Input() public fourPay!: boolean | undefined;
   @Input() public products!: ListModel<IProductCarousel> | null | undefined;
@@ -28,7 +28,11 @@ export class ProductSectionComponent {
   @Input() public priceNoDiscount!: string | undefined;
   @Input() public priceFinal!: string | undefined;
   @Input() public discountPercentage!: string | undefined;
-
+  @Input({ required: true })
+  public category!: string;
+  @Input() public viewAllLink: string | null = null;
+  @Input() public timerEndDate: Date | null = null;
+  @Input() public style: string | null = null;
   public get slider(): ListModel<IProductCarousel> {
     return this.products ?? new ListModel<IProductCarousel>([]);
   }
