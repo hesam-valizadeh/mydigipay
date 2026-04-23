@@ -72,7 +72,7 @@ export class ProductSectionComponent {
       },
       1200: {
         slidesPerView: 6.8,
-        spaceBetween: 8,
+        spaceBetween: 60,
       },
     },
   };
