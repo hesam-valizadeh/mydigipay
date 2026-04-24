@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/hub/hub.component.scss"],
+  "sourcesContent": [".hub-page {\n  max-width: 552px;\n  width: 552px;\n  margin: 0 auto;\n  display: block;\n  height: 100vh;\n}\n\n.hub-header{\n    width: 100%;\n    height: 266px;\n    background-image: linear-gradient(120deg, #ae2ce2 0%,#3d24ca 50%, #44e2e2 100%)}\n"],
+  "mappings": "AAAA,CAAA,SACE,UAAA,MACA,MAAA,MAFF,OAGE,EAAA,KACA,QAAA,MACA,OAAA,MAGF,CAAA,WACI,MAAA,KACA,OAAA,MACA,iBAAA,gBAAA,MAAA,CAAA,OAAA,CAAA,OAAA,CAAA",
+  "names": []
+}
