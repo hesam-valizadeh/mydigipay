@@ -8,6 +8,7 @@ import { ResponsiveService } from './@core/services/responsive.service';
 import { BottomNavigationComponent } from './@layout/bottom-navigation/bottom-navigation.component';
 import { HeaderComponent } from './@layout/header/header.component';
 import { filter, map, mergeMap } from 'rxjs';
+import { INavigationItem } from '@layout/bottom-navigation/model/navigation-item.interface';
 
 @Component({
   selector: 'app-root',
@@ -17,15 +18,29 @@ import { filter, map, mergeMap } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
+  public mainMenu: INavigationItem[] = [
+    { routerLink: '', icon: 'home', label: 'خانه', linear: true },
+    { routerLink: '/services', icon: 'more', label: 'خدمات', linear: true },
+    { routerLink: '/shops', icon: 'bag', label: 'فروشگاه‌ها', hasBadge: true, linear: true },
+    { routerLink: '/payment', icon: 'card-to-card', label: 'پرداخت', linear: true },
+    { routerLink: '/login', icon: 'person', label: 'ورود', linear: true },
+  ];
+
   public searchOverlay = inject(SearchOverlayService);
   public showLayout = true;
   public responsive = inject(ResponsiveService);
-
+  public isHubRoute = false;
   private readonly router = inject(Router);
   private readonly titleService = inject(Title);
   private readonly activatedRoute = inject(ActivatedRoute);
   private readonly metaService = inject(Meta);
   public ngOnInit(): void {
+    this.router.events
+      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.isHubRoute = event.urlAfterRedirects.startsWith('/hub');
+      });
+
     this.router.events
       .pipe(
         filter((event): event is NavigationEnd => event instanceof NavigationEnd),

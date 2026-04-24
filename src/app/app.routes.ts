@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 import { environment } from '../enviroment/environment';
 import { routerLinksPath, routeWithoutSlash } from './@core/constants/router-links';
-import { authGuard } from './@core/guards/auth.guard';
-
+import { authGuard, redirectIfAuthenticatedGuard } from './@core/guards/auth.guard';
 export const routes: Routes = [
   {
     path: '',
@@ -50,22 +49,13 @@ export const routes: Routes = [
   },
   {
     path: routeWithoutSlash(routerLinksPath.loginPage.login),
+    canActivate: [redirectIfAuthenticatedGuard],
     data: {
       showLayout: false,
       title: 'دیجی پی | خدمات مالی و پرداخت',
       description: '',
     },
     loadComponent: () => import('./pages/login/login.component').then((c) => c.LoginComponent),
-  },
-  {
-    path: routeWithoutSlash(routerLinksPath.hubPage.hub),
-    canActivate: [authGuard],
-    data: {
-      showLayout: false,
-      title: '',
-      description: '',
-    },
-    loadComponent: () => import('./pages/hub/hub.component').then((c) => c.HubComponent),
   },
   {
     path: routeWithoutSlash(routerLinksPath.servicesPage.services),
@@ -263,6 +253,65 @@ export const routes: Routes = [
       import('./pages/special-financial-services/special-financial-services.component').then(
         (c) => c.SpecialFinancialServicesComponent,
       ),
+  },
+  {
+    path: 'hub',
+    canActivate: [authGuard],
+    data: {
+      showLayout: false,
+      title: '',
+      description: '',
+    },
+    loadComponent: () => import('./pages/hub/hub.component').then((c) => c.HubComponent),
+    children: [
+      {
+        path: '',
+        redirectTo: 'services',
+        pathMatch: 'full',
+      },
+      {
+        path: 'services',
+        data: {
+          showLayout: false,
+          title: '',
+          description: '',
+        },
+        loadComponent: () =>
+          import('./pages/hub/services/services.component').then((c) => c.ServicesComponent),
+      },
+      {
+        path: 'stores',
+        data: {
+          showLayout: false,
+          title: '',
+          description: '',
+        },
+        loadComponent: () =>
+          import('./pages/hub/stores/stores.component').then((c) => c.StoresComponent),
+      },
+      {
+        path: 'transactions',
+        data: {
+          showLayout: false,
+          title: '',
+          description: '',
+        },
+        loadComponent: () =>
+          import('./pages/hub/transactions/transactions.component').then(
+            (c) => c.TransactionsComponent,
+          ),
+      },
+      {
+        path: 'profile',
+        data: {
+          showLayout: false,
+          title: '',
+          description: '',
+        },
+        loadComponent: () =>
+          import('./pages/hub/profile/profile.component').then((c) => c.ProfileComponent),
+      },
+    ],
   },
   {
     path: '**',

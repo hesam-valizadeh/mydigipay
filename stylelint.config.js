@@ -22,7 +22,6 @@ module.exports = {
     'property-no-deprecated': null,
     'selector-pseudo-class-no-unknown': null,
     'selector-pseudo-element-no-unknown': null,
-    'max-nesting-depth': null,
     'font-family-no-missing-generic-family-keyword': null,
 
     'block-no-empty': true,

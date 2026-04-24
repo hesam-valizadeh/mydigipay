@@ -8,6 +8,6 @@
   <app-footer></app-footer>
 }
 
-@if (isMobile) {
-  <app-bottom-navigation></app-bottom-navigation>
+@if (isMobile && !isHubRoute) {
+  <app-bottom-navigation [navItems]="mainMenu"></app-bottom-navigation>
 }

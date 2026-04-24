@@ -31,6 +31,7 @@ export const routerLinksPath = {
   },
   hubPage: {
     hub: '/hub',
+    profile: '/profile',
   },
   servicesPage: {
     services: '/services',

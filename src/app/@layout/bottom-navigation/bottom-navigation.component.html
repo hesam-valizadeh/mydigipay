@@ -1,47 +1,30 @@
 <div class="bottom-navigation">
   <nav class="navbar justify-content-between">
-    <a class="nav-item d-flex gap-5px align-items-center flex-column active" [routerLink]="''">
-      <span class="icon-container">
-        <i class="icon icon-home-linear text-dark"></i>
-      </span>
-      <span class="fs-10px fw-500 text-dark">خانه</span>
-    </a>
-    <a
-      class="nav-item d-flex flex-column align-items-center gap-5px"
-      [routerLink]="routerLinksPath.servicesPage.services"
-    >
-      <span class="icon-container">
-        <i class="icon icon-more-linear text-dark"></i>
-      </span>
-      <span class="fs-10px fw-500 text-dark">خدمات</span>
-    </a>
-    <a
-      class="nav-item d-flex flex-column align-items-center gap-5px"
-      [routerLink]="routerLinksPath.shopsPage.shops"
-    >
-      <span class="icon-container position-relative">
-        <i class="icon icon-bag-linear text-dark"></i>
-        <i class="icon icon-discount-bold position-absolute"></i>
-      </span>
-      <span class="fs-10px fw-500 text-dark">فروشگاه‌ها</span>
-    </a>
-    <a
-      class="nav-item d-flex flex-column align-items-center gap-5px"
-      [routerLink]="routerLinksPath.paymentPage.payment"
-    >
-      <span class="icon-container">
-        <i class="icon icon-card-to-card-linear text-dark"></i>
-      </span>
-      <span class="fs-10px fw-500 text-dark">پرداخت</span>
-    </a>
-    <a
-      class="nav-item d-flex flex-column align-items-center gap-5px"
-      [routerLink]="routerLinksPath.loginPage.login"
-    >
-      <span class="icon-container">
-        <i class="icon icon-person-linear text-dark"></i>
-      </span>
-      <span class="fs-10px fw-500 text-dark">ورود</span>
-    </a>
+    @for (item of navItems; track $index) {
+      <a
+        class="nav-item d-flex gap-5px align-items-center flex-column"
+        [class.active]="activeRoute === item.routerLink"
+        [routerLink]="item.routerLink"
+      >
+        <span class="icon-container position-relative">
+          <i
+            [class]="'icon icon-' + getIconName(item)"
+            [class.text-dark]="item.linear"
+            [class.text-primary]="!item.linear"
+          ></i>
+          @if (item.hasBadge) {
+            <i class="icon icon-discount-bold position-absolute"></i>
+          }
+        </span>
+
+        <span
+          class="fs-10px fw-500"
+          [class.text-dark]="item.linear"
+          [class.text-primary]="!item.linear"
+        >
+          {{ item.label }}
+        </span>
+      </a>
+    }
   </nav>
 </div>

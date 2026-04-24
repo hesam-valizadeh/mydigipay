@@ -176,4 +176,17 @@
     box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
     padding-bottom: 30px;
   }
+
+  .hub-page{
+    position: relative;
+
+    .bottom-navigation{
+      position: absolute !important;
+      right: 20px !important;
+     left: 20px !important;
+     bottom: 20px !important;
+     width: 510px !important;
+     height: 64px !important;
+    }
+  }
 }
