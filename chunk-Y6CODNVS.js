@@ -1,3 +1,0 @@
-import{Da as n,Db as s,Eb as c,Sa as o,mb as i,nb as a}from"./chunk-G5C3WEJE.js";var d=(()=>{class t{title="\u062A\u0631\u0627\u06A9\u0646\u0634\u200C\u0647\u0627";static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-transactions"]],decls:3,vars:1,consts:[[1,"transactions-container"]],template:function(e,p){e&1&&(i(0,"div",0)(1,"h2"),s(2),a()()),e&2&&(n(2),c(p.title))},styles:[`p[_ngcontent-%COMP%]{z-index:1}
-/*# sourceMappingURL=transactions.component-B4RRHOUQ.css.map */`],changeDetection:0})}return t})();export{d as TransactionsComponent};
-//# sourceMappingURL=chunk-Y6CODNVS.js.map
