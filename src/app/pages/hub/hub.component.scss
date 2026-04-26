@@ -3,7 +3,9 @@
   width: 552px;
   margin: 0 auto;
   display: block;
-  height: 100vh;
+  min-height: 100vh;
+  border-inline: 1px solid #DFE1E5 ;
+
 }
 
 .hub-header{

@@ -1,7 +1,220 @@
-<!-- فقط محتوای پروفایل، بدون bottom-navigation تکراری -->
-<div class="profile-container">
-  <h2>حساب من</h2>
-  <div>شماره تماس: {{ phoneNumber }}</div>
-  <!-- سایر اطلاعات پروفایل -->
-  <button class="logout-btn" (click)="logout()">خروج از حساب</button>
+<div class="profile-page">
+  <h1 class="fs-18px fw-500 mb-20px">حساب من</h1>
+  <div class="profile-menu-list d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center justify-content-center gap-6px">
+      <div class="d-flex flex-column justify-content-center">
+        <img
+          src="assets/images/profile/avatar.webp"
+          alt="avatar"
+          title="avatar"
+          width="48"
+          height="48"
+        />
+      </div>
+      <div class="d-flex flex-column gap-4px">
+        <span class="fs-14px fw-600">
+          {{ fullName }}
+        </span>
+        <span class="phonenumber">
+          {{ phoneNumber }}
+        </span>
+      </div>
+    </div>
+    <div class="d-flex align-items-center gap-4px">
+      <span class="fs-14px text-primary">ویرایش</span>
+      <i class="icon icon-arrow-left-linear text-primary fs-20px d-flex align-items-center"></i>
+    </div>
+  </div>
+  <div
+    class="profile-subscription mb-16px d-flex align-items-center justify-content-between gap-10px"
+  >
+    <div class="card">
+      <img src="assets/images/profile/subscription.svg" alt="" width="40" height="40" />
+      <div>
+        <span class="fs-12px text-onback-low d-block">اشتراک فعال</span>
+        <span class="fs-14px fw-600 text-dark">ندارد</span>
+      </div>
+      <div class="">
+        <span class="text-primary fs-12px d-flex fw-600 gap-5px">
+          خرید اشتراک
+          <i class="icon icon-arrow-2-left-linear text-primary fs-16px fw-bold"></i>
+        </span>
+      </div>
+      <img src="assets/images/profile/1.svg" class="pattern" alt="" width="140" height="170" />
+    </div>
+    <div class="card">
+      <img src="assets/images/profile/3.svg" alt="" width="40" height="40" />
+      <div>
+        <span class="fs-12px text-onback-low d-block">امتیاز پی کلاب</span>
+        <span class="fs-14px fw-600 text-dark">0 سکه</span>
+      </div>
+      <div class="">
+        <span class="text-primary fs-12px d-flex fw-600 gap-5px">
+          جوایز و تخفیف ها
+          <i class="icon icon-arrow-2-left-linear text-primary fs-16px fw-bold"></i>
+        </span>
+      </div>
+      <img src="assets/images/profile/2.svg" class="pattern" alt="" width="140" height="170" />
+    </div>
+  </div>
+  <div>
+    <h6 class="fs-12px mb-12px text-onback-low fw-500">مدیریت حساب</h6>
+    <div class="profile-menu-list flex-column py-10px px-0 h-auto">
+      <div class="d-flex align-items-center w-100 py-4px">
+        <div class="">
+          <i
+            class="icon icon-lock-linear text-onback-low fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div
+          class="d-flex align-center justify-content-between w-100 py-8px border-bottom border-color-profile-menu"
+        >
+          <span class="text-onback-low fs-14px fw-400">رمز عبور</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center w-100 py-4px">
+        <div class="">
+          <i
+            class="icon icon-digital-device-linear text-onback-low fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div
+          class="d-flex align-center justify-content-between w-100 py-8px border-bottom border-color-profile-menu"
+        >
+          <span class="text-onback-low fs-14px fw-400">دستگاه‌های متصل</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center w-100 pt-4px">
+        <div class="">
+          <i
+            class="icon icon-bank-card-linear d-block text-onback-low fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div class="d-flex align-center justify-content-between w-100 py-8px">
+          <span class="text-onback-low fs-14px fw-400">کارت‌های ذخیره شده</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h6 class="fs-12px mb-12px text-onback-low fw-500">اطلاع رسانی</h6>
+    <div class="profile-menu-list py-10px px-0 h-auto">
+      <div class="d-flex align-items-center w-100 pt-4px">
+        <div class="">
+          <i
+            class="icon icon-add-friend-linear d-block text-onback-low fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div class="d-flex align-center justify-content-between w-100 pb-5px">
+          <span class="text-onback-low fs-14px fw-400">دعوت از دوستان</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h6 class="fs-12px mb-12px text-onback-low fw-500">پشتیبانی</h6>
+    <div class="profile-menu-list flex-column py-10px px-0 h-auto">
+      <div class="d-flex align-items-center w-100 py-4px">
+        <div class="">
+          <i
+            class="icon icon-primary icon-question-mark-circle-linear d-block text-onback-low fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div
+          class="d-flex align-center justify-content-between w-100 py-10px border-bottom border-color-profile-menu"
+        >
+          <span class="text-onback-low fs-14px fw-400">راهنما</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center w-100 py-4px">
+        <div class="">
+          <i
+            class="icon icon-group-linear text-onback-low d-block fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div
+          class="d-flex align-center justify-content-between w-100 py-8px border-bottom border-color-profile-menu"
+        >
+          <span class="text-onback-low fs-14px fw-400">درباره ما</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center w-100 pt-4px">
+        <div class="">
+          <i
+            class="icon icon-error-circle-linear d-block text-onback-low fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div
+          class="d-flex align-center justify-content-between w-100 py-8px border-bottom border-color-profile-menu"
+        >
+          <span class="text-onback-low fs-14px fw-400">گزارش تخلف فروشگاه</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center w-100 pt-4px">
+        <div class="">
+          <i
+            class="icon icon-docuemnt-file-linear d-block text-onback-low fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div
+          class="d-flex align-center justify-content-between w-100 py-8px border-bottom border-color-profile-menu"
+        >
+          <span class="text-onback-low fs-14px fw-400">شرایط و مقررات استفاده</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center w-100 pt-4px">
+        <div class="">
+          <i
+            class="icon icon-mobile-linear d-block text-onback-low d-block fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div
+          class="d-flex align-center justify-content-between w-100 py-8px border-bottom border-color-profile-menu"
+        >
+          <span class="text-onback-low fs-14px fw-400">به روزرسانی</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center w-100 pt-4px">
+        <div class="">
+          <i
+            class="icon icon-consulting-linear d-block text-onback-low d-block fs-24px pb-0px ps-16px pe-8px lh-20px"
+          ></i>
+        </div>
+        <div class="d-flex align-center justify-content-between w-100 py-8px">
+          <span class="text-onback-low fs-14px fw-400">پشتیبانی آنلاین</span>
+          <span>
+            <i class="icon icon-arrow-2-left-linear text-onback-low ps-12px pe-16px"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="logout-btn" (click)="logout()">خروج از حساب کاربری</button>
 </div>
