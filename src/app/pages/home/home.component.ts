@@ -44,9 +44,9 @@ export class HomeComponent {
       const section = data[key as keyof IHomePageViewDataInterface];
       return {
         id: index + 1,
-        category: section.category,
-        products: new ListModel(section.sliderProducts),
-        link: section.link ?? null,
+        category: section?.category,
+        products: new ListModel(section?.sliderProducts),
+        link: section?.link ?? null,
       };
     });
   }

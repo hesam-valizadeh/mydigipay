@@ -32,15 +32,13 @@ export const routerLinksPath = {
   hubPage: {
     hub: '/hub',
     profile: '/profile',
+    transactions: '/transactions',
   },
   servicesPage: {
     services: '/services',
   },
   shopsPage: {
     shops: '/shops',
-  },
-  paymentPage: {
-    payment: '/payment',
   },
   loanPage: {
     loanProduct: '/loan-product',

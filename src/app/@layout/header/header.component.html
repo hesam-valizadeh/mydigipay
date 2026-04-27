@@ -199,7 +199,7 @@
   <a
     routerLinkActive="active"
     class="nav-item mx-24px d-flex gap-5px"
-    [routerLink]="routerLinksPath.paymentPage.payment"
+    [routerLink]="'hub/' + routerLinksPath.hubPage.transactions"
     [routerLinkActiveOptions]="{ exact: true }"
   >
     <span class="icon-container">
@@ -244,7 +244,10 @@
         </span>
         <span>فروشگاه‌ها</span>
       </a>
-      <a class="nav-item mx-24px d-flex gap-5px" [routerLink]="routerLinksPath.paymentPage.payment">
+      <a
+        class="nav-item mx-24px d-flex gap-5px"
+        [routerLink]="'hub/' + routerLinksPath.hubPage.transactions"
+      >
         <span class="icon-container">
           <i class="icon icon-card-to-card-bold"></i>
         </span>

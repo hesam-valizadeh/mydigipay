@@ -1,161 +1,161 @@
 import { IProductCarousel } from '../components/product-section/model/carousel-inerface';
 
 export interface IHomePageViewDataInterface {
-  typesOfSpeakers: {
+  typesOfSpeakers?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  mobile: {
+  mobile?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  tabletAndLaptop: {
+  tabletAndLaptop?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  digilandsFullDiscounts: {
+  digilandsFullDiscounts?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  hairRestoration: {
+  hairRestoration?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  skinRoutine: {
+  skinRoutine?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  popularPersonalElectronics: {
+  popularPersonalElectronics?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  mensClothing: {
+  mensClothing?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  womensClothing: {
+  womensClothing?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  childrensClothing: {
+  childrensClothing?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  powerTools: {
+  powerTools?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  practicalCampingEquipment: {
+  practicalCampingEquipment?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  goldRing: {
+  goldRing?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  goldNecklace: {
+  goldNecklace?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  frameAndGlass: {
+  frameAndGlass?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  silverAndRhinestones: {
+  silverAndRhinestones?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  typesOfModems: {
+  modem?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  bankLoan: {
+  bankLoan?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  cateringUtensils: {
+  cateringUtensils?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  smartSwitches: {
+  smartSwitches?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  carSmartAccessories: {
+  carSmartAccessories?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  mobileAccessoriesDigiLand: {
+  mobileAccessoriesDigiLand?: {
     category?: string;
     image?: string;
     description?: string[];
     link?: string;
     sliderProducts?: IProductCarousel[] | undefined;
   };
-  womenBagsAndShoes: {
+  womenBagsAndShoes?: {
     category?: string;
     image?: string;
     description?: string[];

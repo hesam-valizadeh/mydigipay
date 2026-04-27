@@ -74,15 +74,17 @@ export const routes: Routes = [
     },
     loadComponent: () => import('./pages/shops/shops.component').then((c) => c.ShopsComponent),
   },
-  {
-    path: routeWithoutSlash(routerLinksPath.paymentPage.payment),
-    data: {
-      title: 'پرداخت | دیجی‌پی',
-      description: 'پرداخت با دیجی‌پی',
-    },
-    loadComponent: () =>
-      import('./pages/payment/payment.component').then((c) => c.PaymentComponent),
-  },
+  // {
+  //   path: routeWithoutSlash(routerLinksPath.hubPage.transaction),
+  //   data: {
+  //     title: 'پرداخت | دیجی‌پی',
+  //     description: 'پرداخت با دیجی‌پی',
+  //   },
+  //   loadComponent: () =>
+  //     import('./pages/hub/transactions/transactions.component').then(
+  //       (c) => c.TransactionsComponent,
+  //     ),
+  // },
   {
     path: routeWithoutSlash(routerLinksPath.loanPage.loanProduct),
     data: {

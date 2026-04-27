@@ -81,14 +81,14 @@ export class HeroCarouselComponent {
         border-radius: 30px;
         margin: 0 4px;
     }
-    
+
     .swiper-pagination-bullet.swiper-pagination-bullet-active {
         width: 14px !important;
         background-color: #fff !important;
-    
+
     }
-        
-     
+
+
 `,
     ],
     breakpoints: {},
