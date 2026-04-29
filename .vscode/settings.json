@@ -30,7 +30,7 @@
 	"eslint.codeActionsOnSave.mode": "problems",
 	"eslint.run": "onSave",
 	"eslint.options": {
-		"extensions": [".js", ".jsx", ".ts", ".tsx", ".html"]
+		"extensions": [".js", ".ts", ".html"]
 	},
 
 	// تنظیمات فایل

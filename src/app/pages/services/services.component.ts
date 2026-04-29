@@ -2,10 +2,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ListModel } from '@core/models/list-model';
 import { SwiperOptions } from 'swiper/types';
 import { CarouselBannerComponent } from 'src/app/components/carousel-banner/carousel-banner.component';
+import { SquareBanner } from 'src/app/components/square-banner/square-banner.component';
 
 @Component({
 	selector: 'app-services',
-	imports: [CarouselBannerComponent],
+	imports: [CarouselBannerComponent, SquareBanner],
 	templateUrl: './services.component.html',
 	styleUrl: './services.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,8 +19,8 @@ export class ServicesComponent {
 		},
 	]);
 	public SwiperConfig: SwiperOptions = {
-		slidesPerView: 'auto',
-		spaceBetween: 15,
+		slidesPerView: 1,
+		spaceBetween: 6,
 		centeredSlides: false,
 		grabCursor: true,
 		loopPreventsSliding: false,
@@ -35,26 +36,7 @@ export class ServicesComponent {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		injectStyles: [
-			`
-         .swiper-pagination-bullet {
-        background-color: #C9CBCF !important;
-        opacity: 1;
-        width: 6px;
-        height: 6px;
-        border-radius: 30px;
-        margin: 0 4px;
-    }
-
-    .swiper-pagination-bullet.swiper-pagination-bullet-active {
-        width: 14px !important;
-        background-color: #fff !important;
-
-    }
-
-
-`,
-		],
+		injectStyles: [],
 		breakpoints: {},
 	};
 }

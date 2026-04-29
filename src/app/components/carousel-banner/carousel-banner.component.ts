@@ -34,7 +34,7 @@ export class CarouselBannerComponent {
 		},
 	]);
 	public SwiperConfig: SwiperOptions = {
-		slidesPerView: 'auto',
+		slidesPerView: 1,
 		centeredSlides: true,
 		spaceBetween: 2,
 		loop: true,
@@ -63,13 +63,6 @@ export class CarouselBannerComponent {
         }
         `,
 		],
-		breakpoints: {
-			768: {
-				slidesPerView: 1.2,
-			},
-			1024: {
-				slidesPerView: 1.2,
-			},
-		},
+		breakpoints: {},
 	};
 }

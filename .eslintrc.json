@@ -9,7 +9,6 @@
 		"*.config.ts",
 		"src/environments/*.ts"
 	],
-	"ignores": ["cypress/**/*"],
 	"overrides": [
 		{
 			"files": ["*.ts"],
