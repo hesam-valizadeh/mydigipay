@@ -3,10 +3,11 @@ import { ListModel } from '@core/models/list-model';
 import { SwiperOptions } from 'swiper/types';
 import { CarouselBannerComponent } from 'src/app/components/carousel-banner/carousel-banner.component';
 import { SquareBanner } from 'src/app/components/square-banner/square-banner.component';
+import { CarouselBannerServicesComponent } from 'src/app/components/carousel-banner-services/carousel-banner-services.component';
 
 @Component({
 	selector: 'app-services',
-	imports: [CarouselBannerComponent, SquareBanner],
+	imports: [CarouselBannerComponent, SquareBanner, CarouselBannerServicesComponent],
 	templateUrl: './services.component.html',
 	styleUrl: './services.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
