@@ -1,16 +1,16 @@
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./out-tsc/app",
-    "baseUrl": "./",
-    "paths": {
-      "@core/*": ["src/app/@core/*"],
-      "@shared/*": ["src/app/@shared/*"],
-      "@layout/*": ["src/app/@layout/*"]
-    },
-    "types": []
-  },
-  "files": ["src/main.ts"],
-  "include": ["src/**/*.ts", "src/**/*.d.ts"],
-  "exclude": ["src/**/*.spec.ts", "src/test.ts"]
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./out-tsc/app",
+		"baseUrl": "./",
+		"paths": {
+			"@core/*": ["src/app/@core/*"],
+			"@shared/*": ["src/app/@shared/*"],
+			"@layout/*": ["src/app/@layout/*"]
+		},
+		"types": []
+	},
+	"files": ["src/main.ts"],
+	"include": ["src/**/*.ts", "src/**/*.d.ts"],
+	"exclude": ["src/**/*.spec.ts", "src/test.ts"]
 }

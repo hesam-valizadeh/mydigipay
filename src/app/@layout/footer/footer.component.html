@@ -1,411 +1,411 @@
 <footer class="container">
-  <div class="container p-0 pt-40px">
-    <div class="row">
-      <div class="col-lg-5">
-        <div class="logo">
-          <figure>
-            <img ngOptimizedImage ngSrc="assets/images/logo.svg" alt="" width="82" height="20" />
-          </figure>
-        </div>
-        <div class="address">
-          <span>آدرس:</span>
-          <address>تهران، خیابان ملاصدرا، خیابان شیخ بهایی شمالی، نبش لادن، پلاک ۸۵</address>
-        </div>
-        <div class="tell">
-          <span>شماره تماس:</span>
-          <a href="" class="fs-xs">
-            <span>02153924000</span>
-          </a>
-        </div>
-        <div class="d-flex align-items-center justify-content-start gap-25px social">
-          <a href="" aria-label="instagram">
-            <figure>
-              <img
-                ngOptimizedImage
-                ngSrc="assets/images/instagram-icon.svg"
-                alt=""
-                width="32"
-                height="33"
-              />
-            </figure>
-          </a>
-          <a href="" aria-label="linkedin">
-            <figure>
-              <img
-                ngOptimizedImage
-                ngSrc="assets/images/linkedin-icon.svg"
-                alt=""
-                width="25"
-                height="25"
-              />
-            </figure>
-          </a>
-          <a href="" aria-label="x">
-            <figure>
-              <img
-                ngOptimizedImage
-                ngSrc="assets/images/x-icon.svg"
-                alt=""
-                width="32"
-                height="33"
-              />
-            </figure>
-          </a>
-          <a href="" aria-label="aparat">
-            <figure>
-              <img
-                ngOptimizedImage
-                ngSrc="assets/images/aparat-icon.svg"
-                alt=""
-                width="32"
-                height="33"
-              />
-            </figure>
-          </a>
-        </div>
-      </div>
-      @if (isDesktop) {
-        <div class="col-lg-5 footer-links">
-          <div class="">
-            <h4>درباره ما</h4>
-            <ul>
-              <li>
-                <a [routerLink]="routerLinksPath.aboutPage.about"><span>درباره دیجی‌پی</span></a>
-              </li>
-              <li>
-                <a [routerLink]="routerLinksPath.aboutPage.annualReport">
-                  <span>گزارش سالانه</span>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="routerLinksPath.aboutPage.careers"><span>فرصت‌های شغلی</span></a>
-              </li>
-              <li>
-                <a [routerLink]="routerLinksPath.aboutPage.blog">
-                  <span>مجله اینترنتی دیجی‌پی</span>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="routerLinksPath.aboutPage.technicalDocs">
-                  <span>مستندات فنی</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4>خدمات ما</h4>
-            <ul>
-              <li>
-                <a [routerLink]="routerLinksPath.specialServicesPage.specialFinancialServices">
-                  <span>خدمات ویژه مالی</span>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="routerLinksPath.shopsPage.shops"><span>فروشگاه‌ها</span></a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4>خدمات مشتریان</h4>
-            <ul>
-              <li>
-                <a [routerLink]="routerLinksPath.faqPage.faq"><span>سوالات متداول</span></a>
-              </li>
-              <li>
-                <a [routerLink]="routerLinksPath.rulesPage.rules"><span>قوانین و مقررات</span></a>
-              </li>
-              <li>
-                <a [routerLink]="routerLinksPath.contactUsPage.contactUs">
-                  <span>تماس با ما</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      }
-      @if (isMobile) {
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseOne"
-                aria-expanded="true"
-                aria-controls="panelsStayOpen-collapseOne"
-              >
-                درباره ما
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="panelsStayOpen-headingOne"
-            >
-              <div class="accordion-body">
-                <ul>
-                  <li>
-                    <a [routerLink]="routerLinksPath.aboutPage.about">
-                      <span>درباره دیجی‌پی</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="routerLinksPath.aboutPage.annualReport">
-                      <span>گزارش سالانه</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="routerLinksPath.aboutPage.careers">
-                      <span>فرصت‌های شغلی</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="routerLinksPath.aboutPage.blog">
-                      <span>مجله اینترنتی دیجی‌پی</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="routerLinksPath.aboutPage.technicalDocs">
-                      <span>مستندات فنی</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseTwo"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseTwo"
-              >
-                خدمات ما
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingTwo"
-            >
-              <div class="accordion-body">
-                <ul>
-                  <li>
-                    <a [routerLink]="routerLinksPath.specialServicesPage.specialFinancialServices">
-                      <span>خدمات ویژه مالی</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="routerLinksPath.shopsPage.shops"><span>فروشگاه‌ها</span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseThree"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseThree"
-              >
-                خدمات مشتریان
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingThree"
-            >
-              <div class="accordion-body">
-                <ul>
-                  <li>
-                    <a [routerLink]="routerLinksPath.faqPage.faq"><span>سوالات متداول</span></a>
-                  </li>
-                  <li>
-                    <a [routerLink]="routerLinksPath.rulesPage.rules">
-                      <span>قوانین و مقررات</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="routerLinksPath.contactUsPage.contactUs">
-                      <span>تماس با ما</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      }
-    </div>
-  </div>
+	<div class="container p-0 pt-40px">
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="logo">
+					<figure>
+						<img ngOptimizedImage ngSrc="assets/images/logo.svg" alt="" width="82" height="20" />
+					</figure>
+				</div>
+				<div class="address">
+					<span>آدرس:</span>
+					<address>تهران، خیابان ملاصدرا، خیابان شیخ بهایی شمالی، نبش لادن، پلاک ۸۵</address>
+				</div>
+				<div class="tell">
+					<span>شماره تماس:</span>
+					<a href="" class="fs-xs">
+						<span>02153924000</span>
+					</a>
+				</div>
+				<div class="d-flex align-items-center justify-content-start gap-25px social">
+					<a href="" aria-label="instagram">
+						<figure>
+							<img
+								ngOptimizedImage
+								ngSrc="assets/images/instagram-icon.svg"
+								alt=""
+								width="32"
+								height="33"
+							/>
+						</figure>
+					</a>
+					<a href="" aria-label="linkedin">
+						<figure>
+							<img
+								ngOptimizedImage
+								ngSrc="assets/images/linkedin-icon.svg"
+								alt=""
+								width="25"
+								height="25"
+							/>
+						</figure>
+					</a>
+					<a href="" aria-label="x">
+						<figure>
+							<img
+								ngOptimizedImage
+								ngSrc="assets/images/x-icon.svg"
+								alt=""
+								width="32"
+								height="33"
+							/>
+						</figure>
+					</a>
+					<a href="" aria-label="aparat">
+						<figure>
+							<img
+								ngOptimizedImage
+								ngSrc="assets/images/aparat-icon.svg"
+								alt=""
+								width="32"
+								height="33"
+							/>
+						</figure>
+					</a>
+				</div>
+			</div>
+			@if (isDesktop) {
+				<div class="col-lg-5 footer-links">
+					<div class="">
+						<h4>درباره ما</h4>
+						<ul>
+							<li>
+								<a [routerLink]="routerLinksPath.aboutPage.about"><span>درباره دیجی‌پی</span></a>
+							</li>
+							<li>
+								<a [routerLink]="routerLinksPath.aboutPage.annualReport">
+									<span>گزارش سالانه</span>
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="routerLinksPath.aboutPage.careers"><span>فرصت‌های شغلی</span></a>
+							</li>
+							<li>
+								<a [routerLink]="routerLinksPath.aboutPage.blog">
+									<span>مجله اینترنتی دیجی‌پی</span>
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="routerLinksPath.aboutPage.technicalDocs">
+									<span>مستندات فنی</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h4>خدمات ما</h4>
+						<ul>
+							<li>
+								<a [routerLink]="routerLinksPath.specialServicesPage.specialFinancialServices">
+									<span>خدمات ویژه مالی</span>
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="routerLinksPath.shopsPage.shops"><span>فروشگاه‌ها</span></a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h4>خدمات مشتریان</h4>
+						<ul>
+							<li>
+								<a [routerLink]="routerLinksPath.faqPage.faq"><span>سوالات متداول</span></a>
+							</li>
+							<li>
+								<a [routerLink]="routerLinksPath.rulesPage.rules"><span>قوانین و مقررات</span></a>
+							</li>
+							<li>
+								<a [routerLink]="routerLinksPath.contactUsPage.contactUs">
+									<span>تماس با ما</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			}
+			@if (isMobile) {
+				<div class="accordion" id="accordionPanelsStayOpenExample">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+							<button
+								class="accordion-button"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseOne"
+								aria-expanded="true"
+								aria-controls="panelsStayOpen-collapseOne"
+							>
+								درباره ما
+							</button>
+						</h2>
+						<div
+							id="panelsStayOpen-collapseOne"
+							class="accordion-collapse collapse show"
+							aria-labelledby="panelsStayOpen-headingOne"
+						>
+							<div class="accordion-body">
+								<ul>
+									<li>
+										<a [routerLink]="routerLinksPath.aboutPage.about">
+											<span>درباره دیجی‌پی</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="routerLinksPath.aboutPage.annualReport">
+											<span>گزارش سالانه</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="routerLinksPath.aboutPage.careers">
+											<span>فرصت‌های شغلی</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="routerLinksPath.aboutPage.blog">
+											<span>مجله اینترنتی دیجی‌پی</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="routerLinksPath.aboutPage.technicalDocs">
+											<span>مستندات فنی</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseTwo"
+								aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseTwo"
+							>
+								خدمات ما
+							</button>
+						</h2>
+						<div
+							id="panelsStayOpen-collapseTwo"
+							class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingTwo"
+						>
+							<div class="accordion-body">
+								<ul>
+									<li>
+										<a [routerLink]="routerLinksPath.specialServicesPage.specialFinancialServices">
+											<span>خدمات ویژه مالی</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="routerLinksPath.shopsPage.shops"><span>فروشگاه‌ها</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseThree"
+								aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseThree"
+							>
+								خدمات مشتریان
+							</button>
+						</h2>
+						<div
+							id="panelsStayOpen-collapseThree"
+							class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingThree"
+						>
+							<div class="accordion-body">
+								<ul>
+									<li>
+										<a [routerLink]="routerLinksPath.faqPage.faq"><span>سوالات متداول</span></a>
+									</li>
+									<li>
+										<a [routerLink]="routerLinksPath.rulesPage.rules">
+											<span>قوانین و مقررات</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="routerLinksPath.contactUsPage.contactUs">
+											<span>تماس با ما</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
 </footer>
 
 <hr />
 
 <div class="container apps">
-  <div class="row">
-    <div class="col-lg-9 p-0">
-      <h4 class="">دیجی‌پی، پرداخت باهوش</h4>
-      <div class="my-15px mx-10px overflow-hidden">
-        <p class="fs-xs mb-0" appReadMore [maxLines]="2" [toggleButton]="btnReadMore">
-          دیجی‌پی یک پلتفرم جامع در حوزه خدمات مالی و پرداخت الکترونیک است که با ارائه راهکارهای
-          متنوع، مدیریت مالی را برای کاربران آسان‌تر و هوشمندتر می‌کند. از پرداخت‌های روزمره گرفته
-          تا خرید اقساطی، مدیریت ثروت و بیمه، همه و همه در دیجی‌پی یکجا در دسترس شما هستند. پرداخت
-          اعتباری؛ خرید راحت بدون دغدغه مالی با سرویس‌های اعتبار خرد و خرید اعتباری دیجی‌پی، بدون
-          نیاز به ضامن و چک، می‌توانید کالاها و خدمات مورد نیاز خود را خریداری کنید و هزینه را
-          به‌صورت اقساطی بپردازید. این سرویس امکان برنامه‌ریزی مالی بهتر را برای کاربران فراهم کرده
-          و خرید را آسان‌تر می‌کند. درگاه‌های پرداخت؛ پذیرش امن و سریع تراکنش‌ها دیجی‌پی با ارائه
-          درگاه‌های پرداخت آنلاین، تسویه سریع و امنیت بالا را برای کسب‌وکارها و مشتریان فراهم
-          می‌کند. با درگاه پرداخت دیجی‌پی، می‌توانید پرداخت‌های اینترنتی را با سرعت و اطمینان انجام
-          دهید و تجربه‌ای مطمئن از خرید آنلاین داشته باشید. خرید حضوری با اعتبار دیجی پی شما
-          میتوانید با اعتبار دیجی پی، از فروشگاه های حضوری در مراکز خریدی مانند اپال سعادت آباد،
-          نیایش مال و هدیش مال خرید کنید. پرداخت قبوض، خرید شارژ و بسته اینترنتی با دیجی‌پی دیگر
-          نیازی به مراجعه به چندین پلتفرم برای پرداخت قبوض و خرید شارژ ندارید. تنها با چند کلیک
-          می‌توانید قبض‌های خود را پرداخت کنید، سیم‌کارت خود را شارژ کنید یا بسته اینترنتی بخرید.
-          این سرویس به شما کمک می‌کند تا همیشه به‌صورت آنلاین و بدون وقفه در ارتباط باشید. بیمه
-          تجهیزات الکترونیک و بیمه شخص ثالث حفاظت از دارایی‌های دیجیتال و وسایل نقلیه یکی از
-          دغدغه‌های مهم کاربران است. دیجی‌پی با ارائه بیمه تجهیزات الکترونیک مانند: بیمه موبایل و
-          سایر وسایل دیجیتال شما را در برابر آسیب‌ها و حوادث تحت پوشش قرار می‌دهد. همچنین، با بیمه
-          شخص ثالث، می‌توانید خودرو خود را به‌راحتی و با بهترین قیمت بیمه کنید. مدیریت ثروت؛
-          سرمایه‌گذاری هوشمند برای آینده‌ای مطمئن دیجی‌پی تنها یک ابزار پرداخت نیست، بلکه یک همراه
-          مالی برای رشد سرمایه شماست. با سرویس مدیریت ثروت، می‌توانید به روش‌های نوین سرمایه‌گذاری
-          دسترسی داشته باشید و با تصمیم‌های هوشمندانه، ارزش دارایی‌های خود را افزایش دهید. استعلام و
-          پرداخت جریمه و عوارض جاده‌ای با دیجی‌پی، دیگر نیازی به مراجعه به سامانه‌های مختلف برای
-          استعلام و پرداخت جریمه‌های رانندگی یا عوارض جاده‌ای ندارید. این سرویس به شما امکان می‌دهد
-          که تنها با چند کلیک، جریمه‌ها و عوارض خود را بررسی و پرداخت کنید. دیجی‌پی، راهکاری هوشمند
-          برای مدیریت مالی ما در دیجی‌پی تلاش می‌کنیم تا تمامی نیازهای مالی شما را در یک بستر
-          یکپارچه برطرف کنیم. از خرید روزمره گرفته تا سرمایه‌گذاری و بیمه، همه چیز در اپلیکیشن
-          دیجی‌پی در دسترس شماست.
-        </p>
+	<div class="row">
+		<div class="col-lg-9 p-0">
+			<h4 class="">دیجی‌پی، پرداخت باهوش</h4>
+			<div class="my-15px mx-10px overflow-hidden">
+				<p class="fs-xs mb-0" appReadMore [maxLines]="2" [toggleButton]="btnReadMore">
+					دیجی‌پی یک پلتفرم جامع در حوزه خدمات مالی و پرداخت الکترونیک است که با ارائه راهکارهای
+					متنوع، مدیریت مالی را برای کاربران آسان‌تر و هوشمندتر می‌کند. از پرداخت‌های روزمره گرفته
+					تا خرید اقساطی، مدیریت ثروت و بیمه، همه و همه در دیجی‌پی یکجا در دسترس شما هستند. پرداخت
+					اعتباری؛ خرید راحت بدون دغدغه مالی با سرویس‌های اعتبار خرد و خرید اعتباری دیجی‌پی، بدون
+					نیاز به ضامن و چک، می‌توانید کالاها و خدمات مورد نیاز خود را خریداری کنید و هزینه را
+					به‌صورت اقساطی بپردازید. این سرویس امکان برنامه‌ریزی مالی بهتر را برای کاربران فراهم کرده
+					و خرید را آسان‌تر می‌کند. درگاه‌های پرداخت؛ پذیرش امن و سریع تراکنش‌ها دیجی‌پی با ارائه
+					درگاه‌های پرداخت آنلاین، تسویه سریع و امنیت بالا را برای کسب‌وکارها و مشتریان فراهم
+					می‌کند. با درگاه پرداخت دیجی‌پی، می‌توانید پرداخت‌های اینترنتی را با سرعت و اطمینان انجام
+					دهید و تجربه‌ای مطمئن از خرید آنلاین داشته باشید. خرید حضوری با اعتبار دیجی پی شما
+					میتوانید با اعتبار دیجی پی، از فروشگاه های حضوری در مراکز خریدی مانند اپال سعادت آباد،
+					نیایش مال و هدیش مال خرید کنید. پرداخت قبوض، خرید شارژ و بسته اینترنتی با دیجی‌پی دیگر
+					نیازی به مراجعه به چندین پلتفرم برای پرداخت قبوض و خرید شارژ ندارید. تنها با چند کلیک
+					می‌توانید قبض‌های خود را پرداخت کنید، سیم‌کارت خود را شارژ کنید یا بسته اینترنتی بخرید.
+					این سرویس به شما کمک می‌کند تا همیشه به‌صورت آنلاین و بدون وقفه در ارتباط باشید. بیمه
+					تجهیزات الکترونیک و بیمه شخص ثالث حفاظت از دارایی‌های دیجیتال و وسایل نقلیه یکی از
+					دغدغه‌های مهم کاربران است. دیجی‌پی با ارائه بیمه تجهیزات الکترونیک مانند: بیمه موبایل و
+					سایر وسایل دیجیتال شما را در برابر آسیب‌ها و حوادث تحت پوشش قرار می‌دهد. همچنین، با بیمه
+					شخص ثالث، می‌توانید خودرو خود را به‌راحتی و با بهترین قیمت بیمه کنید. مدیریت ثروت؛
+					سرمایه‌گذاری هوشمند برای آینده‌ای مطمئن دیجی‌پی تنها یک ابزار پرداخت نیست، بلکه یک همراه
+					مالی برای رشد سرمایه شماست. با سرویس مدیریت ثروت، می‌توانید به روش‌های نوین سرمایه‌گذاری
+					دسترسی داشته باشید و با تصمیم‌های هوشمندانه، ارزش دارایی‌های خود را افزایش دهید. استعلام و
+					پرداخت جریمه و عوارض جاده‌ای با دیجی‌پی، دیگر نیازی به مراجعه به سامانه‌های مختلف برای
+					استعلام و پرداخت جریمه‌های رانندگی یا عوارض جاده‌ای ندارید. این سرویس به شما امکان می‌دهد
+					که تنها با چند کلیک، جریمه‌ها و عوارض خود را بررسی و پرداخت کنید. دیجی‌پی، راهکاری هوشمند
+					برای مدیریت مالی ما در دیجی‌پی تلاش می‌کنیم تا تمامی نیازهای مالی شما را در یک بستر
+					یکپارچه برطرف کنیم. از خرید روزمره گرفته تا سرمایه‌گذاری و بیمه، همه چیز در اپلیکیشن
+					دیجی‌پی در دسترس شماست.
+				</p>
 
-        <button #btnReadMore class="fw-400 fs-xs">بیشتر...</button>
-      </div>
-    </div>
-    <div class="col-lg-3 d-flex gap-20px justify-content-end p-0">
-      <div class="d-flex flex-lg-column align-items-center justify-content-center application">
-        <a href="" aria-label="Google Play Store">
-          <figure>
-            <img ngOptimizedImage ngSrc="assets/images/gp-text.svg" alt="" width="57" height="19" />
-            <img ngOptimizedImage ngSrc="assets/images/gp-icon.svg" alt="" width="17" height="19" />
-          </figure>
-        </a>
-        <a href="" aria-label="کافه بازار">
-          <figure>
-            <img
-              ngOptimizedImage
-              ngSrc="assets/images/bazaar-text.svg"
-              alt=""
-              width="53"
-              height="18"
-            />
-            <img
-              ngOptimizedImage
-              ngSrc="assets/images/bazaar-icon.svg"
-              alt=""
-              width="17"
-              height="18"
-            />
-          </figure>
-        </a>
-        <a href="" aria-label="وب اپلیکیشن">
-          <figure>
-            <img ngOptimizedImage ngSrc="assets/images/dp-text.svg" alt="" width="47" height="20" />
-            <img ngOptimizedImage ngSrc="assets/images/dp-icon.svg" alt="" width="10" height="20" />
-          </figure>
-        </a>
-      </div>
-      <div class="d-flex flex-column align-items-center justify-content-center qrcode">
-        <span class="text-center">دانلود اپلیکیشن</span>
-        <figure>
-          <img
-            ngOptimizedImage
-            ngSrc="assets/images/qr-code.png"
-            alt="qrcode"
-            width="92"
-            height="92"
-            class="mt-12px"
-          />
-        </figure>
-      </div>
-    </div>
-  </div>
+				<button #btnReadMore class="fw-400 fs-xs">بیشتر...</button>
+			</div>
+		</div>
+		<div class="col-lg-3 d-flex gap-20px justify-content-end p-0">
+			<div class="d-flex flex-lg-column align-items-center justify-content-center application">
+				<a href="" aria-label="Google Play Store">
+					<figure>
+						<img ngOptimizedImage ngSrc="assets/images/gp-text.svg" alt="" width="57" height="19" />
+						<img ngOptimizedImage ngSrc="assets/images/gp-icon.svg" alt="" width="17" height="19" />
+					</figure>
+				</a>
+				<a href="" aria-label="کافه بازار">
+					<figure>
+						<img
+							ngOptimizedImage
+							ngSrc="assets/images/bazaar-text.svg"
+							alt=""
+							width="53"
+							height="18"
+						/>
+						<img
+							ngOptimizedImage
+							ngSrc="assets/images/bazaar-icon.svg"
+							alt=""
+							width="17"
+							height="18"
+						/>
+					</figure>
+				</a>
+				<a href="" aria-label="وب اپلیکیشن">
+					<figure>
+						<img ngOptimizedImage ngSrc="assets/images/dp-text.svg" alt="" width="47" height="20" />
+						<img ngOptimizedImage ngSrc="assets/images/dp-icon.svg" alt="" width="10" height="20" />
+					</figure>
+				</a>
+			</div>
+			<div class="d-flex flex-column align-items-center justify-content-center qrcode">
+				<span class="text-center">دانلود اپلیکیشن</span>
+				<figure>
+					<img
+						ngOptimizedImage
+						ngSrc="assets/images/qr-code.png"
+						alt="qrcode"
+						width="92"
+						height="92"
+						class="mt-12px"
+					/>
+				</figure>
+			</div>
+		</div>
+	</div>
 </div>
 
 <hr />
 
 <div class="container pb-30px sub-footer">
-  <div class="row">
-    <div class="col-lg-8 p-0 d-flex align-items-end">
-      <p class="fs-xs m-0">
-        © کلیه حقوق این سایت متعلق به شرکت نوآوران پرداخت مجازی ایرانیان (دیجی‌پی) است.
-      </p>
-    </div>
-    <div class="col-lg-4 p-0 logos">
-      <a href="" aria-label="ics Icon">
-        <figure>
-          <img
-            ngOptimizedImage
-            ngSrc="assets/images/ics-logo.svg"
-            alt="logo-ics"
-            width="40"
-            height="40"
-          />
-        </figure>
-      </a>
+	<div class="row">
+		<div class="col-lg-8 p-0 d-flex align-items-end">
+			<p class="fs-xs m-0">
+				© کلیه حقوق این سایت متعلق به شرکت نوآوران پرداخت مجازی ایرانیان (دیجی‌پی) است.
+			</p>
+		</div>
+		<div class="col-lg-4 p-0 logos">
+			<a href="" aria-label="ics Icon">
+				<figure>
+					<img
+						ngOptimizedImage
+						ngSrc="assets/images/ics-logo.svg"
+						alt="logo-ics"
+						width="40"
+						height="40"
+					/>
+				</figure>
+			</a>
 
-      <a href="" aria-label="ettehadie Icon">
-        <figure>
-          <img
-            ngOptimizedImage
-            ngSrc="assets/images/ettehadie.svg"
-            alt="ettehadie"
-            width="40"
-            height="40"
-          />
-        </figure>
-      </a>
-      <a href="" aria-label="samandehi Icon">
-        <figure>
-          <img
-            ngOptimizedImage
-            ngSrc="assets/images/logo-samandehi.png"
-            alt="samandehi"
-            width="40"
-            height="40"
-          />
-        </figure>
-      </a>
-      <a href="" aria-label="saramad Icon">
-        <figure>
-          <img
-            ngOptimizedImage
-            ngSrc="assets/images/saramad.svg"
-            alt="saramad"
-            width="40"
-            height="40"
-          />
-        </figure>
-      </a>
-      <a href="" aria-label="enamad Icon">
-        <figure>
-          <img
-            ngOptimizedImage
-            ngSrc="assets/images/enamad.png"
-            alt="enamad"
-            width="40"
-            height="40"
-          />
-        </figure>
-      </a>
-    </div>
-  </div>
+			<a href="" aria-label="ettehadie Icon">
+				<figure>
+					<img
+						ngOptimizedImage
+						ngSrc="assets/images/ettehadie.svg"
+						alt="ettehadie"
+						width="40"
+						height="40"
+					/>
+				</figure>
+			</a>
+			<a href="" aria-label="samandehi Icon">
+				<figure>
+					<img
+						ngOptimizedImage
+						ngSrc="assets/images/logo-samandehi.png"
+						alt="samandehi"
+						width="40"
+						height="40"
+					/>
+				</figure>
+			</a>
+			<a href="" aria-label="saramad Icon">
+				<figure>
+					<img
+						ngOptimizedImage
+						ngSrc="assets/images/saramad.svg"
+						alt="saramad"
+						width="40"
+						height="40"
+					/>
+				</figure>
+			</a>
+			<a href="" aria-label="enamad Icon">
+				<figure>
+					<img
+						ngOptimizedImage
+						ngSrc="assets/images/enamad.png"
+						alt="enamad"
+						width="40"
+						height="40"
+					/>
+				</figure>
+			</a>
+		</div>
+	</div>
 </div>

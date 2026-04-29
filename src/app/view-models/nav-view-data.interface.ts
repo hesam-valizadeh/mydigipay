@@ -1,3 +1,3 @@
 export interface INavViewDataInterface {
-  home?: string;
+	home?: string;
 }

@@ -1,14 +1,14 @@
 <div class="form-floating mb-3">
-  <input
-    placeholder="{{ placeholder }}"
-    type="text"
-    class="form-control"
-    [value]="value"
-    (input)="onInput($event)"
-    (blur)="handleBlur()"
-  />
-  <label for="phone-number">{{ label }}</label>
-  @if (error && touched) {
-    <span class="text-danger fs-12px">{{ error }}</span>
-  }
+	<input
+		placeholder="{{ placeholder }}"
+		type="text"
+		class="form-control"
+		[value]="value"
+		(input)="onInput($event)"
+		(blur)="handleBlur()"
+	/>
+	<label for="phone-number">{{ label }}</label>
+	@if (error && touched) {
+		<span class="text-danger fs-12px">{{ error }}</span>
+	}
 </div>

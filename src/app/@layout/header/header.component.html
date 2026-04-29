@@ -1,454 +1,454 @@
 <header class="pb-lg-16px pt-lg-42px container">
-  <div class="row-lg d-flex align-items-center">
-    <div class="col-lg-5 col-12 d-flex align-items-center justify-content-between">
-      <a class="" [routerLink]="''">
-        <img
-          ngOptimizedImage
-          ngSrc="assets/images/logo.svg"
-          alt="logo"
-          width="78"
-          height="19"
-          class="me-lg-8px me-0"
-        />
-      </a>
-      <div class="d-lg-none d-inline-block">
-        <button
-          class="hamburger-btn"
-          aria-label="منو اصلی"
-          tabindex="0"
-          (click)="toggleSubmenu()"
-          (keydown.enter)="toggleSubmenu()"
-          (keydown.space)="toggleSubmenu(); $event.preventDefault()"
-        >
-          <i class="icon icon-hamburger-menu-linear text-dark"></i>
-        </button>
-      </div>
-    </div>
-    <div class="col-lg-auto d-lg-block d-none p-0">
-      <menu class="p-0">
-        <button class="menu_link">
-          <span>وام و اعتبار</span>
-          <div class="submenu">
-            <a class="submenu_link" [routerLink]="routerLinksPath.loanPage.loanProduct">
-              <i class="icon icon-credit-linear"></i>
-              <span>وام خرید کالا</span>
-            </a>
-            <a class="submenu_link" [routerLink]="routerLinksPath.loanPage.bnpl">
-              <i class="icon icon-bnpl-linear"></i>
-              <span>الان بخر بعدا پرداخت کن</span>
-            </a>
-            <a class="submenu_link" [routerLink]="routerLinksPath.loanPage.digikalaInstallment">
-              <i>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="Logo Frame">
-                    <path
-                      id="Vector"
-                      d="M2.21974 11.049C1.86054 10.6139 1.95313 9.96163 2.41409 9.63763L4.02338 8.50735C4.43393 8.21861 4.99081 8.29808 5.31781 8.67949C6.98386 10.6234 9.42233 11.761 11.9999 11.761C14.5777 11.761 17.0162 10.6234 18.6821 8.67949C19.0091 8.29808 19.5659 8.21861 19.9766 8.50735L21.5858 9.63763C22.0469 9.96163 22.1395 10.6139 21.7802 11.049C19.3778 13.9578 15.7937 15.6666 11.9999 15.6666C8.20628 15.6666 4.62226 13.9578 2.21974 11.049Z"
-                    ></path>
-                  </g>
-                </svg>
-              </i>
-              <span>خرید اقساطی از دیجی‌کالا</span>
-            </a>
-          </div>
-        </button>
-        <button class="menu_link">
-          <span>بیمه</span>
-          <div class="submenu">
-            <a class="submenu_link" [routerLink]="routerLinksPath.insurancePage.thirdParty">
-              <i class="icon icon-car-linear"></i>
-              <span>بیمه شخص ثالث</span>
-            </a>
-            <a
-              class="submenu_link"
-              [routerLink]="routerLinksPath.insurancePage.electronicEquipment"
-            >
-              <i class="icon icon-digital-device-linear"></i>
-              <span>بیمه تجهیزات الکترونیک</span>
-            </a>
-          </div>
-        </button>
-        <a class="menu_link" [routerLink]="routerLinksPath.wealthPage.wealth">
-          <span>مدیریت سرمایه</span>
-        </a>
-        <button class="menu_link">
-          <span>خدمات کسب و کارها</span>
-          <div class="submenu">
-            <a
-              class="submenu_link"
-              [routerLink]="routerLinksPath.businessServicesPage.creditPaymentGateway"
-            >
-              <i class="icon icon-bank-linear"></i>
-              <span>درگاه پرداخت اعتباری</span>
-            </a>
-            <a
-              class="submenu_link"
-              [routerLink]="routerLinksPath.businessServicesPage.merchantLoan"
-            >
-              <i class="icon icon-credit-linear"></i>
-              <span>وام فروشندگان</span>
-            </a>
-            <a
-              class="submenu_link"
-              [routerLink]="routerLinksPath.businessServicesPage.comprehensivePaymentGateway"
-            >
-              <i class="icon icon-bank-linear"></i>
-              <span>درگاه پرداخت جامع</span>
-            </a>
-            <a
-              class="submenu_link"
-              [routerLink]="routerLinksPath.businessServicesPage.earlySettlement"
-            >
-              <i class="icon icon-cash-out-linear"></i>
-              <span>تسویه زودهنگام</span>
-            </a>
-          </div>
-        </button>
-        <button class="menu_link">
-          <span>خدمات سازمانی</span>
-          <div class="submenu">
-            <a
-              class="submenu_link"
-              [routerLink]="routerLinksPath.organizationalServicesPage.organizationalInstallment"
-            >
-              <i>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="Logo Frame">
-                    <path
-                      id="Vector"
-                      d="M2.21974 11.049C1.86054 10.6139 1.95313 9.96163 2.41409 9.63763L4.02338 8.50735C4.43393 8.21861 4.99081 8.29808 5.31781 8.67949C6.98386 10.6234 9.42233 11.761 11.9999 11.761C14.5777 11.761 17.0162 10.6234 18.6821 8.67949C19.0091 8.29808 19.5659 8.21861 19.9766 8.50735L21.5858 9.63763C22.0469 9.96163 22.1395 10.6139 21.7802 11.049C19.3778 13.9578 15.7937 15.6666 11.9999 15.6666C8.20628 15.6666 4.62226 13.9578 2.21974 11.049Z"
-                    ></path>
-                  </g>
-                </svg>
-              </i>
-              <span>خرید اقساطی از دیجی‌کالا</span>
-            </a>
-            <a
-              class="submenu_link"
-              [routerLink]="routerLinksPath.organizationalServicesPage.organizationalBnpl"
-            >
-              <i class="icon icon-bnpl-linear"></i>
-              <span>الان بخر بعدا پرداخت کن</span>
-            </a>
-          </div>
-        </button>
-      </menu>
-    </div>
-    <div class="col-lg-auto d-lg-block d-none p-0">
-      <a class="login" [routerLink]="routerLinksPath.loginPage.login">
-        <img ngOptimizedImage ngSrc="assets/icons/person.svg" alt="logo" width="20" height="20" />
-        <span>ورود/ثبت نام</span>
-      </a>
-    </div>
-  </div>
+	<div class="row-lg d-flex align-items-center">
+		<div class="col-lg-5 col-12 d-flex align-items-center justify-content-between">
+			<a class="" [routerLink]="''">
+				<img
+					ngOptimizedImage
+					ngSrc="assets/images/logo.svg"
+					alt="logo"
+					width="78"
+					height="19"
+					class="me-lg-8px me-0"
+				/>
+			</a>
+			<div class="d-lg-none d-inline-block">
+				<button
+					class="hamburger-btn"
+					aria-label="منو اصلی"
+					tabindex="0"
+					(click)="toggleSubmenu()"
+					(keydown.enter)="toggleSubmenu()"
+					(keydown.space)="toggleSubmenu(); $event.preventDefault()"
+				>
+					<i class="icon icon-hamburger-menu-linear text-dark"></i>
+				</button>
+			</div>
+		</div>
+		<div class="col-lg-auto d-lg-block d-none p-0">
+			<menu class="p-0">
+				<button class="menu_link">
+					<span>وام و اعتبار</span>
+					<div class="submenu">
+						<a class="submenu_link" [routerLink]="routerLinksPath.loanPage.loanProduct">
+							<i class="icon icon-credit-linear"></i>
+							<span>وام خرید کالا</span>
+						</a>
+						<a class="submenu_link" [routerLink]="routerLinksPath.loanPage.bnpl">
+							<i class="icon icon-bnpl-linear"></i>
+							<span>الان بخر بعدا پرداخت کن</span>
+						</a>
+						<a class="submenu_link" [routerLink]="routerLinksPath.loanPage.digikalaInstallment">
+							<i>
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g id="Logo Frame">
+										<path
+											id="Vector"
+											d="M2.21974 11.049C1.86054 10.6139 1.95313 9.96163 2.41409 9.63763L4.02338 8.50735C4.43393 8.21861 4.99081 8.29808 5.31781 8.67949C6.98386 10.6234 9.42233 11.761 11.9999 11.761C14.5777 11.761 17.0162 10.6234 18.6821 8.67949C19.0091 8.29808 19.5659 8.21861 19.9766 8.50735L21.5858 9.63763C22.0469 9.96163 22.1395 10.6139 21.7802 11.049C19.3778 13.9578 15.7937 15.6666 11.9999 15.6666C8.20628 15.6666 4.62226 13.9578 2.21974 11.049Z"
+										></path>
+									</g>
+								</svg>
+							</i>
+							<span>خرید اقساطی از دیجی‌کالا</span>
+						</a>
+					</div>
+				</button>
+				<button class="menu_link">
+					<span>بیمه</span>
+					<div class="submenu">
+						<a class="submenu_link" [routerLink]="routerLinksPath.insurancePage.thirdParty">
+							<i class="icon icon-car-linear"></i>
+							<span>بیمه شخص ثالث</span>
+						</a>
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.insurancePage.electronicEquipment"
+						>
+							<i class="icon icon-digital-device-linear"></i>
+							<span>بیمه تجهیزات الکترونیک</span>
+						</a>
+					</div>
+				</button>
+				<a class="menu_link" [routerLink]="routerLinksPath.wealthPage.wealth">
+					<span>مدیریت سرمایه</span>
+				</a>
+				<button class="menu_link">
+					<span>خدمات کسب و کارها</span>
+					<div class="submenu">
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.businessServicesPage.creditPaymentGateway"
+						>
+							<i class="icon icon-bank-linear"></i>
+							<span>درگاه پرداخت اعتباری</span>
+						</a>
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.businessServicesPage.merchantLoan"
+						>
+							<i class="icon icon-credit-linear"></i>
+							<span>وام فروشندگان</span>
+						</a>
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.businessServicesPage.comprehensivePaymentGateway"
+						>
+							<i class="icon icon-bank-linear"></i>
+							<span>درگاه پرداخت جامع</span>
+						</a>
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.businessServicesPage.earlySettlement"
+						>
+							<i class="icon icon-cash-out-linear"></i>
+							<span>تسویه زودهنگام</span>
+						</a>
+					</div>
+				</button>
+				<button class="menu_link">
+					<span>خدمات سازمانی</span>
+					<div class="submenu">
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.organizationalServicesPage.organizationalInstallment"
+						>
+							<i>
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g id="Logo Frame">
+										<path
+											id="Vector"
+											d="M2.21974 11.049C1.86054 10.6139 1.95313 9.96163 2.41409 9.63763L4.02338 8.50735C4.43393 8.21861 4.99081 8.29808 5.31781 8.67949C6.98386 10.6234 9.42233 11.761 11.9999 11.761C14.5777 11.761 17.0162 10.6234 18.6821 8.67949C19.0091 8.29808 19.5659 8.21861 19.9766 8.50735L21.5858 9.63763C22.0469 9.96163 22.1395 10.6139 21.7802 11.049C19.3778 13.9578 15.7937 15.6666 11.9999 15.6666C8.20628 15.6666 4.62226 13.9578 2.21974 11.049Z"
+										></path>
+									</g>
+								</svg>
+							</i>
+							<span>خرید اقساطی از دیجی‌کالا</span>
+						</a>
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.organizationalServicesPage.organizationalBnpl"
+						>
+							<i class="icon icon-bnpl-linear"></i>
+							<span>الان بخر بعدا پرداخت کن</span>
+						</a>
+					</div>
+				</button>
+			</menu>
+		</div>
+		<div class="col-lg-auto d-lg-block d-none p-0">
+			<a class="login" [routerLink]="routerLinksPath.loginPage.login">
+				<img ngOptimizedImage ngSrc="assets/icons/person.svg" alt="logo" width="20" height="20" />
+				<span>ورود/ثبت نام</span>
+			</a>
+		</div>
+	</div>
 </header>
 
 @if (isMobile && showSearch()) {
-  <div class="search-bar">
-    <app-search-box></app-search-box>
-  </div>
+	<div class="search-bar">
+		<app-search-box></app-search-box>
+	</div>
 }
 
 <nav class="navbar justify-content-start container d-lg-flex d-none">
-  <a
-    routerLinkActive="active"
-    class="nav-item mx-24px d-flex gap-5px"
-    [routerLink]="''"
-    [routerLinkActiveOptions]="{ exact: true }"
-  >
-    <span class="icon-container">
-      <i class="icon icon-home-bold"></i>
-    </span>
-    <span>خانه</span>
-  </a>
-  <a
-    routerLinkActive="active"
-    class="nav-item mx-24px d-flex gap-5px"
-    [routerLink]="routerLinksPath.servicesPage.services"
-    [routerLinkActiveOptions]="{ exact: true }"
-  >
-    <span class="icon-container">
-      <i class="icon icon-more-bold"></i>
-    </span>
-    <span>خدمات</span>
-  </a>
-  <a
-    routerLinkActive="active"
-    class="nav-item mx-24px d-flex gap-5px"
-    [routerLink]="routerLinksPath.shopsPage.shops"
-    [routerLinkActiveOptions]="{ exact: true }"
-  >
-    <span class="icon-container position-relative">
-      <i class="icon icon-bag-bold"></i>
-      <i class="icon icon-discount-bold position-absolute"></i>
-    </span>
-    <span>فروشگاه‌ها</span>
-  </a>
-  <a
-    routerLinkActive="active"
-    class="nav-item mx-24px d-flex gap-5px"
-    [routerLink]="'hub/' + routerLinksPath.hubPage.transactions"
-    [routerLinkActiveOptions]="{ exact: true }"
-  >
-    <span class="icon-container">
-      <i class="icon icon-card-to-card-bold"></i>
-    </span>
-    <span>پرداخت</span>
-  </a>
-  @if (showSearch()) {
-    <app-search-box class="me-auto"></app-search-box>
-  }
+	<a
+		routerLinkActive="active"
+		class="nav-item mx-24px d-flex gap-5px"
+		[routerLink]="''"
+		[routerLinkActiveOptions]="{ exact: true }"
+	>
+		<span class="icon-container">
+			<i class="icon icon-home-bold"></i>
+		</span>
+		<span>خانه</span>
+	</a>
+	<a
+		routerLinkActive="active"
+		class="nav-item mx-24px d-flex gap-5px"
+		[routerLink]="routerLinksPath.servicesPage.services"
+		[routerLinkActiveOptions]="{ exact: true }"
+	>
+		<span class="icon-container">
+			<i class="icon icon-more-bold"></i>
+		</span>
+		<span>خدمات</span>
+	</a>
+	<a
+		routerLinkActive="active"
+		class="nav-item mx-24px d-flex gap-5px"
+		[routerLink]="routerLinksPath.shopsPage.shops"
+		[routerLinkActiveOptions]="{ exact: true }"
+	>
+		<span class="icon-container position-relative">
+			<i class="icon icon-bag-bold"></i>
+			<i class="icon icon-discount-bold position-absolute"></i>
+		</span>
+		<span>فروشگاه‌ها</span>
+	</a>
+	<a
+		routerLinkActive="active"
+		class="nav-item mx-24px d-flex gap-5px"
+		[routerLink]="'hub/' + routerLinksPath.hubPage.transactions"
+		[routerLinkActiveOptions]="{ exact: true }"
+	>
+		<span class="icon-container">
+			<i class="icon icon-card-to-card-bold"></i>
+		</span>
+		<span>پرداخت</span>
+	</a>
+	@if (showSearch()) {
+		<app-search-box class="me-auto"></app-search-box>
+	}
 </nav>
 
 @if (isDesktop) {
-  <header
-    class="header-sticky"
-    [class.visible]="isStickyHeaderVisible()"
-    [class.hidden]="!isStickyHeaderVisible()"
-  >
-    <nav class="navbar justify-content-start container d-lg-flex d-none mt-10px">
-      <a class="nav-item mx-24px d-flex gap-5px active" [routerLink]="''">
-        <img ngOptimizedImage ngSrc="assets/images/dp-logo.svg" alt="" width="16" height="22" />
-      </a>
-      <a class="nav-item mx-24px d-flex gap-5px active" [routerLink]="''">
-        <span class="icon-container">
-          <i class="icon icon-home-bold"></i>
-        </span>
-        <span>خانه</span>
-      </a>
-      <a
-        class="nav-item mx-24px d-flex gap-5px"
-        [routerLink]="routerLinksPath.servicesPage.services"
-      >
-        <span class="icon-container">
-          <i class="icon icon-more-bold"></i>
-        </span>
-        <span>خدمات</span>
-      </a>
-      <a class="nav-item mx-24px d-flex gap-5px" [routerLink]="routerLinksPath.shopsPage.shops">
-        <span class="icon-container position-relative">
-          <i class="icon icon-bag-bold"></i>
-          <i class="icon icon-discount-bold position-absolute"></i>
-        </span>
-        <span>فروشگاه‌ها</span>
-      </a>
-      <a
-        class="nav-item mx-24px d-flex gap-5px"
-        [routerLink]="'hub/' + routerLinksPath.hubPage.transactions"
-      >
-        <span class="icon-container">
-          <i class="icon icon-card-to-card-bold"></i>
-        </span>
-        <span>پرداخت</span>
-      </a>
-      <div class="me-auto d-flex align-items-center flex-wrap">
-        @if (showSearch()) {
-          <button class="header-sticky_search" (click)="toggleSearch()">
-            <i class="icon icon-search-bold fs-20px"></i>
-          </button>
-          <div
-            class="search-bar"
-            [class.search-visible]="isToggleSearch()"
-            [class.search-hidden]="!isToggleSearch()"
-          >
-            <app-search-box></app-search-box>
-          </div>
-        }
+	<header
+		class="header-sticky"
+		[class.visible]="isStickyHeaderVisible()"
+		[class.hidden]="!isStickyHeaderVisible()"
+	>
+		<nav class="navbar justify-content-start container d-lg-flex d-none mt-10px">
+			<a class="nav-item mx-24px d-flex gap-5px active" [routerLink]="''">
+				<img ngOptimizedImage ngSrc="assets/images/dp-logo.svg" alt="" width="16" height="22" />
+			</a>
+			<a class="nav-item mx-24px d-flex gap-5px active" [routerLink]="''">
+				<span class="icon-container">
+					<i class="icon icon-home-bold"></i>
+				</span>
+				<span>خانه</span>
+			</a>
+			<a
+				class="nav-item mx-24px d-flex gap-5px"
+				[routerLink]="routerLinksPath.servicesPage.services"
+			>
+				<span class="icon-container">
+					<i class="icon icon-more-bold"></i>
+				</span>
+				<span>خدمات</span>
+			</a>
+			<a class="nav-item mx-24px d-flex gap-5px" [routerLink]="routerLinksPath.shopsPage.shops">
+				<span class="icon-container position-relative">
+					<i class="icon icon-bag-bold"></i>
+					<i class="icon icon-discount-bold position-absolute"></i>
+				</span>
+				<span>فروشگاه‌ها</span>
+			</a>
+			<a
+				class="nav-item mx-24px d-flex gap-5px"
+				[routerLink]="'hub/' + routerLinksPath.hubPage.transactions"
+			>
+				<span class="icon-container">
+					<i class="icon icon-card-to-card-bold"></i>
+				</span>
+				<span>پرداخت</span>
+			</a>
+			<div class="me-auto d-flex align-items-center flex-wrap">
+				@if (showSearch()) {
+					<button class="header-sticky_search" (click)="toggleSearch()">
+						<i class="icon icon-search-bold fs-20px"></i>
+					</button>
+					<div
+						class="search-bar"
+						[class.search-visible]="isToggleSearch()"
+						[class.search-hidden]="!isToggleSearch()"
+					>
+						<app-search-box></app-search-box>
+					</div>
+				}
 
-        <button class="header-sticky_login" [routerLink]="routerLinksPath.loginPage.login">
-          <i class="icon icon-person-bold fs-20px"></i>
-        </button>
-      </div>
-    </nav>
-  </header>
+				<button class="header-sticky_login" [routerLink]="routerLinksPath.loginPage.login">
+					<i class="icon icon-person-bold fs-20px"></i>
+				</button>
+			</div>
+		</nav>
+	</header>
 }
 
 @if (isSubmenuOpen()) {
-  <div class="mobile-submenu">
-    <div class="d-flex flex-column align-items-start pe-10">
-      <button
-        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-        aria-controls="submenu-games-1"
-        [attr.aria-expanded]="submenuGamesOpen"
-        (click)="toggleSubmenuGames()"
-        (keydown.enter)="toggleSubmenuGames()"
-        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
-      >
-        <div class="d-flex justify-content-between w-100">
-          <span class="fs-12px fw-500">
-            {{ data.loansAndCredits }}
-          </span>
-          <i class="icon icon-arrow-2-down-linear fs-20px"></i>
-        </div>
+	<div class="mobile-submenu">
+		<div class="d-flex flex-column align-items-start pe-10">
+			<button
+				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+				aria-controls="submenu-games-1"
+				[attr.aria-expanded]="submenuGamesOpen"
+				(click)="toggleSubmenuGames()"
+				(keydown.enter)="toggleSubmenuGames()"
+				(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+			>
+				<div class="d-flex justify-content-between w-100">
+					<span class="fs-12px fw-500">
+						{{ data.loansAndCredits }}
+					</span>
+					<i class="icon icon-arrow-2-down-linear fs-20px"></i>
+				</div>
 
-        @if (submenuGamesOpen) {
-          <div class="w-100 d-flex flex-column gap-5px submenu-games">
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.loanPage.loanProduct"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.credit }}</span>
-            </a>
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.loanPage.bnpl"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.bnpl }}</span>
-            </a>
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.loanPage.digikalaInstallment"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.merchants }}</span>
-            </a>
-          </div>
-        }
-      </button>
+				@if (submenuGamesOpen) {
+					<div class="w-100 d-flex flex-column gap-5px submenu-games">
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.loanPage.loanProduct"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.credit }}</span>
+						</a>
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.loanPage.bnpl"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.bnpl }}</span>
+						</a>
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.loanPage.digikalaInstallment"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.merchants }}</span>
+						</a>
+					</div>
+				}
+			</button>
 
-      <button
-        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-        aria-controls="submenu-games-2"
-        [attr.aria-expanded]="submenuGamesOpen"
-        (click)="toggleSubmenuGames()"
-        (keydown.enter)="toggleSubmenuGames()"
-        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
-      >
-        <div class="d-flex justify-content-between w-100">
-          <span class="fs-12px fw-500">
-            {{ data.insurance }}
-          </span>
-          <i class="icon icon-arrow-2-down-linear fs-20px"></i>
-        </div>
+			<button
+				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+				aria-controls="submenu-games-2"
+				[attr.aria-expanded]="submenuGamesOpen"
+				(click)="toggleSubmenuGames()"
+				(keydown.enter)="toggleSubmenuGames()"
+				(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+			>
+				<div class="d-flex justify-content-between w-100">
+					<span class="fs-12px fw-500">
+						{{ data.insurance }}
+					</span>
+					<i class="icon icon-arrow-2-down-linear fs-20px"></i>
+				</div>
 
-        @if (submenuGamesOpen) {
-          <div class="w-100 d-flex flex-column gap-5px submenu-games">
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.insurancePage.thirdParty"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.thirdPartyInsurance }}</span>
-            </a>
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.insurancePage.electronicEquipment"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.equipment }}</span>
-            </a>
-          </div>
-        }
-      </button>
+				@if (submenuGamesOpen) {
+					<div class="w-100 d-flex flex-column gap-5px submenu-games">
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.insurancePage.thirdParty"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.thirdPartyInsurance }}</span>
+						</a>
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.insurancePage.electronicEquipment"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.equipment }}</span>
+						</a>
+					</div>
+				}
+			</button>
 
-      <a
-        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-        [routerLink]="routerLinksPath.wealthPage.wealth"
-      >
-        <div class="d-flex justify-content-between w-100">
-          <span class="fs-12px fw-500">
-            {{ data.wealth }}
-          </span>
-        </div>
-      </a>
+			<a
+				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+				[routerLink]="routerLinksPath.wealthPage.wealth"
+			>
+				<div class="d-flex justify-content-between w-100">
+					<span class="fs-12px fw-500">
+						{{ data.wealth }}
+					</span>
+				</div>
+			</a>
 
-      <button
-        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-        aria-controls="submenu-games-3"
-        [attr.aria-expanded]="submenuGamesOpen"
-        (click)="toggleSubmenuGames()"
-        (keydown.enter)="toggleSubmenuGames()"
-        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
-      >
-        <div class="d-flex justify-content-between w-100">
-          <span class="fs-12px fw-500">
-            {{ data.serviceBusiness }}
-          </span>
-          <i class="icon icon-arrow-2-down-linear fs-20px"></i>
-        </div>
+			<button
+				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+				aria-controls="submenu-games-3"
+				[attr.aria-expanded]="submenuGamesOpen"
+				(click)="toggleSubmenuGames()"
+				(keydown.enter)="toggleSubmenuGames()"
+				(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+			>
+				<div class="d-flex justify-content-between w-100">
+					<span class="fs-12px fw-500">
+						{{ data.serviceBusiness }}
+					</span>
+					<i class="icon icon-arrow-2-down-linear fs-20px"></i>
+				</div>
 
-        @if (submenuGamesOpen) {
-          <div class="w-100 d-flex flex-column gap-5px submenu-games">
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.businessServicesPage.creditPaymentGateway"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.bpg }}</span>
-            </a>
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.businessServicesPage.merchantLoan"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.merchantsSeller }}</span>
-            </a>
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.businessServicesPage.comprehensivePaymentGateway"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.ipg }}</span>
-            </a>
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.businessServicesPage.earlySettlement"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.merchantCredit }}</span>
-            </a>
-          </div>
-        }
-      </button>
+				@if (submenuGamesOpen) {
+					<div class="w-100 d-flex flex-column gap-5px submenu-games">
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.businessServicesPage.creditPaymentGateway"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.bpg }}</span>
+						</a>
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.businessServicesPage.merchantLoan"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.merchantsSeller }}</span>
+						</a>
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.businessServicesPage.comprehensivePaymentGateway"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.ipg }}</span>
+						</a>
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.businessServicesPage.earlySettlement"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.merchantCredit }}</span>
+						</a>
+					</div>
+				}
+			</button>
 
-      <button
-        class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-        aria-controls="submenu-games-4"
-        [attr.aria-expanded]="submenuGamesOpen"
-        (click)="toggleSubmenuGames()"
-        (keydown.enter)="toggleSubmenuGames()"
-        (keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
-      >
-        <div class="d-flex justify-content-between w-100">
-          <span class="fs-12px fw-500">
-            {{ data.serviceOrganization }}
-          </span>
-          <i class="icon icon-arrow-2-down-linear fs-20px"></i>
-        </div>
+			<button
+				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+				aria-controls="submenu-games-4"
+				[attr.aria-expanded]="submenuGamesOpen"
+				(click)="toggleSubmenuGames()"
+				(keydown.enter)="toggleSubmenuGames()"
+				(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+			>
+				<div class="d-flex justify-content-between w-100">
+					<span class="fs-12px fw-500">
+						{{ data.serviceOrganization }}
+					</span>
+					<i class="icon icon-arrow-2-down-linear fs-20px"></i>
+				</div>
 
-        @if (submenuGamesOpen) {
-          <div class="w-100 d-flex flex-column gap-5px submenu-games">
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.organizationalServicesPage.organizationalInstallment"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.Ocredit }}</span>
-            </a>
-            <a
-              class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-              [routerLink]="routerLinksPath.organizationalServicesPage.organizationalBnpl"
-            >
-              <i class="icon icon-credit-linear fs-24px lh-0px"></i>
-              <span class="fs-12px text-900 fw-400">{{ data.orgbnpl }}</span>
-            </a>
-          </div>
-        }
-      </button>
-    </div>
-  </div>
+				@if (submenuGamesOpen) {
+					<div class="w-100 d-flex flex-column gap-5px submenu-games">
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.organizationalServicesPage.organizationalInstallment"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.Ocredit }}</span>
+						</a>
+						<a
+							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+							[routerLink]="routerLinksPath.organizationalServicesPage.organizationalBnpl"
+						>
+							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+							<span class="fs-12px text-900 fw-400">{{ data.orgbnpl }}</span>
+						</a>
+					</div>
+				}
+			</button>
+		</div>
+	</div>
 }

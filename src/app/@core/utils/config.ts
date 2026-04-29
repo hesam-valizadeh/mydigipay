@@ -1,5 +1,5 @@
 export const config = {
-  apiUrl: {
-    sendMessage: '',
-  },
+	apiUrl: {
+		sendMessage: '',
+	},
 };

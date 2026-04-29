@@ -6,48 +6,48 @@ import { CarouselBannerItemComponent } from './carousel-banner-item/carousel-ban
 import { ICarouselBanner } from './model/carousel-banner-interface';
 
 @Component({
-  selector: 'app-carousel-banner',
-  imports: [CustomSwiperComponent, CarouselBannerItemComponent],
-  templateUrl: './carousel-banner.component.html',
-  styleUrl: './carousel-banner.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: 'app-carousel-banner',
+	imports: [CustomSwiperComponent, CarouselBannerItemComponent],
+	templateUrl: './carousel-banner.component.html',
+	styleUrl: './carousel-banner.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CarouselBannerComponent {
-  public slider?: ListModel<ICarouselBanner> = new ListModel<ICarouselBanner>([
-    {
-      id: '1',
-      src: 'assets/images/01.webp',
-      alt: 'test',
-      width: '748',
-      height: '400',
-      link: '',
-      title: 'test',
-    },
-    {
-      id: '2',
-      src: 'assets/images/02.webp',
-      alt: 'test',
-      width: '748',
-      height: '400',
-      link: '',
-      title: 'test',
-    },
-  ]);
-  public SwiperConfig: SwiperOptions = {
-    slidesPerView: 'auto',
-    centeredSlides: true,
-    spaceBetween: 2,
-    loop: true,
+	public slider?: ListModel<ICarouselBanner> = new ListModel<ICarouselBanner>([
+		{
+			id: '1',
+			src: 'assets/images/01.webp',
+			alt: 'test',
+			width: '748',
+			height: '400',
+			link: '',
+			title: 'test',
+		},
+		{
+			id: '2',
+			src: 'assets/images/02.webp',
+			alt: 'test',
+			width: '748',
+			height: '400',
+			link: '',
+			title: 'test',
+		},
+	]);
+	public SwiperConfig: SwiperOptions = {
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		spaceBetween: 2,
+		loop: true,
 
-    pagination: {
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    injectStyles: [
-      `
+		pagination: {
+			type: 'bullets',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		injectStyles: [
+			`
         .swiper-pagination-bullet {
             background-color: #C9CBCF !important;
             opacity: 1;
@@ -62,14 +62,14 @@ export class CarouselBannerComponent {
             background-color: #fff !important;
         }
         `,
-    ],
-    breakpoints: {
-      768: {
-        slidesPerView: 1.2,
-      },
-      1024: {
-        slidesPerView: 1.2,
-      },
-    },
-  };
+		],
+		breakpoints: {
+			768: {
+				slidesPerView: 1.2,
+			},
+			1024: {
+				slidesPerView: 1.2,
+			},
+		},
+	};
 }

@@ -7,73 +7,73 @@ import { IProductCarousel } from './model/carousel-inerface';
 import { ProductSectionHeaderComponent } from './product-section-header/product-section-header.component';
 
 @Component({
-  selector: 'app-product-section',
-  imports: [CustomSwiperComponent, ProductItemComponent, ProductSectionHeaderComponent],
-  standalone: true,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './product-section.component.html',
-  styleUrl: './product-section.component.scss',
+	selector: 'app-product-section',
+	imports: [CustomSwiperComponent, ProductItemComponent, ProductSectionHeaderComponent],
+	standalone: true,
+	changeDetection: ChangeDetectionStrategy.OnPush,
+	templateUrl: './product-section.component.html',
+	styleUrl: './product-section.component.scss',
 })
 export class ProductSectionComponent {
-  @Input() public storeName!: string | undefined;
-  @Input() public fourPay!: boolean | undefined;
-  @Input() public products!: ListModel<IProductCarousel> | null | undefined;
-  @Input() public imageSrc!: string | undefined;
-  @Input() public alt!: string | undefined;
-  @Input() public width!: string | undefined;
-  @Input() public height!: string | undefined;
-  @Input() public title!: string | undefined;
-  @Input() public loading!: string | undefined;
-  @Input() public storeLogoSrc!: string | undefined;
-  @Input() public priceNoDiscount!: string | undefined;
-  @Input() public priceFinal!: string | undefined;
-  @Input() public discountPercentage!: string | undefined;
-  @Input({ required: true })
-  public category!: string;
-  @Input() public viewAllLink: string | null = null;
-  @Input() public timerEndDate: Date | null = null;
-  @Input() public style: string | null = null;
-  public get slider(): ListModel<IProductCarousel> {
-    return this.products ?? new ListModel<IProductCarousel>([]);
-  }
+	@Input() public storeName!: string | undefined;
+	@Input() public fourPay!: boolean | undefined;
+	@Input() public products!: ListModel<IProductCarousel> | null | undefined;
+	@Input() public imageSrc!: string | undefined;
+	@Input() public alt!: string | undefined;
+	@Input() public width!: string | undefined;
+	@Input() public height!: string | undefined;
+	@Input() public title!: string | undefined;
+	@Input() public loading!: string | undefined;
+	@Input() public storeLogoSrc!: string | undefined;
+	@Input() public priceNoDiscount!: string | undefined;
+	@Input() public priceFinal!: string | undefined;
+	@Input() public discountPercentage!: string | undefined;
+	@Input({ required: true })
+	public category!: string;
+	@Input() public viewAllLink: string | null = null;
+	@Input() public timerEndDate: Date | null = null;
+	@Input() public style: string | null = null;
+	public get slider(): ListModel<IProductCarousel> {
+		return this.products ?? new ListModel<IProductCarousel>([]);
+	}
 
-  public SwiperConfig: SwiperOptions = {
-    centeredSlides: false,
-    grabCursor: true,
-    loopPreventsSliding: false,
-    pagination: {
-      type: 'bullets',
-      el: '',
-    },
-    breakpoints: {
-      300: {
-        slidesPerView: 1,
-        spaceBetween: 12,
-      },
-      360: {
-        slidesPerView: 2,
-        spaceBetween: 12,
-      },
-      500: {
-        slidesPerView: 3,
-        spaceBetween: 12,
-      },
-      677: {
-        slidesPerView: 4,
-        spaceBetween: 2,
-      },
-      780: {
-        slidesPerView: 4.5,
-        spaceBetween: 12,
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 12,
-      },
-      1200: {
-        slidesPerView: 6.8,
-        spaceBetween: 60,
-      },
-    },
-  };
+	public SwiperConfig: SwiperOptions = {
+		centeredSlides: false,
+		grabCursor: true,
+		loopPreventsSliding: false,
+		pagination: {
+			type: 'bullets',
+			el: '',
+		},
+		breakpoints: {
+			300: {
+				slidesPerView: 1,
+				spaceBetween: 12,
+			},
+			360: {
+				slidesPerView: 2,
+				spaceBetween: 12,
+			},
+			500: {
+				slidesPerView: 3,
+				spaceBetween: 12,
+			},
+			677: {
+				slidesPerView: 4,
+				spaceBetween: 2,
+			},
+			780: {
+				slidesPerView: 4.5,
+				spaceBetween: 12,
+			},
+			992: {
+				slidesPerView: 6,
+				spaceBetween: 12,
+			},
+			1200: {
+				slidesPerView: 6.8,
+				spaceBetween: 60,
+			},
+		},
+	};
 }

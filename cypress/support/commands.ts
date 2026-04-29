@@ -11,8 +11,8 @@
  * Usage: cy.checkA11y()
  */
 Cypress.Commands.add('checkA11y', (context?: string, options?: any) => {
-  cy.injectAxe();
-  cy.checkA11y(context, options);
+	cy.injectAxe();
+	cy.checkA11y(context, options);
 });
 
 /**
@@ -20,8 +20,8 @@ Cypress.Commands.add('checkA11y', (context?: string, options?: any) => {
  * Usage: cy.waitForPageLoad()
  */
 Cypress.Commands.add('waitForPageLoad', () => {
-  cy.get('body').should('be.visible');
-  cy.window().its('document.readyState').should('eq', 'complete');
+	cy.get('body').should('be.visible');
+	cy.window().its('document.readyState').should('eq', 'complete');
 });
 
 /**
@@ -29,16 +29,16 @@ Cypress.Commands.add('waitForPageLoad', () => {
  * Usage: cy.checkElementAccessibility('[data-cy="example"]')
  */
 Cypress.Commands.add('checkElementAccessibility', (selector: string) => {
-  cy.get(selector).should('be.visible');
-  cy.get(selector).should('not.have.attr', 'aria-hidden', 'true');
+	cy.get(selector).should('be.visible');
+	cy.get(selector).should('not.have.attr', 'aria-hidden', 'true');
 });
 
 declare global {
-  namespace Cypress {
-    interface Chainable {
-      checkA11y(context?: string, options?: any): Chainable<void>;
-      waitForPageLoad(): Chainable<void>;
-      checkElementAccessibility(selector: string): Chainable<void>;
-    }
-  }
+	namespace Cypress {
+		interface Chainable {
+			checkA11y(context?: string, options?: any): Chainable<void>;
+			waitForPageLoad(): Chainable<void>;
+			checkElementAccessibility(selector: string): Chainable<void>;
+		}
+	}
 }

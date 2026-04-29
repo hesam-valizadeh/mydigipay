@@ -3,5 +3,5 @@ import { labels } from '@core/constants/labels';
 
 @Directive()
 export class BaseClass {
-  protected readonly labels = labels;
+	protected readonly labels = labels;
 }

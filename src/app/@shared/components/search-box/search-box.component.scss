@@ -1,136 +1,136 @@
 .search-box-container {
-  position: relative;
+	position: relative;
 
-  #results {
-    position: absolute;
-    top: 55px;
-    right: 0;
-    height: 600px;
-    width: 350px;
-    z-index: 11;
-    background-color: #fff;
-    border-radius: 0 0 24px 24px;
-    overflow-y: scroll;
-    padding: 10px 15px;
-  }
+	#results {
+		position: absolute;
+		top: 55px;
+		right: 0;
+		height: 600px;
+		width: 350px;
+		z-index: 11;
+		background-color: #fff;
+		border-radius: 0 0 24px 24px;
+		overflow-y: scroll;
+		padding: 10px 15px;
+	}
 
-  form i {
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 17px;
-    top: 14px;
-    color: #000;
-  }
+	form i {
+		font-size: 20px;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 17px;
+		top: 14px;
+		color: #000;
+	}
 
-  .search-box {
-    border-radius: 48px;
-    border: none;
-    background-color: #f2f3f6;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 166%;
-    width: 350px;
-    height: 48px;
-    padding-right: 46px;
+	.search-box {
+		border-radius: 48px;
+		border: none;
+		background-color: #f2f3f6;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 166%;
+		width: 350px;
+		height: 48px;
+		padding-right: 46px;
 
-    &::placeholder {
-      word-spacing: 0;
-      font-weight: 400;
-    }
+		&::placeholder {
+			word-spacing: 0;
+			font-weight: 400;
+		}
 
-    &:focus-visible {
-      outline: none;
-      border: 1px solid #1159fc !important;
-      background-color: #deedff !important;
-      color: #74777c;
-    }
-  }
+		&:focus-visible {
+			outline: none;
+			border: 1px solid #1159fc !important;
+			background-color: #deedff !important;
+			color: #74777c;
+		}
+	}
 }
 
 .pill {
-  width: auto;
-  border-radius: 50em;
-  border: 1px solid #dfe1e5;
-  padding: 4px 8px;
+	width: auto;
+	border-radius: 50em;
+	border: 1px solid #dfe1e5;
+	padding: 4px 8px;
 
-  span {
-    font-size: 12px;
-    font-weight: 500;
-    color: #000;
-  }
+	span {
+		font-size: 12px;
+		font-weight: 500;
+		color: #000;
+	}
 }
 
 .blueGradient {
-  background: linear-gradient(224deg, rgb(15 83 237) 11.43%, rgb(148 191 255) 92.87%);
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient(224deg, rgb(15 83 237) 11.43%, rgb(148 191 255) 92.87%);
+	background-clip: text !important;
+	-webkit-text-fill-color: transparent;
 }
 
 .yellowGradient {
-  background: linear-gradient(224deg, rgb(247 136 63) 11.43%, rgb(251 201 23) 92.87%);
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient(224deg, rgb(247 136 63) 11.43%, rgb(251 201 23) 92.87%);
+	background-clip: text !important;
+	-webkit-text-fill-color: transparent;
 }
 
 .purpleGradient {
-  background: linear-gradient(224deg, rgb(134 67 243) 11.43%, rgb(199 170 247) 92.87%);
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient(224deg, rgb(134 67 243) 11.43%, rgb(199 170 247) 92.87%);
+	background-clip: text !important;
+	-webkit-text-fill-color: transparent;
 }
 
 .greenGradient {
-  background: linear-gradient(224deg, rgb(12 186 186) 11.43%, rgb(159 251 251) 92.87%);
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient(224deg, rgb(12 186 186) 11.43%, rgb(159 251 251) 92.87%);
+	background-clip: text !important;
+	-webkit-text-fill-color: transparent;
 }
 
 .stores {
-  figure {
-    width: 40px;
-    height: 40px;
-    background-color: #f2f3f6;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+	figure {
+		width: 40px;
+		height: 40px;
+		background-color: #f2f3f6;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 .categories {
-  a {
-    max-width: 133px;
-  }
+	a {
+		max-width: 133px;
+	}
 
-  figure {
-    width: 133px;
-    height: 68px;
-    border-radius: 16px;
-    background-color: #f2f3f6;
-  }
+	figure {
+		width: 133px;
+		height: 68px;
+		border-radius: 16px;
+		background-color: #f2f3f6;
+	}
 }
 
 #results-mobile {
-  position: absolute;
-  top: 109px;
-  right: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 11;
-  background-color: #f4f4f4;
-  border-radius: 0 0 24px 24px;
-  padding: 10px 10px 350px;
-  overflow-y: scroll;
+	position: absolute;
+	top: 109px;
+	right: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 11;
+	background-color: #f4f4f4;
+	border-radius: 0 0 24px 24px;
+	padding: 10px 10px 350px;
+	overflow-y: scroll;
 
-  .categories {
-    a {
-      max-width: 155px;
+	.categories {
+		a {
+			max-width: 155px;
 
-      figure {
-        background-color: #fff;
-        width: 155px;
-      }
-    }
-  }
+			figure {
+				background-color: #fff;
+				width: 155px;
+			}
+		}
+	}
 }

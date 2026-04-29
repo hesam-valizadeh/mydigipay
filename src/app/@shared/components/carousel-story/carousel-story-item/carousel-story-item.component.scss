@@ -1,63 +1,63 @@
 .story-background-base {
-  height: 540px;
-  width: 100%;
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom, bottom;
-  background-size: contain, cover;
-  background-blend-mode: multiply;
-  position: relative;
+	height: 540px;
+	width: 100%;
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom, bottom;
+	background-size: contain, cover;
+	background-blend-mode: multiply;
+	position: relative;
 
-  div.content {
-    position: absolute;
-    inset: 50px 0 0;
+	div.content {
+		position: absolute;
+		inset: 50px 0 0;
 
-    h1 {
-      text-align: center;
-    }
+		h1 {
+			text-align: center;
+		}
 
-    p {
-      width: 285px;
-    }
+		p {
+			width: 285px;
+		}
 
-    figure {
-      img {
-        width: 250px;
-        height: 250px;
-        position: absolute;
-        left: 50%;
-        top: 60px;
-      }
-    }
-  }
+		figure {
+			img {
+				width: 250px;
+				height: 250px;
+				position: absolute;
+				left: 50%;
+				top: 60px;
+			}
+		}
+	}
 }
 
 .slide-image.animation {
-  animation: zoom-in 0.5s ease-out;
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  transform: translateX(-50%) scale(1) translateZ(0);
+	animation: zoom-in 0.5s ease-out;
+	will-change: transform, opacity;
+	backface-visibility: hidden;
+	transform: translateX(-50%) scale(1) translateZ(0);
 }
 
 @keyframes zoom-in {
-  0% {
-    transform: translateX(-50%) scale(0);
-    opacity: 0;
-  }
+	0% {
+		transform: translateX(-50%) scale(0);
+		opacity: 0;
+	}
 
-  100% {
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-  }
+	100% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
 }
 
 @keyframes zoom-in {
-  0% {
-    transform: translateX(-50%) scale(0);
-    opacity: 0;
-  }
+	0% {
+		transform: translateX(-50%) scale(0);
+		opacity: 0;
+	}
 
-  100% {
-    transform: translateX(-50%) scale(1);
-    opacity: 1;
-  }
+	100% {
+		transform: translateX(-50%) scale(1);
+		opacity: 1;
+	}
 }

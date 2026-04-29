@@ -3,15 +3,15 @@ import { RouterModule } from '@angular/router';
 import { CountdownTimerComponent } from '@shared/components/countdown-timer/countdown-timer.component';
 
 @Component({
-  selector: 'app-product-section-header',
-  imports: [RouterModule, CountdownTimerComponent],
-  templateUrl: './product-section-header.component.html',
-  styleUrl: './product-section-header.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: 'app-product-section-header',
+	imports: [RouterModule, CountdownTimerComponent],
+	templateUrl: './product-section-header.component.html',
+	styleUrl: './product-section-header.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductSectionHeaderComponent {
-  @Input({ required: true }) public title!: string;
-  @Input() public viewAllLink: string | null = null;
-  @Input() public timerEndDate: Date | null = null;
-  @Input() public style: string | null = '';
+	@Input({ required: true }) public title!: string;
+	@Input() public viewAllLink: string | null = null;
+	@Input() public timerEndDate: Date | null = null;
+	@Input() public style: string | null = '';
 }

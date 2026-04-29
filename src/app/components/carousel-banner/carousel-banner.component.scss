@@ -1,22 +1,22 @@
 @media screen and (width >= 1200px) {
-      .swiper-slide {
-        width: 800px !important;
+	.swiper-slide {
+		width: 800px !important;
 
-        img {
-          width: auto !important;
-        }
-      }
+		img {
+			width: auto !important;
+		}
+	}
 
-      swiper-container {
-        width: 800px !important;
-      }
+	swiper-container {
+		width: 800px !important;
+	}
 
-      app-custom-swiper {
-        display: block;
-        width: 910px !important;
-      }
+	app-custom-swiper {
+		display: block;
+		width: 910px !important;
+	}
 
-      .swiper-initialized {
-        width: 800px !important;
-      }
-  }
+	.swiper-initialized {
+		width: 800px !important;
+	}
+}

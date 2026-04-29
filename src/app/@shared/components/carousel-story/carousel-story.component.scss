@@ -1,80 +1,80 @@
 @media screen and (width >=1200px) {
-  .hero-carousel {
-    .swiper-slide {
-      width: 748px !important;
+	.hero-carousel {
+		.swiper-slide {
+			width: 748px !important;
 
-      img {
-        width: 748px !important;
-      }
-    }
+			img {
+				width: 748px !important;
+			}
+		}
 
-    swiper-container {
-      width: 748px !important;
-    }
+		swiper-container {
+			width: 748px !important;
+		}
 
-    app-custom-swiper {
-      display: block;
-      width: 748px !important;
-    }
+		app-custom-swiper {
+			display: block;
+			width: 748px !important;
+		}
 
-    .swiper-initialized {
-      width: 748px !important;
-    }
-  }
+		.swiper-initialized {
+			width: 748px !important;
+		}
+	}
 }
 
 .progress-container {
-  z-index: 111;
-  display: -webkit-box;
-  display: flexbox;
-  display: flexbox;
-  display: flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 12px;
-  position: absolute;
-  top: 5px;
-  width: 93%;
-  right: 20px;
+	z-index: 111;
+	display: -webkit-box;
+	display: flexbox;
+	display: flexbox;
+	display: flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 12px;
+	position: absolute;
+	top: 5px;
+	width: 93%;
+	right: 20px;
 }
 
 .progress-bar {
-  width: 25%;
-  height: 6px;
-  background: rgb(255 255 255 / 30%);
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
+	width: 25%;
+	height: 6px;
+	background: rgb(255 255 255 / 30%);
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
 }
 
 .progress-fill {
-  height: 100%;
-  background: #fff;
-  width: 0%;
-  transition: width 0.1s linear;
+	height: 100%;
+	background: #fff;
+	width: 0%;
+	transition: width 0.1s linear;
 }
 
 .carousel-story {
-  height: 600px;
-  width: 100%;
-  position: relative;
+	height: 600px;
+	width: 100%;
+	position: relative;
 }
 
 ::ng-deep .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-  display: none !important;
+	display: none !important;
 }
 
 .story-background-fade {
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#f2f3f6));
-  background: linear-gradient(0deg, #f2f3f6 0% 100%);
-  box-shadow: 0 -12px 30px 40px #f2f3f6;
-  z-index: 1;
-  display: block;
-  position: absolute;
-  height: 50px;
-  bottom: 50px;
+	width: 100%;
+	background: -webkit-gradient(linear, left bottom, left top, from(#f2f3f6));
+	background: linear-gradient(0deg, #f2f3f6 0% 100%);
+	box-shadow: 0 -12px 30px 40px #f2f3f6;
+	z-index: 1;
+	display: block;
+	position: absolute;
+	height: 50px;
+	bottom: 50px;
 }

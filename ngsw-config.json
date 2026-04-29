@@ -1,45 +1,45 @@
 {
-  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
-  "index": "/index.html",
+	"$schema": "./node_modules/@angular/service-worker/config/schema.json",
+	"index": "/index.html",
 
-  "assetGroups": [
-    {
-      "name": "app-shell",
-      "installMode": "prefetch",
-      "updateMode": "prefetch",
-      "resources": {
-        "files": ["/favicon.ico", "/index.html", "/manifest.webmanifest", "/*.css", "/*.js"]
-      }
-    },
+	"assetGroups": [
+		{
+			"name": "app-shell",
+			"installMode": "prefetch",
+			"updateMode": "prefetch",
+			"resources": {
+				"files": ["/favicon.ico", "/index.html", "/manifest.webmanifest", "/*.css", "/*.js"]
+			}
+		},
 
-    {
-      "name": "static-assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "resources": {
-        "files": [
-          "/assets/**",
-          "/images/**",
-          "/**/*.webp",
-          "/**/*.png",
-          "/**/*.jpg",
-          "/**/*.svg",
-          "/**/*.woff2"
-        ]
-      }
-    }
-  ],
+		{
+			"name": "static-assets",
+			"installMode": "lazy",
+			"updateMode": "prefetch",
+			"resources": {
+				"files": [
+					"/assets/**",
+					"/images/**",
+					"/**/*.webp",
+					"/**/*.png",
+					"/**/*.jpg",
+					"/**/*.svg",
+					"/**/*.woff2"
+				]
+			}
+		}
+	],
 
-  "dataGroups": [
-    {
-      "name": "api-cache",
-      "urls": ["/api/**"],
-      "cacheConfig": {
-        "strategy": "freshness",
-        "maxSize": 100,
-        "maxAge": "5m",
-        "timeout": "10s"
-      }
-    }
-  ]
+	"dataGroups": [
+		{
+			"name": "api-cache",
+			"urls": ["/api/**"],
+			"cacheConfig": {
+				"strategy": "freshness",
+				"maxSize": 100,
+				"maxAge": "5m",
+				"timeout": "10s"
+			}
+		}
+	]
 }

@@ -1,61 +1,61 @@
-.profile-page{
-    display: flex;
-    flex-direction: column;
-    padding: 16px 24px;
+.profile-page {
+	display: flex;
+	flex-direction: column;
+	padding: 16px 24px;
 }
 
-.logout-btn{
-    background-color: #fff;
-    border-radius: 12px;
-    color:#F9441F;
-    height: 56px;
-    width: 100%;
-    margin-bottom: 64px !important
+.logout-btn {
+	background-color: #fff;
+	border-radius: 12px;
+	color: #f9441f;
+	height: 56px;
+	width: 100%;
+	margin-bottom: 64px !important;
 }
 
-.profile-menu-list{
-    border-radius: 16px;
-    height: 84px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
+.profile-menu-list {
+	border-radius: 16px;
+	height: 84px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 12px;
 }
 
-.phonenumber{
-   color:#74777C;
-   font-size: 14px;
+.phonenumber {
+	color: #74777c;
+	font-size: 14px;
 }
 
-.profile-subscription{
-    .card{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background-color: #fff;
-        width: 243px;
-        height: 170px;
-        position: relative;
-        border:none;
-        border-radius: 16px;
-        padding: 0 16px 16px 0;
-        overflow: hidden;
-    }
+.profile-subscription {
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: #fff;
+		width: 243px;
+		height: 170px;
+		position: relative;
+		border: none;
+		border-radius: 16px;
+		padding: 0 16px 16px 0;
+		overflow: hidden;
+	}
 
-    img.pattern{
-        position: absolute;
-        left: -8px;
-        top: 0;
-        height: 140px;
-    }
+	img.pattern {
+		position: absolute;
+		left: -8px;
+		top: 0;
+		height: 140px;
+	}
 }
 
-.icon.icon-lock-linear{
-    display: block;
+.icon.icon-lock-linear {
+	display: block;
 }
 
-.border-color-profile-menu{
-    border-bottom-color: #F2F3F6 !important;
+.border-color-profile-menu {
+	border-bottom-color: #f2f3f6 !important;
 }

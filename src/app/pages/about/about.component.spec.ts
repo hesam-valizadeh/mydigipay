@@ -3,41 +3,41 @@ import { AboutComponent } from './about.component';
 import { ChangeDetectionStrategy } from '@angular/core';
 
 interface IComponentMetadataDef {
-  changeDetection?: ChangeDetectionStrategy;
-  onPush?: boolean;
+	changeDetection?: ChangeDetectionStrategy;
+	onPush?: boolean;
 }
 
 describe('AboutComponent', () => {
-  let component: AboutComponent;
-  let fixture: ComponentFixture<AboutComponent>;
+	let component: AboutComponent;
+	let fixture: ComponentFixture<AboutComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AboutComponent],
-    }).compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [AboutComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(AboutComponent);
-    component = fixture.componentInstance;
-  });
+		fixture = TestBed.createComponent(AboutComponent);
+		component = fixture.componentInstance;
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-  it('should have default title', () => {
-    expect(component.title).toBe('About Component');
-  });
-  it('should use OnPush change detection strategy', () => {
-    const cmp = AboutComponent as unknown as { ɵcmp: IComponentMetadataDef };
-    const metadata = cmp.ɵcmp;
-    expect(metadata.onPush ?? metadata.changeDetection).toBe(
-      metadata.onPush !== undefined ? true : ChangeDetectionStrategy.OnPush,
-    );
-  });
-  it('should render title in template', () => {
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('دیجی‌پی، پِی روزهای بهتر');
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
+	it('should have default title', () => {
+		expect(component.title).toBe('About Component');
+	});
+	it('should use OnPush change detection strategy', () => {
+		const cmp = AboutComponent as unknown as { ɵcmp: IComponentMetadataDef };
+		const metadata = cmp.ɵcmp;
+		expect(metadata.onPush ?? metadata.changeDetection).toBe(
+			metadata.onPush !== undefined ? true : ChangeDetectionStrategy.OnPush,
+		);
+	});
+	it('should render title in template', () => {
+		fixture.detectChanges();
+		const compiled = fixture.nativeElement as HTMLElement;
+		expect(compiled.querySelector('h1')?.textContent).toContain('دیجی‌پی، پِی روزهای بهتر');
+	});
 });
 /**
  * 

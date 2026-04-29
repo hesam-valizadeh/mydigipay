@@ -1,19 +1,19 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "strict": true,
-    "baseUrl": "./",
-    "paths": {
-      "@core/*": ["src/app/@core/*"],
-      "@shared/*": ["src/app/@shared/*"],
-      "@layout/*": ["src/app/@layout/*"]
-    },
-    "target": "ES2022",
-    "module": "ES2022",
-    "moduleResolution": "bundler",
-    "importHelpers": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true
-  }
+	"compileOnSave": false,
+	"compilerOptions": {
+		"outDir": "./dist/out-tsc",
+		"strict": true,
+		"baseUrl": "./",
+		"paths": {
+			"@core/*": ["src/app/@core/*"],
+			"@shared/*": ["src/app/@shared/*"],
+			"@layout/*": ["src/app/@layout/*"]
+		},
+		"target": "ES2022",
+		"module": "ES2022",
+		"moduleResolution": "bundler",
+		"importHelpers": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true
+	}
 }

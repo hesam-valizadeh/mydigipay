@@ -1,12 +1,12 @@
 <div class="incredible-discount-box">
-  @for (section of sections; track section?.id) {
-    <div class="row">
-      <app-product-section
-        class="p-0 m-0 text-white"
-        [timerEndDate]="section.timerEndDate"
-        [category]="section?.category"
-        [products]="section?.products"
-      ></app-product-section>
-    </div>
-  }
+	@for (section of sections; track section?.id) {
+		<div class="row">
+			<app-product-section
+				class="p-0 m-0 text-white"
+				[timerEndDate]="section.timerEndDate"
+				[category]="section?.category"
+				[products]="section?.products"
+			></app-product-section>
+		</div>
+	}
 </div>

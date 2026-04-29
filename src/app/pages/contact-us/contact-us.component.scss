@@ -1,81 +1,81 @@
 .box {
-  background: #fff;
-  border-radius: 30px;
-  box-shadow: 0 10px 50px -10px #06196226;
-  padding: 40px 0 70px;
-  overflow: hidden;
+	background: #fff;
+	border-radius: 30px;
+	box-shadow: 0 10px 50px -10px #06196226;
+	padding: 40px 0 70px;
+	overflow: hidden;
 
-  &_desc {
-    max-width: 720px;
-    margin: auto;
-    padding-bottom: 50px;
+	&_desc {
+		max-width: 720px;
+		margin: auto;
+		padding-bottom: 50px;
 
-    p {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 28px;
-      text-align: center;
-      max-width: 720px;
-    }
-  }
+		p {
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 28px;
+			text-align: center;
+			max-width: 720px;
+		}
+	}
 
-  &_container {
-    width: calc(100% - 12vw);
-    margin: auto;
-  }
+	&_container {
+		width: calc(100% - 12vw);
+		margin: auto;
+	}
 }
 
 .map-contain {
-  position: relative;
+	position: relative;
 
-  .map {
-    height: 800px;
-    z-index: -2;
-    position: relative;
+	.map {
+		height: 800px;
+		z-index: -2;
+		position: relative;
 
-    &::after {
-      content: '';
-      background: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        from(#f2f3f6),
-        color-stop(36.46%, rgb(242 243 246 / 90%)),
-        to(rgb(242 243 246 / 1%))
-      );
-      background: linear-gradient(
-        to top,
-        #f2f3f6 0%,
-        rgb(242 243 246 / 90%) 36.46%,
-        rgb(242 243 246 / 1%) 100%
-      );
-      background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(#f2f3f6),
-        color-stop(36.46%, #f2f3f6e6),
-        to(#f2f3f603)
-      );
-      background: linear-gradient(180deg, #f2f3f6, #f2f3f6e6 36.46%, #f2f3f603);
-      box-shadow: inset 0 -80px 40px -90px #06196233;
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+		&::after {
+			content: '';
+			background: -webkit-gradient(
+				linear,
+				left bottom,
+				left top,
+				from(#f2f3f6),
+				color-stop(36.46%, rgb(242 243 246 / 90%)),
+				to(rgb(242 243 246 / 1%))
+			);
+			background: linear-gradient(
+				to top,
+				#f2f3f6 0%,
+				rgb(242 243 246 / 90%) 36.46%,
+				rgb(242 243 246 / 1%) 100%
+			);
+			background: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				from(#f2f3f6),
+				color-stop(36.46%, #f2f3f6e6),
+				to(#f2f3f603)
+			);
+			background: linear-gradient(180deg, #f2f3f6, #f2f3f6e6 36.46%, #f2f3f603);
+			box-shadow: inset 0 -80px 40px -90px #06196233;
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 
-    figure {
-      width: 100%;
-      height: 100%;
+		figure {
+			width: 100%;
+			height: 100%;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
 }

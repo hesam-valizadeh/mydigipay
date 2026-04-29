@@ -6,20 +6,20 @@ import { RouterLink } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-footer',
-  imports: [ReadMoreDirective, RouterLink, NgOptimizedImage],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: 'app-footer',
+	imports: [ReadMoreDirective, RouterLink, NgOptimizedImage],
+	templateUrl: './footer.component.html',
+	styleUrl: './footer.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
-  public responsive = inject(ResponsiveService);
-  protected readonly routerLinksPath = routerLinksPath;
-  public get isMobile(): boolean {
-    return this.responsive.isMobile();
-  }
+	public responsive = inject(ResponsiveService);
+	protected readonly routerLinksPath = routerLinksPath;
+	public get isMobile(): boolean {
+		return this.responsive.isMobile();
+	}
 
-  public get isDesktop(): boolean {
-    return this.responsive.isDesktop();
-  }
+	public get isDesktop(): boolean {
+		return this.responsive.isDesktop();
+	}
 }

@@ -1,46 +1,46 @@
 import {
-  Component,
-  ChangeDetectionStrategy,
-  ElementRef,
-  HostListener,
-  inject,
-  signal,
+	Component,
+	ChangeDetectionStrategy,
+	ElementRef,
+	HostListener,
+	inject,
+	signal,
 } from '@angular/core';
 import { ResponsiveService } from '../../../@core/services/responsive.service';
 import { SearchOverlayService } from '../../../@core/services/search-overlay-service.service';
 
 @Component({
-  selector: 'app-search-box',
-  imports: [],
-  templateUrl: './search-box.component.html',
-  styleUrl: './search-box.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: 'app-search-box',
+	imports: [],
+	templateUrl: './search-box.component.html',
+	styleUrl: './search-box.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchBoxComponent {
-  public isResultsOpen = signal(false);
-  public responsive = inject(ResponsiveService);
-  public elementRef = inject(ElementRef);
-  public searchOverlay = inject(SearchOverlayService);
+	public isResultsOpen = signal(false);
+	public responsive = inject(ResponsiveService);
+	public elementRef = inject(ElementRef);
+	public searchOverlay = inject(SearchOverlayService);
 
-  public opanResults(): void {
-    this.searchOverlay.openSearch();
-  }
+	public opanResults(): void {
+		this.searchOverlay.openSearch();
+	}
 
-  public get isMobile(): boolean {
-    return this.responsive.isMobile();
-  }
+	public get isMobile(): boolean {
+		return this.responsive.isMobile();
+	}
 
-  public get isDesktop(): boolean {
-    return this.responsive.isDesktop();
-  }
-  public get isSearchOpen(): boolean {
-    return this.searchOverlay.isSearchOpen();
-  }
-  @HostListener('document:click', ['$event'])
-  public handleOutsideClick(event: MouseEvent): void {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.search-box-container')) {
-      this.searchOverlay.closeSearch();
-    }
-  }
+	public get isDesktop(): boolean {
+		return this.responsive.isDesktop();
+	}
+	public get isSearchOpen(): boolean {
+		return this.searchOverlay.isSearchOpen();
+	}
+	@HostListener('document:click', ['$event'])
+	public handleOutsideClick(event: MouseEvent): void {
+		const target = event.target as HTMLElement;
+		if (!target.closest('.search-box-container')) {
+			this.searchOverlay.closeSearch();
+		}
+	}
 }

@@ -1,8 +1,8 @@
 import {
-  ApplicationConfig,
-  provideBrowserGlobalErrorListeners,
-  provideZonelessChangeDetection,
-  isDevMode,
+	ApplicationConfig,
+	provideBrowserGlobalErrorListeners,
+	provideZonelessChangeDetection,
+	isDevMode,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
@@ -11,14 +11,14 @@ import { provideServiceWorker } from '@angular/service-worker';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection(),
-    provideRouter(routes),
-    provideHttpClient(withInterceptors([])),
-    provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
-  ],
+	providers: [
+		provideBrowserGlobalErrorListeners(),
+		provideZonelessChangeDetection(),
+		provideRouter(routes),
+		provideHttpClient(withInterceptors([])),
+		provideServiceWorker('ngsw-worker.js', {
+			enabled: !isDevMode(),
+			registrationStrategy: 'registerWhenStable:30000',
+		}),
+	],
 };

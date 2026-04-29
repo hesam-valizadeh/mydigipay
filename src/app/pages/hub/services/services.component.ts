@@ -4,39 +4,39 @@ import { CustomSwiperComponent } from '@shared/components/custom-swiper/custom-s
 import { SwiperOptions } from 'swiper/types';
 
 @Component({
-  selector: 'app-services',
-  imports: [CustomSwiperComponent],
-  templateUrl: './services.component.html',
-  styleUrl: './services.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: 'app-services',
+	imports: [CustomSwiperComponent],
+	templateUrl: './services.component.html',
+	styleUrl: './services.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ServicesComponent {
-  public slider?: ListModel<unknown> = new ListModel<unknown>([
-    {
-      id: 1,
-      image: 'assets/images/01.webp',
-    },
-  ]);
-  public SwiperConfig: SwiperOptions = {
-    slidesPerView: 'auto',
-    spaceBetween: 15,
-    centeredSlides: false,
-    grabCursor: true,
-    loopPreventsSliding: false,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    injectStyles: [
-      `
+	public slider?: ListModel<unknown> = new ListModel<unknown>([
+		{
+			id: 1,
+			image: 'assets/images/01.webp',
+		},
+	]);
+	public SwiperConfig: SwiperOptions = {
+		slidesPerView: 'auto',
+		spaceBetween: 15,
+		centeredSlides: false,
+		grabCursor: true,
+		loopPreventsSliding: false,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			type: 'bullets',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		injectStyles: [
+			`
          .swiper-pagination-bullet {
         background-color: #C9CBCF !important;
         opacity: 1;
@@ -54,7 +54,7 @@ export class ServicesComponent {
 
 
 `,
-    ],
-    breakpoints: {},
-  };
+		],
+		breakpoints: {},
+	};
 }

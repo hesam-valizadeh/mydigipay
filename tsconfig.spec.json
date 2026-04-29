@@ -1,24 +1,24 @@
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./out-tsc/spec",
-    "types": ["jest", "node"],
-    "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "module": "es2020",
-    "target": "es2022",
-    "allowJs": true
-  },
-  "files": ["setup-jest.ts"],
-  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"],
-  "exclude": [
-    "cypress",
-    "cypress.config.ts",
-    "cypress.config.js",
-    "**/*.cy.ts",
-    "**/*.cy.tsx",
-    "**/*.spec.cy.ts",
-    "node_modules/cypress"
-  ]
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./out-tsc/spec",
+		"types": ["jest", "node"],
+		"esModuleInterop": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"module": "es2020",
+		"target": "es2022",
+		"allowJs": true
+	},
+	"files": ["setup-jest.ts"],
+	"include": ["src/**/*.spec.ts", "src/**/*.d.ts"],
+	"exclude": [
+		"cypress",
+		"cypress.config.ts",
+		"cypress.config.js",
+		"**/*.cy.ts",
+		"**/*.cy.tsx",
+		"**/*.spec.cy.ts",
+		"node_modules/cypress"
+	]
 }

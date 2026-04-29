@@ -1,228 +1,228 @@
 .login-page {
-  max-width: 550px;
-  height: 100vh;
-  border-inline: 1px solid #ccc;
-  margin-inline: auto;
-  position: relative;
+	max-width: 550px;
+	height: 100vh;
+	border-inline: 1px solid #ccc;
+	margin-inline: auto;
+	position: relative;
 
-  .form-control {
-    border-radius: 12px;
-    border: 1px solid #c9cbcf;
+	.form-control {
+		border-radius: 12px;
+		border: 1px solid #c9cbcf;
 
-    &:focus-visible {
-      outline: none;
-      border: 1px solid #1159fc !important;
-      background-color: #deedff !important;
-      color: #74777c;
-    }
-  }
+		&:focus-visible {
+			outline: none;
+			border: 1px solid #1159fc !important;
+			background-color: #deedff !important;
+			color: #74777c;
+		}
+	}
 
-  .box {
-    border-radius: 16px !important;
-    position: absolute;
-    inset: 350px 0 0;
-    width: 510px;
-    height: 350px;
-    box-shadow: 0 10px 40px #10111333 !important;
-    backdrop-filter: blur(18px) !important;
-    margin-inline: auto;
-    background-color: rgb(255 255 255 / 60%);
-    padding: 24px;
-    z-index: 111;
+	.box {
+		border-radius: 16px !important;
+		position: absolute;
+		inset: 350px 0 0;
+		width: 510px;
+		height: 350px;
+		box-shadow: 0 10px 40px #10111333 !important;
+		backdrop-filter: blur(18px) !important;
+		margin-inline: auto;
+		background-color: rgb(255 255 255 / 60%);
+		padding: 24px;
+		z-index: 111;
 
-    .phone-number-content {
-      padding-block: 20px;
+		.phone-number-content {
+			padding-block: 20px;
 
-      h1 {
-        font-size: 18px;
-        padding-bottom: 6px;
-        text-align: center;
-        font-weight: 800;
-      }
+			h1 {
+				font-size: 18px;
+				padding-bottom: 6px;
+				text-align: center;
+				font-weight: 800;
+			}
 
-      p {
-        font-size: 12px;
-        margin-bottom: 16px;
-        font-weight: 500;
-        color: #74777c;
-        text-align: center;
-      }
+			p {
+				font-size: 12px;
+				margin-bottom: 16px;
+				font-weight: 500;
+				color: #74777c;
+				text-align: center;
+			}
 
-      .login-btn {
-        width: 100%;
-        height: 56px;
-        border: none;
-        outline: none;
-        text-align: center;
-        color: #fff;
-        background-color: #000431;
-        font-size: 16px !important;
-        font-weight: 400 !important;
-        transition: ease all 0.5s;
-        border-radius: 12px;
-        margin-top: 16px;
-        margin-bottom: 12px;
-      }
+			.login-btn {
+				width: 100%;
+				height: 56px;
+				border: none;
+				outline: none;
+				text-align: center;
+				color: #fff;
+				background-color: #000431;
+				font-size: 16px !important;
+				font-weight: 400 !important;
+				transition: ease all 0.5s;
+				border-radius: 12px;
+				margin-top: 16px;
+				margin-bottom: 12px;
+			}
 
-      .link {
-        button {
-          background-color: transparent;
+			.link {
+				button {
+					background-color: transparent;
 
-          span {
-            color: #1159fc;
-            font-size: 12px;
-            font-weight: 400;
-          }
-        }
-      }
-    }
-  }
+					span {
+						color: #1159fc;
+						font-size: 12px;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
 }
 
 #referral,
 #phone-number {
-  direction: ltr !important;
-  text-align: left !important;
-  font-family: Yekan-Bakh;
+	direction: ltr !important;
+	text-align: left !important;
+	font-family: Yekan-Bakh;
 }
 
 .form-floating {
-  input {
-    direction: rtl !important;
-    text-align: right !important;
-    font-size: 14px;
-  }
+	input {
+		direction: rtl !important;
+		text-align: right !important;
+		font-size: 14px;
+	}
 }
 
 .form-floating > label {
-  right: 0;
-  left: unset;
-  top: 5px;
-  margin: 0;
-  color: #000;
-  font-size: 14px;
-  line-height: 1;
-  transition: all 0.3s;
-  z-index: 1;
+	right: 0;
+	left: unset;
+	top: 5px;
+	margin: 0;
+	color: #000;
+	font-size: 14px;
+	line-height: 1;
+	transition: all 0.3s;
+	z-index: 1;
 }
 
 .form-floating > .form-control:not(:placeholder) ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-  color: #74777c;
+	transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+	color: #74777c;
 }
 
 .form-floating > .form-control:not(:input-placeholder) ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-  color: #74777c;
+	transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+	color: #74777c;
 }
 
 .form-floating > .form-control:not(:placeholder) ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-  color: #74777c;
+	transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+	color: #74777c;
 }
 
 .form-floating > .form-control:not(:input-placeholder) ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-  color: #74777c;
+	transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+	color: #74777c;
 }
 
 .form-floating > .form-control:not(:placeholder) ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-  color: #74777c;
+	transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+	color: #74777c;
 }
 
 .form-floating > .form-control:not(:input-placeholder) ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-  color: #74777c;
+	transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+	color: #74777c;
 }
 
 .form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
-  transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
-  color: #74777c;
+	transform: scale(0.65) translateY(-0.5rem) translateX(3rem);
+	color: #74777c;
 }
 
 .login-btn:disabled {
-  background-color: #aeb0be !important;
-  cursor: not-allowed;
+	background-color: #aeb0be !important;
+	cursor: not-allowed;
 }
 
 .modal-header {
-  button {
-    i {
-      width: 48px;
-      height: 48px;
-      font-size: 24px;
-    }
-  }
+	button {
+		i {
+			width: 48px;
+			height: 48px;
+			font-size: 24px;
+		}
+	}
 }
 
 .not-referral-btn {
-  background-color: #eaeff7;
-  color: #1159fc;
-  padding: 12px 24px;
-  border-radius: 12px;
-  height: 56px;
-  min-width: 140px;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: center;
+	background-color: #eaeff7;
+	color: #1159fc;
+	padding: 12px 24px;
+	border-radius: 12px;
+	height: 56px;
+	min-width: 140px;
+	cursor: pointer;
+	transition: all 0.3s;
+	text-align: center;
 
-  &:hover {
-    opacity: 0.74;
-    transition: all 0.3s;
-  }
+	&:hover {
+		opacity: 0.74;
+		transition: all 0.3s;
+	}
 
-  span {
-    padding: 2px 8px;
-  }
+	span {
+		padding: 2px 8px;
+	}
 }
 
 .referral-btn {
-  background-color: #000431;
-  color: #fff;
-  padding: 12px 24px;
-  border-radius: 12px;
-  height: 56px;
-  min-width: 140px;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: center;
+	background-color: #000431;
+	color: #fff;
+	padding: 12px 24px;
+	border-radius: 12px;
+	height: 56px;
+	min-width: 140px;
+	cursor: pointer;
+	transition: all 0.3s;
+	text-align: center;
 
-  &:hover {
-    opacity: 0.74;
-    transition: all 0.3s;
-  }
+	&:hover {
+		opacity: 0.74;
+		transition: all 0.3s;
+	}
 
-  span {
-    padding: 2px 8px;
-  }
+	span {
+		padding: 2px 8px;
+	}
 }
 
 .enter-code {
-  color: #74777c;
-  font-size: 14px;
+	color: #74777c;
+	font-size: 14px;
 }
 
 .modal.modal-static .modal-dialog {
-  transform: none !important;
+	transform: none !important;
 }
 
 .error-message {
-  width: 180px;
-  height: 40px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 32px;
-  margin: auto;
-  line-height: 3;
-  font-size: 14px;
+	width: 180px;
+	height: 40px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 32px;
+	margin: auto;
+	line-height: 3;
+	font-size: 14px;
 }
 
 .offcanvas.offcanvas-top {
-  z-index: 1111;
-  border-bottom: none;
-  height: 45vh;
+	z-index: 1111;
+	border-bottom: none;
+	height: 45vh;
 }

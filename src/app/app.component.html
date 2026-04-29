@@ -1,13 +1,13 @@
 @if (showLayout) {
-  <app-header [class.active-search]="isSearchOpen"></app-header>
+	<app-header [class.active-search]="isSearchOpen"></app-header>
 }
 <main>
-  <router-outlet></router-outlet>
+	<router-outlet></router-outlet>
 </main>
 @if (showLayout) {
-  <app-footer></app-footer>
+	<app-footer></app-footer>
 }
 
 @if (isMobile && !isHubRoute) {
-  <app-bottom-navigation [navItems]="mainMenu"></app-bottom-navigation>
+	<app-bottom-navigation [navItems]="mainMenu"></app-bottom-navigation>
 }
