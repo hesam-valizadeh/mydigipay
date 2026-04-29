@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/carousel-banner-services/carousel-banner-services.component.scss"],
+  "sourcesContent": [".slide {\n\twidth: 275px;\n\theight: 162px;\n}\n"],
+  "mappings": "AAAA,CAAA,MACC,MAAA,MACA,OAAA",
+  "names": []
+}

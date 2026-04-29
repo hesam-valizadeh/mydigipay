@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["src/app/components/carousel-banner/carousel-banner.component.scss"],
-  "sourcesContent": ["p {\n  z-index: 1;\n}\n"],
-  "mappings": "AAAA,EACE,QAAA",
+  "sourcesContent": ["p {\n\tz-index: 1;\n}\n"],
+  "mappings": "AAAA,EACC,QAAA",
   "names": []
 }
