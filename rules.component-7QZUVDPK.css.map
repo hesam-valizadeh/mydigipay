@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/pages/rules/rules.component.scss"],
-  "sourcesContent": ["p {\n  text-align: justify;\n  margin-bottom: 7px;\n}\n\nstrong {\n  margin-bottom: 8px;\n}\n"],
-  "mappings": "AAAA,EACE,WAAA,QACA,cAAA,IAGF,OACE,cAAA",
-  "names": []
-}

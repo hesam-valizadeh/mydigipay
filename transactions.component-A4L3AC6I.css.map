@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/hub/transactions/transactions.component.scss"],
+  "sourcesContent": ["p {\n\tz-index: 1;\n}\n"],
+  "mappings": "AAAA,EACC,QAAA",
+  "names": []
+}

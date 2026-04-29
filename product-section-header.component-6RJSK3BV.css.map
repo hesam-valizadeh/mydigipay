@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/product-section/product-section-header/product-section-header.component.scss"],
+  "sourcesContent": [".product-section-title {\n\tfont-weight: 600;\n\tfont-size: 14px;\n\tline-height: 2;\n\tmargin: 0;\n}\n\n.product-section-link {\n\tdisplay: flex;\n\talign-items: center;\n\n\ti.icon {\n\t\tdisplay: inline-block;\n\t\twidth: 20px;\n\t\theight: 20px;\n\t\tfont-size: 20px;\n\t\tmargin-right: 4px;\n\t}\n}\n"],
+  "mappings": "AAAA,CAAA,sBACC,YAAA,IACA,UAAA,KACA,YAAA,EAHD,OAIC,EAGD,CAAA,qBACC,QAAA,KACA,YAAA,OAEA,CAJD,qBAIC,CAAA,CAAA,KACC,QAAA,aACA,MAAA,KACA,OAAA,KACA,UAAA,KACA,aAAA",
+  "names": []
+}

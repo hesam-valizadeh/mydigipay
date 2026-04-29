@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/carousel-banner/carousel-banner-item/carousel-banner-item.component.scss"],
-  "sourcesContent": ["p{\n    z-index: 1;\n}\n"],
-  "mappings": "AAAA,EACI,QAAA",
-  "names": []
-}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/square-banner/square-banner.component.scss"],
+  "sourcesContent": [".square-banner {\n\t.swiper-slide {\n\t\twidth: 320px !important;\n\t\theight: 248px !important;\n\t}\n\n\tswiper-container {\n\t\twidth: 320px !important;\n\t\theight: 248px !important;\n\t}\n\n\tapp-custom-swiper {\n\t\tdisplay: block;\n\t\twidth: 320px !important;\n\t\theight: 248px !important;\n\t}\n\n\t.swiper-initialized {\n\t\twidth: 320px !important;\n\t\theight: 248px !important;\n\t}\n}\n"],
+  "mappings": "AACC,CAAA,cAAA,CAAA,aACC,MAAA,gBACA,OAAA,gBAGD,CALA,cAKA,iBACC,MAAA,gBACA,OAAA,gBAGD,CAVA,cAUA,kBACC,QAAA,MACA,MAAA,gBACA,OAAA,gBAGD,CAhBA,cAgBA,CAAA,mBACC,MAAA,gBACA,OAAA",
+  "names": []
+}

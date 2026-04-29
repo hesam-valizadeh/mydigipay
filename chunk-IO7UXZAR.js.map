@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/pages/careers/careers.component.ts", "src/app/pages/careers/careers.component.html"],
-  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  selector: 'app-careers',\n  imports: [],\n  templateUrl: './careers.component.html',\n  styleUrl: './careers.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class CareersComponent {\n  public trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n  <div class=\"row px-lg-150px\">\n    <h1 class=\"fs-32px fw-bold text-center\">فرصت‌های شغلی</h1>\n    <div>\n      <p>صفحه فرصت‌های شغلی دیجی‌پی</p>\n    </div>\n  </div>\n</div>\n"],
-  "mappings": "iEASA,IAAaA,GAAgB,IAAA,CAAvB,MAAOA,CAAgB,CACpBC,aAAW,CAAU,4CADjBD,EAAgB,2BAAhBA,EAAgBE,UAAA,CAAA,CAAA,aAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICT7BE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACJ,EAAA,KAAA,CAAA,EACaC,EAAA,EAAA,2EAAA,EAAaC,EAAA,EACrDF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACAC,EAAA,EAAA,+IAAA,EAA0BC,EAAA,EAAI,EAC7B,EACF,qGDGKX,CAAgB,GAAA",
-  "names": ["CareersComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
-}

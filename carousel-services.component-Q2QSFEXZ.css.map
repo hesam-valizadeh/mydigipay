@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/@shared/components/carousel-services/carousel-services.component.scss"],
+  "sourcesContent": [".services-carousel {\n\t.swiper-slide {\n\t\twidth: 180px !important;\n\t}\n\n\tswiper-container {\n\t\twidth: 180px !important;\n\t}\n\n\tapp-custom-swiper {\n\t\tdisplay: block;\n\t\twidth: 100% !important;\n\t}\n\n\t.swiper-initialized {\n\t\twidth: 180px !important;\n\t}\n}\n"],
+  "mappings": "AACC,CAAA,kBAAA,CAAA,aACC,MAAA,gBAGD,CAJA,kBAIA,iBACC,MAAA,gBAGD,CARA,kBAQA,kBACC,QAAA,MACA,MAAA,eAGD,CAbA,kBAaA,CAAA,mBACC,MAAA",
+  "names": []
+}

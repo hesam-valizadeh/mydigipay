@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/@shared/components/carousel-services/carousel-services.component.scss"],
-  "sourcesContent": [".services-carousel {\n  .swiper-slide {\n    width: 180px !important;\n  }\n\n  swiper-container {\n    width: 180px !important;\n  }\n\n  app-custom-swiper {\n    display: block;\n    width: 100% !important;\n  }\n\n  .swiper-initialized {\n    width: 180px !important;\n  }\n}\n"],
-  "mappings": "AACE,CAAA,kBAAA,CAAA,aACE,MAAA,gBAGF,CAJA,kBAIA,iBACE,MAAA,gBAGF,CARA,kBAQA,kBACE,QAAA,MACA,MAAA,eAGF,CAbA,kBAaA,CAAA,mBACE,MAAA",
-  "names": []
-}

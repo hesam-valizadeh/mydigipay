@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/@shared/components/countdown-timer/countdown-timer.component.scss"],
+  "sourcesContent": [".timer {\n\tfont-size: 12px;\n\tfont-weight: 600;\n}\n\n.time-box {\n\tbackground: rgb(255 255 255 / 60%);\n\tcolor: #fff;\n\tpadding: 4px 6px;\n\tborder-radius: 6px;\n\tmax-width: max-content;\n\ttext-align: center;\n}\n"],
+  "mappings": "AAAA,CAAA,MACC,UAAA,KACA,YAAA,IAGD,CAAA,SACC,WAAA,MACA,MAAA,KAPD,QAQC,IAAA,IARD,cASC,IACA,UAAA,YACA,WAAA",
+  "names": []
+}

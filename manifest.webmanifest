@@ -1,52 +1,52 @@
 {
-  "name": "Digipay",
-  "short_name": "Digipay",
-  "start_url": "/mydigipay/",
-  "scope": "/mydigipay/",
-  "display": "standalone",
-  "background_color": "#0038FF",
-  "theme_color": "#ffffff",
-  "icons": [
-    {
-      "src": "assets/icons/digipayn-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/digipayn-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/digipayn-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/digipay-144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/digipayn-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/digipay-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "assets/icons/digipay-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/icons/digipay-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+	"name": "Digipay",
+	"short_name": "Digipay",
+	"start_url": "/mydigipay/",
+	"scope": "/mydigipay/",
+	"display": "standalone",
+	"background_color": "#0038FF",
+	"theme_color": "#ffffff",
+	"icons": [
+		{
+			"src": "assets/icons/digipayn-72x72.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/digipayn-96x96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/digipayn-128x128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/digipay-144.png",
+			"sizes": "144x144",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/digipayn-152x152.png",
+			"sizes": "152x152",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/digipay-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "assets/icons/digipay-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/icons/digipay-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
 }

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/product-section/product-section.component.scss"],
+  "sourcesContent": [".product-section {\n\t.heading {\n\t\theight: 36px;\n\t}\n}\n"],
+  "mappings": "AACC,CAAA,gBAAA,CAAA,QACC,OAAA",
+  "names": []
+}

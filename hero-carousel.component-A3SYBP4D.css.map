@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/hero-carousel/hero-carousel.component.scss"],
+  "sourcesContent": ["@media screen and (width >= 1200px) {\n\t.hero-carousel {\n\t\t.swiper-slide {\n\t\t\twidth: 748px !important;\n\n\t\t\timg {\n\t\t\t\twidth: 748px !important;\n\t\t\t}\n\t\t}\n\n\t\tswiper-container {\n\t\t\twidth: 748px !important;\n\t\t}\n\n\t\tapp-custom-swiper {\n\t\t\tdisplay: block;\n\t\t\twidth: 748px !important;\n\t\t}\n\n\t\t.swiper-initialized {\n\t\t\twidth: 748px !important;\n\t\t}\n\t}\n}\n"],
+  "mappings": "AAAA,OAAA,OAAA,IAAA,CAAA,MAAA,CAAA,EAAA,QAEE,CAAA,cAAA,CAAA,aAGC,CAHD,cAGC,CAHD,aAGC,IAFA,MAAA,gBAOD,CARA,cAQA,iBACC,MAAA,gBAGD,CAZA,cAYA,kBACC,QAAA,MACA,MAAA,gBAGD,CAjBA,cAiBA,CAAA,mBACC,MAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/bnpl/bnpl.component.ts", "src/app/pages/bnpl/bnpl.component.html"],
+  "sourcesContent": ["import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n\tselector: 'app-bnpl',\n\timports: [],\n\ttemplateUrl: './bnpl.component.html',\n\tstyleUrl: './bnpl.component.scss',\n\tchangeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class BnplComponent {\n\tpublic trackEffect(): void {}\n}\n", "<div class=\"container mt-lg-150px\">\n\t<div class=\"row px-lg-150px\">\n\t\t<h1 class=\"fs-32px fw-bold text-center\">الان بخر بعدا پرداخت کن</h1>\n\t\t<div>\n\t\t\t<p>صفحه خرید اعتباری دیجی‌پی</p>\n\t\t</div>\n\t</div>\n</div>\n"],
+  "mappings": "iEASA,IAAaA,GAAa,IAAA,CAApB,MAAOA,CAAa,CAClBC,aAAW,CAAU,4CADhBD,EAAa,2BAAbA,EAAaE,UAAA,CAAA,CAAA,UAAA,CAAA,EAAAC,MAAA,EAAAC,KAAA,EAAAC,OAAA,CAAA,CAAA,EAAA,YAAA,aAAA,EAAA,CAAA,EAAA,MAAA,aAAA,EAAA,CAAA,EAAA,UAAA,UAAA,aAAA,CAAA,EAAAC,SAAA,SAAAC,EAAAC,EAAA,CAAAD,EAAA,ICT1BE,EAAA,EAAA,MAAA,CAAA,EAAmC,EAAA,MAAA,CAAA,EACL,EAAA,KAAA,CAAA,EACYC,EAAA,EAAA,wHAAA,EAAuBC,EAAA,EAC/DF,EAAA,EAAA,KAAA,EAAK,EAAA,GAAA,EACDC,EAAA,EAAA,yIAAA,EAAyBC,EAAA,EAAI,EAC3B,EACD,kGDGMX,CAAa,GAAA",
+  "names": ["BnplComponent", "trackEffect", "selectors", "decls", "vars", "consts", "template", "rf", "ctx", "\u0275\u0275domElementStart", "\u0275\u0275text", "\u0275\u0275domElementEnd"]
+}
