@@ -1,0 +1,82 @@
+// two-row-slider.component.scss
+
+.two-row-slider-wrapper {
+	position: relative;
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+
+	.swiper-container {
+		width: 100%;
+		overflow: hidden;
+		padding: 10px 0 30px;
+	}
+
+	.swiper-wrapper {
+		width: max-content;
+		display: flex;
+		align-items: stretch;
+	}
+
+	.swiper-slide {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		width: 40px;
+		height: 40px;
+		background: #fff;
+		border-radius: 50%;
+		box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+
+		&::after {
+			font-size: 18px;
+			font-weight: bold;
+			color: #0f53ed;
+		}
+
+		&:hover {
+			background: #f5f5f5;
+			box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+		}
+	}
+
+	// استایل pagination
+	.swiper-pagination {
+		bottom: 0;
+
+		.swiper-pagination-bullet {
+			width: 8px;
+			height: 8px;
+			background: #ccc;
+			opacity: 1;
+			transition: all 0.3s ease;
+
+			&-active {
+				background: #0f53ed;
+				width: 20px;
+				border-radius: 4px;
+			}
+		}
+	}
+}
+
+// استایل responsive برای موبایل
+@media (width <= 768px) {
+	.two-row-slider-wrapper {
+		padding: 10px 0;
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			width: 30px;
+			height: 30px;
+
+			&::after {
+				font-size: 14px;
+			}
+		}
+	}
+}

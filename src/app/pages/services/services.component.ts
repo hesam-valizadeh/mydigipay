@@ -6,6 +6,8 @@ import { SquareBanner } from 'src/app/components/square-banner/square-banner.com
 import { CarouselBannerServicesComponent } from 'src/app/components/carousel-banner-services/carousel-banner-services.component';
 import { ServicesItemComponent } from '@shared/components/services-item/services-item.component';
 import { IServiceItemInterface } from '../../@core/models/interfaces/services-item.interface';
+import { TwoRowSliderComponent } from 'src/app/components/two-row-slider/two-row-slider.component';
+import { ITwoRowSlide } from '@core/models/interfaces/two-row-slider.interface';
 
 @Component({
 	selector: 'app-services',
@@ -14,6 +16,7 @@ import { IServiceItemInterface } from '../../@core/models/interfaces/services-it
 		SquareBanner,
 		CarouselBannerServicesComponent,
 		ServicesItemComponent,
+		TwoRowSliderComponent,
 	],
 	templateUrl: './services.component.html',
 	styleUrl: './services.component.scss',
@@ -251,5 +254,58 @@ export class ServicesComponent {
 		},
 		injectStyles: [],
 		breakpoints: {},
+	};
+
+	public insuranceSlides: ITwoRowSlide[] = [
+		{
+			id: 1,
+			rowUp: this.paymentList[0],
+			rowDown: this.paymentList[1],
+		},
+		{
+			id: 2,
+			rowUp: this.paymentList[2],
+			rowDown: this.paymentList[3],
+		},
+		{
+			id: 3,
+			rowUp: this.paymentList[4],
+			rowDown: this.paymentList[0],
+		},
+		{
+			id: 4,
+			rowUp: this.paymentList[1],
+			rowDown: this.paymentList[2],
+		},
+		{
+			id: 5,
+			rowUp: this.paymentList[3],
+			rowDown: this.paymentList[4],
+		},
+		{
+			id: 5,
+			rowUp: this.paymentList[3],
+			rowDown: this.paymentList[4],
+		},
+		{
+			id: 5,
+			rowUp: this.paymentList[3],
+			rowDown: this.paymentList[4],
+		},
+		{
+			id: 5,
+			rowUp: this.paymentList[3],
+			rowDown: this.paymentList[4],
+		},
+	];
+
+	// تنظیمات اسلایدر
+	public sliderConfig = {
+		slidesPerView: 5.6,
+		spaceBetween: 20,
+		loop: true,
+		autoplayDelay: 3000,
+		pagination: false,
+		navigation: false,
 	};
 }

@@ -111,3 +111,43 @@ aside {
 	background-color: #fff;
 	border-radius: 16px;
 }
+
+.charity {
+	img {
+		border-radius: 16px;
+	}
+
+	.text-banner {
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+::ng-deep .two-row-slider-wrapper {
+	.services-item-logo {
+		width: 48px !important	;
+		height: 48px !important;
+		border-radius: 16px !important;
+
+		i {
+			width: 32px;
+			height: 32px;
+			font-size: 32px;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	.services-item-link span:last-child {
+		font-size: 10px !important;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		display: none;
+	}
+}

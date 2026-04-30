@@ -232,7 +232,28 @@
 		</div>
 		<div class="row my-20px gap-24px">
 			<div class="download-app"></div>
-			<div class="charity"></div>
+			<div class="charity p-4px d-flex flex-column gap-16px">
+				<div class="position-relative">
+					<div class="text-banner">
+						<span class="fs-16px fw-bold mb-4px">نیکوکاری</span>
+						<span class="fs-14px">در ساختن دنیای بهتر سهیم باش!</span>
+					</div>
+					<img
+						src="assets/images/charity-banner.webp"
+						width="522"
+						height="92"
+						alt=""
+						class="object-fit-cover"
+					/>
+				</div>
+
+				<div>
+					<app-two-row-slider
+						[slides]="insuranceSlides"
+						[config]="sliderConfig"
+					></app-two-row-slider>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
