@@ -74,150 +74,42 @@
 			<div class="col-12 col-md-8 p-0">
 				<div class="insurance-car-wealth">
 					<div>
-						<h2 class="fs-16px fw-600 text-dark mb-16px">خدمات بیمه</h2>
+						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات پرداخت</h2>
 						<div class="services-item">
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
+							@for (payment of paymentList; track payment?.id) {
+								<app-services-item
+									[linkValue]="payment?.link"
+									[titleValue]="payment?.title"
+									[iconValue]="payment?.icon"
+									[colorIconValue]="payment?.colorIcon"
+								></app-services-item>
+							}
 						</div>
 					</div>
 					<div>
-						<h2 class="fs-16px fw-600 text-dark mb-16px">خدمات خودرو</h2>
+						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات موبایل</h2>
 						<div class="services-item">
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
+							@for (mobile of mobileList; track mobile?.id) {
+								<app-services-item
+									[linkValue]="mobile?.link"
+									[titleValue]="mobile?.title"
+									[iconValue]="mobile?.icon"
+									[colorIconValue]="mobile?.colorIcon"
+								></app-services-item>
+							}
 						</div>
 					</div>
 					<div>
-						<h2 class="fs-16px fw-600 text-dark mb-16px">مدیریت ثروت</h2>
+						<h2 class="fs-14px fw-600 text-dark mb-16px">قبوض خدماتی</h2>
 						<div class="services-item">
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
+							@for (bill of bills; track bill?.id) {
+								<app-services-item
+									[linkValue]="bill?.link"
+									[titleValue]="bill?.title"
+									[iconValue]="bill?.icon"
+									[colorIconValue]="bill?.colorIcon"
+								></app-services-item>
+							}
 						</div>
 					</div>
 				</div>
@@ -294,150 +186,42 @@
 			<div class="col-12 col-md-8 p-0">
 				<div class="insurance-car-wealth">
 					<div>
-						<h2 class="fs-16px fw-600 text-dark mb-16px">خدمات پرداخت</h2>
+						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات بیمه</h2>
 						<div class="services-item">
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
+							@for (insurance of insurancesList; track insurance?.id) {
+								<app-services-item
+									[linkValue]="insurance?.link"
+									[titleValue]="insurance?.title"
+									[iconValue]="insurance?.icon"
+									[colorIconValue]="insurance?.colorIcon"
+								></app-services-item>
+							}
 						</div>
 					</div>
 					<div>
-						<h2 class="fs-16px fw-600 text-dark mb-16px">خدمات موبایل</h2>
+						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات خودرو</h2>
 						<div class="services-item">
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
+							@for (automobile of automobiles; track automobile?.id) {
+								<app-services-item
+									[linkValue]="automobile?.link"
+									[titleValue]="automobile?.title"
+									[iconValue]="automobile?.icon"
+									[colorIconValue]="automobile?.colorIcon"
+								></app-services-item>
+							}
 						</div>
 					</div>
 					<div>
-						<h2 class="fs-16px fw-600 text-dark mb-16px">قبوض خدماتی</h2>
+						<h2 class="fs-14px fw-600 text-dark mb-16px">مدیریت ثروت</h2>
 						<div class="services-item">
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
-
-							<a href="" class="services-item-link">
-								<span class="services-item-logo">
-									<i class="icon icon-container">
-										<i class="icon icon-receipt-bill-bold"></i>
-									</i>
-								</span>
-								<span class="fs-12px">پرداخت قبض</span>
-							</a>
+							@for (item of wealth; track item?.id) {
+								<app-services-item
+									[linkValue]="item?.link"
+									[titleValue]="item?.title"
+									[iconValue]="item?.icon"
+									[colorIconValue]="item?.colorIcon"
+								></app-services-item>
+							}
 						</div>
 					</div>
 				</div>
