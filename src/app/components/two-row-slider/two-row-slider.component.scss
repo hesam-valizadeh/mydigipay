@@ -45,23 +45,6 @@
 	}
 
 	// استایل pagination
-	.swiper-pagination {
-		bottom: 0;
-
-		.swiper-pagination-bullet {
-			width: 8px;
-			height: 8px;
-			background: #ccc;
-			opacity: 1;
-			transition: all 0.3s ease;
-
-			&-active {
-				background: #0f53ed;
-				width: 20px;
-				border-radius: 4px;
-			}
-		}
-	}
 }
 
 // استایل responsive برای موبایل
@@ -77,6 +60,35 @@
 			&::after {
 				font-size: 14px;
 			}
+		}
+	}
+}
+
+::ng-deep .swiper-pagination {
+	position: absolute;
+	bottom: 20px;
+	height: 26px;
+	width: 520px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.swiper-pagination-bullet {
+		width: 6px;
+		height: 6px;
+		border-radius: 30px;
+		background-color: #c9cbcf;
+		margin: 0 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&-active {
+			width: 14px;
+			background-color: #000;
+			height: 6px;
+			border-radius: 30px;
+			margin: 0 4px;
 		}
 	}
 }

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
 import {
 	AfterViewInit,
 	ChangeDetectionStrategy,
@@ -16,7 +15,8 @@ import {
 	ITwoRowSlide,
 	ITwoRowSliderConfig,
 } from '@core/models/interfaces/two-row-slider.interface';
-
+const slidesPerView: number = 4;
+const spaceBetween: number = 20;
 @Component({
 	selector: 'app-two-row-slider',
 	imports: [CustomSwiperComponent, TwoRowSliderItemComponent],
@@ -27,35 +27,28 @@ import {
 export class TwoRowSliderComponent implements AfterViewInit, OnDestroy {
 	@Input() public slides: ITwoRowSlide[] = [];
 	@Input() public config: ITwoRowSliderConfig = {};
-
-	@ViewChild('swiperContainer') public swiperContainer!: ElementRef;
-
+	@ViewChild('swiperContainer') public swiperContainer!: ElementRef<HTMLElement>;
 	private swiper: Swiper | null = null;
-
 	public ngAfterViewInit(): void {
 		this.initSwiper();
 	}
-
 	public ngOnDestroy(): void {
 		if (this.swiper) {
 			this.swiper.destroy(true, true);
 		}
 	}
-
 	private initSwiper(): void {
 		const swiperConfig: SwiperOptions = {
-			// eslint-disable-next-line no-magic-numbers
-			slidesPerView: this.config.slidesPerView ?? 4,
-			// eslint-disable-next-line no-magic-numbers
-			spaceBetween: this.config.spaceBetween ?? 20,
+			slidesPerView: this.config.slidesPerView ?? slidesPerView,
+			spaceBetween: this.config.spaceBetween ?? spaceBetween,
 			loop: this.config.loop ?? false,
-			// eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-			autoplay: this.config.autoplayDelay
-				? {
-						delay: this.config.autoplayDelay,
-						disableOnInteraction: false,
-					}
-				: false,
+			autoplay:
+				this.config.autoplayDelay !== undefined
+					? {
+							delay: this.config.autoplayDelay,
+							disableOnInteraction: false,
+						}
+					: false,
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'bullets',
@@ -79,18 +72,15 @@ export class TwoRowSliderComponent implements AfterViewInit, OnDestroy {
 					spaceBetween: 15,
 				},
 				1024: {
-					// eslint-disable-next-line no-magic-numbers
-					slidesPerView: this.config.slidesPerView ?? 4,
+					slidesPerView: this.config.slidesPerView ?? slidesPerView,
 					spaceBetween: 20,
 				},
 				1280: {
-					// eslint-disable-next-line no-magic-numbers
-					slidesPerView: this.config.slidesPerView ?? 5,
+					slidesPerView: this.config.slidesPerView ?? slidesPerView + 1,
 					spaceBetween: 20,
 				},
 			},
 		};
-
 		this.swiper = new Swiper(this.swiperContainer.nativeElement, swiperConfig);
 	}
 }

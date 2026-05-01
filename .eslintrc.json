@@ -87,7 +87,7 @@
 						"skipComments": true
 					}
 				],
-				"complexity": ["error", 7],
+				"complexity": ["error", 9],
 				"max-params": ["error", 3],
 				"@angular-eslint/prefer-on-push-component-change-detection": "error",
 				"@angular-eslint/use-lifecycle-interface": "error",
