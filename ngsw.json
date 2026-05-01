@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1777648366128,
+  "timestamp": 1777651873713,
   "index": "/mydigipay/index.html",
   "assetGroups": [
     {
@@ -41,7 +41,6 @@
         "/mydigipay/chunk-P2HVAMNR.js",
         "/mydigipay/chunk-PHWRDECA.js",
         "/mydigipay/chunk-QPU3YMGD.js",
-        "/mydigipay/chunk-QSXM66LQ.js",
         "/mydigipay/chunk-QVFX5KIO.js",
         "/mydigipay/chunk-THIWUU63.js",
         "/mydigipay/chunk-UYAWKLYU.js",
@@ -52,8 +51,9 @@
         "/mydigipay/chunk-X4AUF4LW.js",
         "/mydigipay/chunk-X4HLBJBE.js",
         "/mydigipay/chunk-YERVEY3F.js",
+        "/mydigipay/chunk-ZWJ3ALB7.js",
         "/mydigipay/index.html",
-        "/mydigipay/main-E7ORRS3U.js",
+        "/mydigipay/main-QRYCANDP.js",
         "/mydigipay/manifest.webmanifest",
         "/mydigipay/scripts-KDEA36TY.js",
         "/mydigipay/styles-7XOJE56P.css"
@@ -1271,7 +1271,6 @@
     "/mydigipay/chunk-P2HVAMNR.js": "3d072c86a73aeac5c386be5af1830c3ce90cd12c",
     "/mydigipay/chunk-PHWRDECA.js": "f542006acb7d59623086e0b84ef4fef31f0d2eaa",
     "/mydigipay/chunk-QPU3YMGD.js": "f06fa9bab031635a5dd33f6a5aa6ac922dbda247",
-    "/mydigipay/chunk-QSXM66LQ.js": "e6a8497a07eb89ab8ad7715d55d68a2a6318ec4c",
     "/mydigipay/chunk-QVFX5KIO.js": "e557af3e01bb9695382fbccccba615aa8694a62f",
     "/mydigipay/chunk-THIWUU63.js": "3adb60e2094a24643037aa9b773a48dc99415068",
     "/mydigipay/chunk-UYAWKLYU.js": "22eb612d995217d1f56166237134f7cbfe322a69",
@@ -1282,8 +1281,9 @@
     "/mydigipay/chunk-X4AUF4LW.js": "60270f09d6a158f521c20352b273fe81a50d67ba",
     "/mydigipay/chunk-X4HLBJBE.js": "ded2f27468aeb20aa0924454abe0506d5f6ae3a6",
     "/mydigipay/chunk-YERVEY3F.js": "7ec03eb1662435143aadfc0bf8e637e99cdfd878",
-    "/mydigipay/index.html": "a0d0dc4abf087497fa5d9e22894595c7bfd7716c",
-    "/mydigipay/main-E7ORRS3U.js": "d7bf893cdcd5041a90e1c26bea9786ab9df935a1",
+    "/mydigipay/chunk-ZWJ3ALB7.js": "edf64068519c206d9a700fff0a39f09c8a96acda",
+    "/mydigipay/index.html": "f0915611b19c1695f206efc2581a8d9a23aed55d",
+    "/mydigipay/main-QRYCANDP.js": "1dee44c9e14b14fb9d5a255914af2fef63ef581a",
     "/mydigipay/manifest.webmanifest": "bb4d71c6f42fe3f5749ce085473a219c755f8d73",
     "/mydigipay/media/YekanBakhFaNum-Black-VYXMUH3K.woff2": "5e85acd2eea3d4f26472f5419c7bd454d078523b",
     "/mydigipay/media/YekanBakhFaNum-Bold-7CVCFUCF.woff2": "6b226880c8b149234127ae7e39e44acafd15e858",
