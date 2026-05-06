@@ -23,7 +23,6 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
 	@Input({ required: true })
 	public endDate!: Date;
 
-	// public days = signal(0);
 	public hours = signal(0);
 	public minutes = signal(0);
 	public seconds = signal(0);
@@ -48,14 +47,12 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
 
 		if (distance <= 0) {
 			this.subscription?.unsubscribe();
-			// this.days.set(0);
 			this.hours.set(0);
 			this.minutes.set(0);
 			this.seconds.set(0);
 			return;
 		}
 
-		// this.days.set(Math.floor(distance / (MILLISECONDS_PER_SECOND * SECONDS_PER_MINUTE * MINUTES_PER_HOUR * HOURS_PER_DAY)));
 		this.hours.set(
 			Math.floor(
 				(distance / (MILLISECONDS_PER_SECOND * SECONDS_PER_MINUTE * MINUTES_PER_HOUR)) %

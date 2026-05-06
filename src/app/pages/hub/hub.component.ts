@@ -1,4 +1,3 @@
-// hub.component.ts
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
@@ -13,7 +12,6 @@ import { INavigationItem } from '@layout/bottom-navigation/model/navigation-item
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HubComponent {
-	// 1. public properties
 	public hubMenu: INavigationItem[] = [
 		{ routerLink: '/hub/services', icon: 'more', label: 'خدمات', exact: true, linear: true },
 		{
@@ -27,15 +25,12 @@ export class HubComponent {
 		{ routerLink: '/hub/profile', icon: 'person', label: 'پروفایل', linear: true },
 	];
 
-	// 2. public getters
 	public get dynamicMenu(): INavigationItem[] {
 		return this.hubMenu.map((item) => this.getItemWithLinearState(item));
 	}
 
-	// 3. private properties
 	private router = inject(Router);
 
-	// 4. public methods
 	public getItemWithLinearState(item: INavigationItem): INavigationItem {
 		const isActive = this.isRouteActive(item.routerLink, item.exact);
 		return {
@@ -44,7 +39,6 @@ export class HubComponent {
 		};
 	}
 
-	// 5. private methods
 	private getRouterLinkString(routerLink: string | unknown[]): string {
 		if (typeof routerLink === 'string') {
 			return routerLink;

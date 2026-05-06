@@ -151,3 +151,58 @@ aside {
 		display: none;
 	}
 }
+
+.application {
+	gap: 16px;
+	width: 97px;
+
+	a {
+		width: 97px;
+		height: 30px;
+		border: 0.5px solid #000;
+		border-radius: 74px;
+		background-color: transparent;
+		display: -webkit-box;
+		display: flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		gap: 6px;
+
+		figure {
+			img:last-child {
+				margin-right: 6px;
+			}
+		}
+	}
+}
+
+.qrcode {
+	span {
+		color: #45474a;
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	width: 92px;
+}
+
+.download-app {
+	div.image-download {
+		position: relative;
+
+		img {
+			position: absolute;
+			bottom: -32px;
+			right: -20px;
+		}
+	}
+}
+
+.content {
+	width: 250px;
+}

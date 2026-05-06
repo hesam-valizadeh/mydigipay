@@ -7,7 +7,6 @@ import {
 	OnDestroy,
 	ViewChild,
 } from '@angular/core';
-import { CustomSwiperComponent } from '@shared/components/custom-swiper/custom-swiper.component';
 import { TwoRowSliderItemComponent } from './two-row-slider-item/two-row-slider-item.component';
 import Swiper from 'swiper';
 import { SwiperOptions } from 'swiper/types';
@@ -19,7 +18,7 @@ const slidesPerView: number = 4;
 const spaceBetween: number = 20;
 @Component({
 	selector: 'app-two-row-slider',
-	imports: [CustomSwiperComponent, TwoRowSliderItemComponent],
+	imports: [TwoRowSliderItemComponent],
 	templateUrl: './two-row-slider.component.html',
 	styleUrl: './two-row-slider.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,

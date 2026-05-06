@@ -1,9 +1,7 @@
-// two-row-slider.component.scss
-
 .two-row-slider-wrapper {
 	position: relative;
 	width: 100%;
-	padding: 20px 0;
+	padding: 0 0 20px;
 	overflow: hidden;
 
 	.swiper-container {
@@ -43,11 +41,8 @@
 			box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 		}
 	}
-
-	// استایل pagination
 }
 
-// استایل responsive برای موبایل
 @media (width <= 768px) {
 	.two-row-slider-wrapper {
 		padding: 10px 0;

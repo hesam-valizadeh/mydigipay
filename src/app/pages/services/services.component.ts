@@ -8,6 +8,7 @@ import { ServicesItemComponent } from '@shared/components/services-item/services
 import { IServiceItemInterface } from '../../@core/models/interfaces/services-item.interface';
 import { TwoRowSliderComponent } from 'src/app/components/two-row-slider/two-row-slider.component';
 import { ITwoRowSlide } from '@core/models/interfaces/two-row-slider.interface';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
 	selector: 'app-services',
@@ -17,6 +18,7 @@ import { ITwoRowSlide } from '@core/models/interfaces/two-row-slider.interface';
 		CarouselBannerServicesComponent,
 		ServicesItemComponent,
 		TwoRowSliderComponent,
+		NgOptimizedImage,
 	],
 	templateUrl: './services.component.html',
 	styleUrl: './services.component.scss',
@@ -299,7 +301,6 @@ export class ServicesComponent {
 		},
 	];
 
-	// تنظیمات اسلایدر
 	public sliderConfig = {
 		slidesPerView: 5.6,
 		spaceBetween: 20,
