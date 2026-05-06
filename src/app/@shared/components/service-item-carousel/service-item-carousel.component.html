@@ -1,0 +1,20 @@
+<app-custom-swiper
+	#swiperRef
+	pagination="false"
+	[config]="SwiperConfig"
+	[startIndex]="0"
+	[slides]="itemsList"
+>
+	<ng-template #swiperSlideTemplate let-item="item" let-index="index">
+		<div class="services-item">
+			<a class="services-item-link" [href]="item.link">
+				<span class="services-item-logo">
+					<i class="icon icon-container" [style.background]="item.colorIcon">
+						<i class="icon" [class]="item.icon"></i>
+					</i>
+				</span>
+				<span class="fs-12px">{{ item.title }}</span>
+			</a>
+		</div>
+	</ng-template>
+</app-custom-swiper>

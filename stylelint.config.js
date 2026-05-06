@@ -14,7 +14,7 @@ module.exports = {
 		'at-rule-no-unknown': null,
 		'selector-class-pattern': null,
 		'declaration-no-important': null,
-		'max-nesting-depth': 5,
+		'max-nesting-depth': 7,
 		'color-hex-length': 'short',
 		'color-named': 'never',
 		'unit-no-unknown': true,

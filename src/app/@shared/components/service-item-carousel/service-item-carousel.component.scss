@@ -1,0 +1,42 @@
+.swiper-slide {
+	width: 88px !important;
+}
+
+app-custom-swiper {
+	display: block;
+	width: 100%;
+}
+
+.services-item-link {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	flex-basis: max-content;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	width: 88px;
+
+	.services-item-logo {
+		background: #f2f3f6;
+		width: 88px;
+		height: 88px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 24px;
+
+		.icon-container {
+			height: 40px;
+			width: 40px;
+			font-size: 40px;
+			background-clip: text !important;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+
+.services-item {
+	display: flex;
+	gap: 15px;
+}

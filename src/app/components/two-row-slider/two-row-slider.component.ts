@@ -59,11 +59,11 @@ export class TwoRowSliderComponent implements AfterViewInit, OnDestroy {
 			},
 			breakpoints: {
 				320: {
-					slidesPerView: 1,
+					slidesPerView: 3.5,
 					spaceBetween: 10,
 				},
 				480: {
-					slidesPerView: 2,
+					slidesPerView: 3.5,
 					spaceBetween: 12,
 				},
 				768: {

@@ -69,8 +69,8 @@ aside {
 	gap: 40px;
 
 	.services-item {
-		display: flex;
-		gap: 15px;
+		width: 100%;
+		display: block;
 	}
 
 	.services-item-link {

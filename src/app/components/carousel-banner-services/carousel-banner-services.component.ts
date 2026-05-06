@@ -72,5 +72,19 @@ export class CarouselBannerServicesComponent {
 			type: 'bullets',
 			el: '',
 		},
+		breakpoints: {
+			300: {
+				slidesPerView: 1.3,
+				spaceBetween: 25,
+			},
+			500: {
+				slidesPerView: 1.3,
+				spaceBetween: 25,
+			},
+			998: {
+				slidesPerView: 4,
+				spaceBetween: 10,
+			},
+		},
 	};
 }

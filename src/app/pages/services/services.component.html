@@ -76,40 +76,19 @@
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات پرداخت</h2>
 						<div class="services-item">
-							@for (payment of paymentList; track payment?.id) {
-								<app-services-item
-									[linkValue]="payment?.link"
-									[titleValue]="payment?.title"
-									[iconValue]="payment?.icon"
-									[colorIconValue]="payment?.colorIcon"
-								></app-services-item>
-							}
+							<app-service-item-carousel [itemsList]="paymentList"></app-service-item-carousel>
 						</div>
 					</div>
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات موبایل</h2>
 						<div class="services-item">
-							@for (mobile of mobileList; track mobile?.id) {
-								<app-services-item
-									[linkValue]="mobile?.link"
-									[titleValue]="mobile?.title"
-									[iconValue]="mobile?.icon"
-									[colorIconValue]="mobile?.colorIcon"
-								></app-services-item>
-							}
+							<app-service-item-carousel [itemsList]="mobileList"></app-service-item-carousel>
 						</div>
 					</div>
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">قبوض خدماتی</h2>
 						<div class="services-item">
-							@for (bill of bills; track bill?.id) {
-								<app-services-item
-									[linkValue]="bill?.link"
-									[titleValue]="bill?.title"
-									[iconValue]="bill?.icon"
-									[colorIconValue]="bill?.colorIcon"
-								></app-services-item>
-							}
+							<app-service-item-carousel [itemsList]="bills"></app-service-item-carousel>
 						</div>
 					</div>
 				</div>
@@ -188,40 +167,19 @@
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات بیمه</h2>
 						<div class="services-item">
-							@for (insurance of insurancesList; track insurance?.id) {
-								<app-services-item
-									[linkValue]="insurance?.link"
-									[titleValue]="insurance?.title"
-									[iconValue]="insurance?.icon"
-									[colorIconValue]="insurance?.colorIcon"
-								></app-services-item>
-							}
+							<app-service-item-carousel [itemsList]="insurancesList"></app-service-item-carousel>
 						</div>
 					</div>
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات خودرو</h2>
 						<div class="services-item">
-							@for (automobile of automobiles; track automobile?.id) {
-								<app-services-item
-									[linkValue]="automobile?.link"
-									[titleValue]="automobile?.title"
-									[iconValue]="automobile?.icon"
-									[colorIconValue]="automobile?.colorIcon"
-								></app-services-item>
-							}
+							<app-service-item-carousel [itemsList]="automobiles"></app-service-item-carousel>
 						</div>
 					</div>
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">مدیریت ثروت</h2>
 						<div class="services-item">
-							@for (item of wealth; track item?.id) {
-								<app-services-item
-									[linkValue]="item?.link"
-									[titleValue]="item?.title"
-									[iconValue]="item?.icon"
-									[colorIconValue]="item?.colorIcon"
-								></app-services-item>
-							}
+							<app-service-item-carousel [itemsList]="wealth"></app-service-item-carousel>
 						</div>
 					</div>
 				</div>
@@ -230,7 +188,7 @@
 		<div class="row my-20px">
 			<app-carousel-banner-services class="p-0"></app-carousel-banner-services>
 		</div>
-		<div class="row my-20px gap-24px">
+		<div class="row my-20px gap-24px charity-downloadApp-section">
 			<div class="download-app d-flex align-item-center justify-content-between p-32px">
 				<div class="image-download">
 					<img src="assets/images/download service app.webp" alt="" width="257" height="259" />

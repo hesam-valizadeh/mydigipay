@@ -5,10 +5,11 @@ import { CarouselBannerComponent } from 'src/app/components/carousel-banner/caro
 import { SquareBanner } from 'src/app/components/square-banner/square-banner.component';
 import { CarouselBannerServicesComponent } from 'src/app/components/carousel-banner-services/carousel-banner-services.component';
 import { ServicesItemComponent } from '@shared/components/services-item/services-item.component';
-import { IServiceItemInterface } from '../../@core/models/interfaces/services-item.interface';
+import { IServiceItemInterface } from '@core/models/interfaces/services-item.interface';
 import { TwoRowSliderComponent } from 'src/app/components/two-row-slider/two-row-slider.component';
 import { ITwoRowSlide } from '@core/models/interfaces/two-row-slider.interface';
 import { NgOptimizedImage } from '@angular/common';
+import { ServiceItemCarouselComponent } from '@shared/components/service-item-carousel/service-item-carousel.component';
 
 @Component({
 	selector: 'app-services',
@@ -19,6 +20,7 @@ import { NgOptimizedImage } from '@angular/common';
 		ServicesItemComponent,
 		TwoRowSliderComponent,
 		NgOptimizedImage,
+		ServiceItemCarouselComponent,
 	],
 	templateUrl: './services.component.html',
 	styleUrl: './services.component.scss',
@@ -255,7 +257,12 @@ export class ServicesComponent {
 			prevEl: '.swiper-button-prev',
 		},
 		injectStyles: [],
-		breakpoints: {},
+		breakpoints: {
+			480: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+		},
 	};
 
 	public insuranceSlides: ITwoRowSlide[] = [
