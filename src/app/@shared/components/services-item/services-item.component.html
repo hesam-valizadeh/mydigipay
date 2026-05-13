@@ -1,8 +1,12 @@
 <a class="services-item-link" [href]="link()">
 	<span class="services-item-logo">
-		<i class="icon icon-container" [style.background]="colorIcon()">
-			<i class="icon" [class]="icon()"></i>
-		</i>
+		@if (src()) {
+			<img width="40" height="40" alt="test" class="rounded" [src]="src()" />
+		} @else {
+			<i class="icon icon-container" [style.background]="colorIcon()">
+				<i class="icon" [class]="icon()"></i>
+			</i>
+		}
 	</span>
 	<span class="fs-12px">{{ title() }}</span>
 </a>

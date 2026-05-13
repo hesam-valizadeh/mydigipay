@@ -95,6 +95,7 @@
 						<h2 class="fs-14px fw-600 text-dark mb-16px">قبوض خدماتی</h2>
 						<div class="services-item">
 							<app-service-item-carousel
+								class="bill"
 								[customConfig]="serviceItemCarousel"
 								[itemsList]="bills"
 							></app-service-item-carousel>
@@ -308,10 +309,10 @@
 					/>
 				</div>
 
-				<div>
+				<div class="two-row-slider">
 					<app-two-row-slider
 						[slides]="insuranceSlides"
-						[config]="sliderConfig"
+						[config]="sliderConfigTwoRow"
 					></app-two-row-slider>
 				</div>
 			</div>

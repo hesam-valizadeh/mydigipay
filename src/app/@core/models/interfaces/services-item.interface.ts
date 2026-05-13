@@ -4,4 +4,5 @@ export interface IServiceItemInterface {
 	icon: string;
 	colorIcon: string;
 	title: string;
+	src?: string;
 }

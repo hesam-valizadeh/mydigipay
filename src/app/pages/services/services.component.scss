@@ -129,7 +129,7 @@ aside {
 
 ::ng-deep .two-row-slider-wrapper {
 	.services-item-logo {
-		width: 48px !important	;
+		width: 48px !important;
 		height: 48px !important;
 		border-radius: 16px !important;
 
@@ -205,4 +205,18 @@ aside {
 
 .content {
 	width: 250px;
+}
+
+::ng-deep {
+	.two-row-slider {
+		img {
+			mix-blend-mode: multiply;
+		}
+	}
+
+	.bill {
+		img {
+			border-radius: 24px;
+		}
+	}
 }

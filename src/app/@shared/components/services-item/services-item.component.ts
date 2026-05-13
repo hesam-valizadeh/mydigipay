@@ -11,6 +11,7 @@ export class ServicesItemComponent {
 	public title: WritableSignal<string> = signal<string>('');
 	public icon: WritableSignal<string> = signal<string>('icon-traffic-signal-bold');
 	public link: WritableSignal<string> = signal<string>('#');
+	public src: WritableSignal<string> = signal<string>('');
 	public colorIcon: WritableSignal<string> = signal<string>(
 		'linear-gradient(224deg, #0f53ed 11.43%, #94bfff 92.87%)',
 	);
@@ -33,5 +34,9 @@ export class ServicesItemComponent {
 	@Input()
 	public set colorIconValue(value: string) {
 		this.colorIcon.set(value);
+	}
+
+	@Input() public set srcValue(value: string) {
+		this.src.set(value);
 	}
 }

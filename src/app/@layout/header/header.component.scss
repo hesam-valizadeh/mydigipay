@@ -125,7 +125,7 @@ nav {
 }
 
 .active,
-.active * {
+.active .icon:not(.icon-discount-bold.position-absolute) {
 	color: #1159fc;
 }
 
