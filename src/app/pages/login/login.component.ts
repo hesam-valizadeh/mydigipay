@@ -1,7 +1,7 @@
 import { Component, inject, signal, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { CarouselStoryComponent } from '../../@shared/components/carousel-story/carousel-story.component';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 import { Router } from '@angular/router';
 import { routerLinksPath } from '../../@core/constants/router-links';
 import { AuthService } from '../../@core/services/auth.service';
@@ -13,13 +13,7 @@ const LOADING_TIMEOUT = 3000;
 	selector: 'app-login',
 	standalone: true,
 	changeDetection: ChangeDetectionStrategy.OnPush,
-	imports: [
-		CarouselStoryComponent,
-		ReactiveFormsModule,
-		CommonModule,
-		CustomInputComponent,
-		SkeletonDirective,
-	],
+	imports: [CarouselStoryComponent, ReactiveFormsModule, CustomInputComponent, SkeletonDirective],
 	templateUrl: './login.component.html',
 	styleUrl: './login.component.scss',
 })
