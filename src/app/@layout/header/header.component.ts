@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
 	public responsive = inject(ResponsiveService);
 	public routerLinksPath = routerLinksPath;
 	public searchOverlay = inject(SearchOverlayService);
-
+	public isDisabled: boolean = true;
 	@Output() public overlayToggle = new EventEmitter<boolean>();
 
 	public data: IHeaderViewDataInterface = {

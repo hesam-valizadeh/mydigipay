@@ -73,20 +73,28 @@
 								<a [routerLink]="routerLinksPath.aboutPage.about"><span>درباره دیجی‌پی</span></a>
 							</li>
 							<li>
-								<a [routerLink]="routerLinksPath.aboutPage.annualReport">
+								<a
+									[routerLink]="routerLinksPath.aboutPage.annualReport"
+									[class.disabled]="isDisabled"
+								>
 									<span>گزارش سالانه</span>
 								</a>
 							</li>
 							<li>
-								<a [routerLink]="routerLinksPath.aboutPage.careers"><span>فرصت‌های شغلی</span></a>
+								<a [routerLink]="routerLinksPath.aboutPage.careers" [class.disabled]="isDisabled">
+									<span>فرصت‌های شغلی</span>
+								</a>
 							</li>
 							<li>
-								<a [routerLink]="routerLinksPath.aboutPage.blog">
+								<a [routerLink]="routerLinksPath.aboutPage.blog" [class.disabled]="isDisabled">
 									<span>مجله اینترنتی دیجی‌پی</span>
 								</a>
 							</li>
 							<li>
-								<a [routerLink]="routerLinksPath.aboutPage.technicalDocs">
+								<a
+									[routerLink]="routerLinksPath.aboutPage.technicalDocs"
+									[class.disabled]="isDisabled"
+								>
 									<span>مستندات فنی</span>
 								</a>
 							</li>

@@ -75,6 +75,15 @@ export const routes: Routes = [
 		loadComponent: () => import('./pages/shops/shops.component').then((c) => c.ShopsComponent),
 	},
 	{
+		path: '',
+		data: {
+			title: '',
+			description: '',
+		},
+		pathMatch: 'full',
+		redirectTo: routerLinksPath.shopsPage.shops,
+	},
+	{
 		path: routeWithoutSlash(routerLinksPath.loanPage.loanProduct),
 		data: {
 			title: 'وام خرید کالا | دیجی‌پی',

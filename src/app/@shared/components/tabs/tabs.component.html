@@ -1,0 +1,16 @@
+<ul class="nav nav-tabs">
+	@for (tab of tabs; track tab.id) {
+		<li class="nav-item">
+			<a
+				class="nav-link"
+				role="tab"
+				tabindex="0"
+				[class.active]="activeTabId === tab.id"
+				(click)="onTabClick(tab.id)"
+				(keydown.enter)="onTabClick(tab.id)"
+			>
+				{{ tab.title }}
+			</a>
+		</li>
+	}
+</ul>

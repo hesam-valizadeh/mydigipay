@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ListModel } from '@core/models/list-model';
-import { SwiperOptions } from 'swiper/types';
 import { CarouselBannerComponent } from 'src/app/components/carousel-banner/carousel-banner.component';
 import { SquareBanner } from 'src/app/components/square-banner/square-banner.component';
 import { CarouselBannerServicesComponent } from 'src/app/components/carousel-banner-services/carousel-banner-services.component';
@@ -238,32 +237,6 @@ export class ServicesComponent {
 			image: 'assets/images/01.webp',
 		},
 	]);
-	public SwiperConfig: SwiperOptions = {
-		slidesPerView: 1,
-		spaceBetween: 6,
-		centeredSlides: false,
-		grabCursor: true,
-		loopPreventsSliding: false,
-		loop: true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-		},
-		pagination: {
-			type: 'bullets',
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		injectStyles: [],
-		breakpoints: {
-			480: {
-				slidesPerView: 1,
-				spaceBetween: 10,
-			},
-		},
-	};
 
 	public insuranceSlides: ITwoRowSlide[] = [
 		{
@@ -315,5 +288,42 @@ export class ServicesComponent {
 		autoplayDelay: 3000,
 		pagination: false,
 		navigation: false,
+	};
+	public serviceItemCarousel = {
+		slidesPerView: 5,
+		spaceBetween: 10,
+		pagination: false,
+		navigation: false,
+		loop: false,
+		breakpoints: {
+			300: {
+				slidesPerView: 3.2,
+				spaceBetween: 8,
+				pagination: false,
+				navigation: false,
+				loop: false,
+			},
+			500: {
+				slidesPerView: 4.8,
+				spaceBetween: 8,
+				pagination: false,
+				navigation: false,
+				loop: false,
+			},
+			700: {
+				slidesPerView: 6,
+				spaceBetween: 8,
+				pagination: false,
+				navigation: false,
+				loop: false,
+			},
+			1200: {
+				slidesPerView: 6,
+				spaceBetween: 15,
+				pagination: false,
+				navigation: false,
+				loop: false,
+			},
+		},
 	};
 }

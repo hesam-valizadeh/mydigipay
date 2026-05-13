@@ -14,6 +14,7 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class FooterComponent {
 	public responsive = inject(ResponsiveService);
+	public isDisabled: boolean = true;
 	protected readonly routerLinksPath = routerLinksPath;
 	public get isMobile(): boolean {
 		return this.responsive.isMobile();

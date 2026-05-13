@@ -32,13 +32,25 @@ export class CarouselBannerComponent {
 			link: '',
 			title: 'test',
 		},
+		{
+			id: '3',
+			src: 'assets/images/03.webp',
+			alt: 'test',
+			width: '748',
+			height: '400',
+			link: '',
+			title: 'test',
+		},
 	]);
 	public SwiperConfig: SwiperOptions = {
 		slidesPerView: 1,
-		centeredSlides: true,
-		spaceBetween: 2,
+		spaceBetween: 10,
 		loop: true,
-
+		effect: 'slide',
+		speed: 1000,
+		autoplay: {
+			delay: 1000,
+		},
 		pagination: {
 			type: 'bullets',
 		},

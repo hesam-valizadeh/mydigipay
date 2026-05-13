@@ -76,19 +76,28 @@
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات پرداخت</h2>
 						<div class="services-item">
-							<app-service-item-carousel [itemsList]="paymentList"></app-service-item-carousel>
+							<app-service-item-carousel
+								[customConfig]="serviceItemCarousel"
+								[itemsList]="paymentList"
+							></app-service-item-carousel>
 						</div>
 					</div>
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات موبایل</h2>
 						<div class="services-item">
-							<app-service-item-carousel [itemsList]="mobileList"></app-service-item-carousel>
+							<app-service-item-carousel
+								[customConfig]="serviceItemCarousel"
+								[itemsList]="mobileList"
+							></app-service-item-carousel>
 						</div>
 					</div>
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">قبوض خدماتی</h2>
 						<div class="services-item">
-							<app-service-item-carousel [itemsList]="bills"></app-service-item-carousel>
+							<app-service-item-carousel
+								[customConfig]="serviceItemCarousel"
+								[itemsList]="bills"
+							></app-service-item-carousel>
 						</div>
 					</div>
 				</div>
@@ -167,19 +176,28 @@
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات بیمه</h2>
 						<div class="services-item">
-							<app-service-item-carousel [itemsList]="insurancesList"></app-service-item-carousel>
+							<app-service-item-carousel
+								[customConfig]="serviceItemCarousel"
+								[itemsList]="insurancesList"
+							></app-service-item-carousel>
 						</div>
 					</div>
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">خدمات خودرو</h2>
 						<div class="services-item">
-							<app-service-item-carousel [itemsList]="automobiles"></app-service-item-carousel>
+							<app-service-item-carousel
+								[customConfig]="serviceItemCarousel"
+								[itemsList]="automobiles"
+							></app-service-item-carousel>
 						</div>
 					</div>
 					<div>
 						<h2 class="fs-14px fw-600 text-dark mb-16px">مدیریت ثروت</h2>
 						<div class="services-item">
-							<app-service-item-carousel [itemsList]="wealth"></app-service-item-carousel>
+							<app-service-item-carousel
+								[customConfig]="serviceItemCarousel"
+								[itemsList]="wealth"
+							></app-service-item-carousel>
 						</div>
 					</div>
 				</div>

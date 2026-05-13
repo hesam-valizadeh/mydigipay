@@ -219,3 +219,14 @@ hr {
 		}
 	}
 }
+
+a.disabled {
+	cursor: not-allowed !important;
+	opacity: 0.5;
+
+	a:hover {
+		pointer-events: none;
+		cursor: not-allowed !important;
+		opacity: 0.5;
+	}
+}

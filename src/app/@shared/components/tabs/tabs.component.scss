@@ -1,0 +1,53 @@
+.nav-link {
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+	background-color: #f8f9fa;
+}
+
+.nav.nav-tabs {
+	width: 280px;
+	height: 47px;
+	background: #fff;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+
+	.nav-item {
+		width: auto;
+		height: 39px;
+	}
+
+	.nav-link {
+		padding: 0 5px;
+		font-size: 14px;
+		text-align: center;
+		background-color: #fff;
+		border-style: none;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		color: #74777c;
+		border-radius: 12px;
+		line-height: 2.8;
+
+		a {
+			height: 100%;
+		}
+
+		&:hover {
+			background-color: #ddd;
+			border-radius: 8px;
+		}
+
+		&.active {
+			background-color: #1159fc;
+			border-radius: 8px;
+			color: #fff;
+			width: 136px;
+			height: 39px;
+		}
+	}
+}

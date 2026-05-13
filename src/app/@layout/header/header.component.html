@@ -29,15 +29,27 @@
 				<button class="menu_link">
 					<span>وام و اعتبار</span>
 					<div class="submenu">
-						<a class="submenu_link" [routerLink]="routerLinksPath.loanPage.loanProduct">
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.loanPage.loanProduct"
+							[class.disabled]="isDisabled"
+						>
 							<i class="icon icon-credit-linear"></i>
 							<span>وام خرید کالا</span>
 						</a>
-						<a class="submenu_link" [routerLink]="routerLinksPath.loanPage.bnpl">
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.loanPage.bnpl"
+							[class.disabled]="isDisabled"
+						>
 							<i class="icon icon-bnpl-linear"></i>
 							<span>الان بخر بعدا پرداخت کن</span>
 						</a>
-						<a class="submenu_link" [routerLink]="routerLinksPath.loanPage.digikalaInstallment">
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.loanPage.digikalaInstallment"
+							[class.disabled]="isDisabled"
+						>
 							<i>
 								<svg
 									width="24"
@@ -61,20 +73,29 @@
 				<button class="menu_link">
 					<span>بیمه</span>
 					<div class="submenu">
-						<a class="submenu_link" [routerLink]="routerLinksPath.insurancePage.thirdParty">
+						<a
+							class="submenu_link"
+							[routerLink]="routerLinksPath.insurancePage.thirdParty"
+							[class.disabled]="isDisabled"
+						>
 							<i class="icon icon-car-linear"></i>
 							<span>بیمه شخص ثالث</span>
 						</a>
 						<a
 							class="submenu_link"
 							[routerLink]="routerLinksPath.insurancePage.electronicEquipment"
+							[class.disabled]="isDisabled"
 						>
 							<i class="icon icon-digital-device-linear"></i>
 							<span>بیمه تجهیزات الکترونیک</span>
 						</a>
 					</div>
 				</button>
-				<a class="menu_link" [routerLink]="routerLinksPath.wealthPage.wealth">
+				<a
+					class="menu_link"
+					[routerLink]="routerLinksPath.wealthPage.wealth"
+					[class.disabled]="isDisabled"
+				>
 					<span>مدیریت سرمایه</span>
 				</a>
 				<button class="menu_link">
@@ -83,6 +104,7 @@
 						<a
 							class="submenu_link"
 							[routerLink]="routerLinksPath.businessServicesPage.creditPaymentGateway"
+							[class.disabled]="isDisabled"
 						>
 							<i class="icon icon-bank-linear"></i>
 							<span>درگاه پرداخت اعتباری</span>
@@ -90,6 +112,7 @@
 						<a
 							class="submenu_link"
 							[routerLink]="routerLinksPath.businessServicesPage.merchantLoan"
+							[class.disabled]="isDisabled"
 						>
 							<i class="icon icon-credit-linear"></i>
 							<span>وام فروشندگان</span>
@@ -97,6 +120,7 @@
 						<a
 							class="submenu_link"
 							[routerLink]="routerLinksPath.businessServicesPage.comprehensivePaymentGateway"
+							[class.disabled]="isDisabled"
 						>
 							<i class="icon icon-bank-linear"></i>
 							<span>درگاه پرداخت جامع</span>
@@ -104,6 +128,7 @@
 						<a
 							class="submenu_link"
 							[routerLink]="routerLinksPath.businessServicesPage.earlySettlement"
+							[class.disabled]="isDisabled"
 						>
 							<i class="icon icon-cash-out-linear"></i>
 							<span>تسویه زودهنگام</span>
@@ -116,6 +141,7 @@
 						<a
 							class="submenu_link"
 							[routerLink]="routerLinksPath.organizationalServicesPage.organizationalInstallment"
+							[class.disabled]="isDisabled"
 						>
 							<i>
 								<svg
@@ -138,6 +164,7 @@
 						<a
 							class="submenu_link"
 							[routerLink]="routerLinksPath.organizationalServicesPage.organizationalBnpl"
+							[class.disabled]="isDisabled"
 						>
 							<i class="icon icon-bnpl-linear"></i>
 							<span>الان بخر بعدا پرداخت کن</span>
