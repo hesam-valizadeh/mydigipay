@@ -131,11 +131,13 @@
 			"parser": "@angular-eslint/template-parser",
 			"extends": [
 				"plugin:@angular-eslint/template/recommended",
-				"plugin:@angular-eslint/template/accessibility"
+				"plugin:@angular-eslint/template/accessibility",
+				"plugin:prettier/recommended"
 			],
 			"rules": {
 				"@angular-eslint/template/no-call-expression": "off",
 				"@angular-eslint/template/no-any": "error",
+				"@angular-eslint/template/button-has-type": "error",
 				"@angular-eslint/template/attributes-order": "error",
 				"@angular-eslint/template/no-distracting-elements": "error",
 				"@angular-eslint/template/conditional-complexity": [
