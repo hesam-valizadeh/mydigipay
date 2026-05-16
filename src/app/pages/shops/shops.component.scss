@@ -14,4 +14,54 @@ app-tabs {
 	.swiper-pagination {
 		display: none !important;
 	}
+
+	app-service-item-carousel {
+		.services-item-link {
+			span:last-child {
+				font-weight: 600;
+			}
+		}
+
+		.services-item-logo {
+			width: 84px;
+			height: 84px;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			background-color: rgb(255 255 255 / 60%) !important;
+
+			img {
+				width: 84px;
+				height: auto;
+			}
+		}
+	}
+
+	app-two-row-slider {
+		.two-row-slide {
+			gap: 90px !important;
+		}
+
+		.services-item-link {
+			span:last-child {
+				font-weight: 600;
+				font-size: 14px !important;
+			}
+		}
+
+		.services-item-logo {
+			width: 80px !important;
+			height: 80px !important;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			background-color: #fff !important;
+			border-radius: 50em !important;
+
+			img {
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
 }

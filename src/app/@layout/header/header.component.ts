@@ -72,7 +72,14 @@ export class HeaderComponent implements OnInit {
 	public constructor() {
 		this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
 			const url = this.router.url.trim();
-			const isHome = url === '/' || url === '' || url === '/home';
+			const isHome =
+				url === '/' ||
+				url === '' ||
+				url === '/home' ||
+				url === '/shops' ||
+				url === '/shops?mode=online' ||
+				url === '/shops?mode=onsite' ||
+				url === '/services';
 			this.showSearch.set(isHome);
 		});
 	}
