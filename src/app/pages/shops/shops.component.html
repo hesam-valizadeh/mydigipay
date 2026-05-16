@@ -13,7 +13,14 @@
 			<div class="row my-30px">
 				<app-carousel-banner></app-carousel-banner>
 			</div>
-			<div class="row my-30px">
+			<div class="row mt-40px gap-30px">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="text-dark fs-14px fw-600">فروشگاه‌های منتخب</div>
+					<a href="" class="d-flex align-items-center">
+						<span class="text-primary fs-14px">همه</span>
+						<i class="icon icon-arrow-2-left-linear w-20px h-20px fs-20px text-primary"></i>
+					</a>
+				</div>
 				<app-two-row-slider [slides]="insuranceSlides" [config]="sliderConfig"></app-two-row-slider>
 			</div>
 		</div>
@@ -30,9 +37,25 @@
 			></app-product-section>
 		</div>
 		} } @if (activeTabId === 'onsite') {
-		<div>
-			<h3>فروشگاه‌های حضوری</h3>
-			<p>لیست فروشگاه‌های فیزیکی...</p>
+		<div id="lottie-animation" class="my-huge">
+			<a href="">
+				<img src="assets/images/location.svg" alt="" />
+			</a>
+		</div>
+		<div class="row mt-40px gap-30px">
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="text-dark fs-14px fw-600">فروشگاه‌های حضوری</div>
+				<a href="" class="d-flex align-items-center">
+					<span class="text-primary fs-14px">همه</span>
+					<i class="icon icon-arrow-2-left-linear w-20px h-20px fs-20px text-primary"></i>
+				</a>
+			</div>
+			<app-two-row-slider [slides]="insuranceSlides" [config]="sliderConfig"></app-two-row-slider>
+		</div>
+		<div class="row">
+			<div class="row my-30px">
+				<app-carousel-banner></app-carousel-banner>
+			</div>
 		</div>
 		}
 	</div>

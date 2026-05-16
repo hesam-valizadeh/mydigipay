@@ -14,7 +14,7 @@
 		"lint": "ng lint",
 		"lint:fix": "ng lint --fix",
 		"stylelint": "stylelint \"src/**/*.{scss,css}\"",
-		"stylelint:fix": "stylelint \"src/**/*.{scss,css}\" --fix",
+		"stylelint:fix": "stylelint \"src/**/*.{scss,css}\" --fix --allow-empty-input",
 		"format:check": "prettier --check .",
 		"format": "prettier --write .",
 		"cy:open": "cypress open",
