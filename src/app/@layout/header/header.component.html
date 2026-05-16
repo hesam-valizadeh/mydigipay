@@ -183,9 +183,9 @@
 </header>
 
 @if (isMobile && showSearch()) {
-	<div class="search-bar">
-		<app-search-box></app-search-box>
-	</div>
+<div class="search-bar">
+	<app-search-box></app-search-box>
+</div>
 }
 <nav class="navbar justify-content-start container d-lg-flex d-none">
 	<a
@@ -234,247 +234,232 @@
 		<span>پرداخت</span>
 	</a>
 	@if (showSearch()) {
-		<app-search-box class="me-auto"></app-search-box>
+	<app-search-box class="me-auto"></app-search-box>
 	}
 </nav>
 
 @if (isDesktop) {
-	<header
-		class="header-sticky"
-		[class.visible]="isStickyHeaderVisible()"
-		[class.hidden]="!isStickyHeaderVisible()"
-	>
-		<nav class="navbar justify-content-start container d-lg-flex d-none mt-10px">
-			<a class="nav-item mx-24px d-flex gap-5px active" [routerLink]="''">
-				<img ngOptimizedImage ngSrc="assets/images/dp-logo.svg" alt="" width="16" height="22" />
-			</a>
-			<a class="nav-item mx-24px d-flex gap-5px active" [routerLink]="''">
-				<span class="icon-container">
-					<i class="icon icon-home-bold"></i>
-				</span>
-				<span>خانه</span>
-			</a>
-			<a
-				class="nav-item mx-24px d-flex gap-5px"
-				[routerLink]="routerLinksPath.servicesPage.services"
+<header
+	class="header-sticky"
+	[class.visible]="isStickyHeaderVisible()"
+	[class.hidden]="!isStickyHeaderVisible()"
+>
+	<nav class="navbar justify-content-start container d-lg-flex d-none mt-10px">
+		<a class="nav-item mx-24px d-flex gap-5px active" [routerLink]="''">
+			<img ngOptimizedImage ngSrc="assets/images/dp-logo.svg" alt="" width="16" height="22" />
+		</a>
+		<a class="nav-item mx-24px d-flex gap-5px active" [routerLink]="''">
+			<span class="icon-container">
+				<i class="icon icon-home-bold"></i>
+			</span>
+			<span>خانه</span>
+		</a>
+		<a class="nav-item mx-24px d-flex gap-5px" [routerLink]="routerLinksPath.servicesPage.services">
+			<span class="icon-container">
+				<i class="icon icon-more-bold"></i>
+			</span>
+			<span>خدمات</span>
+		</a>
+		<a class="nav-item mx-24px d-flex gap-5px" [routerLink]="routerLinksPath.shopsPage.shops">
+			<span class="icon-container position-relative">
+				<i class="icon icon-bag-bold"></i>
+				<i class="icon icon-discount-bold position-absolute"></i>
+			</span>
+			<span>فروشگاه‌ها</span>
+		</a>
+		<a
+			class="nav-item mx-24px d-flex gap-5px"
+			[routerLink]="'hub/' + routerLinksPath.hubPage.transactions"
+		>
+			<span class="icon-container">
+				<i class="icon icon-card-to-card-bold"></i>
+			</span>
+			<span>پرداخت</span>
+		</a>
+		<div class="me-auto d-flex align-items-center flex-wrap">
+			@if (showSearch()) {
+			<button class="header-sticky_search" (click)="toggleSearch()">
+				<i class="icon icon-search-bold fs-20px"></i>
+			</button>
+			<div
+				class="search-bar"
+				[class.search-visible]="isToggleSearch()"
+				[class.search-hidden]="!isToggleSearch()"
 			>
-				<span class="icon-container">
-					<i class="icon icon-more-bold"></i>
-				</span>
-				<span>خدمات</span>
-			</a>
-			<a class="nav-item mx-24px d-flex gap-5px" [routerLink]="routerLinksPath.shopsPage.shops">
-				<span class="icon-container position-relative">
-					<i class="icon icon-bag-bold"></i>
-					<i class="icon icon-discount-bold position-absolute"></i>
-				</span>
-				<span>فروشگاه‌ها</span>
-			</a>
-			<a
-				class="nav-item mx-24px d-flex gap-5px"
-				[routerLink]="'hub/' + routerLinksPath.hubPage.transactions"
-			>
-				<span class="icon-container">
-					<i class="icon icon-card-to-card-bold"></i>
-				</span>
-				<span>پرداخت</span>
-			</a>
-			<div class="me-auto d-flex align-items-center flex-wrap">
-				@if (showSearch()) {
-					<button class="header-sticky_search" (click)="toggleSearch()">
-						<i class="icon icon-search-bold fs-20px"></i>
-					</button>
-					<div
-						class="search-bar"
-						[class.search-visible]="isToggleSearch()"
-						[class.search-hidden]="!isToggleSearch()"
-					>
-						<app-search-box></app-search-box>
-					</div>
-				}
-
-				<button class="header-sticky_login" [routerLink]="routerLinksPath.loginPage.login">
-					<i class="icon icon-person-bold fs-20px"></i>
-				</button>
+				<app-search-box></app-search-box>
 			</div>
-		</nav>
-	</header>
-}
+			}
 
-@if (isSubmenuOpen()) {
-	<div class="mobile-submenu">
-		<div class="d-flex flex-column align-items-start pe-10">
-			<button
-				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-				aria-controls="submenu-games-1"
-				[attr.aria-expanded]="submenuGamesOpen"
-				(click)="toggleSubmenuGames()"
-				(keydown.enter)="toggleSubmenuGames()"
-				(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
-			>
-				<div class="d-flex justify-content-between w-100">
-					<span class="fs-12px fw-500">
-						{{ data.loansAndCredits }}
-					</span>
-					<i class="icon icon-arrow-2-down-linear fs-20px"></i>
-				</div>
-
-				@if (submenuGamesOpen) {
-					<div class="w-100 d-flex flex-column gap-5px submenu-games">
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.loanPage.loanProduct"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.credit }}</span>
-						</a>
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.loanPage.bnpl"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.bnpl }}</span>
-						</a>
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.loanPage.digikalaInstallment"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.merchants }}</span>
-						</a>
-					</div>
-				}
-			</button>
-
-			<button
-				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-				aria-controls="submenu-games-2"
-				[attr.aria-expanded]="submenuGamesOpen"
-				(click)="toggleSubmenuGames()"
-				(keydown.enter)="toggleSubmenuGames()"
-				(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
-			>
-				<div class="d-flex justify-content-between w-100">
-					<span class="fs-12px fw-500">
-						{{ data.insurance }}
-					</span>
-					<i class="icon icon-arrow-2-down-linear fs-20px"></i>
-				</div>
-
-				@if (submenuGamesOpen) {
-					<div class="w-100 d-flex flex-column gap-5px submenu-games">
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.insurancePage.thirdParty"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.thirdPartyInsurance }}</span>
-						</a>
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.insurancePage.electronicEquipment"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.equipment }}</span>
-						</a>
-					</div>
-				}
-			</button>
-
-			<a
-				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-				[routerLink]="routerLinksPath.wealthPage.wealth"
-			>
-				<div class="d-flex justify-content-between w-100">
-					<span class="fs-12px fw-500">
-						{{ data.wealth }}
-					</span>
-				</div>
-			</a>
-
-			<button
-				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-				aria-controls="submenu-games-3"
-				[attr.aria-expanded]="submenuGamesOpen"
-				(click)="toggleSubmenuGames()"
-				(keydown.enter)="toggleSubmenuGames()"
-				(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
-			>
-				<div class="d-flex justify-content-between w-100">
-					<span class="fs-12px fw-500">
-						{{ data.serviceBusiness }}
-					</span>
-					<i class="icon icon-arrow-2-down-linear fs-20px"></i>
-				</div>
-
-				@if (submenuGamesOpen) {
-					<div class="w-100 d-flex flex-column gap-5px submenu-games">
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.businessServicesPage.creditPaymentGateway"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.bpg }}</span>
-						</a>
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.businessServicesPage.merchantLoan"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.merchantsSeller }}</span>
-						</a>
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.businessServicesPage.comprehensivePaymentGateway"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.ipg }}</span>
-						</a>
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.businessServicesPage.earlySettlement"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.merchantCredit }}</span>
-						</a>
-					</div>
-				}
-			</button>
-
-			<button
-				class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
-				aria-controls="submenu-games-4"
-				[attr.aria-expanded]="submenuGamesOpen"
-				(click)="toggleSubmenuGames()"
-				(keydown.enter)="toggleSubmenuGames()"
-				(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
-			>
-				<div class="d-flex justify-content-between w-100">
-					<span class="fs-12px fw-500">
-						{{ data.serviceOrganization }}
-					</span>
-					<i class="icon icon-arrow-2-down-linear fs-20px"></i>
-				</div>
-
-				@if (submenuGamesOpen) {
-					<div class="w-100 d-flex flex-column gap-5px submenu-games">
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.organizationalServicesPage.organizationalInstallment"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.Ocredit }}</span>
-						</a>
-						<a
-							class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
-							[routerLink]="routerLinksPath.organizationalServicesPage.organizationalBnpl"
-						>
-							<i class="icon icon-credit-linear fs-24px lh-0px"></i>
-							<span class="fs-12px text-900 fw-400">{{ data.orgbnpl }}</span>
-						</a>
-					</div>
-				}
+			<button class="header-sticky_login" [routerLink]="routerLinksPath.loginPage.login">
+				<i class="icon icon-person-bold fs-20px"></i>
 			</button>
 		</div>
+	</nav>
+</header>
+} @if (isSubmenuOpen()) {
+<div class="mobile-submenu">
+	<div class="d-flex flex-column align-items-start pe-10">
+		<button
+			class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+			aria-controls="submenu-games-1"
+			[attr.aria-expanded]="submenuGamesOpen"
+			(click)="toggleSubmenuGames()"
+			(keydown.enter)="toggleSubmenuGames()"
+			(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+		>
+			<div class="d-flex justify-content-between w-100">
+				<span class="fs-12px fw-500">{{ data.loansAndCredits }}</span>
+				<i class="icon icon-arrow-2-down-linear fs-20px"></i>
+			</div>
+
+			@if (submenuGamesOpen) {
+			<div class="w-100 d-flex flex-column gap-5px submenu-games">
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.loanPage.loanProduct"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.credit }}</span>
+				</a>
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.loanPage.bnpl"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.bnpl }}</span>
+				</a>
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.loanPage.digikalaInstallment"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.merchants }}</span>
+				</a>
+			</div>
+			}
+		</button>
+
+		<button
+			class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+			aria-controls="submenu-games-2"
+			[attr.aria-expanded]="submenuGamesOpen"
+			(click)="toggleSubmenuGames()"
+			(keydown.enter)="toggleSubmenuGames()"
+			(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+		>
+			<div class="d-flex justify-content-between w-100">
+				<span class="fs-12px fw-500">{{ data.insurance }}</span>
+				<i class="icon icon-arrow-2-down-linear fs-20px"></i>
+			</div>
+
+			@if (submenuGamesOpen) {
+			<div class="w-100 d-flex flex-column gap-5px submenu-games">
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.insurancePage.thirdParty"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.thirdPartyInsurance }}</span>
+				</a>
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.insurancePage.electronicEquipment"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.equipment }}</span>
+				</a>
+			</div>
+			}
+		</button>
+
+		<a
+			class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+			[routerLink]="routerLinksPath.wealthPage.wealth"
+		>
+			<div class="d-flex justify-content-between w-100">
+				<span class="fs-12px fw-500">{{ data.wealth }}</span>
+			</div>
+		</a>
+
+		<button
+			class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+			aria-controls="submenu-games-3"
+			[attr.aria-expanded]="submenuGamesOpen"
+			(click)="toggleSubmenuGames()"
+			(keydown.enter)="toggleSubmenuGames()"
+			(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+		>
+			<div class="d-flex justify-content-between w-100">
+				<span class="fs-12px fw-500">{{ data.serviceBusiness }}</span>
+				<i class="icon icon-arrow-2-down-linear fs-20px"></i>
+			</div>
+
+			@if (submenuGamesOpen) {
+			<div class="w-100 d-flex flex-column gap-5px submenu-games">
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.businessServicesPage.creditPaymentGateway"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.bpg }}</span>
+				</a>
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.businessServicesPage.merchantLoan"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.merchantsSeller }}</span>
+				</a>
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.businessServicesPage.comprehensivePaymentGateway"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.ipg }}</span>
+				</a>
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.businessServicesPage.earlySettlement"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.merchantCredit }}</span>
+				</a>
+			</div>
+			}
+		</button>
+
+		<button
+			class="mobile-menu-item border-bottom d-flex flex-column justify-content-start align-items-start text-900 py-15px"
+			aria-controls="submenu-games-4"
+			[attr.aria-expanded]="submenuGamesOpen"
+			(click)="toggleSubmenuGames()"
+			(keydown.enter)="toggleSubmenuGames()"
+			(keydown.space)="toggleSubmenuGames(); $event.preventDefault()"
+		>
+			<div class="d-flex justify-content-between w-100">
+				<span class="fs-12px fw-500">{{ data.serviceOrganization }}</span>
+				<i class="icon icon-arrow-2-down-linear fs-20px"></i>
+			</div>
+
+			@if (submenuGamesOpen) {
+			<div class="w-100 d-flex flex-column gap-5px submenu-games">
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.organizationalServicesPage.organizationalInstallment"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.Ocredit }}</span>
+				</a>
+				<a
+					class="mobile-menu-item d-flex align-items-center gap-5px p-10px mx-5px"
+					[routerLink]="routerLinksPath.organizationalServicesPage.organizationalBnpl"
+				>
+					<i class="icon icon-credit-linear fs-24px lh-0px"></i>
+					<span class="fs-12px text-900 fw-400">{{ data.orgbnpl }}</span>
+				</a>
+			</div>
+			}
+		</button>
 	</div>
+</div>
 }

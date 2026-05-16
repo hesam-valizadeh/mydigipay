@@ -22,14 +22,14 @@
 		<app-incredible-discount-box class="p-0"></app-incredible-discount-box>
 	</div>
 	@for (section of sections; track section?.id) {
-		<div class="row">
-			<app-product-section
-				class="p-0"
-				[category]="section?.category"
-				[products]="section?.products"
-				[viewAllLink]="section?.link"
-			></app-product-section>
-		</div>
+	<div class="row">
+		<app-product-section
+			class="p-0"
+			[category]="section?.category"
+			[products]="section?.products"
+			[viewAllLink]="section?.link"
+		></app-product-section>
+	</div>
 	}
 </div>
 
@@ -138,5 +138,5 @@
 </div>
 
 @if (isDesktop) {
-	<div id="backdrop" [class.show-overlay]="isSearchOpen"></div>
+<div id="backdrop" [class.show-overlay]="isSearchOpen"></div>
 }

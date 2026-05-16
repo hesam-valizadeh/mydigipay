@@ -23,12 +23,9 @@
 
 	<div class="progress-container">
 		@for (item of slider?.data; track item; let i = $index) {
-			<div class="progress-bar" [class.active]="i === activeIndex">
-				<div
-					class="progress-fill"
-					[style.width.%]="i | progressWidth: activeIndex : progress"
-				></div>
-			</div>
+		<div class="progress-bar" [class.active]="i === activeIndex">
+			<div class="progress-fill" [style.width.%]="i | progressWidth: activeIndex : progress"></div>
+		</div>
 		}
 	</div>
 	<div class="story-background-fade"></div>

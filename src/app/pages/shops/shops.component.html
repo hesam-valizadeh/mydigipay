@@ -2,43 +2,38 @@
 	<app-tabs [tabs]="tabs" [activeTabId]="activeTabId" (tabChange)="onTabChange($event)"></app-tabs>
 	<div class="tab-content mt-3">
 		@if (activeTabId === 'online') {
-			<div>
-				<h3>فروشگاه‌های آنلاین</h3>
-				<div class="row my-30px">
-					<app-service-item-carousel
-						[customConfig]="serviceItemCarousel"
-						[itemsList]="paymentList"
-					></app-service-item-carousel>
-				</div>
-				<div class="row my-30px">
-					<app-carousel-banner></app-carousel-banner>
-				</div>
-				<div class="row my-30px">
-					<app-two-row-slider
-						[slides]="insuranceSlides"
-						[config]="sliderConfig"
-					></app-two-row-slider>
-				</div>
+		<div>
+			<h3>فروشگاه‌های آنلاین</h3>
+			<div class="row my-30px">
+				<app-service-item-carousel
+					[customConfig]="serviceItemCarousel"
+					[itemsList]="paymentList"
+				></app-service-item-carousel>
 			</div>
-			<div class="row">
-				<app-incredible-discount-box class="p-0"></app-incredible-discount-box>
+			<div class="row my-30px">
+				<app-carousel-banner></app-carousel-banner>
 			</div>
-			@for (section of sections; track section?.id) {
-				<div class="row">
-					<app-product-section
-						class="p-0"
-						[category]="section?.category"
-						[products]="section?.products"
-						[viewAllLink]="section?.link"
-					></app-product-section>
-				</div>
-			}
-		}
-		@if (activeTabId === 'onsite') {
-			<div>
-				<h3>فروشگاه‌های حضوری</h3>
-				<p>لیست فروشگاه‌های فیزیکی...</p>
+			<div class="row my-30px">
+				<app-two-row-slider [slides]="insuranceSlides" [config]="sliderConfig"></app-two-row-slider>
 			</div>
+		</div>
+		<div class="row">
+			<app-incredible-discount-box class="p-0"></app-incredible-discount-box>
+		</div>
+		@for (section of sections; track section?.id) {
+		<div class="row">
+			<app-product-section
+				class="p-0"
+				[category]="section?.category"
+				[products]="section?.products"
+				[viewAllLink]="section?.link"
+			></app-product-section>
+		</div>
+		} } @if (activeTabId === 'onsite') {
+		<div>
+			<h3>فروشگاه‌های حضوری</h3>
+			<p>لیست فروشگاه‌های فیزیکی...</p>
+		</div>
 		}
 	</div>
 </div>

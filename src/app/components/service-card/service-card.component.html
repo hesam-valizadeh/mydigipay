@@ -1,88 +1,86 @@
 @if (isDesktop) {
-	<div class="services-section mt-40px p-0 gap-20px d-flex aling-items-center flex-column">
-		<div class="heading d-flex justify-content-between aling-items-center p-0">
-			<h3 class="text-dark fs-sm fw-600 services-section-title mb-0">خدمات دیجی‌پی</h3>
-			<a href="" class="text-primary services-section-link">
-				<span class="text-primary">همه</span>
-				<i class="icon icon-arrow-2-left-linear text-primary"></i>
-			</a>
-		</div>
-		<div class="service-card-section d-flex aling-items-center justify-content-between">
-			@for (card of cards; track card; let i = $index) {
-				<div class="card position-relative overflow-hidden">
-					<div class="image-card">
-						<img
-							[src]="card.src"
-							[alt]="card.alt"
-							[title]="card.title"
-							[width]="card.width"
-							[height]="card.height"
-						/>
-					</div>
-					<div class="overlay w-100 position-absolute">
-						<div class="title-card">
-							<h3 class="text-center text-white fs-18px fw-600 mb-6px">{{ card.title }}</h3>
-						</div>
-						<div class="description-card text-center fs-xs text-white fw-400">
-							<p>{{ card.description }}</p>
-						</div>
-						<div class="card-link">
-							<a href="" class="text-white text-center fs-14px fw-500">
-								<span>
-									{{ card.link }}
-								</span>
-								<i class="icon icon-arrow-2-left-linear"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			}
-		</div>
+<div class="services-section mt-40px p-0 gap-20px d-flex aling-items-center flex-column">
+	<div class="heading d-flex justify-content-between aling-items-center p-0">
+		<h3 class="text-dark fs-sm fw-600 services-section-title mb-0">خدمات دیجی‌پی</h3>
+		<a href="" class="text-primary services-section-link">
+			<span class="text-primary">همه</span>
+			<i class="icon icon-arrow-2-left-linear text-primary"></i>
+		</a>
 	</div>
+	<div class="service-card-section d-flex aling-items-center justify-content-between">
+		@for (card of cards; track card; let i = $index) {
+		<div class="card position-relative overflow-hidden">
+			<div class="image-card">
+				<img
+					[src]="card.src"
+					[alt]="card.alt"
+					[title]="card.title"
+					[width]="card.width"
+					[height]="card.height"
+				/>
+			</div>
+			<div class="overlay w-100 position-absolute">
+				<div class="title-card">
+					<h3 class="text-center text-white fs-18px fw-600 mb-6px">{{ card.title }}</h3>
+				</div>
+				<div class="description-card text-center fs-xs text-white fw-400">
+					<p>{{ card.description }}</p>
+				</div>
+				<div class="card-link">
+					<a href="" class="text-white text-center fs-14px fw-500">
+						<span>{{ card.link }}</span>
+						<i class="icon icon-arrow-2-left-linear"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		}
+	</div>
+</div>
 } @else if (isMobile) {
-	<div class="services-section mt-40px p-0 gap-20px d-flex aling-items-center flex-column">
-		<div class="heading d-flex justify-content-between aling-items-center p-0">
-			<h3 class="text-dark fs-sm fw-600 services-section-title mb-0">خدمات دیجی‌پی</h3>
-			<a href="" class="text-primary services-section-link">
-				<span class="text-primary">همه</span>
-				<i class="icon icon-arrow-2-left-linear text-primary"></i>
-			</a>
-		</div>
-		<div
-			class="service-card-section d-flex aling-items-center justify-content-around bg-white p-25px rounded"
-		>
-			<a href="" class="d-flex flex-column justify-content-center align-items-center">
-				<div class="icon-container bnpl">
-					<i class="icon icon-bnpl-bold text-white"></i>
-				</div>
-				<div class="text-center">
-					<span class="fs-10px mt-6px fw-500 text-dark">وام و اعتبار</span>
-				</div>
-			</a>
-			<a href="" class="d-flex flex-column justify-content-center align-items-center">
-				<div class="icon-container card-to-card">
-					<i class="icon icon-card-to-card-bold text-white"></i>
-				</div>
-				<div class="text-center">
-					<span class="fs-10px mt-6px fw-500 text-dark">خدمات پرداخت</span>
-				</div>
-			</a>
-			<a href="" class="d-flex flex-column justify-content-center align-items-center">
-				<div class="icon-container bar-chart-upward">
-					<i class="icon icon-bar-chart-upward-bold text-white"></i>
-				</div>
-				<div class="text-center">
-					<span class="fs-10px mt-6px fw-500 text-dark">سرمایه‌گذاری</span>
-				</div>
-			</a>
-			<a href="" class="d-flex flex-column justify-content-center align-items-center">
-				<div class="icon-container insurance">
-					<i class="icon icon-insurance-bold text-white"></i>
-				</div>
-				<div class="text-center">
-					<span class="fs-10px mt-6px fw-500 text-dark">بیمه شخص ثالث</span>
-				</div>
-			</a>
-		</div>
+<div class="services-section mt-40px p-0 gap-20px d-flex aling-items-center flex-column">
+	<div class="heading d-flex justify-content-between aling-items-center p-0">
+		<h3 class="text-dark fs-sm fw-600 services-section-title mb-0">خدمات دیجی‌پی</h3>
+		<a href="" class="text-primary services-section-link">
+			<span class="text-primary">همه</span>
+			<i class="icon icon-arrow-2-left-linear text-primary"></i>
+		</a>
 	</div>
+	<div
+		class="service-card-section d-flex aling-items-center justify-content-around bg-white p-25px rounded"
+	>
+		<a href="" class="d-flex flex-column justify-content-center align-items-center">
+			<div class="icon-container bnpl">
+				<i class="icon icon-bnpl-bold text-white"></i>
+			</div>
+			<div class="text-center">
+				<span class="fs-10px mt-6px fw-500 text-dark">وام و اعتبار</span>
+			</div>
+		</a>
+		<a href="" class="d-flex flex-column justify-content-center align-items-center">
+			<div class="icon-container card-to-card">
+				<i class="icon icon-card-to-card-bold text-white"></i>
+			</div>
+			<div class="text-center">
+				<span class="fs-10px mt-6px fw-500 text-dark">خدمات پرداخت</span>
+			</div>
+		</a>
+		<a href="" class="d-flex flex-column justify-content-center align-items-center">
+			<div class="icon-container bar-chart-upward">
+				<i class="icon icon-bar-chart-upward-bold text-white"></i>
+			</div>
+			<div class="text-center">
+				<span class="fs-10px mt-6px fw-500 text-dark">سرمایه‌گذاری</span>
+			</div>
+		</a>
+		<a href="" class="d-flex flex-column justify-content-center align-items-center">
+			<div class="icon-container insurance">
+				<i class="icon icon-insurance-bold text-white"></i>
+			</div>
+			<div class="text-center">
+				<span class="fs-10px mt-6px fw-500 text-dark">بیمه شخص ثالث</span>
+			</div>
+		</a>
+	</div>
+</div>
 }

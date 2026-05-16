@@ -32,9 +32,8 @@ export class SwiperElementDirective implements AfterViewInit {
 	private readonly element = inject(ElementRef<SwiperContainer>);
 	private readonly ngZone = inject(NgZone);
 	private readonly platformId = inject(PLATFORM_ID);
+	private readonly _swiperElement = this.element.nativeElement as SwiperContainer;
 
-	private readonly _swiperElement: SwiperContainer = this.element
-		.nativeElement as unknown as SwiperContainer;
 	public ngAfterViewInit(): void {
 		if (!isPlatformBrowser(this.platformId)) {
 			return;

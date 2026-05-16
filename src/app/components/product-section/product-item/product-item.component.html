@@ -13,57 +13,56 @@
 				/>
 			</figure>
 			@if (storeRate) {
-				<div class="store-logo" style="border-radius: 100px 100px 48px 48px">
-					<img
-						ngOptimizedImage
-						alt="arta logo"
-						width="24"
-						height="24"
-						title=""
-						loading="lazy"
-						class=""
-						[ngSrc]="storeLogoSrc"
-					/>
-					<span class="store-rate">{{ storeRate }}</span>
-				</div>
+			<div class="store-logo" style="border-radius: 100px 100px 48px 48px">
+				<img
+					ngOptimizedImage
+					alt="arta logo"
+					width="24"
+					height="24"
+					title=""
+					loading="lazy"
+					class=""
+					[ngSrc]="storeLogoSrc"
+				/>
+				<span class="store-rate">{{ storeRate }}</span>
+			</div>
 			} @else {
-				<div class="store-logo" style="border-radius: 100em">
-					<img
-						ngOptimizedImage
-						alt="arta logo"
-						width="24"
-						height="24"
-						title=""
-						loading="lazy"
-						class=""
-						[ngSrc]="storeLogoSrc"
-					/>
-				</div>
-			}
-			@if (fourPay) {
-				<div class="four-pay-box d-flex gap-2px mb-12px">
-					<div class="four-pay-wrapper">
-						<div class="four-pay">
-							<span class="count text-white">4</span>
-							<div class="text-white text">قسط</div>
-						</div>
-						<div class="d-flex gap-2px align-items-center">
-							<span class="fw-800">913,120</span>
-							<span class="text-onback-low fs-8px">تومانی</span>
-						</div>
+			<div class="store-logo" style="border-radius: 100em">
+				<img
+					ngOptimizedImage
+					alt="arta logo"
+					width="24"
+					height="24"
+					title=""
+					loading="lazy"
+					class=""
+					[ngSrc]="storeLogoSrc"
+				/>
+			</div>
+			} @if (fourPay) {
+			<div class="four-pay-box d-flex gap-2px mb-12px">
+				<div class="four-pay-wrapper">
+					<div class="four-pay">
+						<span class="count text-white">4</span>
+						<div class="text-white text">قسط</div>
+					</div>
+					<div class="d-flex gap-2px align-items-center">
+						<span class="fw-800">913,120</span>
+						<span class="text-onback-low fs-8px">تومانی</span>
 					</div>
 				</div>
+			</div>
 			} @else {
-				<div class="purchase-type">
-					<div class="credit">
-						<i class="icon icon-credit-linear"></i>
-						<span>وام</span>
-					</div>
-					<div class="bnpl">
-						<i class="icon icon-bnpl-linear"></i>
-						<span>اعتبار</span>
-					</div>
+			<div class="purchase-type">
+				<div class="credit">
+					<i class="icon icon-credit-linear"></i>
+					<span>وام</span>
 				</div>
+				<div class="bnpl">
+					<i class="icon icon-bnpl-linear"></i>
+					<span>اعتبار</span>
+				</div>
+			</div>
 			}
 		</div>
 		<div class="store-info">
@@ -71,9 +70,7 @@
 				<i class="icon icon-store-linear"></i>
 				<span>{{ storeName }}</span>
 			</div>
-			<div class="title">
-				{{ title }}
-			</div>
+			<div class="title">{{ title }}</div>
 			<div class="discount">
 				<span>{{ discountPercentage }}%</span>
 				<del>{{ priceNoDiscount }}</del>

@@ -2,12 +2,12 @@
 	<div #swiperContainer class="swiper-container">
 		<div class="swiper-wrapper">
 			@for (slide of slides; track slide.id) {
-				<div class="swiper-slide">
-					<app-two-row-slider-item
-						[rowUp]="slide.rowUp"
-						[rowDown]="slide.rowDown"
-					></app-two-row-slider-item>
-				</div>
+			<div class="swiper-slide">
+				<app-two-row-slider-item
+					[rowUp]="slide.rowUp"
+					[rowDown]="slide.rowDown"
+				></app-two-row-slider-item>
+			</div>
 			}
 		</div>
 		<!-- Pagination -->

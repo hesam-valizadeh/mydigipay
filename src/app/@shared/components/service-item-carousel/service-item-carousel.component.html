@@ -10,11 +10,11 @@
 			<a class="services-item-link" [href]="item.link">
 				<span class="services-item-logo">
 					@if (item.src) {
-						<img width="40" height="40" alt="test" [src]="item.src" />
+					<img width="40" height="40" alt="test" [src]="item.src" />
 					} @else {
-						<i class="icon icon-container" [style.background]="item.colorIcon">
-							<i class="icon" [class]="item.icon"></i>
-						</i>
+					<i class="icon icon-container" [style.background]="item.colorIcon">
+						<i class="icon" [class]="item.icon"></i>
+					</i>
 					}
 				</span>
 				<span class="fs-12px">{{ item.title }}</span>

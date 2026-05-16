@@ -1,23 +1,21 @@
 @if (slides) {
-	<swiper-container
-		#swiperRef
-		class="{{ swiperClass }} {{ toggleContainerEndClass }}"
-		init="false"
-		appSwiperElement
-		pagination="true"
-		[config]="config"
-		[dir]="swiperDir"
-	>
-		@for (item of slides; track item; let i = $index) {
-			<swiper-slide class="swiper-slide">
-				<ng-container
-					*ngTemplateOutlet="swiperSlideTemplate; context: { item: item, index: i }"
-				></ng-container>
-			</swiper-slide>
-		}
-
-		@if (config.slidesPerView === 'auto' || slides.length > config.slidesPerView!) {
-			<div slot="container-end" class="swiper-container-end"></div>
-		}
-	</swiper-container>
+<swiper-container
+	#swiperRef
+	class="{{ swiperClass }} {{ toggleContainerEndClass }}"
+	init="false"
+	appSwiperElement
+	pagination="true"
+	[config]="config"
+	[dir]="swiperDir"
+>
+	@for (item of slides; track item; let i = $index) {
+	<swiper-slide class="swiper-slide">
+		<ng-container
+			*ngTemplateOutlet="swiperSlideTemplate; context: { item: item, index: i }"
+		></ng-container>
+	</swiper-slide>
+	} @if (config.slidesPerView === 'auto' || slides.length > config.slidesPerView!) {
+	<div slot="container-end" class="swiper-container-end"></div>
+	}
+</swiper-container>
 }

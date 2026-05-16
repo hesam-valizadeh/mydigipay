@@ -12,5 +12,13 @@
 	"endOfLine": "lf",
 	"htmlWhitespaceSensitivity": "ignore",
 	"proseWrap": "preserve",
-	"embeddedLanguageFormatting": "auto"
+	"embeddedLanguageFormatting": "auto",
+	"overrides": [
+		{
+			"files": "*.html",
+			"options": {
+				"parser": "html"
+			}
+		}
+	]
 }
