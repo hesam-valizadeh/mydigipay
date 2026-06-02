@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/carousel-banner/carousel-banner.component.scss"],
+  "sourcesContent": ["::ng-deep swiper-slide.swiper-slide {\n\ttext-align: center;\n}\n"],
+  "mappings": "AAAA,UAAA,YAAA,CAAA,aACC,WAAA",
+  "names": []
+}

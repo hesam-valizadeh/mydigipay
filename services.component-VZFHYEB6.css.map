@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/hub/services/services.component.scss"],
+  "sourcesContent": [".hub-header {\n\twidth: 100%;\n\theight: 266px;\n\tbackground-image: linear-gradient(120deg, #ae2ce2 0%, #3d24ca 50%, #44e2e2 100%);\n}\n\n@media screen and (width >= 1200px) {\n\t.hero-carousel {\n\t\t.swiper-slide {\n\t\t\twidth: 748px !important;\n\n\t\t\timg {\n\t\t\t\twidth: 748px !important;\n\t\t\t}\n\t\t}\n\n\t\tswiper-container {\n\t\t\twidth: 748px !important;\n\t\t}\n\n\t\tapp-custom-swiper {\n\t\t\tdisplay: block;\n\t\t\twidth: 748px !important;\n\t\t}\n\n\t\t.swiper-initialized {\n\t\t\twidth: 748px !important;\n\t\t}\n\t}\n}\n"],
+  "mappings": "AAAA,CAAA,WACC,MAAA,KACA,OAAA,MACA,iBAAA,gBAAA,MAAA,CAAA,OAAA,CAAA,OAAA,CAAA,SAGD,OAAA,YAAA,OAAA,QAEE,CAAA,cAAA,CAAA,aAGC,CAHD,cAGC,CAHD,aAGC,IAFA,MAAA,gBAOD,CARA,cAQA,iBACC,MAAA,gBAGD,CAZA,cAYA,kBACC,QAAA,MACA,MAAA,gBAGD,CAjBA,cAiBA,CAAA,mBACC,MAAA",
+  "names": []
+}
